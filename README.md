@@ -1,0 +1,2 @@
+# odds
+robimy hajs elo
