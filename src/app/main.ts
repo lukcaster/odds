@@ -1,10 +1,8 @@
-import {getOdds} from "./get-odds/get-us-nfl-odds";
-import {setPage} from "./utils/set-page";
+import {OmegaCalculator} from "./get-odds/omega-calculator";
+const calculator = new OmegaCalculator();
 
 const start = async (): Promise<void> => {
-    const page = await setPage();
-    const response = await getOdds(page);
-    console.log(await response.json())
+    await calculator.calculate();
 }
 
 start();
