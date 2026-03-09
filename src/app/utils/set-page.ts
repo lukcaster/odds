@@ -1,8 +1,8 @@
-import {chromium, Page} from "playwright";
+import { chromium, Page } from "playwright";
 
-export async function setPage(): Promise<Page> {
+export async function setPage(headless: boolean = true): Promise<Page> {
     const browser = await chromium.launch({
-        headless: false
+        headless: headless
     });
     const context = await browser.newContext();
     return await context.newPage();
