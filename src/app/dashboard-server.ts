@@ -182,18 +182,6 @@ export class DashboardServer {
             }
         });
 
-        // Force refresh odds (costs 1 API request)
-        this.app.post('/api/odds/refresh', async (req: Request, res: Response) => {
-            const league = req.body.league as string;
-            const sport = LEAGUE_KEY_TO_SPORT[league] ?? Sport.NFL;
-            try {
-                const result = await this.oddsService.refreshOdds(sport);
-                res.json(result);
-            } catch (error: any) {
-                res.status(500).json({ error: 'Błąd odświeżania kursów', details: error?.message });
-            }
-        });
-
         // Cache status
         this.app.get('/api/cache-status', (_req: Request, res: Response) => {
             res.json(this.oddsService.getCacheStatus());
@@ -218,7 +206,36 @@ export class DashboardServer {
             console.log('\n💡 Otwórz przeglądarkę и przejdź na http://localhost:3000\n');
 
             this.startKeepAlive();
+            this.scheduleDailyFetch();
         });
+    }
+
+    private scheduleDailyFetch(): void {
+        const scheduleNext = () => {
+            const now    = new Date();
+            const target = new Date();
+            target.setHours(3, 0, 0, 0);
+            if (target <= now) target.setDate(target.getDate() + 1);
+            const delay = target.getTime() - now.getTime();
+            console.log(`[Cron] następne pobieranie kursów: ${target.toLocaleString('pl-PL')}`);
+            setTimeout(async () => {
+                await this.fetchAllLeagues();
+                scheduleNext();
+            }, delay);
+        };
+        scheduleNext();
+    }
+
+    private async fetchAllLeagues(): Promise<void> {
+        console.log('[Cron] pobieranie kursów dla wszystkich lig...');
+        for (const sport of Object.values(Sport)) {
+            try {
+                await this.oddsService.refreshOdds(sport);
+            } catch (err) {
+                console.error(`[Cron] błąd dla ${sport}:`, err);
+            }
+        }
+        console.log('[Cron] gotowe');
     }
 
     private startKeepAlive(): void {

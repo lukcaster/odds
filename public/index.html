@@ -577,7 +577,7 @@
             <div class="header-title" id="matchesLeagueTitle">Mecze</div>
             <div class="header-sub"   id="matchesLeagueSub"></div>
         </div>
-        <button class="header-action-btn" id="refreshBtn" onclick="refreshOdds()">↻ Odśwież</button>
+        <div class="header-sub" id="cacheAge" style="font-size:10px;opacity:0.6;margin-top:2px;"></div>
     </div>
     <div class="matches-body">
         <div class="disclaimer" id="disclaimer"></div>
@@ -767,34 +767,16 @@ async function loadOdds() {
     }
 }
 
-async function refreshOdds() {
-    const btn = document.getElementById('refreshBtn');
-    btn.disabled = true; btn.textContent = '…';
-    try {
-        const res  = await fetch(`${API}/api/odds/refresh`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ league: state.league })
-        });
-        const data = await res.json();
-        state.odds = data.data;
-        renderDisclaimer(data.fetchedAt);
-        renderMatchGrid();
-        showToast(`${data.data.length} meczów · ${data.requestsRemaining ?? '?'} req/mies.`);
-    } catch {
-        showToast('Błąd odświeżania');
-    } finally {
-        btn.disabled = false; btn.textContent = '↻ Odśwież';
-    }
-}
-
 function renderDisclaimer(fetchedAt) {
     if (!fetchedAt) return;
     const el  = document.getElementById('disclaimer');
     const str = new Date(fetchedAt).toLocaleString('pl-PL',
         { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
-    el.textContent  = `⚠️ Kursy z ${str} — sprawdź przed postawieniem.`;
+    el.textContent   = `⚠️ Kursy z ${str} — sprawdź przed postawieniem.`;
     el.style.display = 'block';
+
+    const age = document.getElementById('cacheAge');
+    if (age) age.textContent = `kursy z ${str}`;
 }
 
 // ── Match grid ─────────────────────────────────────────────
