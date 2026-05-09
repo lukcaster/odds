@@ -5,6 +5,8 @@
   "main": "main.ts",
   "type": "commonjs",
   "scripts": {
+    "start": "tsx src/app/server.ts",
+    "dev": "tsx src/app/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

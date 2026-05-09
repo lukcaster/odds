@@ -2,15 +2,19 @@ import cors from 'cors';
 import express, { Express, Request, Response } from 'express';
 import path from 'path';
 import { HybridPredictionModel } from './get-odds/hybrid-prediction-model';
+import { OddsService } from './get-odds/odds-service';
+import { LEAGUE_KEY_TO_SPORT, Sport, SportConfig } from './utils/enums/sport';
 
 export class DashboardServer {
     private app: Express;
     private predictionModel: HybridPredictionModel;
-    private port: number = 3000;
+    private oddsService: OddsService;
+    private port: number = parseInt(process.env.PORT || '3000', 10);
 
     constructor() {
         this.app = express();
         this.predictionModel = new HybridPredictionModel();
+        this.oddsService = new OddsService();
         this.setupMiddleware();
         this.setupRoutes();
     }
@@ -152,6 +156,47 @@ export class DashboardServer {
             } catch (error) {
                 res.status(500).json({ error: 'Failed to fetch model weights' });
             }
+        });
+
+        // Get available leagues
+        this.app.get('/api/leagues', (_req: Request, res: Response) => {
+            const leagues = Object.entries(LEAGUE_KEY_TO_SPORT).map(([key, sport]) => ({
+                key,
+                sport,
+                label: SportConfig[sport].label,
+                flag: SportConfig[sport].flag,
+                hasDraw: SportConfig[sport].hasDraw
+            }));
+            res.json(leagues);
+        });
+
+        // Get odds for a league (with cache)
+        this.app.get('/api/odds', async (req: Request, res: Response) => {
+            const league = req.query.league as string;
+            const sport = LEAGUE_KEY_TO_SPORT[league] ?? Sport.NFL;
+            try {
+                const result = await this.oddsService.getOdds(sport);
+                res.json(result);
+            } catch (error: any) {
+                res.status(500).json({ error: 'Błąd pobierania kursów', details: error?.message });
+            }
+        });
+
+        // Force refresh odds (costs 1 API request)
+        this.app.post('/api/odds/refresh', async (req: Request, res: Response) => {
+            const league = req.body.league as string;
+            const sport = LEAGUE_KEY_TO_SPORT[league] ?? Sport.NFL;
+            try {
+                const result = await this.oddsService.refreshOdds(sport);
+                res.json(result);
+            } catch (error: any) {
+                res.status(500).json({ error: 'Błąd odświeżania kursów', details: error?.message });
+            }
+        });
+
+        // Cache status
+        this.app.get('/api/cache-status', (_req: Request, res: Response) => {
+            res.json(this.oddsService.getCacheStatus());
         });
 
         // Serve index.html for all other routes
