@@ -216,7 +216,26 @@ export class DashboardServer {
             console.log(`║                   📊 http://localhost:${this.port}                       ║`);
             console.log('╚════════════════════════════════════════════════════════════════════╝');
             console.log('\n💡 Otwórz przeglądarkę и przejdź na http://localhost:3000\n');
+
+            this.startKeepAlive();
         });
+    }
+
+    private startKeepAlive(): void {
+        const renderUrl = process.env.RENDER_EXTERNAL_URL;
+        if (!renderUrl) return; // tylko na Renderze
+
+        const url = `${renderUrl}/api/health`;
+        setInterval(async () => {
+            try {
+                const res = await fetch(url);
+                console.log(`[KeepAlive] ping OK (${res.status})`);
+            } catch (err) {
+                console.warn('[KeepAlive] ping failed:', err);
+            }
+        }, 10 * 60 * 1000); // co 10 minut
+
+        console.log(`[KeepAlive] aktywny → pinguje ${url} co 10 min`);
     }
 
     /**
