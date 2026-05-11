@@ -306,9 +306,26 @@
         .rec-stat-val { font-size: 18px; font-weight: 800; color: var(--text); }
         .rec-stat-val.positive { color: var(--primary); }
 
-        .rec-kelly-bar-wrap { margin-bottom: 12px; }
-        .rec-kelly-label { font-size: 10px; color: var(--text-dim); margin-bottom: 4px; }
-        .rec-kelly-bar { height: 6px; background: var(--primary-light); border-radius: 3px; overflow: hidden; }
+        .rec-stake-wrap { margin-bottom: 14px; }
+        .rec-stake-header { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
+        .rec-stake-lbl { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.4px; }
+        .rec-stake-amt { font-size: 28px; font-weight: 900; color: var(--primary); margin-bottom: 4px; }
+        .rec-stake-sub {
+            display: inline-flex; align-items: center; gap: 5px;
+            font-size: 12px; color: var(--text-dim);
+            cursor: pointer; user-select: none;
+            -webkit-user-select: none;
+        }
+        .rec-stake-sub:active { opacity: 0.6; }
+        .rec-info-badge {
+            width: 17px; height: 17px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 10px; font-weight: 800; color: var(--primary);
+            flex-shrink: 0; line-height: 1;
+        }
+        .rec-kelly-bar { height: 5px; background: var(--primary-light); border-radius: 3px; overflow: hidden; margin-top: 8px; }
         .rec-kelly-fill { height: 100%; background: var(--primary); border-radius: 3px; transition: width 0.5s; }
 
         .rec-open-btn {
@@ -1226,8 +1243,15 @@ function renderRecommended(bets) {
                     <div class="rec-stat-val positive">+${bet.edgePercent.toFixed(1)}%</div>
                 </div>
             </div>
-            <div class="rec-kelly-bar-wrap">
-                <div class="rec-kelly-label">Kelly (1/4): ${kellyPct}% bankrolla = <strong>~${betAmt} PLN</strong></div>
+            <div class="rec-stake-wrap">
+                <div class="rec-stake-lbl">Proponowany zakład</div>
+                <div class="rec-stake-amt">💰 ${betAmt > 0 ? betAmt + ' PLN' : '< 1 PLN'}</div>
+                <div class="rec-stake-sub"
+                     onclick="showKellyExplain(${betAmt}, '${kellyPct}', ${bankroll})"
+                     title="Kelly Criterion (1/4): ${kellyPct}% Twojego bankrolla (${bankroll} PLN). Kliknij po wyjaśnienie.">
+                    ~${kellyPct}% Twojego bankrolla
+                    <span class="rec-info-badge">i</span>
+                </div>
                 <div class="rec-kelly-bar"><div class="rec-kelly-fill" style="width:${barWidth}%"></div></div>
             </div>
             <button class="rec-open-btn" onclick="openMatchFromRecommended('${bet.matchId}','${bet.leagueKey}')">
@@ -1267,6 +1291,44 @@ async function openMatchFromRecommended(matchId, leagueKey) {
         document.getElementById('matchGrid').innerHTML =
             '<div class="state-box"><div class="icon">⚠️</div><p>Błąd połączenia z serwerem</p></div>';
     }
+}
+
+// ── Kelly Explain ─────────────────────────────────────────
+function showKellyExplain(betAmt, kellyPct, bankroll) {
+    const modal = document.createElement('div');
+    modal.style.cssText = `
+        position:fixed; inset:0; z-index:9999;
+        background:rgba(0,0,0,0.65); display:flex;
+        align-items:center; justify-content:center; padding:1.5rem;
+    `;
+    modal.innerHTML = `
+        <div style="background:#1e2233; border-radius:1rem; padding:1.5rem; max-width:360px; width:100%;
+                    box-shadow:0 8px 32px rgba(0,0,0,0.5); color:#e2e8f0; font-size:0.95rem; line-height:1.6;">
+            <div style="font-size:1.15rem; font-weight:700; margin-bottom:0.8rem;">📊 Jak liczymy zakład?</div>
+            <p style="margin:0 0 0.8rem;">
+                Korzystamy z <strong>Kryterium Kelly'ego</strong> — wzoru, który wyznacza optymalny rozmiar zakładu
+                na podstawie Twojej przewagi nad bukmacherem.
+            </p>
+            <div style="background:#0f1525; border-radius:0.6rem; padding:0.8rem; margin-bottom:0.8rem; font-size:0.88rem;">
+                <div>🏦 Twój bankroll: <strong>${bankroll} PLN</strong></div>
+                <div>📐 Kelly (¼): <strong>${kellyPct}% bankrolla</strong></div>
+                <div>💰 Proponowany zakład: <strong>${betAmt > 0 ? betAmt + ' PLN' : '< 1 PLN'}</strong></div>
+            </div>
+            <p style="margin:0 0 0.8rem; font-size:0.88rem; color:#94a3b8;">
+                Używamy <em>frakcyjnego Kelly (1/4)</em>, żeby ograniczyć ryzyko.
+                Pełne Kelly byłoby ${Math.round(parseFloat(kellyPct) * 4)}% bankrolla.
+                Bankroll ustawiasz w swoim profilu.
+            </p>
+            <button onclick="this.closest('[data-modal]').remove()"
+                    style="width:100%; padding:0.7rem; border:none; border-radius:0.6rem;
+                           background:#3b82f6; color:#fff; font-weight:600; cursor:pointer; font-size:0.95rem;">
+                Rozumiem
+            </button>
+        </div>
+    `;
+    modal.setAttribute('data-modal', '1');
+    modal.addEventListener('click', e => { if (e.target === modal) modal.remove(); });
+    document.body.appendChild(modal);
 }
 
 // ── Toast ──────────────────────────────────────────────────
