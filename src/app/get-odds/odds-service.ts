@@ -18,6 +18,12 @@ export interface OddsMatch {
         away: number;
         bookmaker: string;
     } | null;
+    consensusProbability?: {
+        home: number;
+        draw?: number;
+        away: number;
+        bookmakerCount: number;
+    };
 }
 
 export interface OddsCache {
@@ -57,6 +63,10 @@ export class OddsService {
             fetchedAt: cache.fetchedAt,
             count: cache.data.length
         }));
+    }
+
+    public getAllCaches(): Map<Sport, OddsCache> {
+        return this.cache;
     }
 
     private async fetchAndCache(sport: Sport): Promise<OddsCache> {
@@ -110,9 +120,48 @@ export class OddsService {
                 sport: match.sport_key,
                 odds: homeOdds && awayOdds
                     ? { home: homeOdds, draw: drawOdds, away: awayOdds, bookmaker: bookmaker?.title || 'Bukmacher' }
-                    : null
+                    : null,
+                consensusProbability: this.computeConsensus(match) ?? undefined
             };
         });
+    }
+
+    private computeConsensus(match: any): { home: number; draw?: number; away: number; bookmakerCount: number } | null {
+        const bookmakers: any[] = match.bookmakers || [];
+        if (!bookmakers.length) return null;
+
+        let homeSum = 0, awaySum = 0, drawSum = 0;
+        let count = 0, drawCount = 0;
+
+        for (const bm of bookmakers) {
+            const mkt = bm.markets?.find((m: any) => m.key === 'h2h');
+            if (!mkt) continue;
+
+            let h: number | null = null, a: number | null = null, d: number | null = null;
+            for (const outcome of mkt.outcomes || []) {
+                if (outcome.name === match.home_team)      h = outcome.price;
+                else if (outcome.name === match.away_team) a = outcome.price;
+                else if (outcome.name === 'Draw')          d = outcome.price;
+            }
+
+            if (!h || !a) continue;
+
+            // Remove bookmaker's vig, get fair probabilities
+            const vigSum = 1 / h + 1 / a + (d ? 1 / d : 0);
+            homeSum += (1 / h) / vigSum;
+            awaySum += (1 / a) / vigSum;
+            if (d) { drawSum += (1 / d) / vigSum; drawCount++; }
+            count++;
+        }
+
+        if (!count) return null;
+
+        return {
+            home: homeSum / count,
+            draw: drawCount > 0 ? drawSum / drawCount : undefined,
+            away: awaySum / count,
+            bookmakerCount: count
+        };
     }
 
     private loadCacheFromDisk(): void {

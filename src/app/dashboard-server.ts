@@ -3,18 +3,22 @@ import express, { Express, Request, Response } from 'express';
 import path from 'path';
 import { HybridPredictionModel } from './get-odds/hybrid-prediction-model';
 import { OddsService } from './get-odds/odds-service';
+import { RecommendedBet, RecommendedService } from './get-odds/recommended-service';
 import { LEAGUE_KEY_TO_SPORT, Sport, SportConfig } from './utils/enums/sport';
 
 export class DashboardServer {
     private app: Express;
     private predictionModel: HybridPredictionModel;
     private oddsService: OddsService;
+    private recommendedService: RecommendedService;
+    private recommendedBets: RecommendedBet[] = [];
     private port: number = parseInt(process.env.PORT || '3000', 10);
 
     constructor() {
         this.app = express();
         this.predictionModel = new HybridPredictionModel();
         this.oddsService = new OddsService();
+        this.recommendedService = new RecommendedService(this.predictionModel);
         this.setupMiddleware();
         this.setupRoutes();
     }
@@ -187,6 +191,11 @@ export class DashboardServer {
             res.json(this.oddsService.getCacheStatus());
         });
 
+        // Recommended bets (computed daily by cron)
+        this.app.get('/api/recommended', (_req: Request, res: Response) => {
+            res.json(this.recommendedBets);
+        });
+
         // Serve index.html for all other routes
         this.app.get('*', (req: Request, res: Response) => {
             res.sendFile(path.join(process.cwd(), 'public/index.html'));
@@ -207,6 +216,8 @@ export class DashboardServer {
 
             this.startKeepAlive();
             this.scheduleDailyFetch();
+            // Compute recommended from already-cached odds on startup
+            setTimeout(() => this.computeRecommendedBets(), 2000);
         });
     }
 
@@ -235,7 +246,19 @@ export class DashboardServer {
                 console.error(`[Cron] błąd dla ${sport}:`, err);
             }
         }
+        await this.computeRecommendedBets();
         console.log('[Cron] gotowe');
+    }
+
+    private async computeRecommendedBets(): Promise<void> {
+        try {
+            console.log('[Recommended] obliczanie polecanych zakładów...');
+            const caches = this.oddsService.getAllCaches();
+            this.recommendedBets = await this.recommendedService.computeRecommended(caches);
+            console.log(`[Recommended] gotowe — znaleziono ${this.recommendedBets.length} bets`);
+        } catch (err) {
+            console.error('[Recommended] błąd:', err);
+        }
     }
 
     private startKeepAlive(): void {
