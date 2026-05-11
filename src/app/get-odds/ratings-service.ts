@@ -124,14 +124,46 @@ export class RatingsService {
             return [];
         }
 
-        const url = `https://site.api.espn.com/apis/site/v2/sports/soccer/${leagueCode}/standings`;
-        const response = await axios.get(url, { timeout: 8000 });
+        // Try two URL variants — ESPN sometimes serves differently per IP/region
+        const urls = [
+            `https://site.api.espn.com/apis/site/v2/sports/soccer/${leagueCode}/standings`,
+            `https://site.web.api.espn.com/apis/v2/sports/soccer/${leagueCode}/standings`,
+        ];
+
+        const headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+            'Accept': 'application/json, text/plain, */*',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Referer': 'https://www.espn.com/',
+            'Origin': 'https://www.espn.com',
+        };
+
+        let response: any = null;
+        for (const url of urls) {
+            try {
+                const r = await axios.get(url, { timeout: 8000, headers });
+                const keys = Object.keys(r.data ?? {});
+                if (keys.length > 0) { response = r; break; }
+                console.warn(`[Ratings] ${url} → pusta odpowiedź`);
+            } catch (err: any) {
+                console.warn(`[Ratings] ${url} → błąd: ${err?.message}`);
+            }
+        }
+
+        if (!response) throw new Error(`ESPN nie odpowiada dla ${leagueCode}`);
 
         // Log raw structure first time to help debugging
         if (!this.debugLogged.has(sport)) {
             this.debugLogged.add(sport);
-            const keys = Object.keys(response.data);
+            const keys = Object.keys(response.data ?? {});
             console.log(`[Ratings] ${sport} raw top-level keys: ${keys.join(', ')}`);
+            if (keys.length > 0) {
+                // log first nested level to understand structure
+                const firstVal = response.data[keys[0]];
+                if (firstVal && typeof firstVal === 'object') {
+                    console.log(`[Ratings]   ${keys[0]} keys: ${Object.keys(firstVal).join(', ')}`);
+                }
+            }
         }
 
         const entries = this.parseResponse(response.data);

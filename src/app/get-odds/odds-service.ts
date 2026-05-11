@@ -18,6 +18,11 @@ export interface OddsMatch {
         away: number;
         bookmaker: string;
     } | null;
+    bestOdds?: {
+        home: number;
+        draw?: number;
+        away: number;
+    };
     consensusProbability?: {
         home: number;
         draw?: number;
@@ -121,9 +126,28 @@ export class OddsService {
                 odds: homeOdds && awayOdds
                     ? { home: homeOdds, draw: drawOdds, away: awayOdds, bookmaker: bookmaker?.title || 'Bukmacher' }
                     : null,
+                bestOdds: this.computeBestOdds(match) ?? undefined,
                 consensusProbability: this.computeConsensus(match) ?? undefined
             };
         });
+    }
+
+    private computeBestOdds(match: any): { home: number; draw?: number; away: number } | null {
+        const bookmakers: any[] = match.bookmakers || [];
+        let bestHome = 0, bestAway = 0, bestDraw = 0;
+
+        for (const bm of bookmakers) {
+            const mkt = bm.markets?.find((m: any) => m.key === 'h2h');
+            if (!mkt) continue;
+            for (const outcome of mkt.outcomes || []) {
+                if (outcome.name === match.home_team)      bestHome = Math.max(bestHome, outcome.price);
+                else if (outcome.name === match.away_team) bestAway = Math.max(bestAway, outcome.price);
+                else if (outcome.name === 'Draw')          bestDraw = Math.max(bestDraw, outcome.price);
+            }
+        }
+
+        if (!bestHome || !bestAway) return null;
+        return { home: bestHome, draw: bestDraw > 0 ? bestDraw : undefined, away: bestAway };
     }
 
     private computeConsensus(match: any): { home: number; draw?: number; away: number; bookmakerCount: number } | null {

@@ -91,21 +91,25 @@ export class RecommendedService {
                     bookmakerCount = match.consensusProbability?.bookmakerCount ?? 1;
                 }
 
-                const outcomes: Array<{ type: 'home' | 'draw' | 'away'; label: string; odds: number; prob: number }> = [
-                    { type: 'home', label: match.homeTeam, odds: match.odds.home, prob: homeProb },
-                    { type: 'away', label: match.awayTeam, odds: match.odds.away, prob: awayProb },
+                // Use BEST available odds for comparison (finds genuine line shopping value)
+                // Fall back to displayed odds if bestOdds not available
+                const bestOdds = match.bestOdds ?? match.odds;
+
+                const outcomes: Array<{ type: 'home' | 'draw' | 'away'; label: string; bestOdds: number; displayOdds: number; prob: number }> = [
+                    { type: 'home', label: match.homeTeam, bestOdds: bestOdds!.home, displayOdds: match.odds.home, prob: homeProb },
+                    { type: 'away', label: match.awayTeam, bestOdds: bestOdds!.away, displayOdds: match.odds.away, prob: awayProb },
                 ];
                 if (match.odds.draw != null && drawProb != null) {
-                    outcomes.push({ type: 'draw', label: 'Remis', odds: match.odds.draw, prob: drawProb });
+                    outcomes.push({ type: 'draw', label: 'Remis', bestOdds: bestOdds!.draw ?? match.odds.draw, displayOdds: match.odds.draw, prob: drawProb });
                 }
 
-                const bookmakerSrc = match.consensusProbability ? `consensus/${bookmakerCount}bk` : 'no-vig/1bk';
                 for (const o of outcomes) {
-                    const b = o.odds - 1;
+                    const b = o.bestOdds - 1;
                     const kelly = (b * o.prob - (1 - o.prob)) / b;
-                    const impliedProb = 1 / o.odds;
+                    const impliedProb = 1 / o.bestOdds;
                     const edge = o.prob - impliedProb;
-                    console.log(`  [${config.label}] ${match.homeTeam} vs ${match.awayTeam} | ${o.type}: prob=${(o.prob*100).toFixed(1)}% implied=${(impliedProb*100).toFixed(1)}% edge=${(edge*100).toFixed(1)}% kelly=${(kelly*100).toFixed(2)}% src=${bookmakerSrc}`);
+                    const bkCount = match.consensusProbability?.bookmakerCount ?? 1;
+                    console.log(`  [${config.label}] ${match.homeTeam} vs ${match.awayTeam} | ${o.type}: prob=${(o.prob*100).toFixed(1)}% bestOdds=${o.bestOdds.toFixed(2)} implied=${(impliedProb*100).toFixed(1)}% edge=${(edge*100).toFixed(1)}% src=${source}/${bkCount}bk`);
 
                     if (kelly <= MIN_KELLY || edge <= MIN_EDGE) { skippedNoEdge++; continue; }
 
@@ -122,7 +126,7 @@ export class RecommendedService {
                         commenceTime: match.commenceTime,
                         outcomeType: o.type,
                         outcomeLabel: o.label,
-                        odds: o.odds,
+                        odds: o.bestOdds,
                         bookmakerName: match.odds.bookmaker,
                         ourProbability: o.prob,
                         impliedProbability: impliedProb,
