@@ -43,13 +43,13 @@ export class RecommendedService {
             const config = SportConfig[sport];
 
             for (const match of cache.data) {
-                if (!match.odds || !match.consensusProbability) continue;
+                if (!match.odds) continue;
 
-                // Probability sources per sport
                 let homeProb: number;
                 let awayProb: number;
                 let drawProb: number | undefined;
                 let source: 'model' | 'consensus';
+                let bookmakerCount: number;
 
                 if (sport === Sport.NFL) {
                     const prediction = await this.predictionModel.getPredictionAsync(
@@ -59,11 +59,16 @@ export class RecommendedService {
                     homeProb = prediction;
                     awayProb = 1 - prediction;
                     source = 'model';
+                    bookmakerCount = 1;
                 } else {
-                    homeProb = match.consensusProbability.home;
-                    awayProb = match.consensusProbability.away;
-                    drawProb = match.consensusProbability.draw;
+                    // Use multi-bookmaker consensus if available (fresh fetch),
+                    // otherwise fall back to single-bookmaker no-vig (old cache)
+                    const consensus = match.consensusProbability ?? this.noVigFromOdds(match.odds);
+                    homeProb = consensus.home;
+                    awayProb = consensus.away;
+                    drawProb = consensus.draw;
                     source = 'consensus';
+                    bookmakerCount = match.consensusProbability?.bookmakerCount ?? 1;
                 }
 
                 const outcomes: Array<{ type: 'home' | 'draw' | 'away'; label: string; odds: number; prob: number }> = [
@@ -102,7 +107,7 @@ export class RecommendedService {
                         fractionalKelly: kelly / 4,
                         edgePercent: edge * 100,
                         probabilitySource: source,
-                        bookmakerCount: match.consensusProbability.bookmakerCount
+                        bookmakerCount
                     });
                 }
             }
@@ -112,5 +117,15 @@ export class RecommendedService {
             .sort((a, b) => b.kellyFraction - a.kellyFraction)
             .slice(0, 10)
             .map((bet, i) => ({ ...bet, rank: i + 1 }));
+    }
+
+    private noVigFromOdds(odds: { home: number; draw?: number; away: number }) {
+        const vigSum = 1 / odds.home + 1 / odds.away + (odds.draw ? 1 / odds.draw : 0);
+        return {
+            home: (1 / odds.home) / vigSum,
+            away: (1 / odds.away) / vigSum,
+            draw: odds.draw ? (1 / odds.draw) / vigSum : undefined,
+            bookmakerCount: 1
+        };
     }
 }

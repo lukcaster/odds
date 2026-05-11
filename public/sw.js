@@ -1,4 +1,4 @@
-const CACHE = 'odds-v1';
+const CACHE = 'odds-v2';
 
 self.addEventListener('install', e => {
     e.waitUntil(
