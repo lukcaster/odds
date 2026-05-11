@@ -4,12 +4,16 @@ import path from 'path';
 import { HybridPredictionModel } from './get-odds/hybrid-prediction-model';
 import { OddsService } from './get-odds/odds-service';
 import { RecommendedBet, RecommendedService } from './get-odds/recommended-service';
+import { RatingsService } from './get-odds/ratings-service';
+import { SoccerPredictionModel } from './get-odds/soccer-prediction-model';
 import { LEAGUE_KEY_TO_SPORT, Sport, SportConfig } from './utils/enums/sport';
 
 export class DashboardServer {
     private app: Express;
     private predictionModel: HybridPredictionModel;
     private oddsService: OddsService;
+    private ratingsService: RatingsService;
+    private soccerModel: SoccerPredictionModel;
     private recommendedService: RecommendedService;
     private recommendedBets: RecommendedBet[] = [];
     private port: number = parseInt(process.env.PORT || '3000', 10);
@@ -18,7 +22,9 @@ export class DashboardServer {
         this.app = express();
         this.predictionModel = new HybridPredictionModel();
         this.oddsService = new OddsService();
-        this.recommendedService = new RecommendedService(this.predictionModel);
+        this.ratingsService = new RatingsService();
+        this.soccerModel = new SoccerPredictionModel(this.ratingsService);
+        this.recommendedService = new RecommendedService(this.predictionModel, this.soccerModel);
         this.setupMiddleware();
         this.setupRoutes();
     }
@@ -196,6 +202,12 @@ export class DashboardServer {
             res.json(this.recommendedBets);
         });
 
+        // Manual refresh trigger (standings + odds + recommended)
+        this.app.post('/api/refresh', async (_req: Request, res: Response) => {
+            res.json({ status: 'started' });
+            await this.fetchAllLeagues();
+        });
+
         // Serve index.html for all other routes
         this.app.get('*', (req: Request, res: Response) => {
             res.sendFile(path.join(process.cwd(), 'public/index.html'));
@@ -237,14 +249,17 @@ export class DashboardServer {
     }
 
     private async fetchAllLeagues(): Promise<void> {
-        console.log('[Cron] pobieranie kursów dla wszystkich lig...');
+        console.log('[Cron] pobieranie kursów i standings...');
         for (const sport of Object.values(Sport)) {
             try {
                 await this.oddsService.refreshOdds(sport);
             } catch (err) {
-                console.error(`[Cron] błąd dla ${sport}:`, err);
+                console.error(`[Cron] błąd kursów dla ${sport}:`, err);
             }
         }
+        await this.ratingsService.refreshAll([
+            Sport.PREMIER_LEAGUE, Sport.LALIGA, Sport.BUNDESLIGA, Sport.EKSTRAKLASA
+        ]);
         await this.computeRecommendedBets();
         console.log('[Cron] gotowe');
     }
@@ -253,22 +268,24 @@ export class DashboardServer {
         const caches = this.oddsService.getAllCaches();
 
         if (caches.size === 0) {
-            console.log('[Startup] Brak cache — pobieram kursy dla wszystkich lig...');
+            console.log('[Startup] Brak cache — pobieram kursy i standings...');
             await this.fetchAllLeagues();
             return;
         }
 
-        // Check if cached data is new format (has consensusProbability)
         let hasConsensus = false;
         for (const [, cache] of caches) {
             if (cache.data.some(m => m.consensusProbability)) { hasConsensus = true; break; }
         }
 
         if (!hasConsensus) {
-            console.log('[Startup] Cache jest w starym formacie (bez consensus) — odświeżam...');
+            console.log('[Startup] Stary format cache — odświeżam wszystko...');
             await this.fetchAllLeagues();
         } else {
-            console.log('[Startup] Cache OK — przeliczam polecane...');
+            console.log('[Startup] Cache OK — pobieram standings i przeliczam polecane...');
+            await this.ratingsService.refreshAll([
+                Sport.PREMIER_LEAGUE, Sport.LALIGA, Sport.BUNDESLIGA, Sport.EKSTRAKLASA
+            ]);
             await this.computeRecommendedBets();
         }
     }

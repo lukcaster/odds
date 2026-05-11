@@ -1,5 +1,6 @@
 import { OddsCache } from './odds-service';
 import { HybridPredictionModel } from './hybrid-prediction-model';
+import { SoccerPredictionModel, isSoccerSport } from './soccer-prediction-model';
 import { Sport, SportConfig, SPORT_TO_LEAGUE_KEY } from '../utils/enums/sport';
 
 export interface RecommendedBet {
@@ -30,11 +31,10 @@ const MIN_EDGE = 0.025;   // minimum 2.5% edge to include
 const MIN_KELLY = 0.005;  // minimum 0.5% Kelly
 
 export class RecommendedService {
-    private predictionModel: HybridPredictionModel;
-
-    constructor(predictionModel: HybridPredictionModel) {
-        this.predictionModel = predictionModel;
-    }
+    constructor(
+        private predictionModel: HybridPredictionModel,
+        private soccerModel: SoccerPredictionModel
+    ) {}
 
     public async computeRecommended(cacheMap: Map<Sport, OddsCache>): Promise<RecommendedBet[]> {
         const candidates: Omit<RecommendedBet, 'rank'>[] = [];
@@ -65,11 +65,28 @@ export class RecommendedService {
                     awayProb = 1 - prediction;
                     source = 'model';
                     bookmakerCount = 1;
+                } else if (isSoccerSport(sport)) {
+                    const prediction = await this.soccerModel.predict(match.homeTeam, match.awayTeam, sport).catch(() => null);
+                    if (prediction) {
+                        homeProb = prediction.homeWin;
+                        awayProb = prediction.awayWin;
+                        drawProb = prediction.draw;
+                        source = 'model';
+                        bookmakerCount = prediction.teamFound ? 1 : 0;
+                    } else {
+                        // Soccer model unavailable — fall back to consensus
+                        const consensus = match.consensusProbability ?? this.noVigFromOdds(match.odds);
+                        homeProb = consensus.home;
+                        awayProb = consensus.away;
+                        drawProb = consensus.draw;
+                        source = 'consensus';
+                        bookmakerCount = match.consensusProbability?.bookmakerCount ?? 1;
+                    }
                 } else {
+                    // NBA i inne — consensus
                     const consensus = match.consensusProbability ?? this.noVigFromOdds(match.odds);
                     homeProb = consensus.home;
                     awayProb = consensus.away;
-                    drawProb = consensus.draw;
                     source = 'consensus';
                     bookmakerCount = match.consensusProbability?.bookmakerCount ?? 1;
                 }
