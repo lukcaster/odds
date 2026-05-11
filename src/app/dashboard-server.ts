@@ -265,29 +265,32 @@ export class DashboardServer {
     }
 
     private async initOnStartup(): Promise<void> {
+        // Ratings are free (ESPN, no rate limit) — always refresh on startup
+        await this.ratingsService.refreshAll([
+            Sport.PREMIER_LEAGUE, Sport.LALIGA, Sport.BUNDESLIGA, Sport.EKSTRAKLASA
+        ]);
+
         const caches = this.oddsService.getAllCaches();
+        const twelveHoursAgo = Date.now() - 12 * 60 * 60 * 1000;
 
-        if (caches.size === 0) {
-            console.log('[Startup] Brak cache — pobieram kursy i standings...');
-            await this.fetchAllLeagues();
-            return;
-        }
+        const vals = Array.from(caches.values());
+        const needsOddsRefresh =
+            caches.size === 0 ||
+            vals.some(c => new Date(c.fetchedAt).getTime() < twelveHoursAgo) ||
+            vals.some(c => !c.data.some(m => m.consensusProbability));
 
-        let hasConsensus = false;
-        for (const [, cache] of caches) {
-            if (cache.data.some(m => m.consensusProbability)) { hasConsensus = true; break; }
-        }
-
-        if (!hasConsensus) {
-            console.log('[Startup] Stary format cache — odświeżam wszystko...');
-            await this.fetchAllLeagues();
+        if (needsOddsRefresh) {
+            console.log('[Startup] Odświeżam kursy (brak cache / stary format / >12h)...');
+            for (const sport of Object.values(Sport)) {
+                try { await this.oddsService.refreshOdds(sport); } catch (err) {
+                    console.error(`[Startup] błąd kursów dla ${sport}:`, err);
+                }
+            }
         } else {
-            console.log('[Startup] Cache OK — pobieram standings i przeliczam polecane...');
-            await this.ratingsService.refreshAll([
-                Sport.PREMIER_LEAGUE, Sport.LALIGA, Sport.BUNDESLIGA, Sport.EKSTRAKLASA
-            ]);
-            await this.computeRecommendedBets();
+            console.log('[Startup] Kursy świeże — pomijam fetch.');
         }
+
+        await this.computeRecommendedBets();
     }
 
     private async computeRecommendedBets(): Promise<void> {
