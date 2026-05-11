@@ -216,8 +216,7 @@ export class DashboardServer {
 
             this.startKeepAlive();
             this.scheduleDailyFetch();
-            // Compute recommended from already-cached odds on startup
-            setTimeout(() => this.computeRecommendedBets(), 2000);
+            setTimeout(() => this.initOnStartup(), 2000);
         });
     }
 
@@ -248,6 +247,30 @@ export class DashboardServer {
         }
         await this.computeRecommendedBets();
         console.log('[Cron] gotowe');
+    }
+
+    private async initOnStartup(): Promise<void> {
+        const caches = this.oddsService.getAllCaches();
+
+        if (caches.size === 0) {
+            console.log('[Startup] Brak cache — pobieram kursy dla wszystkich lig...');
+            await this.fetchAllLeagues();
+            return;
+        }
+
+        // Check if cached data is new format (has consensusProbability)
+        let hasConsensus = false;
+        for (const [, cache] of caches) {
+            if (cache.data.some(m => m.consensusProbability)) { hasConsensus = true; break; }
+        }
+
+        if (!hasConsensus) {
+            console.log('[Startup] Cache jest w starym formacie (bez consensus) — odświeżam...');
+            await this.fetchAllLeagues();
+        } else {
+            console.log('[Startup] Cache OK — przeliczam polecane...');
+            await this.computeRecommendedBets();
+        }
     }
 
     private async computeRecommendedBets(): Promise<void> {

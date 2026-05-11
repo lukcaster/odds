@@ -39,11 +39,16 @@ export class RecommendedService {
     public async computeRecommended(cacheMap: Map<Sport, OddsCache>): Promise<RecommendedBet[]> {
         const candidates: Omit<RecommendedBet, 'rank'>[] = [];
 
+        console.log(`[Recommended] przetwarzam ${cacheMap.size} lig`);
+
         for (const [sport, cache] of cacheMap) {
             const config = SportConfig[sport];
+            console.log(`[Recommended] ${config.label}: ${cache.data.length} meczów w cache`);
+
+            let skippedNoOdds = 0, skippedNoModel = 0, skippedNoEdge = 0, added = 0;
 
             for (const match of cache.data) {
-                if (!match.odds) continue;
+                if (!match.odds) { skippedNoOdds++; continue; }
 
                 let homeProb: number;
                 let awayProb: number;
@@ -55,14 +60,12 @@ export class RecommendedService {
                     const prediction = await this.predictionModel.getPredictionAsync(
                         match.homeTeam, match.awayTeam
                     ).catch(() => null);
-                    if (prediction == null) continue;
+                    if (prediction == null) { skippedNoModel++; continue; }
                     homeProb = prediction;
                     awayProb = 1 - prediction;
                     source = 'model';
                     bookmakerCount = 1;
                 } else {
-                    // Use multi-bookmaker consensus if available (fresh fetch),
-                    // otherwise fall back to single-bookmaker no-vig (old cache)
                     const consensus = match.consensusProbability ?? this.noVigFromOdds(match.odds);
                     homeProb = consensus.home;
                     awayProb = consensus.away;
@@ -79,14 +82,17 @@ export class RecommendedService {
                     outcomes.push({ type: 'draw', label: 'Remis', odds: match.odds.draw, prob: drawProb });
                 }
 
+                const bookmakerSrc = match.consensusProbability ? `consensus/${bookmakerCount}bk` : 'no-vig/1bk';
                 for (const o of outcomes) {
                     const b = o.odds - 1;
                     const kelly = (b * o.prob - (1 - o.prob)) / b;
                     const impliedProb = 1 / o.odds;
                     const edge = o.prob - impliedProb;
+                    console.log(`  [${config.label}] ${match.homeTeam} vs ${match.awayTeam} | ${o.type}: prob=${(o.prob*100).toFixed(1)}% implied=${(impliedProb*100).toFixed(1)}% edge=${(edge*100).toFixed(1)}% kelly=${(kelly*100).toFixed(2)}% src=${bookmakerSrc}`);
 
-                    if (kelly <= MIN_KELLY || edge <= MIN_EDGE) continue;
+                    if (kelly <= MIN_KELLY || edge <= MIN_EDGE) { skippedNoEdge++; continue; }
 
+                    added++;
                     candidates.push({
                         matchId: match.id,
                         leagueKey: SPORT_TO_LEAGUE_KEY[sport],
@@ -111,8 +117,10 @@ export class RecommendedService {
                     });
                 }
             }
+            console.log(`[Recommended] ${config.label}: noOdds=${skippedNoOdds} noModel=${skippedNoModel} noEdge=${skippedNoEdge} added=${added}`);
         }
 
+        console.log(`[Recommended] łącznie kandydatów: ${candidates.length}`);
         return candidates
             .sort((a, b) => b.kellyFraction - a.kellyFraction)
             .slice(0, 10)
