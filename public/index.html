@@ -607,11 +607,11 @@
             <div class="menu-greeting-sub">Co chcesz dziś zrobić?</div>
         </div>
 
-        <button class="menu-card" onclick="showScreen('screen-profile-edit')">
-            <div class="menu-card-icon">👤</div>
+        <button class="menu-card" onclick="showScreen('screen-recommended')">
+            <div class="menu-card-icon">🎯</div>
             <div class="menu-card-text">
-                <div class="menu-card-title">Profil</div>
-                <div class="menu-card-desc">Edytuj dane i historia zakładów</div>
+                <div class="menu-card-title">Polecane</div>
+                <div class="menu-card-desc">Top 10 zakładów wg Kelly Criterion</div>
             </div>
             <span class="menu-card-chevron">›</span>
         </button>
@@ -625,11 +625,11 @@
             <span class="menu-card-chevron">›</span>
         </button>
 
-        <button class="menu-card" onclick="showScreen('screen-recommended')">
-            <div class="menu-card-icon">🎯</div>
+        <button class="menu-card" onclick="showScreen('screen-profile-edit')">
+            <div class="menu-card-icon">👤</div>
             <div class="menu-card-text">
-                <div class="menu-card-title">Polecane</div>
-                <div class="menu-card-desc">Top 10 zakładów wg Kelly Criterion</div>
+                <div class="menu-card-title">Profil</div>
+                <div class="menu-card-desc">Edytuj dane i historia zakładów</div>
             </div>
             <span class="menu-card-chevron">›</span>
         </button>
@@ -1254,9 +1254,6 @@ function renderRecommended(bets) {
                 </div>
                 <div class="rec-kelly-bar"><div class="rec-kelly-fill" style="width:${barWidth}%"></div></div>
             </div>
-            <button class="rec-open-btn" onclick="openMatchFromRecommended('${bet.matchId}','${bet.leagueKey}')">
-                Oblicz swój zakład →
-            </button>
         </div>`;
     }
 
@@ -1295,40 +1292,45 @@ async function openMatchFromRecommended(matchId, leagueKey) {
 
 // ── Kelly Explain ─────────────────────────────────────────
 function showKellyExplain(betAmt, kellyPct, bankroll) {
+    const existing = document.getElementById('kelly-modal');
+    if (existing) existing.remove();
+
+    const fullKellyPct = (parseFloat(kellyPct) * 4).toFixed(1);
     const modal = document.createElement('div');
-    modal.style.cssText = `
-        position:fixed; inset:0; z-index:9999;
-        background:rgba(0,0,0,0.65); display:flex;
-        align-items:center; justify-content:center; padding:1.5rem;
-    `;
+    modal.id = 'kelly-modal';
+    modal.style.cssText = [
+        'position:fixed', 'top:0', 'left:0', 'right:0', 'bottom:0', 'z-index:9999',
+        'background:rgba(0,0,0,0.65)',
+        'display:flex', 'align-items:center', 'justify-content:center', 'padding:1.5rem'
+    ].join(';');
     modal.innerHTML = `
-        <div style="background:#1e2233; border-radius:1rem; padding:1.5rem; max-width:360px; width:100%;
-                    box-shadow:0 8px 32px rgba(0,0,0,0.5); color:#e2e8f0; font-size:0.95rem; line-height:1.6;">
-            <div style="font-size:1.15rem; font-weight:700; margin-bottom:0.8rem;">📊 Jak liczymy zakład?</div>
+        <div style="background:#1e2233;border-radius:1rem;padding:1.5rem;max-width:360px;width:100%;
+                    box-shadow:0 8px 32px rgba(0,0,0,0.5);color:#e2e8f0;font-size:0.95rem;line-height:1.6;">
+            <div style="font-size:1.15rem;font-weight:700;margin-bottom:0.8rem;">📊 Jak liczymy zakład?</div>
             <p style="margin:0 0 0.8rem;">
                 Korzystamy z <strong>Kryterium Kelly'ego</strong> — wzoru, który wyznacza optymalny rozmiar zakładu
                 na podstawie Twojej przewagi nad bukmacherem.
             </p>
-            <div style="background:#0f1525; border-radius:0.6rem; padding:0.8rem; margin-bottom:0.8rem; font-size:0.88rem;">
-                <div>🏦 Twój bankroll: <strong>${bankroll} PLN</strong></div>
+            <div style="background:#0f1525;border-radius:0.6rem;padding:0.8rem;margin-bottom:0.8rem;font-size:0.88rem;">
+                <div>🏦 Twój bankroll: <strong>${bankroll} PLN</strong> (z ustawień profilu)</div>
                 <div>📐 Kelly (¼): <strong>${kellyPct}% bankrolla</strong></div>
                 <div>💰 Proponowany zakład: <strong>${betAmt > 0 ? betAmt + ' PLN' : '< 1 PLN'}</strong></div>
             </div>
-            <p style="margin:0 0 0.8rem; font-size:0.88rem; color:#94a3b8;">
+            <p style="margin:0 0 0.8rem;font-size:0.88rem;color:#94a3b8;">
                 Używamy <em>frakcyjnego Kelly (1/4)</em>, żeby ograniczyć ryzyko.
-                Pełne Kelly byłoby ${Math.round(parseFloat(kellyPct) * 4)}% bankrolla.
-                Bankroll ustawiasz w swoim profilu.
+                Pełne Kelly wynosiłoby ${fullKellyPct}% bankrolla — zbyt agresywne przy niepewnych prognozach.
+                Bankroll możesz zmienić w zakładce Profil.
             </p>
-            <button onclick="this.closest('[data-modal]').remove()"
-                    style="width:100%; padding:0.7rem; border:none; border-radius:0.6rem;
-                           background:#3b82f6; color:#fff; font-weight:600; cursor:pointer; font-size:0.95rem;">
+            <button id="kelly-modal-close"
+                    style="width:100%;padding:0.7rem;border:none;border-radius:0.6rem;
+                           background:#3b82f6;color:#fff;font-weight:600;cursor:pointer;font-size:0.95rem;">
                 Rozumiem
             </button>
         </div>
     `;
-    modal.setAttribute('data-modal', '1');
     modal.addEventListener('click', e => { if (e.target === modal) modal.remove(); });
     document.body.appendChild(modal);
+    document.getElementById('kelly-modal-close').addEventListener('click', () => modal.remove());
 }
 
 // ── Toast ──────────────────────────────────────────────────
