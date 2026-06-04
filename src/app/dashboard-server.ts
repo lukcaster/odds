@@ -6,6 +6,7 @@ import { OddsService } from './get-odds/odds-service';
 import { RecommendedBet, RecommendedService } from './get-odds/recommended-service';
 import { RatingsService } from './get-odds/ratings-service';
 import { SoccerPredictionModel } from './get-odds/soccer-prediction-model';
+import { MatchAnalysisService } from './get-odds/match-analysis-service';
 import { LEAGUE_KEY_TO_SPORT, Sport, SportConfig } from './utils/enums/sport';
 
 export class DashboardServer {
@@ -15,6 +16,7 @@ export class DashboardServer {
     private ratingsService: RatingsService;
     private soccerModel: SoccerPredictionModel;
     private recommendedService: RecommendedService;
+    private matchAnalysisService: MatchAnalysisService;
     private recommendedBets: RecommendedBet[] = [];
     private port: number = parseInt(process.env.PORT || '3000', 10);
 
@@ -25,6 +27,7 @@ export class DashboardServer {
         this.ratingsService = new RatingsService();
         this.soccerModel = new SoccerPredictionModel(this.ratingsService);
         this.recommendedService = new RecommendedService(this.predictionModel, this.soccerModel);
+        this.matchAnalysisService = new MatchAnalysisService(this.soccerModel, this.predictionModel);
         this.setupMiddleware();
         this.setupRoutes();
     }
@@ -195,6 +198,30 @@ export class DashboardServer {
         // Cache status
         this.app.get('/api/cache-status', (_req: Request, res: Response) => {
             res.json(this.oddsService.getCacheStatus());
+        });
+
+        // Deep match analysis (fetches all markets, runs model, returns top 3 bets)
+        this.app.get('/api/match/:eventId/analysis', async (req: Request, res: Response) => {
+            const eventId  = String(req.params.eventId);
+            const league   = String(req.query.league   ?? '');
+            const homeTeam = String(req.query.homeTeam ?? '');
+            const awayTeam = String(req.query.awayTeam ?? '');
+
+            if (!league || !homeTeam || !awayTeam) {
+                return res.status(400).json({ error: 'Brakuje league, homeTeam lub awayTeam' });
+            }
+
+            const sport = LEAGUE_KEY_TO_SPORT[league];
+            if (!sport) {
+                return res.status(400).json({ error: `Nieznana liga: ${league}` });
+            }
+
+            try {
+                const analysis = await this.matchAnalysisService.analyzeMatch(eventId, sport, homeTeam, awayTeam);
+                res.json(analysis);
+            } catch (err: any) {
+                res.status(500).json({ error: 'Błąd analizy meczu', details: err?.message });
+            }
         });
 
         // Recommended bets (computed daily by cron)

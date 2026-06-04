@@ -388,6 +388,114 @@
         .odds-chip-lbl { font-size: 8px; color: var(--text-dim); }
         .odds-chip-val { font-size: 11px; font-weight: 700; color: var(--primary-dark); }
 
+        /* ── Match detail screen ── */
+        .match-detail-body { flex: 1; overflow-y: auto; padding: 0 0 40px; }
+
+        .match-detail-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 20px 16px 24px;
+            text-align: center;
+        }
+        .match-detail-teams {
+            font-size: 17px; font-weight: 800;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            margin-bottom: 6px;
+        }
+        .match-detail-vs { font-size: 12px; opacity: 0.7; font-weight: 400; }
+        .match-detail-time { font-size: 12px; opacity: 0.75; }
+        .match-detail-xg {
+            display: inline-flex; gap: 12px; margin-top: 10px;
+            background: rgba(255,255,255,0.15); border-radius: 20px;
+            padding: 5px 14px; font-size: 12px;
+        }
+        .match-detail-xg span { font-weight: 700; }
+
+        .analysis-section-label {
+            font-size: 11px; font-weight: 700; color: var(--text-dim);
+            text-transform: uppercase; letter-spacing: 0.7px;
+            padding: 16px 16px 8px;
+        }
+
+        .analysis-loading {
+            text-align: center; padding: 48px 20px; color: var(--text-dim);
+        }
+        .analysis-loading p { font-size: 14px; margin-top: 10px; line-height: 1.6; }
+        .analysis-loading .sub { font-size: 12px; margin-top: 4px; opacity: 0.7; }
+
+        .analysis-empty {
+            text-align: center; padding: 36px 20px; color: var(--text-dim);
+            font-size: 13px; line-height: 1.6;
+        }
+
+        .bet-card {
+            margin: 0 12px 10px;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 18px;
+            padding: 14px;
+            box-shadow: var(--shadow);
+        }
+        .bet-card.rank-1 { border-color: #f9a825; }
+        .bet-card.rank-2 { border-color: #90a4ae; }
+        .bet-card.rank-3 { border-color: #a1887f; }
+
+        .bet-card-top {
+            display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+        }
+        .bet-rank-badge {
+            width: 28px; height: 28px; border-radius: 50%;
+            background: var(--primary-light); color: var(--primary-dark);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 12px; font-weight: 800; flex-shrink: 0;
+        }
+        .bet-rank-badge.r1 { background: #fff8e1; color: #f57f17; }
+        .bet-rank-badge.r2 { background: #eceff1; color: #546e7a; }
+        .bet-rank-badge.r3 { background: #efebe9; color: #6d4c41; }
+
+        .bet-market-label {
+            font-size: 11px; font-weight: 700; color: var(--text-dim);
+            text-transform: uppercase; letter-spacing: 0.4px; flex: 1;
+        }
+        .bet-bm-label {
+            font-size: 10px; color: var(--text-dim);
+            background: var(--bg); border-radius: 8px; padding: 2px 7px;
+        }
+
+        .bet-outcome { font-size: 16px; font-weight: 800; color: var(--text); margin-bottom: 10px; }
+
+        .bet-stats {
+            display: grid; grid-template-columns: 1fr 1fr 1fr;
+            gap: 6px; margin-bottom: 12px;
+        }
+        .bet-stat {
+            background: var(--bg); border-radius: 9px; padding: 8px 6px; text-align: center;
+        }
+        .bet-stat-lbl { font-size: 8px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 3px; }
+        .bet-stat-val { font-size: 16px; font-weight: 800; color: var(--text); }
+        .bet-stat-val.good { color: var(--primary); }
+
+        .bet-stake {
+            background: var(--primary-light);
+            border-radius: 10px; padding: 10px 12px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .bet-stake-lbl { font-size: 11px; color: var(--primary-dark); }
+        .bet-stake-amt { font-size: 22px; font-weight: 900; color: var(--primary); }
+
+        .manual-calc-btn {
+            width: calc(100% - 24px);
+            margin: 6px 12px 0;
+            background: transparent;
+            border: 2px solid var(--border);
+            border-radius: 14px;
+            padding: 13px;
+            font-size: 14px; font-weight: 700;
+            color: var(--text-dim); cursor: pointer;
+            transition: all 0.15s;
+        }
+        .manual-calc-btn:active { border-color: var(--primary); color: var(--primary); }
+
         /* ── State boxes ── */
         .state-box { text-align: center; padding: 60px 20px; color: var(--text-dim); }
         .state-box .icon { font-size: 40px; margin-bottom: 12px; }
@@ -715,6 +823,45 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════════
+     SCREEN: Analiza meczu
+════════════════════════════════════════════════════ -->
+<div id="screen-match-detail" class="screen">
+    <div class="screen-header">
+        <button class="back-btn" id="matchDetailBack" onclick="closeMatchDetail()">‹</button>
+        <div class="header-info">
+            <div class="header-title" id="matchDetailTitle">Analiza meczu</div>
+            <div class="header-sub"   id="matchDetailSub"></div>
+        </div>
+    </div>
+    <div class="match-detail-body">
+        <div class="match-detail-hero">
+            <div class="match-detail-teams">
+                <span id="detailHome"></span>
+                <span class="match-detail-vs">vs</span>
+                <span id="detailAway"></span>
+            </div>
+            <div class="match-detail-time" id="detailTime"></div>
+            <div class="match-detail-xg" id="detailXg" style="display:none">
+                <span>xG dom: <span id="xgHome">–</span></span>
+                <span>xG goście: <span id="xgAway">–</span></span>
+            </div>
+        </div>
+
+        <div id="analysisContent">
+            <div class="analysis-loading">
+                <div class="spinner"></div>
+                <p>Analizuję rynki zakładów...</p>
+                <p class="sub">Pobieranie kursów i obliczanie modelu Poissona</p>
+            </div>
+        </div>
+
+        <button class="manual-calc-btn" onclick="openManualCalc()">
+            ⚙️ Kalkulator własny (1X2)
+        </button>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
      Overlay + Bottom sheet (modal meczu)
 ════════════════════════════════════════════════════ -->
 <div id="overlay" onclick="closeSheet()"></div>
@@ -965,10 +1112,123 @@ function renderMatchGrid() {
     container.innerHTML = html;
 }
 
-// ── Modal (bottom sheet) ───────────────────────────────────
+// ── Match detail screen ────────────────────────────────────
 function openMatch(id) {
     const match = state.odds?.find(m => m.id === id);
     if (!match) return;
+
+    state.currentMatch = match;
+
+    const time = new Date(match.commenceTime).toLocaleTimeString('pl-PL', { hour: '2-digit', minute: '2-digit' });
+    const date = new Date(match.commenceTime).toLocaleDateString('pl-PL', { weekday: 'long', day: 'numeric', month: 'long' });
+
+    document.getElementById('matchDetailTitle').textContent = 'Analiza meczu';
+    document.getElementById('matchDetailSub').textContent   = `${date}, ${time}`;
+    document.getElementById('detailHome').textContent       = match.homeTeam;
+    document.getElementById('detailAway').textContent       = match.awayTeam;
+    document.getElementById('detailTime').textContent       = `${date} · ${time}`;
+    document.getElementById('detailXg').style.display       = 'none';
+
+    document.getElementById('analysisContent').innerHTML = `
+        <div class="analysis-loading">
+            <div class="spinner"></div>
+            <p>Analizuję rynki zakładów...</p>
+            <p class="sub">Pobieranie kursów i obliczanie modelu Poissona</p>
+        </div>`;
+
+    showScreen('screen-match-detail');
+    loadMatchAnalysis(match);
+}
+
+async function loadMatchAnalysis(match) {
+    try {
+        const url = `/api/match/${match.id}/analysis?league=${state.league}&homeTeam=${encodeURIComponent(match.homeTeam)}&awayTeam=${encodeURIComponent(match.awayTeam)}`;
+        const res  = await fetch(url);
+        const data = await res.json();
+
+        if (data.xgHome != null) {
+            document.getElementById('xgHome').textContent = data.xgHome.toFixed(2);
+            document.getElementById('xgAway').textContent = data.xgAway.toFixed(2);
+            document.getElementById('detailXg').style.display = 'inline-flex';
+        }
+
+        renderMatchAnalysis(data, match);
+    } catch {
+        document.getElementById('analysisContent').innerHTML =
+            '<div class="analysis-empty">⚠️ Błąd połączenia z serwerem</div>';
+    }
+}
+
+function renderMatchAnalysis(data, match) {
+    const bankroll = getBankroll();
+    const { recommendations, marketsChecked } = data;
+
+    if (!recommendations || !recommendations.length) {
+        document.getElementById('analysisContent').innerHTML = `
+            <div class="analysis-section-label">Top 3 bety (wg Kelly Criterion)</div>
+            <div class="analysis-empty">
+                Brak wyraźnej przewagi nad bukmacherem w żadnym z ${marketsChecked ?? 0} sprawdzonych rynków.<br><br>
+                Użyj kalkulatora własnego poniżej lub poczekaj na lepszą okazję.
+            </div>`;
+        return;
+    }
+
+    const rankClass = r => r === 1 ? 'r1' : r === 2 ? 'r2' : 'r3';
+    const rankBorderClass = r => `rank-${r}`;
+
+    let html = `<div class="analysis-section-label">Top ${recommendations.length} bety wg modelu (${marketsChecked ?? 0} rynków sprawdzonych)</div>`;
+
+    for (const bet of recommendations) {
+        const betAmt   = Math.round(bankroll * bet.fractionalKelly);
+        const kellyPct = (bet.fractionalKelly * 100).toFixed(1);
+
+        html += `
+        <div class="bet-card ${rankBorderClass(bet.rank)}">
+            <div class="bet-card-top">
+                <div class="bet-rank-badge ${rankClass(bet.rank)}">${bet.rank}</div>
+                <div class="bet-market-label">${bet.marketLabel}</div>
+                <div class="bet-bm-label">${bet.bookmakerName}</div>
+            </div>
+            <div class="bet-outcome">${bet.outcomeLabel}</div>
+            <div class="bet-stats">
+                <div class="bet-stat">
+                    <div class="bet-stat-lbl">Kurs</div>
+                    <div class="bet-stat-val">${bet.odds.toFixed(2)}</div>
+                </div>
+                <div class="bet-stat">
+                    <div class="bet-stat-lbl">Model vs Buk</div>
+                    <div class="bet-stat-val good">${(bet.ourProbability * 100).toFixed(0)}% vs ${(bet.impliedProbability * 100).toFixed(0)}%</div>
+                </div>
+                <div class="bet-stat">
+                    <div class="bet-stat-lbl">Edge</div>
+                    <div class="bet-stat-val good">+${bet.edgePercent.toFixed(1)}%</div>
+                </div>
+            </div>
+            <div class="bet-stake">
+                <div>
+                    <div class="bet-stake-lbl">Proponowany zakład (Kelly ¼)</div>
+                    <div style="font-size:11px;color:var(--primary-dark);margin-top:1px">~${kellyPct}% bankrolla</div>
+                </div>
+                <div class="bet-stake-amt">${betAmt > 0 ? betAmt + ' PLN' : '< 1 PLN'}</div>
+            </div>
+        </div>`;
+    }
+
+    document.getElementById('analysisContent').innerHTML = html;
+}
+
+function closeMatchDetail() {
+    showScreen('screen-matches');
+}
+
+function openManualCalc() {
+    const match = state.currentMatch;
+    if (!match) return;
+    openMatchBottomSheet(match);
+}
+
+// ── Modal (bottom sheet) — manual calculator ───────────────
+function openMatchBottomSheet(match) {
 
     state.currentMatch    = match;
     state.selectedOutcome = null;

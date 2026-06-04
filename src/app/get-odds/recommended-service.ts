@@ -38,16 +38,19 @@ export class RecommendedService {
 
     public async computeRecommended(cacheMap: Map<Sport, OddsCache>): Promise<RecommendedBet[]> {
         const candidates: Omit<RecommendedBet, 'rank'>[] = [];
+        const { start: weekStart, end: weekEnd } = this.getCurrentWeekRange();
 
-        console.log(`[Recommended] przetwarzam ${cacheMap.size} lig`);
+        console.log(`[Recommended] przetwarzam ${cacheMap.size} lig | tydzień: ${weekStart.toLocaleDateString('pl-PL')} – ${weekEnd.toLocaleDateString('pl-PL')}`);
 
         for (const [sport, cache] of cacheMap) {
             const config = SportConfig[sport];
             console.log(`[Recommended] ${config.label}: ${cache.data.length} meczów w cache`);
 
-            let skippedNoOdds = 0, skippedNoModel = 0, skippedNoEdge = 0, added = 0;
+            let skippedNoOdds = 0, skippedNoModel = 0, skippedNoEdge = 0, skippedWrongWeek = 0, added = 0;
 
             for (const match of cache.data) {
+                const matchTime = new Date(match.commenceTime);
+                if (matchTime < weekStart || matchTime > weekEnd) { skippedWrongWeek++; continue; }
                 if (!match.odds) { skippedNoOdds++; continue; }
 
                 let homeProb: number;
@@ -138,7 +141,7 @@ export class RecommendedService {
                     });
                 }
             }
-            console.log(`[Recommended] ${config.label}: noOdds=${skippedNoOdds} noModel=${skippedNoModel} noEdge=${skippedNoEdge} added=${added}`);
+            console.log(`[Recommended] ${config.label}: wrongWeek=${skippedWrongWeek} noOdds=${skippedNoOdds} noModel=${skippedNoModel} noEdge=${skippedNoEdge} added=${added}`);
         }
 
         console.log(`[Recommended] łącznie kandydatów: ${candidates.length}`);
@@ -146,6 +149,22 @@ export class RecommendedService {
             .sort((a, b) => b.kellyFraction - a.kellyFraction)
             .slice(0, 10)
             .map((bet, i) => ({ ...bet, rank: i + 1 }));
+    }
+
+    private getCurrentWeekRange(): { start: Date; end: Date } {
+        const now = new Date();
+        const dayOfWeek = now.getDay(); // 0=niedziela, 1=pon, ..., 6=sob
+        const daysSinceMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+
+        const monday = new Date(now);
+        monday.setDate(now.getDate() - daysSinceMonday);
+        monday.setHours(0, 0, 0, 0);
+
+        const sunday = new Date(monday);
+        sunday.setDate(monday.getDate() + 6);
+        sunday.setHours(23, 59, 59, 999);
+
+        return { start: monday, end: sunday };
     }
 
     private noVigFromOdds(odds: { home: number; draw?: number; away: number }) {
