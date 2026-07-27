@@ -27,8 +27,9 @@ export interface RecommendedBet {
     bookmakerCount: number;
 }
 
-const MIN_EDGE = 0.025;   // minimum 2.5% edge to include
+const MIN_EDGE = 0.02;    // minimum 2% edge to include
 const MIN_KELLY = 0.005;  // minimum 0.5% Kelly
+const UPCOMING_WINDOW_DAYS = 8; // pokazuj mecze z najbliższych N dni (nie tylko bieżący tydzień kalendarzowy)
 
 export class RecommendedService {
     constructor(
@@ -38,9 +39,9 @@ export class RecommendedService {
 
     public async computeRecommended(cacheMap: Map<Sport, OddsCache>): Promise<RecommendedBet[]> {
         const candidates: Omit<RecommendedBet, 'rank'>[] = [];
-        const { start: weekStart, end: weekEnd } = this.getCurrentWeekRange();
+        const { start: weekStart, end: weekEnd } = this.getUpcomingRange();
 
-        console.log(`[Recommended] przetwarzam ${cacheMap.size} lig | tydzień: ${weekStart.toLocaleDateString('pl-PL')} – ${weekEnd.toLocaleDateString('pl-PL')}`);
+        console.log(`[Recommended] przetwarzam ${cacheMap.size} lig | okno: ${weekStart.toLocaleDateString('pl-PL')} – ${weekEnd.toLocaleDateString('pl-PL')}`);
 
         for (const [sport, cache] of cacheMap) {
             const config = SportConfig[sport];
@@ -151,20 +152,24 @@ export class RecommendedService {
             .map((bet, i) => ({ ...bet, rank: i + 1 }));
     }
 
-    private getCurrentWeekRange(): { start: Date; end: Date } {
+    /**
+     * Kroczące okno "nadchodzące mecze": od początku dzisiejszego dnia
+     * do końca dnia za UPCOMING_WINDOW_DAYS. Dzięki temu polecane bety
+     * łapią najbliższą kolejkę niezależnie od tego, który jest dziś dzień
+     * (stary filtr brał tylko bieżący tydzień kalendarzowy pon–niedz,
+     * przez co w środku tygodnia znikały mecze z przyszłego weekendu).
+     */
+    private getUpcomingRange(): { start: Date; end: Date } {
         const now = new Date();
-        const dayOfWeek = now.getDay(); // 0=niedziela, 1=pon, ..., 6=sob
-        const daysSinceMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
 
-        const monday = new Date(now);
-        monday.setDate(now.getDate() - daysSinceMonday);
-        monday.setHours(0, 0, 0, 0);
+        const start = new Date(now);
+        start.setHours(0, 0, 0, 0);
 
-        const sunday = new Date(monday);
-        sunday.setDate(monday.getDate() + 6);
-        sunday.setHours(23, 59, 59, 999);
+        const end = new Date(start);
+        end.setDate(start.getDate() + UPCOMING_WINDOW_DAYS);
+        end.setHours(23, 59, 59, 999);
 
-        return { start: monday, end: sunday };
+        return { start, end };
     }
 
     private noVigFromOdds(odds: { home: number; draw?: number; away: number }) {
