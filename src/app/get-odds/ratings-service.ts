@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as fs from 'fs';
 import * as path from 'path';
 import { Sport } from '../utils/enums/sport';
+import { NAME_MAP } from './team-names';
 
 export interface TeamStanding {
     teamName: string;
@@ -31,67 +32,7 @@ const ESPN_SOCCER: Partial<Record<Sport, string>> = {
 const CACHE_FILE = path.join(process.cwd(), 'ratings-cache.json');
 const CACHE_MAX_AGE_MS = 24 * 60 * 60 * 1000;
 
-// Team name normalization: ESPN → The-Odds-API
-const NAME_MAP: Record<string, string> = {
-    // Premier League
-    'Manchester City FC':         'Manchester City',
-    'Manchester United FC':       'Manchester United',
-    'Arsenal FC':                 'Arsenal',
-    'Liverpool FC':               'Liverpool',
-    'Chelsea FC':                 'Chelsea',
-    'Tottenham Hotspur':          'Tottenham Hotspur',
-    'Newcastle United FC':        'Newcastle United',
-    'Aston Villa FC':             'Aston Villa',
-    'Brighton & Hove Albion FC':  'Brighton and Hove Albion',
-    'West Ham United FC':         'West Ham United',
-    'Wolverhampton Wanderers FC': 'Wolverhampton Wanderers',
-    'Fulham FC':                  'Fulham',
-    'Crystal Palace FC':          'Crystal Palace',
-    'Brentford FC':               'Brentford',
-    'Nottingham Forest FC':       'Nottingham Forest',
-    'Everton FC':                 'Everton',
-    'Leicester City FC':          'Leicester City',
-    'Southampton FC':             'Southampton',
-    'Ipswich Town FC':            'Ipswich Town',
-    'AFC Bournemouth':            'Bournemouth',
-    // La Liga
-    'FC Barcelona':               'Barcelona',
-    'Real Madrid CF':             'Real Madrid',
-    'Club Atlético de Madrid':    'Atletico Madrid',
-    'Atletico de Madrid':         'Atletico Madrid',
-    'Real Sociedad de Fútbol':    'Real Sociedad',
-    'Athletic Club':              'Athletic Club Bilbao',
-    'Villarreal CF':              'Villarreal',
-    'Real Betis Balompié':        'Real Betis',
-    'Sevilla FC':                 'Sevilla',
-    'Valencia CF':                'Valencia',
-    'Celta de Vigo':              'Celta Vigo',
-    'Rayo Vallecano de Madrid':   'Rayo Vallecano',
-    'UD Las Palmas':              'Las Palmas',
-    'RCD Mallorca':               'Mallorca',
-    'RCD Espanyol de Barcelona':  'Espanyol',
-    'Deportivo Alavés':           'Alaves',
-    'Girona FC':                  'Girona',
-    'Getafe CF':                  'Getafe',
-    'UD Almería':                 'Almeria',
-    // Bundesliga
-    'FC Bayern München':          'Bayern Munich',
-    'Bayer 04 Leverkusen':        'Bayer Leverkusen',
-    'VfB Stuttgart':              'Stuttgart',
-    'SC Freiburg':                'Freiburg',
-    'TSG Hoffenheim':             'Hoffenheim',
-    'FSV Mainz 05':               'Mainz 05',
-    '1. FC Union Berlin':         'Union Berlin',
-    '1. FC Köln':                 'FC Koln',
-    'FC Augsburg':                'Augsburg',
-    'VfL Wolfsburg':              'Wolfsburg',
-    'SV Werder Bremen':           'Werder Bremen',
-    'Borussia Mönchengladbach':   'Borussia Monchengladbach',
-    'VfL Bochum 1848':            'Bochum',
-    'Darmstadt 98':               'Darmstadt',
-    'FC Heidenheim 1846':         'Heidenheim',
-    'SV Darmstadt 98':            'Darmstadt',
-};
+// Mapowanie nazw ESPN → The-Odds-API żyje teraz w team-names.ts (współdzielone).
 
 export class RatingsService {
     private cache: Map<Sport, StandingsCache> = new Map();

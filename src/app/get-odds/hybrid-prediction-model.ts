@@ -30,6 +30,13 @@ export class HybridPredictionModel extends PredictionModel {
     }
 
     /**
+     * Zasil ELO ratingami policzonymi z realnych wyników (PowerRankingService).
+     */
+    public setEloRatings(ratings: Map<string, number>): void {
+        this.elo.setRatings(ratings);
+    }
+
+    /**
      * Główna metoda - zwraca prawdopodobieństwo zwycięstwa drużyny domowej
      */
     public async getPredictionAsync(homeTeam: string, awayTeam: string): Promise<number | null> {

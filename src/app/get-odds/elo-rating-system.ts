@@ -9,65 +9,17 @@ export class EloRatingSystem {
     private homeFieldAdvantage = 65; // punkty ELO advantage dla domu
 
     constructor() {
-        this.initializeAllTeams();
+        // Bez hardkodu — ratingi wgrywane sa z realnych wynikow
+        // (PowerRankingService → setRatings). Nieznana druzyna = 1500.
     }
 
     /**
-     * Inicjalizuj wszystkie drużyny NFL z bazowymi ratingami
-     * Zaktualizuje się w trakcie sezonu
+     * Wgraj ratingi policzone z realnych wynikow (zastepuje poprzednie).
      */
-    private initializeAllTeams(): void {
-        // Sezon 2025 - startowe ratings (możesz zaktualizować)
-        const teams: Record<string, number> = {
-            // AFC East
-            'Kansas City Chiefs': 1680,
-            'Buffalo Bills': 1620,
-            'Miami Dolphins': 1560,
-            'New England Patriots': 1520,
-
-            // AFC North
-            'Baltimore Ravens': 1600,
-            'Cincinnati Bengals': 1580,
-            'Pittsburgh Steelers': 1550,
-            'Cleveland Browns': 1540,
-
-            // AFC South
-            'Houston Texans': 1570,
-            'Indianapolis Colts': 1530,
-            'Jacksonville Jaguars': 1510,
-            'Tennessee Titans': 1500,
-
-            // AFC West
-            'Los Angeles Chargers': 1550,
-            'Denver Broncos': 1540,
-            'Las Vegas Raiders': 1480,
-
-            // NFC East
-            'Philadelphia Eagles': 1650,
-            'Dallas Cowboys': 1620,
-            'Washington Commanders': 1540,
-            'New York Giants': 1500,
-
-            // NFC North
-            'Detroit Lions': 1640,
-            'Green Bay Packers': 1600,
-            'Minnesota Vikings': 1570,
-            'Chicago Bears': 1510,
-
-            // NFC South
-            'San Francisco 49ers': 1660,
-            'New Orleans Saints': 1560,
-            'Tampa Bay Buccaneers': 1550,
-            'Atlanta Falcons': 1480,
-
-            // NFC West
-            'Los Angeles Rams': 1580,
-            'Seattle Seahawks': 1520
-        };
-
-        Object.entries(teams).forEach(([team, rating]) => {
-            this.teamRatings.set(team, rating);
-        });
+    public setRatings(ratings: Map<string, number>): void {
+        if (!ratings || ratings.size === 0) return;
+        this.teamRatings = new Map(ratings);
+        console.log(`📊 ELO NFL zasilone realnymi wynikami: ${ratings.size} drużyn`);
     }
 
     /**

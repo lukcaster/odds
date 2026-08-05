@@ -21,6 +21,10 @@ apiKey=TWOJ_KLUCZ
 - **🎯 Polecane** – top zakłady z najbliższych 8 dni, posortowane wg Kelly.
   Podgląd trzech najlepszych widać od razu na ekranie głównym, pełną listę
   w zakładce *Polecane*. Bety liczone przy starcie serwera i codziennie o 3:00.
+- **📊 Power Ranking** – siła drużyn wg **ELO liczonego z realnych wyników**
+  (`ResultsService` dociąga zakończone mecze z ESPN, `EloEngine` przelicza ranking,
+  większa różnica bramek = większy ruch). Bez hardkodu. Użytkownicy mogą dać 👍/👎
+  do pozycji drużyny — to **sentyment społeczności obok algorytmu** (nie zmienia matmy).
 - **⚽ Graj** – wybór ligi i przegląd meczów z kursami + analiza po rozwinięciu.
 - **👤 Profil** – nick i bankroll (podstawa do wyliczenia kwoty zakładu).
 
