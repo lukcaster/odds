@@ -1,183 +1,163 @@
 import axios from 'axios';
+import * as dotenv from 'dotenv';
 import * as fs from 'fs';
 import * as path from 'path';
 import { Sport } from '../utils/enums/sport';
-import { normalizeTeamName } from './team-names';
+import { TeamStanding } from './ratings-service';
+
+dotenv.config();
 
 export interface MatchResult {
     id: string;
-    date: string;      // ISO
+    date: string;      // ISO (commence_time)
     home: string;
     away: string;
     homeScore: number;
     awayScore: number;
 }
 
+/**
+ * Policz tabelę ligową z listy wyników (GP/W/D/L/GF/GA/pkt).
+ * Nazwy drużyn = te same co w kursach (the-odds-api), więc SoccerPredictionModel
+ * dopasuje je dokładnie, bez fuzzy-matcha. Zastępuje tabelę z ESPN (403).
+ */
+export function standingsFromResults(results: MatchResult[]): TeamStanding[] {
+    const map = new Map<string, TeamStanding>();
+    const ensure = (name: string): TeamStanding => {
+        let t = map.get(name);
+        if (!t) {
+            t = { teamName: name, gamesPlayed: 0, wins: 0, draws: 0, losses: 0, goalsFor: 0, goalsAgainst: 0, points: 0 };
+            map.set(name, t);
+        }
+        return t;
+    };
+
+    for (const r of results) {
+        if (!r.home || !r.away) continue;
+        const h = ensure(r.home);
+        const a = ensure(r.away);
+        h.gamesPlayed++; a.gamesPlayed++;
+        h.goalsFor += r.homeScore; h.goalsAgainst += r.awayScore;
+        a.goalsFor += r.awayScore; a.goalsAgainst += r.homeScore;
+        if (r.homeScore > r.awayScore)      { h.wins++;  a.losses++; h.points += 3; }
+        else if (r.homeScore < r.awayScore) { a.wins++;  h.losses++; a.points += 3; }
+        else                                { h.draws++; a.draws++;  h.points++; a.points++; }
+    }
+
+    return Array.from(map.values());
+}
+
 interface ResultsCache {
     sport: Sport;
     matches: MatchResult[];
-    finalizedDays: string[];   // YYYYMMDD dni juz domkniete (nie refetchujemy)
     updatedAt: string;
 }
 
-// Sciezki ESPN per sport: {sportPath}/{leagueCode}
-const ESPN_PATH: Partial<Record<Sport, { sportPath: string; code: string }>> = {
-    [Sport.EKSTRAKLASA]:    { sportPath: 'soccer',   code: 'pol.1' },
-    [Sport.PREMIER_LEAGUE]: { sportPath: 'soccer',   code: 'eng.1' },
-    [Sport.LALIGA]:         { sportPath: 'soccer',   code: 'esp.1' },
-    [Sport.BUNDESLIGA]:     { sportPath: 'soccer',   code: 'ger.1' },
-    [Sport.NFL]:            { sportPath: 'football', code: 'nfl'   },
-};
+// Ligi obslugiwane przez the-odds-api /scores, dla ktorych liczymy ELO.
+const SUPPORTED = new Set<Sport>([
+    Sport.EKSTRAKLASA, Sport.PREMIER_LEAGUE, Sport.LALIGA, Sport.BUNDESLIGA, Sport.NFL,
+]);
 
 const CACHE_FILE = path.join(process.cwd(), 'results-cache.json');
 
-const HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-    'Accept': 'application/json, text/plain, */*',
-    'Accept-Language': 'en-US,en;q=0.9',
-    'Referer': 'https://www.espn.com/',
-    'Origin': 'https://www.espn.com',
-};
-
+/**
+ * Zrodlo wynikow: the-odds-api endpoint /scores.
+ * Zwraca wyniki z ostatnich ~3 dni (daysFrom max 3), wiec dociagamy je
+ * regularnie i AKUMULUJEMY na dysku, budujac pelna historie sezonu z czasem.
+ * Nazwy druzyn sa te same co w kursach (the-odds-api) — brak potrzeby mapowania.
+ */
 export class ResultsService {
     private cache: Map<Sport, ResultsCache> = new Map();
-    private debugLogged = new Set<Sport>();
+    private readonly apiKey: string;
+    private readonly baseUrl = 'https://api.the-odds-api.com/v4';
 
     constructor() {
+        this.apiKey = process.env.apiKey || '';
         this.loadFromDisk();
     }
 
     public isSupported(sport: Sport): boolean {
-        return !!ESPN_PATH[sport];
+        return SUPPORTED.has(sport);
     }
 
     public getResults(sport: Sport): MatchResult[] {
         return this.cache.get(sport)?.matches ?? [];
     }
 
+    /** Znacznik czasu ostatniego odswiezenia (ms epoch). 0 = brak danych. */
+    public updatedAtMs(sport: Sport): number {
+        const at = this.cache.get(sport)?.updatedAt;
+        return at ? new Date(at).getTime() : 0;
+    }
+
     /**
-     * Dociaga brakujace/najswiezsze dni i zwraca pelna liste wynikow sezonu.
-     * Dni z przeszlosci raz pobrane sa "domkniete" i pomijane przy kolejnych odswiezeniach.
+     * Dociaga swieze wyniki (ostatnie ~3 dni) i scala je z historia na dysku.
+     * Zwraca pelna, posortowana chronologicznie liste wynikow sezonu.
      */
     public async refresh(sport: Sport): Promise<MatchResult[]> {
-        const cfg = ESPN_PATH[sport];
-        if (!cfg) return [];
+        if (!SUPPORTED.has(sport)) return [];
+        if (!this.apiKey) {
+            console.warn('[Results] brak apiKey w .env — pomijam');
+            return this.getResults(sport);
+        }
 
         const existing = this.cache.get(sport)
-            ?? { sport, matches: [], finalizedDays: [], updatedAt: new Date().toISOString() };
+            ?? { sport, matches: [], updatedAt: new Date().toISOString() };
         const byId = new Map<string, MatchResult>(existing.matches.map(m => [m.id, m]));
-        const finalized = new Set<string>(existing.finalizedDays);
 
-        const todayKey = dayKey(new Date());
-        const yesterdayKey = dayKey(addDays(new Date(), -1));
-        const days = this.seasonDays(sport);
+        let added = 0;
+        try {
+            const response = await axios.get(`${this.baseUrl}/sports/${sport}/scores/`, {
+                params: { apiKey: this.apiKey, daysFrom: 3, dateFormat: 'iso' },
+            });
+            const remaining = response.headers['x-requests-remaining'];
 
-        let fetched = 0, added = 0;
-        for (const day of days) {
-            // Domkniete dni z przeszlosci pomijamy (dzis i wczoraj zawsze odswiezamy).
-            if (finalized.has(day) && day !== todayKey && day !== yesterdayKey) continue;
-
-            let events: any[];
-            try {
-                events = await this.fetchDay(sport, cfg.sportPath, cfg.code, day);
-                fetched++;
-            } catch (err: any) {
-                console.warn(`[Results] ${sport} ${day} blad: ${err?.message}`);
-                continue;
-            }
-
-            let dayHasEvents = false;
-            let allCompleted = true;
-            for (const ev of events) {
-                dayHasEvents = true;
-                const parsed = this.parseEvent(ev);
-                if (!parsed) { allCompleted = false; continue; }
+            for (const game of response.data ?? []) {
+                const parsed = this.parseGame(game);
+                if (!parsed) continue;
                 if (!byId.has(parsed.id)) added++;
-                byId.set(parsed.id, parsed);
+                byId.set(parsed.id, parsed);   // nadpisz — wynik moze sie douzupelnic
             }
-
-            // Dzien z przeszlosci, w ktorym wszystko juz zakonczone → domykamy.
-            if (day < todayKey && (!dayHasEvents || allCompleted)) finalized.add(day);
+            console.log(`[Results] ${sport}: +${added} nowych (pozostalo requestow: ${remaining})`);
+        } catch (err: any) {
+            console.warn(`[Results] ${sport} blad /scores: ${err?.response?.status ?? err?.message}`);
         }
 
         const matches = Array.from(byId.values())
             .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-        const record: ResultsCache = {
-            sport,
-            matches,
-            finalizedDays: Array.from(finalized),
-            updatedAt: new Date().toISOString(),
-        };
+        const record: ResultsCache = { sport, matches, updatedAt: new Date().toISOString() };
         this.cache.set(sport, record);
         this.saveToDisk();
-        console.log(`[Results] ${sport}: dni pobrane=${fetched}, nowych meczow=${added}, lacznie=${matches.length}`);
         return matches;
     }
 
-    private async fetchDay(sport: Sport, sportPath: string, code: string, day: string): Promise<any[]> {
-        const url = `https://site.api.espn.com/apis/site/v2/sports/${sportPath}/${code}/scoreboard?dates=${day}`;
-        const r = await axios.get(url, { timeout: 8000, headers: HEADERS });
-        const data = r.data ?? {};
+    private parseGame(game: any): MatchResult | null {
+        if (!game || game.completed !== true) return null;
+        const scores: any[] = game.scores;
+        if (!Array.isArray(scores) || scores.length < 2) return null;
 
-        if (!this.debugLogged.has(sport)) {
-            this.debugLogged.add(sport);
-            console.log(`[Results] ${sport} raw top-level keys: ${Object.keys(data).join(', ')}`);
-        }
+        const home = game.home_team;
+        const away = game.away_team;
+        if (!home || !away) return null;
 
-        return Array.isArray(data.events) ? data.events : [];
-    }
-
-    private parseEvent(ev: any): MatchResult | null {
-        const comp = ev?.competitions?.[0];
-        if (!comp) return null;
-
-        const completed =
-            comp?.status?.type?.completed === true ||
-            ev?.status?.type?.completed === true ||
-            comp?.status?.type?.state === 'post';
-        if (!completed) return null;
-
-        const competitors: any[] = comp.competitors ?? [];
-        const homeC = competitors.find(c => c.homeAway === 'home');
-        const awayC = competitors.find(c => c.homeAway === 'away');
-        if (!homeC || !awayC) return null;
-
-        const home = homeC?.team?.displayName ?? homeC?.team?.name;
-        const away = awayC?.team?.displayName ?? awayC?.team?.name;
-        const hs = Number(homeC?.score);
-        const as = Number(awayC?.score);
-        if (!home || !away || !Number.isFinite(hs) || !Number.isFinite(as)) return null;
+        const findScore = (team: string): number => {
+            const s = scores.find(x => x?.name === team);
+            const n = Number(s?.score);
+            return Number.isFinite(n) ? n : NaN;
+        };
+        const hs = findScore(home);
+        const as = findScore(away);
+        if (!Number.isFinite(hs) || !Number.isFinite(as)) return null;
 
         return {
-            id: String(ev.id),
-            date: ev.date ?? comp.date ?? new Date().toISOString(),
-            home: normalizeTeamName(home),
-            away: normalizeTeamName(away),
+            id: String(game.id),
+            date: game.commence_time ?? new Date().toISOString(),
+            home,
+            away,
             homeScore: hs,
             awayScore: as,
         };
-    }
-
-    /** Lista dni YYYYMMDD od poczatku sezonu do dzis. */
-    private seasonDays(sport: Sport): string[] {
-        const start = this.seasonStart(sport);
-        const today = new Date();
-        const out: string[] = [];
-        for (let d = new Date(start); d <= today; d = addDays(d, 1)) {
-            out.push(dayKey(d));
-        }
-        return out;
-    }
-
-    private seasonStart(sport: Sport): Date {
-        const now = new Date();
-        const year = now.getFullYear();
-        // Pilka: sezon startuje ~lipiec; NFL ~sierpien/wrzesien.
-        const startMonth = sport === Sport.NFL ? 7 /*sierpien*/ : 6 /*lipiec*/;
-        const s = new Date(year, startMonth, 1);
-        if (s > now) s.setFullYear(year - 1);
-        return s;
     }
 
     private loadFromDisk(): void {
@@ -197,17 +177,4 @@ export class ResultsService {
             console.warn('[Results] nie udalo sie zapisac cache:', err);
         }
     }
-}
-
-function dayKey(d: Date): string {
-    const y = d.getFullYear();
-    const m = String(d.getMonth() + 1).padStart(2, '0');
-    const day = String(d.getDate()).padStart(2, '0');
-    return `${y}${m}${day}`;
-}
-
-function addDays(d: Date, n: number): Date {
-    const r = new Date(d);
-    r.setDate(r.getDate() + n);
-    return r;
 }

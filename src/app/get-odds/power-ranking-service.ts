@@ -30,14 +30,42 @@ export class PowerRankingService {
         this.loadSentiment();
     }
 
+    private readonly maxAgeMs = 6 * 60 * 60 * 1000; // 6h — próg swiezosci
+
     public isSupported(sport: Sport): boolean {
         return this.resultsService.isSupported(sport);
     }
 
+    /** Zbuduj rankingi z danych JUŻ na dysku — bez sieci, zero kredytow. */
+    public primeFromDisk(sports: Sport[]): void {
+        for (const sport of sports) {
+            if (this.resultsService.isSupported(sport)) this.buildEngine(sport);
+        }
+    }
+
+    /**
+     * Zapewnij swieze dane dla ligi: dociagnij z /scores tylko gdy brak danych
+     * lub cache starszy niz prog (on-demand, oszczedza kredyty), potem przelicz.
+     */
+    public async ensureFresh(sport: Sport): Promise<void> {
+        if (!this.resultsService.isSupported(sport)) return;
+        const empty = this.resultsService.getResults(sport).length === 0;
+        const age = Date.now() - this.resultsService.updatedAtMs(sport);
+        if (empty || age > this.maxAgeMs) {
+            await this.resultsService.refresh(sport);
+        }
+        this.buildEngine(sport);
+    }
+
+    /** Wymus dociagniecie i przeliczenie (np. przycisk ↻). */
     public async refresh(sport: Sport): Promise<void> {
         if (!this.resultsService.isSupported(sport)) return;
+        await this.resultsService.refresh(sport);
+        this.buildEngine(sport);
+    }
 
-        const results = await this.resultsService.refresh(sport);
+    private buildEngine(sport: Sport): void {
+        const results = this.resultsService.getResults(sport);
         const engine = new EloEngine();
         engine.rebuild(results);
         this.engines.set(sport, engine);
@@ -55,16 +83,6 @@ export class PowerRankingService {
             teams,
         });
         console.log(`[PowerRanking] ${sport}: ${teams.length} druzyn z ${results.length} meczow`);
-    }
-
-    public async refreshAll(sports: Sport[]): Promise<void> {
-        for (const sport of sports) {
-            try {
-                await this.refresh(sport);
-            } catch (err: any) {
-                console.error(`[PowerRanking] blad dla ${sport}: ${err?.message}`);
-            }
-        }
     }
 
     public getRanking(sport: Sport): PowerRanking | null {

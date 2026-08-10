@@ -34,11 +34,11 @@ export class DashboardServer {
         this.predictionModel = new HybridPredictionModel();
         this.oddsService = new OddsService();
         this.ratingsService = new RatingsService();
-        this.soccerModel = new SoccerPredictionModel(this.ratingsService);
-        this.recommendedService = new RecommendedService(this.predictionModel, this.soccerModel);
-        this.matchAnalysisService = new MatchAnalysisService(this.soccerModel, this.predictionModel);
         this.resultsService = new ResultsService();
         this.powerRankingService = new PowerRankingService(this.resultsService);
+        this.soccerModel = new SoccerPredictionModel(this.ratingsService, this.resultsService);
+        this.recommendedService = new RecommendedService(this.predictionModel, this.soccerModel);
+        this.matchAnalysisService = new MatchAnalysisService(this.soccerModel, this.predictionModel);
         this.setupMiddleware();
         this.setupRoutes();
     }
@@ -240,15 +240,27 @@ export class DashboardServer {
             res.json(this.recommendedBets);
         });
 
-        // Power ranking (ELO z realnych wynikow) dla ligi
-        this.app.get('/api/power-ranking', (req: Request, res: Response) => {
+        // Power ranking (ELO z realnych wynikow) dla ligi — on-demand refresh
+        this.app.get('/api/power-ranking', async (req: Request, res: Response) => {
             const league = String(req.query.league ?? '');
             const sport = LEAGUE_KEY_TO_SPORT[league];
             if (!sport) return res.status(400).json({ error: `Nieznana liga: ${league}` });
-            const ranking = this.powerRankingService.getRanking(sport);
-            if (!ranking) {
+            if (!this.powerRankingService.isSupported(sport)) {
                 return res.json({ league, sport, updatedAt: null, matchesUsed: 0, teams: [] });
             }
+            const force = req.query.force === '1';
+            try {
+                if (force) await this.powerRankingService.refresh(sport);
+                else       await this.powerRankingService.ensureFresh(sport);
+                // Jesli to NFL — zasil model predykcji swiezym ELO.
+                if (sport === Sport.NFL) {
+                    this.predictionModel.setEloRatings(this.powerRankingService.ratingsMap(Sport.NFL));
+                }
+            } catch (err: any) {
+                console.warn('[PowerRanking] ensureFresh blad:', err?.message);
+            }
+            const ranking = this.powerRankingService.getRanking(sport)
+                ?? { league, sport, updatedAt: null, matchesUsed: 0, teams: [] };
             res.json(ranking);
         });
 
@@ -321,7 +333,7 @@ export class DashboardServer {
         await this.ratingsService.refreshAll([
             Sport.PREMIER_LEAGUE, Sport.LALIGA, Sport.BUNDESLIGA, Sport.EKSTRAKLASA
         ]);
-        await this.computePowerRankings();
+        this.computePowerRankings();
         await this.computeRecommendedBets();
         console.log('[Cron] gotowe');
     }
@@ -352,17 +364,18 @@ export class DashboardServer {
             console.log('[Startup] Kursy świeże — pomijam fetch.');
         }
 
-        await this.computePowerRankings();
+        this.computePowerRankings();
         await this.computeRecommendedBets();
     }
 
-    private async computePowerRankings(): Promise<void> {
+    private computePowerRankings(): void {
         try {
-            console.log('[PowerRanking] przeliczanie rankingow ELO z wynikow...');
-            await this.powerRankingService.refreshAll(this.powerSports);
+            // Buduj rankingi z danych na dysku — bez sieci (kredyty oszczedzamy;
+            // swieze wyniki dociagane sa on-demand przy otwarciu zakladki ligi).
+            console.log('[PowerRanking] budowanie rankingow ELO z cache na dysku...');
+            this.powerRankingService.primeFromDisk(this.powerSports);
             // Zasil model NFL realnym ELO (zamiast dawnego hardkodu).
-            const nflRatings = this.powerRankingService.ratingsMap(Sport.NFL);
-            this.predictionModel.setEloRatings(nflRatings);
+            this.predictionModel.setEloRatings(this.powerRankingService.ratingsMap(Sport.NFL));
         } catch (err) {
             console.error('[PowerRanking] blad:', err);
         }

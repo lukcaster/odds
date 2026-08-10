@@ -1,4 +1,5 @@
 import { RatingsService, TeamStanding } from './ratings-service';
+import { ResultsService, standingsFromResults } from './results-service';
 import { Sport } from '../utils/enums/sport';
 
 export interface SoccerPrediction {
@@ -34,13 +35,33 @@ export function isSoccerSport(sport: Sport): boolean {
 }
 
 export class SoccerPredictionModel {
-    constructor(private ratingsService: RatingsService) {}
+    constructor(
+        private ratingsService: RatingsService,
+        private resultsService?: ResultsService
+    ) {}
+
+    /**
+     * Zwróć tabelę: najpierw policzoną z wyników /scores (na dysku),
+     * a jak brak danych — fallback do ESPN (który obecnie i tak daje 403).
+     */
+    private async getStandings(sport: Sport): Promise<TeamStanding[]> {
+        const results = this.resultsService?.getResults(sport) ?? [];
+        if (results.length) {
+            const fromResults = standingsFromResults(results);
+            if (fromResults.length) return fromResults;
+        }
+        try {
+            return await this.ratingsService.getStandings(sport);
+        } catch {
+            return [];
+        }
+    }
 
     public async predict(homeTeam: string, awayTeam: string, sport: Sport): Promise<SoccerPrediction | null> {
         if (!isSoccerSport(sport)) return null;
 
         try {
-            const standings = await this.ratingsService.getStandings(sport);
+            const standings = await this.getStandings(sport);
             if (!standings.length) return null;
 
             const avgHomeGoals = AVG_HOME_GOALS[sport] ?? 1.35;
@@ -50,8 +71,17 @@ export class SoccerPredictionModel {
             const away = this.findTeam(awayTeam, standings);
 
             if (!home || !away) {
-                console.warn(`[Soccer] team not found: ${!home ? homeTeam : awayTeam} — używam neutral`);
-                return this.neutralPrediction(avgHomeGoals, avgAwayGoals);
+                // Nazwy zgadzają się z kursami, więc brak drużyny = brak jej wyników.
+                // Nie fabrykujemy predykcji — oddajemy głos rynkowi (consensus).
+                console.log(`[Soccer] brak wyników dla: ${!home ? homeTeam : awayTeam} — oddaję rynkowi`);
+                return null;
+            }
+
+            // Za mało meczów = model niewiarygodny (przeceniony). Oddaj głos rynkowi.
+            const MIN_GAMES = 3;
+            if (home.gamesPlayed < MIN_GAMES || away.gamesPlayed < MIN_GAMES) {
+                console.log(`[Soccer] ${homeTeam}(${home.gamesPlayed}) vs ${awayTeam}(${away.gamesPlayed}): za mało meczów — oddaję rynkowi (consensus)`);
+                return null;
             }
 
             // Compute league averages for attack/defense index

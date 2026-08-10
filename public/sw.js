@@ -1,9 +1,8 @@
-const CACHE = 'odds-v2';
+const CACHE = 'odds-v3';
+const ASSETS = ['/', '/index.html', '/icon.svg'];
 
 self.addEventListener('install', e => {
-    e.waitUntil(
-        caches.open(CACHE).then(c => c.addAll(['/', '/index.html', '/icon.svg']))
-    );
+    e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
     self.skipWaiting();
 });
 
@@ -17,10 +16,25 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
-    // API calls zawsze z sieci (live kursy)
-    if (e.request.url.includes('/api/')) return;
+    const req = e.request;
 
-    e.respondWith(
-        caches.match(e.request).then(cached => cached || fetch(e.request))
-    );
+    // API calls zawsze z sieci (live kursy / ranking / sentyment)
+    if (req.url.includes('/api/')) return;
+
+    // HTML / nawigacja → network-first, żeby nowa wersja apki od razu się pojawiała
+    const isDoc = req.mode === 'navigate' || req.destination === 'document';
+    if (isDoc) {
+        e.respondWith(
+            fetch(req)
+                .then(res => {
+                    caches.open(CACHE).then(c => c.put('/index.html', res.clone()));
+                    return res;
+                })
+                .catch(() => caches.match('/index.html').then(r => r || caches.match('/')))
+        );
+        return;
+    }
+
+    // Reszta (ikony itp.) → cache-first
+    e.respondWith(caches.match(req).then(cached => cached || fetch(req)));
 });

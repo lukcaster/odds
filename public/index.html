@@ -900,7 +900,7 @@
             <div class="header-title">📊 Power Ranking</div>
             <div class="header-sub" id="powerSub">Siła drużyn wg ELO</div>
         </div>
-        <button class="header-action-btn" id="powerRefreshBtn" onclick="loadPowerRanking()">↻</button>
+        <button class="header-action-btn" id="powerRefreshBtn" onclick="loadPowerRanking(true)">↻</button>
     </div>
     <div class="power-tabs" id="powerTabs"></div>
     <div class="power-body" id="powerBody">
@@ -1739,13 +1739,14 @@ function selectPowerLeague(key) {
     initPowerScreen();
 }
 
-async function loadPowerRanking() {
+async function loadPowerRanking(force) {
     const body = document.getElementById('powerBody');
     const btn  = document.getElementById('powerRefreshBtn');
     body.innerHTML = '<div class="state-box"><div class="spinner"></div><p>Ładowanie...</p></div>';
     if (btn) btn.disabled = true;
     try {
-        const res  = await fetch(`${API}/api/power-ranking?league=${powerLeague}`);
+        const qs   = `league=${powerLeague}${force ? '&force=1' : ''}`;
+        const res  = await fetch(`${API}/api/power-ranking?${qs}`);
         const data = await res.json();
         renderPowerRanking(data);
     } catch {
