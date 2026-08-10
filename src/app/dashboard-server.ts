@@ -326,24 +326,17 @@ export class DashboardServer {
         for (const sport of Object.values(Sport)) {
             try {
                 await this.oddsService.refreshOdds(sport);
-            } catch (err) {
-                console.error(`[Cron] błąd kursów dla ${sport}:`, err);
+            } catch (err: any) {
+                console.error(`[Cron] błąd kursów dla ${sport}: ${err?.response?.status ?? ''} ${err?.response?.data?.message ?? err?.message}`);
             }
         }
-        await this.ratingsService.refreshAll([
-            Sport.PREMIER_LEAGUE, Sport.LALIGA, Sport.BUNDESLIGA, Sport.EKSTRAKLASA
-        ]);
         this.computePowerRankings();
         await this.computeRecommendedBets();
         console.log('[Cron] gotowe');
     }
 
     private async initOnStartup(): Promise<void> {
-        // Ratings are free (ESPN, no rate limit) — always refresh on startup
-        await this.ratingsService.refreshAll([
-            Sport.PREMIER_LEAGUE, Sport.LALIGA, Sport.BUNDESLIGA, Sport.EKSTRAKLASA
-        ]);
-
+        // Standings liczymy z wyników (/scores + backfill), nie z ESPN (403).
         const caches = this.oddsService.getAllCaches();
         const twelveHoursAgo = Date.now() - 12 * 60 * 60 * 1000;
 
@@ -356,8 +349,8 @@ export class DashboardServer {
         if (needsOddsRefresh) {
             console.log('[Startup] Odświeżam kursy (brak cache / stary format / >12h)...');
             for (const sport of Object.values(Sport)) {
-                try { await this.oddsService.refreshOdds(sport); } catch (err) {
-                    console.error(`[Startup] błąd kursów dla ${sport}:`, err);
+                try { await this.oddsService.refreshOdds(sport); } catch (err: any) {
+                    console.error(`[Startup] błąd kursów dla ${sport}: ${err?.response?.status ?? ''} ${err?.response?.data?.message ?? err?.message}`);
                 }
             }
         } else {

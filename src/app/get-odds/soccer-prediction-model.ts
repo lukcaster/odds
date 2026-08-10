@@ -41,20 +41,12 @@ export class SoccerPredictionModel {
     ) {}
 
     /**
-     * Zwróć tabelę: najpierw policzoną z wyników /scores (na dysku),
-     * a jak brak danych — fallback do ESPN (który obecnie i tak daje 403).
+     * Tabela liczona z wyników (/scores + backfill). ESPN wypadło (403),
+     * więc brak wyników = pusta tabela → predict() odda głos rynkowi.
      */
     private async getStandings(sport: Sport): Promise<TeamStanding[]> {
         const results = this.resultsService?.getResults(sport) ?? [];
-        if (results.length) {
-            const fromResults = standingsFromResults(results);
-            if (fromResults.length) return fromResults;
-        }
-        try {
-            return await this.ratingsService.getStandings(sport);
-        } catch {
-            return [];
-        }
+        return results.length ? standingsFromResults(results) : [];
     }
 
     public async predict(homeTeam: string, awayTeam: string, sport: Sport): Promise<SoccerPrediction | null> {

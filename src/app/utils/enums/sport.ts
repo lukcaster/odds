@@ -4,7 +4,7 @@ export enum Sport {
     NBA            = 'basketball_nba',
     EKSTRAKLASA    = 'soccer_poland_ekstraklasa',
     LALIGA         = 'soccer_spain_la_liga',
-    PREMIER_LEAGUE = 'soccer_england_premier_league',
+    PREMIER_LEAGUE = 'soccer_epl',
     BUNDESLIGA     = 'soccer_germany_bundesliga'
 }
 

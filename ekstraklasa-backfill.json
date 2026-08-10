@@ -1,0 +1,100 @@
+[
+  {
+    "date": "2026-07-24",
+    "home": "Pogoń Szczecin",
+    "away": "Legia Warszawa",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-07-24",
+    "home": "Radomiak Radom",
+    "away": "Wieczysta Kraków",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-07-25",
+    "home": "Jagiellonia Białystok",
+    "away": "Korona Kielce",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-07-25",
+    "home": "Górnik Zabrze",
+    "away": "Śląsk Wrocław",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-07-25",
+    "home": "Lech Poznań",
+    "away": "Cracovia Kraków",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-07-26",
+    "home": "Wisła Kraków",
+    "away": "GKS Katowice",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-07-26",
+    "home": "Raków Częstochowa",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-07-26",
+    "home": "Widzew Łódź",
+    "away": "Motor Lublin",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-07-27",
+    "home": "Zagłębie Lubin",
+    "away": "Piast Gliwice",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-07-31",
+    "home": "Wisła Płock",
+    "away": "Widzew Łódź",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-07-31",
+    "home": "Motor Lublin",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-08-01",
+    "home": "Piast Gliwice",
+    "away": "Wisła Kraków",
+    "homeScore": 4,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-08-01",
+    "home": "Wieczysta Kraków",
+    "away": "Lech Poznań",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-08-02",
+    "home": "Śląsk Wrocław",
+    "away": "Raków Częstochowa",
+    "homeScore": 2,
+    "awayScore": 1
+  }
+]
