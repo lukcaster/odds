@@ -239,21 +239,40 @@
         .league-tile-sport { font-size: 22px; line-height: 1; }
         .league-tile-name  { font-size: 13px; font-weight: 700; color: var(--text); text-align: center; line-height: 1.3; }
 
-        /* ── Recommended preview na menu ── */
-        .menu-rec { display: flex; flex-direction: column; gap: 12px; margin-bottom: 4px; }
-        .menu-rec:empty { display: none; }
-        .menu-rec-head {
-            display: flex; align-items: baseline; justify-content: space-between;
-            padding: 0 2px 2px;
+        /* ── Dashboard (podsumowanie na ekranie głównym) ── */
+        .dash { display: flex; flex-direction: column; gap: 12px; margin-bottom: 6px; }
+        .dash-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .dash-stat {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 16px; padding: 12px 14px;
         }
-        .menu-rec-title { font-size: 15px; font-weight: 800; color: var(--text); }
-        .menu-rec-title small { font-weight: 600; color: var(--text-dim); font-size: 12px; }
-        .menu-rec-all {
-            background: none; border: none; cursor: pointer;
-            color: var(--primary); font-size: 13px; font-weight: 700; padding: 4px;
+        .dash-stat-val { font-size: 24px; font-weight: 800; color: var(--text); line-height: 1.1; }
+        .dash-stat-val.pos { color: #2e7d32; } .dash-stat-val.neg { color: #c62828; }
+        .dash-stat-lbl { font-size: 11px; color: var(--text-dim); margin-top: 3px; text-transform: uppercase; letter-spacing: .4px; }
+        .dash-stat-sub { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+
+        .dash-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: 16px; padding: 14px;
         }
-        .menu-rec-all:active { opacity: 0.6; }
-        .menu-rec-hint { text-align: center; color: var(--text-dim); font-size: 12px; padding: 4px 0 2px; }
+        .dash-card-title { font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 8px; display: flex; justify-content: space-between; align-items: baseline; }
+        .dash-card-title small { font-weight: 600; color: var(--text-dim); font-size: 11px; }
+        .dash-chart { width: 100%; height: 120px; display: block; }
+        .dash-empty { text-align: center; color: var(--text-dim); font-size: 13px; line-height: 1.6; padding: 18px 8px; }
+        .dash-pending-note { font-size: 11px; color: var(--text-dim); text-align: center; }
+
+        /* przyciski rozstrzygania w historii */
+        .hist-settle { display: flex; gap: 6px; margin-top: 8px; }
+        .hist-settle button {
+            border: 1px solid var(--border); background: var(--bg); border-radius: 8px;
+            font-size: 12px; font-weight: 700; padding: 4px 10px; cursor: pointer; color: var(--text-dim);
+        }
+        .hist-settle button.won.on { background: #e8f5e9; border-color: #2e7d32; color: #2e7d32; }
+        .hist-settle button.lost.on { background: #ffebee; border-color: #c62828; color: #c62828; }
+        .hist-badge { font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+        .hist-badge.won { background: #e8f5e9; color: #2e7d32; }
+        .hist-badge.lost { background: #ffebee; color: #c62828; }
+        .hist-badge.pending { background: rgba(96,125,139,0.12); color: var(--text-dim); }
 
         /* ── Power ranking screen ── */
         .power-tabs {
@@ -346,6 +365,11 @@
             border-radius: 10px; padding: 6px 12px;
             font-size: 13px; font-weight: 700; color: var(--primary-dark);
             margin-bottom: 12px;
+        }
+        .rec-dc-note {
+            font-size: 11px; color: #9a3412; background: #fff7ed;
+            border: 1px solid #fed7aa; border-radius: 8px;
+            padding: 6px 9px; margin: -4px 0 12px; line-height: 1.4;
         }
 
         .rec-stats {
@@ -766,13 +790,12 @@
     </div>
     <div class="menu-body">
         <div class="menu-greeting">
-            <div class="menu-greeting-hello">Witaj z powrotem,</div>
+            <div class="menu-greeting-hello">Cześć,</div>
             <div class="menu-greeting-name" id="greetingName">—</div>
-            <div class="menu-greeting-sub">Co chcesz dziś zrobić?</div>
         </div>
 
-        <!-- Polecane bety — podgląd na górze menu -->
-        <div class="menu-rec" id="menuRecommended"></div>
+        <!-- Dashboard — podsumowanie zakładów -->
+        <div class="dash" id="dashboard"></div>
 
         <button class="menu-card" onclick="showScreen('screen-recommended')">
             <div class="menu-card-icon">🎯</div>
@@ -1042,6 +1065,15 @@ const nflPredictions = {};
 // ── Profile ────────────────────────────────────────────────
 function loadProfile() {
     try { state.profile = JSON.parse(localStorage.getItem('profile')); } catch {}
+    // Migracja starszych zakładów: brakujące id / result
+    if (state.profile?.history?.length) {
+        let changed = false;
+        for (const b of state.profile.history) {
+            if (!b.id)     { b.id = `${new Date(b.date).getTime() || Date.now()}-${Math.random().toString(36).slice(2, 7)}`; changed = true; }
+            if (!b.result) { b.result = 'pending'; changed = true; }
+        }
+        if (changed) persistProfile();
+    }
 }
 
 function saveProfileFirst() {
@@ -1093,7 +1125,8 @@ function showScreen(id) {
         loadRecommended();
     }
     if (id === 'screen-menu') {
-        loadMenuRecommended();
+        renderDashboard();
+        settlePendingBets();
     }
     if (id === 'screen-power') {
         initPowerScreen();
@@ -1456,14 +1489,18 @@ function saveBet() {
     const hasValue = state.userProb > implied && kelly > 0;
 
     const bet = {
+        id:       `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
         date:     new Date().toISOString(),
         league:   state.league,
         match:    `${state.currentMatch.homeTeam} vs ${state.currentMatch.awayTeam}`,
+        home:     state.currentMatch.homeTeam,
+        away:     state.currentMatch.awayTeam,
         outcome:  type,
         odds,
         userProb: state.userProb,
         betAmt,
-        hasValue
+        hasValue,
+        result:   'pending'
     };
 
     state.profile.history = [bet, ...(state.profile.history || [])].slice(0, 50);
@@ -1480,17 +1517,29 @@ function renderHistory() {
         return;
     }
     const outcomeLabel = { home: '1', away: '2', draw: 'X' };
+    const badge = { won: '✓ wygrany', lost: '✗ przegrany', pending: '⏳ oczekuje' };
     list.innerHTML = history.map(bet => {
         const date = new Date(bet.date).toLocaleDateString('pl-PL',
             { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
         const leagueName = LEAGUES.find(l => l.key === bet.league)?.label || bet.league;
+        const isBet = bet.betAmt > 0;
+        const r = bet.result || 'pending';
+        const score = (bet.homeScore != null && bet.awayScore != null) ? ` · ${bet.homeScore}:${bet.awayScore}` : '';
         return `
         <div class="history-item">
             <div class="history-item-row">
                 <div class="history-item-match">${bet.match}</div>
-                <div class="history-item-amount">${bet.betAmt > 0 ? bet.betAmt + ' PLN' : 'PASS'}</div>
+                <div class="history-item-amount">${isBet ? bet.betAmt + ' PLN' : 'PASS'}</div>
             </div>
-            <div class="history-item-meta">${leagueName} · ${date} · wynik: ${outcomeLabel[bet.outcome] || bet.outcome} · kurs ${bet.odds?.toFixed(2)}</div>
+            <div class="history-item-meta">${leagueName} · ${date} · typ: ${outcomeLabel[bet.outcome] || bet.outcome} · kurs ${bet.odds?.toFixed(2)}${score}</div>
+            ${isBet ? `
+            <div class="history-item-row" style="margin-top:8px;align-items:center">
+                <span class="hist-badge ${r}">${badge[r]}</span>
+                <div class="hist-settle">
+                    <button class="won ${r === 'won' ? 'on' : ''}"  onclick="setBetResult('${bet.id}','won')">wygrany</button>
+                    <button class="lost ${r === 'lost' ? 'on' : ''}" onclick="setBetResult('${bet.id}','lost')">przegrany</button>
+                </div>
+            </div>` : ''}
         </div>`;
     }).join('');
 }
@@ -1552,7 +1601,7 @@ function renderRecommended(bets) {
 
 function buildRecCardsHtml(bets) {
     const rankClass = r => r === 1 ? 'top1' : r === 2 ? 'top2' : r === 3 ? 'top3' : '';
-    const outcomeIcon = t => t === 'home' ? '🏠' : t === 'away' ? '✈️' : '🤝';
+    const outcomeIcon = t => ({ home:'🏠', away:'✈️', draw:'🤝', '1X':'🛡️', '12':'🛡️', 'X2':'🛡️' })[t] || '🎯';
 
     let html = '';
 
@@ -1581,10 +1630,11 @@ function buildRecCardsHtml(bets) {
             <div class="rec-pick">
                 ${outcomeIcon(bet.outcomeType)} Typuj: <strong>${bet.outcomeLabel}</strong>
             </div>
+            ${bet.estimatedOdds ? `<div class="rec-dc-note">🛡️ Double chance — kurs szacowany z 1X2 (konserwatywnie). Sprawdź realny kurs „double chance" u buka.</div>` : ''}
             <div class="rec-stats">
                 <div class="rec-stat">
-                    <div class="rec-stat-lbl">Kurs</div>
-                    <div class="rec-stat-val">${bet.odds.toFixed(2)}</div>
+                    <div class="rec-stat-lbl">Kurs${bet.estimatedOdds ? ' (szac.)' : ''}</div>
+                    <div class="rec-stat-val">${bet.estimatedOdds ? '~' : ''}${bet.odds.toFixed(2)}</div>
                 </div>
                 <div class="rec-stat">
                     <div class="rec-stat-lbl">Szansa wg buka</div>
@@ -1616,35 +1666,143 @@ function buildRecCardsHtml(bets) {
     return html;
 }
 
-// ── Podgląd polecanych na ekranie głównym ──────────────────
-async function loadMenuRecommended() {
-    const box = document.getElementById('menuRecommended');
-    if (!box) return;
-    box.innerHTML = '<div class="menu-rec-hint">Ładowanie polecanych…</div>';
+// ── Dashboard (podsumowanie na ekranie głównym) ─────────────
+function betHomeAway(bet) {
+    if (bet.home && bet.away) return { home: bet.home, away: bet.away };
+    const parts = (bet.match || '').split(' vs ');
+    return { home: parts[0] || '', away: parts[1] || '' };
+}
+
+function computeStats(history) {
+    const placed  = history.filter(b => b.betAmt > 0);
+    const settled = placed.filter(b => b.result === 'won' || b.result === 'lost');
+    const wins    = settled.filter(b => b.result === 'won');
+    const staked  = settled.reduce((s, b) => s + b.betAmt, 0);
+    const profit  = settled.reduce((s, b) =>
+        s + (b.result === 'won' ? b.betAmt * (b.odds - 1) : -b.betAmt), 0);
+    return {
+        placedCount:  placed.length,
+        settledCount: settled.length,
+        winsCount:    wins.length,
+        pendingCount: placed.length - settled.length,
+        winRate:      settled.length ? (wins.length / settled.length) * 100 : 0,
+        staked,
+        profit,
+        roi:          staked > 0 ? (profit / staked) * 100 : 0,
+    };
+}
+
+function renderDashboard() {
+    const el = document.getElementById('dashboard');
+    if (!el) return;
+    const history = state.profile?.history || [];
+    const s = computeStats(history);
+
+    if (!s.placedCount) {
+        el.innerHTML = `<div class="dash-card"><div class="dash-empty">
+            📊 Brak zakładów.<br>Kliknij <strong>Graj</strong> i postaw pierwszy —
+            statystyki pojawią się tutaj.</div></div>`;
+        return;
+    }
+
+    const money = v => (v >= 0 ? '+' : '') + Math.round(v).toLocaleString('pl-PL') + ' zł';
+    const cls   = v => v > 0 ? 'pos' : v < 0 ? 'neg' : '';
+
+    // Wykres: skumulowany zysk po kolejnych rozstrzygniętych zakładach (chronologicznie)
+    const settledChrono = history
+        .filter(b => b.betAmt > 0 && (b.result === 'won' || b.result === 'lost'))
+        .sort((a, b) => new Date(a.date) - new Date(b.date));
+    let run = 0;
+    const cumulative = settledChrono.map(b => (run += (b.result === 'won' ? b.betAmt * (b.odds - 1) : -b.betAmt)));
+
+    el.innerHTML = `
+        <div class="dash-stats">
+            <div class="dash-stat">
+                <div class="dash-stat-val">${s.placedCount}</div>
+                <div class="dash-stat-lbl">Postawione</div>
+                <div class="dash-stat-sub">${s.pendingCount} oczekuje · ${s.settledCount} rozstrzygnięte</div>
+            </div>
+            <div class="dash-stat">
+                <div class="dash-stat-val">${s.winsCount}<span style="font-size:14px;color:var(--text-dim)">/${s.settledCount}</span></div>
+                <div class="dash-stat-lbl">Wygrane</div>
+                <div class="dash-stat-sub">win rate ${s.winRate.toFixed(0)}%</div>
+            </div>
+            <div class="dash-stat">
+                <div class="dash-stat-val ${cls(s.profit)}">${money(s.profit)}</div>
+                <div class="dash-stat-lbl">Bilans</div>
+                <div class="dash-stat-sub">postawiono ${Math.round(s.staked).toLocaleString('pl-PL')} zł</div>
+            </div>
+            <div class="dash-stat">
+                <div class="dash-stat-val ${cls(s.roi)}">${s.roi >= 0 ? '+' : ''}${s.roi.toFixed(1)}%</div>
+                <div class="dash-stat-lbl">ROI</div>
+                <div class="dash-stat-sub">zwrot z postawionej kasy</div>
+            </div>
+        </div>
+        <div class="dash-card">
+            <div class="dash-card-title">Zysk w czasie <small>${s.settledCount} rozstrzygniętych</small></div>
+            ${cumulative.length >= 2
+                ? profitChartSvg(cumulative)
+                : `<div class="dash-pending-note">Za mało rozstrzygniętych zakładów na wykres —<br>rozstrzygnij co najmniej 2 (auto po meczu albo ręcznie w Profilu).</div>`}
+        </div>`;
+}
+
+function profitChartSvg(cumulative) {
+    const w = 300, h = 120, pad = 10;
+    const series = [0, ...cumulative];
+    const min = Math.min(...series, 0), max = Math.max(...series, 0);
+    const range = (max - min) || 1;
+    const stepX = (w - 2 * pad) / (series.length - 1 || 1);
+    const X = i => pad + i * stepX;
+    const Y = v => h - pad - ((v - min) / range) * (h - 2 * pad);
+    const pts = series.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`);
+    const zeroY = Y(0).toFixed(1);
+    const last = series[series.length - 1];
+    const color = last >= 0 ? '#2e7d32' : '#c62828';
+    const area = `M${X(0).toFixed(1)},${zeroY} L${pts.join(' L')} L${X(series.length - 1).toFixed(1)},${zeroY} Z`;
+    return `<svg class="dash-chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+        <line x1="${pad}" y1="${zeroY}" x2="${w - pad}" y2="${zeroY}" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 3"/>
+        <path d="${area}" fill="${color}" opacity="0.12"/>
+        <path d="M${pts.join(' L')}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    </svg>`;
+}
+
+// Auto-rozstrzyganie zakładów z realnych wyników (serwer dopasowuje mecz+typ)
+async function settlePendingBets() {
+    const history = state.profile?.history || [];
+    const pending = history.filter(b => b.betAmt > 0 && b.result !== 'won' && b.result !== 'lost');
+    if (!pending.length) return;
+
+    const payload = pending.map(b => {
+        const { home, away } = betHomeAway(b);
+        return { id: b.id, league: b.league, home, away, outcome: b.outcome };
+    }).filter(b => b.id && b.home && b.away);
+    if (!payload.length) return;
 
     try {
-        const res  = await fetch(`${API}/api/recommended`);
+        const res = await fetch(`${API}/api/settle`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ bets: payload }),
+        });
         const data = await res.json();
-        recommendedData = data;
-
-        if (!data || !data.length) {
-            box.innerHTML = '';   // pusto → :empty ukrywa sekcję
-            return;
+        let changed = false;
+        for (const s of (data.settled || [])) {
+            if (s.result !== 'won' && s.result !== 'lost') continue;
+            const bet = history.find(b => b.id === s.id);
+            if (bet) { bet.result = s.result; bet.homeScore = s.homeScore; bet.awayScore = s.awayScore; changed = true; }
         }
+        if (changed) { persistProfile(); renderDashboard(); }
+    } catch { /* offline — spróbujemy następnym razem */ }
+}
 
-        const preview = data.slice(0, 3);
-        box.innerHTML = `
-            <div class="menu-rec-head">
-                <div class="menu-rec-title">🎯 Polecane dziś <small>top ${data.length} wg Kelly</small></div>
-                <button class="menu-rec-all" onclick="showScreen('screen-recommended')">Zobacz wszystkie ›</button>
-            </div>
-            ${buildRecCardsHtml(preview)}
-            ${data.length > preview.length
-                ? `<div class="menu-rec-hint">+ ${data.length - preview.length} kolejnych w zakładce Polecane</div>`
-                : ''}`;
-    } catch {
-        box.innerHTML = '';       // błąd — nie blokuj menu
-    }
+// Ręczne rozstrzygnięcie (z historii w Profilu)
+function setBetResult(id, result) {
+    const history = state.profile?.history || [];
+    const bet = history.find(b => b.id === id);
+    if (!bet) return;
+    bet.result = bet.result === result ? 'pending' : result;  // ponowne kliknięcie = cofnij
+    persistProfile();
+    renderHistory();
 }
 
 async function openMatchFromRecommended(matchId, leagueKey) {
@@ -1855,11 +2013,17 @@ function showHelp() {
                 jest wyższa niż ta, którą wycenia bukmacher. To Twoja przewaga (<em>edge</em>).
             </p>
 
+            <div style="font-weight:700;margin:0.4rem 0 0.3rem;">🏠 Ekran główny</div>
+            <p style="margin:0 0 0.9rem;color:#475569;">
+                Podsumowanie Twoich zakładów: ile postawionych, wygrane, bilans kasy, ROI
+                i wykres zysku w czasie. Zakłady rozstrzygają się automatycznie po meczu
+                (z wyników), a ręcznie możesz je oznaczyć w <strong>Profilu</strong>.
+            </p>
+
             <div style="font-weight:700;margin:0.4rem 0 0.3rem;">🎯 Polecane</div>
             <p style="margin:0 0 0.9rem;color:#475569;">
-                Top zakłady z najbliższych ${'8'} dni, posortowane wg Kryterium Kelly'ego.
-                Podgląd trzech najlepszych masz od razu na stronie głównej,
-                pełną listę w zakładce <strong>Polecane</strong>.
+                Top zakłady z najbliższych ${'8'} dni, posortowane wg Kryterium Kelly'ego —
+                w zakładce <strong>Polecane</strong>.
             </p>
 
             <div style="font-weight:700;margin:0.4rem 0 0.3rem;">📊 Power Ranking</div>

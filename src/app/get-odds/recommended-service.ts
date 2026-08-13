@@ -3,6 +3,8 @@ import { HybridPredictionModel } from './hybrid-prediction-model';
 import { SoccerPredictionModel, isSoccerSport } from './soccer-prediction-model';
 import { Sport, SportConfig, SPORT_TO_LEAGUE_KEY } from '../utils/enums/sport';
 
+export type OutcomeType = 'home' | 'draw' | 'away' | '1X' | '12' | 'X2';
+
 export interface RecommendedBet {
     rank: number;
     matchId: string;
@@ -14,9 +16,10 @@ export interface RecommendedBet {
     homeTeam: string;
     awayTeam: string;
     commenceTime: string;
-    outcomeType: 'home' | 'draw' | 'away';
+    outcomeType: OutcomeType;
     outcomeLabel: string;
     odds: number;
+    estimatedOdds: boolean;   // true dla double chance (kurs liczony z 1X2)
     bookmakerName: string;
     ourProbability: number;
     impliedProbability: number;
@@ -27,9 +30,19 @@ export interface RecommendedBet {
     bookmakerCount: number;
 }
 
-const MIN_EDGE = 0.02;    // minimum 2% edge to include
-const MIN_KELLY = 0.005;  // minimum 0.5% Kelly
-const UPCOMING_WINDOW_DAYS = 8; // pokazuj mecze z najbliższych N dni (nie tylko bieżący tydzień kalendarzowy)
+const MIN_EDGE = 0.015;        // minimum 1.5% edge to include
+const MIN_KELLY = 0.005;       // minimum 0.5% Kelly
+const ROUND_WINDOW_DAYS = 4;   // "następna kolejka": mecze w N dni od najbliższego meczu ligi
+
+interface Single {
+    type: 'home' | 'draw' | 'away';
+    label: string;
+    odds: number;
+    prob: number;
+    kelly: number;
+    edge: number;
+    implied: number;
+}
 
 export class RecommendedService {
     constructor(
@@ -39,108 +52,119 @@ export class RecommendedService {
 
     public async computeRecommended(cacheMap: Map<Sport, OddsCache>): Promise<RecommendedBet[]> {
         const candidates: Omit<RecommendedBet, 'rank'>[] = [];
-        const { start: weekStart, end: weekEnd } = this.getUpcomingRange();
-
-        console.log(`[Recommended] przetwarzam ${cacheMap.size} lig | okno: ${weekStart.toLocaleDateString('pl-PL')} – ${weekEnd.toLocaleDateString('pl-PL')}`);
 
         for (const [sport, cache] of cacheMap) {
             const config = SportConfig[sport];
-            console.log(`[Recommended] ${config.label}: ${cache.data.length} meczów w cache`);
 
-            let skippedNoOdds = 0, skippedNoModel = 0, skippedNoEdge = 0, skippedWrongWeek = 0, added = 0;
+            // Okno "następna kolejka": kotwica na najwcześniejszym nadchodzącym meczu ligi.
+            const startFloor = new Date(); startFloor.setHours(0, 0, 0, 0);
+            const floorMs = startFloor.getTime();
+            const upcoming = cache.data.filter(m => m.odds && new Date(m.commenceTime).getTime() >= floorMs);
+            if (!upcoming.length) {
+                console.log(`[Recommended] ${config.label}: brak nadchodzących meczów`);
+                continue;
+            }
+            const earliest = Math.min(...upcoming.map(m => new Date(m.commenceTime).getTime()));
+            const roundEnd = earliest + ROUND_WINDOW_DAYS * 86400000;
+            console.log(`[Recommended] ${config.label}: ${cache.data.length} w cache | kolejka od ${new Date(earliest).toLocaleDateString('pl-PL')} do ${new Date(roundEnd).toLocaleDateString('pl-PL')}`);
+
+            let skippedWrongWeek = 0, skippedNoOdds = 0, skippedNoModel = 0, skippedNoEdge = 0, added = 0;
 
             for (const match of cache.data) {
-                const matchTime = new Date(match.commenceTime);
-                if (matchTime < weekStart || matchTime > weekEnd) { skippedWrongWeek++; continue; }
+                const t = new Date(match.commenceTime).getTime();
+                if (t < floorMs || t > roundEnd) { skippedWrongWeek++; continue; }
                 if (!match.odds) { skippedNoOdds++; continue; }
 
-                let homeProb: number;
-                let awayProb: number;
+                let homeProb: number, awayProb: number;
                 let drawProb: number | undefined;
                 let source: 'model' | 'consensus';
                 let bookmakerCount: number;
 
                 if (sport === Sport.NFL) {
-                    const prediction = await this.predictionModel.getPredictionAsync(
-                        match.homeTeam, match.awayTeam
-                    ).catch(() => null);
+                    const prediction = await this.predictionModel.getPredictionAsync(match.homeTeam, match.awayTeam).catch(() => null);
                     if (prediction == null) { skippedNoModel++; continue; }
-                    homeProb = prediction;
-                    awayProb = 1 - prediction;
-                    source = 'model';
-                    bookmakerCount = 1;
+                    homeProb = prediction; awayProb = 1 - prediction;
+                    source = 'model'; bookmakerCount = 1;
                 } else if (isSoccerSport(sport)) {
                     const prediction = await this.soccerModel.predict(match.homeTeam, match.awayTeam, sport).catch(() => null);
                     if (prediction) {
-                        homeProb = prediction.homeWin;
-                        awayProb = prediction.awayWin;
-                        drawProb = prediction.draw;
-                        source = 'model';
-                        bookmakerCount = prediction.teamFound ? 1 : 0;
+                        homeProb = prediction.homeWin; awayProb = prediction.awayWin; drawProb = prediction.draw;
+                        source = 'model'; bookmakerCount = prediction.teamFound ? 1 : 0;
                     } else {
-                        // Soccer model unavailable — fall back to consensus
-                        const consensus = match.consensusProbability ?? this.noVigFromOdds(match.odds);
-                        homeProb = consensus.home;
-                        awayProb = consensus.away;
-                        drawProb = consensus.draw;
-                        source = 'consensus';
-                        bookmakerCount = match.consensusProbability?.bookmakerCount ?? 1;
+                        const c = match.consensusProbability ?? this.noVigFromOdds(match.odds);
+                        homeProb = c.home; awayProb = c.away; drawProb = c.draw;
+                        source = 'consensus'; bookmakerCount = match.consensusProbability?.bookmakerCount ?? 1;
                     }
                 } else {
-                    // NBA i inne — consensus
-                    const consensus = match.consensusProbability ?? this.noVigFromOdds(match.odds);
-                    homeProb = consensus.home;
-                    awayProb = consensus.away;
-                    source = 'consensus';
-                    bookmakerCount = match.consensusProbability?.bookmakerCount ?? 1;
+                    const c = match.consensusProbability ?? this.noVigFromOdds(match.odds);
+                    homeProb = c.home; awayProb = c.away;
+                    source = 'consensus'; bookmakerCount = match.consensusProbability?.bookmakerCount ?? 1;
                 }
 
-                // Use BEST available odds for comparison (finds genuine line shopping value)
-                // Fall back to displayed odds if bestOdds not available
+                // Najlepsze dostępne kursy (line shopping); fallback do wyświetlanych.
                 const bestOdds = match.bestOdds ?? match.odds;
+                const hasDraw = match.odds.draw != null && drawProb != null && (bestOdds!.draw ?? match.odds.draw) != null;
 
-                const outcomes: Array<{ type: 'home' | 'draw' | 'away'; label: string; bestOdds: number; displayOdds: number; prob: number }> = [
-                    { type: 'home', label: match.homeTeam, bestOdds: bestOdds!.home, displayOdds: match.odds.home, prob: homeProb },
-                    { type: 'away', label: match.awayTeam, bestOdds: bestOdds!.away, displayOdds: match.odds.away, prob: awayProb },
+                const singles: Single[] = [
+                    this.mkSingle('home', match.homeTeam, bestOdds!.home, homeProb),
+                    this.mkSingle('away', match.awayTeam, bestOdds!.away, awayProb),
                 ];
-                if (match.odds.draw != null && drawProb != null) {
-                    outcomes.push({ type: 'draw', label: 'Remis', bestOdds: bestOdds!.draw ?? match.odds.draw, displayOdds: match.odds.draw, prob: drawProb });
+                if (hasDraw) {
+                    singles.push(this.mkSingle('draw', 'Remis', (bestOdds!.draw ?? match.odds.draw)!, drawProb!));
                 }
 
-                for (const o of outcomes) {
-                    const b = o.bestOdds - 1;
-                    const kelly = (b * o.prob - (1 - o.prob)) / b;
-                    const impliedProb = 1 / o.bestOdds;
-                    const edge = o.prob - impliedProb;
-                    const bkCount = match.consensusProbability?.bookmakerCount ?? 1;
-                    console.log(`  [${config.label}] ${match.homeTeam} vs ${match.awayTeam} | ${o.type}: prob=${(o.prob*100).toFixed(1)}% bestOdds=${o.bestOdds.toFixed(2)} implied=${(impliedProb*100).toFixed(1)}% edge=${(edge*100).toFixed(1)}% src=${source}/${bkCount}bk`);
-
-                    if (kelly <= MIN_KELLY || edge <= MIN_EDGE) { skippedNoEdge++; continue; }
-
-                    added++;
-                    candidates.push({
-                        matchId: match.id,
-                        leagueKey: SPORT_TO_LEAGUE_KEY[sport],
-                        sport,
-                        sportLabel: config.label,
-                        countryFlag: config.countryFlag,
-                        sportIcon: config.sportIcon,
-                        homeTeam: match.homeTeam,
-                        awayTeam: match.awayTeam,
-                        commenceTime: match.commenceTime,
-                        outcomeType: o.type,
-                        outcomeLabel: o.label,
-                        odds: o.bestOdds,
-                        bookmakerName: match.odds.bookmaker,
-                        ourProbability: o.prob,
-                        impliedProbability: impliedProb,
-                        kellyFraction: kelly,
-                        fractionalKelly: kelly / 4,
-                        edgePercent: edge * 100,
-                        probabilitySource: source,
-                        bookmakerCount
-                    });
+                for (const s of singles) {
+                    console.log(`  [${config.label}] ${match.homeTeam} vs ${match.awayTeam} | ${s.type}: prob=${(s.prob*100).toFixed(1)}% odds=${s.odds.toFixed(2)} edge=${(s.edge*100).toFixed(1)}% src=${source}`);
                 }
+
+                const passing = singles.filter(s => s.kelly > MIN_KELLY && s.edge > MIN_EDGE);
+                if (!passing.length) { skippedNoEdge++; continue; }
+
+                // Jeden bet na mecz. Jeśli value jest na ≥2 wynikach (np. remis i wygrana),
+                // proponujemy DOUBLE CHANCE łączący dwa najmocniejsze — zamiast sprzecznej pary.
+                let chosen: {
+                    type: OutcomeType; label: string; odds: number; prob: number;
+                    kelly: number; edge: number; implied: number; estimated: boolean;
+                };
+
+                if (passing.length >= 2 && hasDraw) {
+                    const top2 = [...passing].sort((a, b) => b.edge - a.edge).slice(0, 2);
+                    const dc = this.mkDoubleChance(top2[0], top2[1], match.homeTeam, match.awayTeam);
+                    if (dc && dc.kelly > MIN_KELLY && dc.edge > MIN_EDGE) {
+                        chosen = dc;
+                    } else {
+                        const best = [...passing].sort((a, b) => b.kelly - a.kelly)[0];
+                        chosen = { ...best, estimated: false };
+                    }
+                } else {
+                    const best = [...passing].sort((a, b) => b.kelly - a.kelly)[0];
+                    chosen = { ...best, estimated: false };
+                }
+
+                added++;
+                candidates.push({
+                    matchId: match.id,
+                    leagueKey: SPORT_TO_LEAGUE_KEY[sport],
+                    sport,
+                    sportLabel: config.label,
+                    countryFlag: config.countryFlag,
+                    sportIcon: config.sportIcon,
+                    homeTeam: match.homeTeam,
+                    awayTeam: match.awayTeam,
+                    commenceTime: match.commenceTime,
+                    outcomeType: chosen.type,
+                    outcomeLabel: chosen.label,
+                    odds: chosen.odds,
+                    estimatedOdds: chosen.estimated,
+                    bookmakerName: match.odds.bookmaker,
+                    ourProbability: chosen.prob,
+                    impliedProbability: chosen.implied,
+                    kellyFraction: chosen.kelly,
+                    fractionalKelly: chosen.kelly / 4,
+                    edgePercent: chosen.edge * 100,
+                    probabilitySource: source,
+                    bookmakerCount
+                });
             }
             console.log(`[Recommended] ${config.label}: wrongWeek=${skippedWrongWeek} noOdds=${skippedNoOdds} noModel=${skippedNoModel} noEdge=${skippedNoEdge} added=${added}`);
         }
@@ -152,24 +176,26 @@ export class RecommendedService {
             .map((bet, i) => ({ ...bet, rank: i + 1 }));
     }
 
-    /**
-     * Kroczące okno "nadchodzące mecze": od początku dzisiejszego dnia
-     * do końca dnia za UPCOMING_WINDOW_DAYS. Dzięki temu polecane bety
-     * łapią najbliższą kolejkę niezależnie od tego, który jest dziś dzień
-     * (stary filtr brał tylko bieżący tydzień kalendarzowy pon–niedz,
-     * przez co w środku tygodnia znikały mecze z przyszłego weekendu).
-     */
-    private getUpcomingRange(): { start: Date; end: Date } {
-        const now = new Date();
+    private mkSingle(type: 'home' | 'draw' | 'away', label: string, odds: number, prob: number): Single {
+        const b = odds - 1;
+        const kelly = b > 0 ? (b * prob - (1 - prob)) / b : 0;
+        return { type, label, odds, prob, kelly, edge: prob - 1 / odds, implied: 1 / odds };
+    }
 
-        const start = new Date(now);
-        start.setHours(0, 0, 0, 0);
+    /** Double chance z dwóch pojedynczych wyników: kurs (Oa·Ob)/(Oa+Ob), prob = suma. */
+    private mkDoubleChance(a: Single, b: Single, homeTeam: string, awayTeam: string) {
+        const set = new Set([a.type, b.type]);
+        let type: OutcomeType, label: string;
+        if (set.has('home') && set.has('draw'))      { type = '1X'; label = `${homeTeam} lub remis`; }
+        else if (set.has('draw') && set.has('away')) { type = 'X2'; label = `Remis lub ${awayTeam}`; }
+        else if (set.has('home') && set.has('away')) { type = '12'; label = `${homeTeam} lub ${awayTeam}`; }
+        else return null;
 
-        const end = new Date(start);
-        end.setDate(start.getDate() + UPCOMING_WINDOW_DAYS);
-        end.setHours(23, 59, 59, 999);
-
-        return { start, end };
+        const odds = (a.odds * b.odds) / (a.odds + b.odds);
+        const prob = a.prob + b.prob;
+        const bb = odds - 1;
+        const kelly = bb > 0 ? (bb * prob - (1 - prob)) / bb : 0;
+        return { type, label, odds, prob, kelly, edge: prob - 1 / odds, implied: 1 / odds, estimated: true };
     }
 
     private noVigFromOdds(odds: { home: number; draw?: number; away: number }) {

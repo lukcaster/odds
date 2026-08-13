@@ -32,7 +32,7 @@ Kwota zakładu = **frakcyjny Kelly (¼)** liczony od bankrolla — ostrożne pod
 ograniczające ryzyko.
 
 Progi doboru polecanych (w `src/app/get-odds/recommended-service.ts`):
-- `MIN_EDGE` – minimalna przewaga nad bukmacherem (domyślnie 2%),
+- `MIN_EDGE` – minimalna przewaga nad bukmacherem (domyślnie 1.5%),
 - `UPCOMING_WINDOW_DAYS` – ile dni w przód patrzymy (domyślnie 8).
 
 > ⚠️ Kursy bywają nieaktualne — zawsze sprawdź je u bukmachera przed zakładem.

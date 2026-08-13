@@ -70,7 +70,7 @@ export class SoccerPredictionModel {
             }
 
             // Za mało meczów = model niewiarygodny (przeceniony). Oddaj głos rynkowi.
-            const MIN_GAMES = 3;
+            const MIN_GAMES = 2;
             if (home.gamesPlayed < MIN_GAMES || away.gamesPlayed < MIN_GAMES) {
                 console.log(`[Soccer] ${homeTeam}(${home.gamesPlayed}) vs ${awayTeam}(${away.gamesPlayed}): za mało meczów — oddaję rynkowi (consensus)`);
                 return null;
