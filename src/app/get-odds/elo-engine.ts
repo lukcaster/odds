@@ -9,9 +9,11 @@
  */
 
 export interface EloOptions {
-    base?: number;   // rating startowy nowej drużyny
-    k?: number;      // współczynnik zmienności
-    home?: number;   // przewaga gospodarza w punktach ELO
+    base?: number;       // rating startowy nowej drużyny
+    k?: number;          // współczynnik zmienności
+    home?: number;       // przewaga gospodarza w punktach ELO
+    movDivisor?: number; // dzielnik różnicy wyniku dla margin-of-victory
+                         // (1 dla goli/piłki, ~7 dla NBA gdzie różnice punktowe są duże)
 }
 
 export interface EloTeam {
@@ -53,11 +55,13 @@ export class EloEngine {
     private readonly base: number;
     private readonly k: number;
     private readonly home: number;
+    private readonly movDivisor: number;
 
     constructor(opts: EloOptions = {}) {
         this.base = opts.base ?? 1500;
         this.k    = opts.k    ?? 24;
         this.home = opts.home ?? 55;
+        this.movDivisor = opts.movDivisor ?? 1;
     }
 
     public reset(): void {
@@ -91,8 +95,9 @@ export class EloEngine {
         else if (r.homeScore < r.awayScore) { actualHome = 0;   hRes = 'L'; aRes = 'W'; home.losses++; away.wins++;  }
         else                                { actualHome = 0.5; hRes = 'D'; aRes = 'D'; home.draws++;  away.draws++; }
 
-        // Margin-of-victory: większa różnica bramek = większa zmiana ratingu.
-        const movMult = 1 + Math.log(1 + Math.abs(r.homeScore - r.awayScore));
+        // Margin-of-victory: większa różnica = większa zmiana ratingu.
+        // Dzielnik skaluje różnicę wg sportu (gole vs punkty NBA).
+        const movMult = 1 + Math.log(1 + Math.abs(r.homeScore - r.awayScore) / this.movDivisor);
         const delta = this.k * movMult * (actualHome - expHome);
 
         home.rating += delta;

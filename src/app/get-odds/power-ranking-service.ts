@@ -2,7 +2,12 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { Sport, SPORT_TO_LEAGUE_KEY } from '../utils/enums/sport';
 import { ResultsService } from './results-service';
-import { EloEngine, EloTeam } from './elo-engine';
+import { EloEngine, EloOptions, EloTeam } from './elo-engine';
+
+// Parametry ELO per sport (koszykówka ma duże różnice punktowe → movDivisor).
+const ELO_OPTS: Partial<Record<Sport, EloOptions>> = {
+    [Sport.NBA]: { movDivisor: 7, home: 70 },
+};
 
 export interface PowerRankingEntry extends EloTeam {
     up: number;    // glosy "zgadzam sie"
@@ -66,7 +71,7 @@ export class PowerRankingService {
 
     private buildEngine(sport: Sport): void {
         const results = this.resultsService.getResults(sport);
-        const engine = new EloEngine();
+        const engine = new EloEngine(ELO_OPTS[sport]);
         engine.rebuild(results);
         this.engines.set(sport, engine);
 

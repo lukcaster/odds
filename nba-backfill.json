@@ -1,0 +1,9256 @@
+[
+  {
+    "date": "2025-10-21",
+    "home": "Oklahoma City Thunder",
+    "away": "Houston Rockets",
+    "homeScore": 125,
+    "awayScore": 124
+  },
+  {
+    "date": "2025-10-21",
+    "home": "Los Angeles Lakers",
+    "away": "Golden State Warriors",
+    "homeScore": 109,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-10-22",
+    "home": "New York Knicks",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 119,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-10-22",
+    "home": "Dallas Mavericks",
+    "away": "San Antonio Spurs",
+    "homeScore": 92,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-10-22",
+    "home": "Charlotte Hornets",
+    "away": "Brooklyn Nets",
+    "homeScore": 136,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-10-22",
+    "home": "Orlando Magic",
+    "away": "Miami Heat",
+    "homeScore": 125,
+    "awayScore": 121
+  },
+  {
+    "date": "2025-10-22",
+    "home": "Atlanta Hawks",
+    "away": "Toronto Raptors",
+    "homeScore": 118,
+    "awayScore": 138
+  },
+  {
+    "date": "2025-10-22",
+    "home": "Boston Celtics",
+    "away": "Philadelphia 76ers",
+    "homeScore": 116,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-10-22",
+    "home": "Chicago Bulls",
+    "away": "Detroit Pistons",
+    "homeScore": 115,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-10-22",
+    "home": "Memphis Grizzlies",
+    "away": "New Orleans Pelicans",
+    "homeScore": 128,
+    "awayScore": 122
+  },
+  {
+    "date": "2025-10-22",
+    "home": "Milwaukee Bucks",
+    "away": "Washington Wizards",
+    "homeScore": 133,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-10-22",
+    "home": "Utah Jazz",
+    "away": "Los Angeles Clippers",
+    "homeScore": 129,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-10-22",
+    "home": "Phoenix Suns",
+    "away": "Sacramento Kings",
+    "homeScore": 120,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-10-22",
+    "home": "Portland Trail Blazers",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 114,
+    "awayScore": 118
+  },
+  {
+    "date": "2025-10-23",
+    "home": "Indiana Pacers",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 135,
+    "awayScore": 141
+  },
+  {
+    "date": "2025-10-23",
+    "home": "Golden State Warriors",
+    "away": "Denver Nuggets",
+    "homeScore": 137,
+    "awayScore": 131
+  },
+  {
+    "date": "2025-10-24",
+    "home": "New York Knicks",
+    "away": "Boston Celtics",
+    "homeScore": 105,
+    "awayScore": 95
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Los Angeles Lakers",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 128,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Orlando Magic",
+    "away": "Atlanta Hawks",
+    "homeScore": 107,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Brooklyn Nets",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 124,
+    "awayScore": 131
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Toronto Raptors",
+    "away": "Milwaukee Bucks",
+    "homeScore": 116,
+    "awayScore": 122
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Houston Rockets",
+    "away": "Detroit Pistons",
+    "homeScore": 111,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Memphis Grizzlies",
+    "away": "Miami Heat",
+    "homeScore": 114,
+    "awayScore": 146
+  },
+  {
+    "date": "2025-10-24",
+    "home": "New Orleans Pelicans",
+    "away": "San Antonio Spurs",
+    "homeScore": 116,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Dallas Mavericks",
+    "away": "Washington Wizards",
+    "homeScore": 107,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Portland Trail Blazers",
+    "away": "Golden State Warriors",
+    "homeScore": 139,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Sacramento Kings",
+    "away": "Utah Jazz",
+    "homeScore": 105,
+    "awayScore": 104
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Los Angeles Clippers",
+    "away": "Phoenix Suns",
+    "homeScore": 129,
+    "awayScore": 102
+  },
+  {
+    "date": "2025-10-25",
+    "home": "Orlando Magic",
+    "away": "Chicago Bulls",
+    "homeScore": 98,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-10-25",
+    "home": "Atlanta Hawks",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 100,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-10-25",
+    "home": "Philadelphia 76ers",
+    "away": "Charlotte Hornets",
+    "homeScore": 125,
+    "awayScore": 121
+  },
+  {
+    "date": "2025-10-25",
+    "home": "Memphis Grizzlies",
+    "away": "Indiana Pacers",
+    "homeScore": 128,
+    "awayScore": 103
+  },
+  {
+    "date": "2025-10-25",
+    "home": "Denver Nuggets",
+    "away": "Phoenix Suns",
+    "homeScore": 133,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-10-26",
+    "home": "San Antonio Spurs",
+    "away": "Brooklyn Nets",
+    "homeScore": 118,
+    "awayScore": 107
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Detroit Pistons",
+    "away": "Boston Celtics",
+    "homeScore": 119,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Cleveland Cavaliers",
+    "away": "Milwaukee Bucks",
+    "homeScore": 118,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Miami Heat",
+    "away": "New York Knicks",
+    "homeScore": 115,
+    "awayScore": 107
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Washington Wizards",
+    "away": "Charlotte Hornets",
+    "homeScore": 113,
+    "awayScore": 139
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Minnesota Timberwolves",
+    "away": "Indiana Pacers",
+    "homeScore": 114,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Dallas Mavericks",
+    "away": "Toronto Raptors",
+    "homeScore": 139,
+    "awayScore": 129
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Los Angeles Clippers",
+    "away": "Portland Trail Blazers",
+    "homeScore": 114,
+    "awayScore": 107
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Sacramento Kings",
+    "away": "Los Angeles Lakers",
+    "homeScore": 120,
+    "awayScore": 127
+  },
+  {
+    "date": "2025-10-27",
+    "home": "Detroit Pistons",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 95,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-10-27",
+    "home": "Minnesota Timberwolves",
+    "away": "Denver Nuggets",
+    "homeScore": 114,
+    "awayScore": 127
+  },
+  {
+    "date": "2025-10-27",
+    "home": "Philadelphia 76ers",
+    "away": "Orlando Magic",
+    "homeScore": 136,
+    "awayScore": 124
+  },
+  {
+    "date": "2025-10-27",
+    "home": "Chicago Bulls",
+    "away": "Atlanta Hawks",
+    "homeScore": 128,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-10-27",
+    "home": "Houston Rockets",
+    "away": "Brooklyn Nets",
+    "homeScore": 137,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-10-27",
+    "home": "New Orleans Pelicans",
+    "away": "Boston Celtics",
+    "homeScore": 90,
+    "awayScore": 122
+  },
+  {
+    "date": "2025-10-27",
+    "home": "San Antonio Spurs",
+    "away": "Toronto Raptors",
+    "homeScore": 121,
+    "awayScore": 103
+  },
+  {
+    "date": "2025-10-27",
+    "home": "Dallas Mavericks",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 94,
+    "awayScore": 101
+  },
+  {
+    "date": "2025-10-27",
+    "home": "Utah Jazz",
+    "away": "Phoenix Suns",
+    "homeScore": 138,
+    "awayScore": 134
+  },
+  {
+    "date": "2025-10-27",
+    "home": "Golden State Warriors",
+    "away": "Memphis Grizzlies",
+    "homeScore": 131,
+    "awayScore": 118
+  },
+  {
+    "date": "2025-10-27",
+    "home": "Los Angeles Lakers",
+    "away": "Portland Trail Blazers",
+    "homeScore": 108,
+    "awayScore": 122
+  },
+  {
+    "date": "2025-10-28",
+    "home": "Washington Wizards",
+    "away": "Philadelphia 76ers",
+    "homeScore": 134,
+    "awayScore": 139
+  },
+  {
+    "date": "2025-10-28",
+    "home": "Miami Heat",
+    "away": "Charlotte Hornets",
+    "homeScore": 144,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-10-28",
+    "home": "Milwaukee Bucks",
+    "away": "New York Knicks",
+    "homeScore": 121,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-10-28",
+    "home": "Oklahoma City Thunder",
+    "away": "Sacramento Kings",
+    "homeScore": 107,
+    "awayScore": 101
+  },
+  {
+    "date": "2025-10-28",
+    "home": "Golden State Warriors",
+    "away": "Los Angeles Clippers",
+    "homeScore": 98,
+    "awayScore": 79
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Boston Celtics",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 125,
+    "awayScore": 105
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Detroit Pistons",
+    "away": "Orlando Magic",
+    "homeScore": 135,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Brooklyn Nets",
+    "away": "Atlanta Hawks",
+    "homeScore": 112,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Toronto Raptors",
+    "away": "Houston Rockets",
+    "homeScore": 121,
+    "awayScore": 139
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Chicago Bulls",
+    "away": "Sacramento Kings",
+    "homeScore": 126,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Dallas Mavericks",
+    "away": "Indiana Pacers",
+    "homeScore": 107,
+    "awayScore": 105
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Denver Nuggets",
+    "away": "New Orleans Pelicans",
+    "homeScore": 122,
+    "awayScore": 88
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Utah Jazz",
+    "away": "Portland Trail Blazers",
+    "homeScore": 134,
+    "awayScore": 136
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Minnesota Timberwolves",
+    "away": "Los Angeles Lakers",
+    "homeScore": 115,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-10-29",
+    "home": "Phoenix Suns",
+    "away": "Memphis Grizzlies",
+    "homeScore": 113,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-10-30",
+    "home": "Charlotte Hornets",
+    "away": "Orlando Magic",
+    "homeScore": 107,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-10-30",
+    "home": "Milwaukee Bucks",
+    "away": "Golden State Warriors",
+    "homeScore": 120,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-10-30",
+    "home": "Oklahoma City Thunder",
+    "away": "Washington Wizards",
+    "homeScore": 127,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-10-30",
+    "home": "San Antonio Spurs",
+    "away": "Miami Heat",
+    "homeScore": 107,
+    "awayScore": 101
+  },
+  {
+    "date": "2025-10-31",
+    "home": "Indiana Pacers",
+    "away": "Atlanta Hawks",
+    "homeScore": 108,
+    "awayScore": 128
+  },
+  {
+    "date": "2025-10-31",
+    "home": "Philadelphia 76ers",
+    "away": "Boston Celtics",
+    "homeScore": 108,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-10-31",
+    "home": "Cleveland Cavaliers",
+    "away": "Toronto Raptors",
+    "homeScore": 101,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-10-31",
+    "home": "Chicago Bulls",
+    "away": "New York Knicks",
+    "homeScore": 135,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-10-31",
+    "home": "Memphis Grizzlies",
+    "away": "Los Angeles Lakers",
+    "homeScore": 112,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-10-31",
+    "home": "Phoenix Suns",
+    "away": "Utah Jazz",
+    "homeScore": 118,
+    "awayScore": 96
+  },
+  {
+    "date": "2025-10-31",
+    "home": "Portland Trail Blazers",
+    "away": "Denver Nuggets",
+    "homeScore": 109,
+    "awayScore": 107
+  },
+  {
+    "date": "2025-10-31",
+    "home": "Los Angeles Clippers",
+    "away": "New Orleans Pelicans",
+    "homeScore": 126,
+    "awayScore": 124
+  },
+  {
+    "date": "2025-11-01",
+    "home": "Milwaukee Bucks",
+    "away": "Sacramento Kings",
+    "homeScore": 133,
+    "awayScore": 135
+  },
+  {
+    "date": "2025-11-01",
+    "home": "Charlotte Hornets",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 105,
+    "awayScore": 122
+  },
+  {
+    "date": "2025-11-01",
+    "home": "Indiana Pacers",
+    "away": "Golden State Warriors",
+    "homeScore": 114,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-11-01",
+    "home": "Washington Wizards",
+    "away": "Orlando Magic",
+    "homeScore": 94,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-11-01",
+    "home": "Boston Celtics",
+    "away": "Houston Rockets",
+    "homeScore": 101,
+    "awayScore": 128
+  },
+  {
+    "date": "2025-11-01",
+    "home": "Detroit Pistons",
+    "away": "Dallas Mavericks",
+    "homeScore": 122,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Oklahoma City Thunder",
+    "away": "New Orleans Pelicans",
+    "homeScore": 137,
+    "awayScore": 106
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Brooklyn Nets",
+    "away": "Philadelphia 76ers",
+    "homeScore": 105,
+    "awayScore": 129
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Charlotte Hornets",
+    "away": "Utah Jazz",
+    "homeScore": 126,
+    "awayScore": 103
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Cleveland Cavaliers",
+    "away": "Atlanta Hawks",
+    "homeScore": 117,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Toronto Raptors",
+    "away": "Memphis Grizzlies",
+    "homeScore": 117,
+    "awayScore": 104
+  },
+  {
+    "date": "2025-11-02",
+    "home": "New York Knicks",
+    "away": "Chicago Bulls",
+    "homeScore": 128,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Phoenix Suns",
+    "away": "San Antonio Spurs",
+    "homeScore": 130,
+    "awayScore": 118
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Los Angeles Lakers",
+    "away": "Miami Heat",
+    "homeScore": 130,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-11-03",
+    "home": "Brooklyn Nets",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 109,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-11-03",
+    "home": "Indiana Pacers",
+    "away": "Milwaukee Bucks",
+    "homeScore": 115,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-11-03",
+    "home": "Boston Celtics",
+    "away": "Utah Jazz",
+    "homeScore": 103,
+    "awayScore": 105
+  },
+  {
+    "date": "2025-11-03",
+    "home": "New York Knicks",
+    "away": "Washington Wizards",
+    "homeScore": 119,
+    "awayScore": 102
+  },
+  {
+    "date": "2025-11-03",
+    "home": "Houston Rockets",
+    "away": "Dallas Mavericks",
+    "homeScore": 110,
+    "awayScore": 102
+  },
+  {
+    "date": "2025-11-03",
+    "home": "Memphis Grizzlies",
+    "away": "Detroit Pistons",
+    "homeScore": 106,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-11-03",
+    "home": "Denver Nuggets",
+    "away": "Sacramento Kings",
+    "homeScore": 130,
+    "awayScore": 124
+  },
+  {
+    "date": "2025-11-03",
+    "home": "Portland Trail Blazers",
+    "away": "Los Angeles Lakers",
+    "homeScore": 115,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-11-03",
+    "home": "Los Angeles Clippers",
+    "away": "Miami Heat",
+    "homeScore": 119,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-11-04",
+    "home": "Toronto Raptors",
+    "away": "Milwaukee Bucks",
+    "homeScore": 128,
+    "awayScore": 100
+  },
+  {
+    "date": "2025-11-04",
+    "home": "Atlanta Hawks",
+    "away": "Orlando Magic",
+    "homeScore": 127,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-04",
+    "home": "Chicago Bulls",
+    "away": "Philadelphia 76ers",
+    "homeScore": 113,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-11-04",
+    "home": "New Orleans Pelicans",
+    "away": "Charlotte Hornets",
+    "homeScore": 116,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-04",
+    "home": "Golden State Warriors",
+    "away": "Phoenix Suns",
+    "homeScore": 118,
+    "awayScore": 107
+  },
+  {
+    "date": "2025-11-04",
+    "home": "Los Angeles Clippers",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 107,
+    "awayScore": 126
+  },
+  {
+    "date": "2025-11-05",
+    "home": "Cleveland Cavaliers",
+    "away": "Philadelphia 76ers",
+    "homeScore": 132,
+    "awayScore": 121
+  },
+  {
+    "date": "2025-11-05",
+    "home": "Detroit Pistons",
+    "away": "Utah Jazz",
+    "homeScore": 114,
+    "awayScore": 103
+  },
+  {
+    "date": "2025-11-05",
+    "home": "Indiana Pacers",
+    "away": "Brooklyn Nets",
+    "homeScore": 103,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-05",
+    "home": "Boston Celtics",
+    "away": "Washington Wizards",
+    "homeScore": 136,
+    "awayScore": 107
+  },
+  {
+    "date": "2025-11-05",
+    "home": "New York Knicks",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 137,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-11-05",
+    "home": "Memphis Grizzlies",
+    "away": "Houston Rockets",
+    "homeScore": 109,
+    "awayScore": 124
+  },
+  {
+    "date": "2025-11-05",
+    "home": "Dallas Mavericks",
+    "away": "New Orleans Pelicans",
+    "homeScore": 99,
+    "awayScore": 101
+  },
+  {
+    "date": "2025-11-05",
+    "home": "Denver Nuggets",
+    "away": "Miami Heat",
+    "homeScore": 122,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-05",
+    "home": "Los Angeles Lakers",
+    "away": "San Antonio Spurs",
+    "homeScore": 118,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-11-05",
+    "home": "Portland Trail Blazers",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 121,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-11-05",
+    "home": "Sacramento Kings",
+    "away": "Golden State Warriors",
+    "homeScore": 121,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-11-06",
+    "home": "Phoenix Suns",
+    "away": "Los Angeles Clippers",
+    "homeScore": 115,
+    "awayScore": 102
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Orlando Magic",
+    "away": "Boston Celtics",
+    "homeScore": 123,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Washington Wizards",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 114,
+    "awayScore": 148
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Atlanta Hawks",
+    "away": "Toronto Raptors",
+    "homeScore": 97,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Brooklyn Nets",
+    "away": "Detroit Pistons",
+    "homeScore": 107,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-11-07",
+    "home": "San Antonio Spurs",
+    "away": "Houston Rockets",
+    "homeScore": 121,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Miami Heat",
+    "away": "Charlotte Hornets",
+    "homeScore": 126,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Memphis Grizzlies",
+    "away": "Dallas Mavericks",
+    "homeScore": 118,
+    "awayScore": 104
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Milwaukee Bucks",
+    "away": "Chicago Bulls",
+    "homeScore": 126,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Minnesota Timberwolves",
+    "away": "Utah Jazz",
+    "homeScore": 137,
+    "awayScore": 97
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Denver Nuggets",
+    "away": "Golden State Warriors",
+    "homeScore": 129,
+    "awayScore": 104
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Sacramento Kings",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 101,
+    "awayScore": 132
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Washington Wizards",
+    "away": "Dallas Mavericks",
+    "homeScore": 105,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Philadelphia 76ers",
+    "away": "Toronto Raptors",
+    "homeScore": 130,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Atlanta Hawks",
+    "away": "Los Angeles Lakers",
+    "homeScore": 122,
+    "awayScore": 102
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Cleveland Cavaliers",
+    "away": "Chicago Bulls",
+    "homeScore": 128,
+    "awayScore": 122
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Miami Heat",
+    "away": "Portland Trail Blazers",
+    "homeScore": 136,
+    "awayScore": 131
+  },
+  {
+    "date": "2025-11-08",
+    "home": "San Antonio Spurs",
+    "away": "New Orleans Pelicans",
+    "homeScore": 126,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Denver Nuggets",
+    "away": "Indiana Pacers",
+    "homeScore": 117,
+    "awayScore": 100
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Los Angeles Clippers",
+    "away": "Phoenix Suns",
+    "homeScore": 103,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Milwaukee Bucks",
+    "away": "Houston Rockets",
+    "homeScore": 115,
+    "awayScore": 122
+  },
+  {
+    "date": "2025-11-09",
+    "home": "New York Knicks",
+    "away": "Brooklyn Nets",
+    "homeScore": 134,
+    "awayScore": 98
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Orlando Magic",
+    "away": "Boston Celtics",
+    "homeScore": 107,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Memphis Grizzlies",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 100,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Philadelphia 76ers",
+    "away": "Detroit Pistons",
+    "homeScore": 108,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Golden State Warriors",
+    "away": "Indiana Pacers",
+    "homeScore": 114,
+    "awayScore": 83
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Sacramento Kings",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 117,
+    "awayScore": 144
+  },
+  {
+    "date": "2025-11-10",
+    "home": "Charlotte Hornets",
+    "away": "Los Angeles Lakers",
+    "homeScore": 111,
+    "awayScore": 121
+  },
+  {
+    "date": "2025-11-10",
+    "home": "Detroit Pistons",
+    "away": "Washington Wizards",
+    "homeScore": 137,
+    "awayScore": 135
+  },
+  {
+    "date": "2025-11-10",
+    "home": "Orlando Magic",
+    "away": "Portland Trail Blazers",
+    "homeScore": 115,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-10",
+    "home": "Miami Heat",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 140,
+    "awayScore": 138
+  },
+  {
+    "date": "2025-11-10",
+    "home": "Chicago Bulls",
+    "away": "San Antonio Spurs",
+    "homeScore": 117,
+    "awayScore": 121
+  },
+  {
+    "date": "2025-11-10",
+    "home": "Dallas Mavericks",
+    "away": "Milwaukee Bucks",
+    "homeScore": 114,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-11-10",
+    "home": "Phoenix Suns",
+    "away": "New Orleans Pelicans",
+    "homeScore": 121,
+    "awayScore": 98
+  },
+  {
+    "date": "2025-11-10",
+    "home": "Utah Jazz",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 113,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-11-10",
+    "home": "Los Angeles Clippers",
+    "away": "Atlanta Hawks",
+    "homeScore": 102,
+    "awayScore": 105
+  },
+  {
+    "date": "2025-11-11",
+    "home": "Brooklyn Nets",
+    "away": "Toronto Raptors",
+    "homeScore": 109,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-11-11",
+    "home": "New York Knicks",
+    "away": "Memphis Grizzlies",
+    "homeScore": 133,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-11-11",
+    "home": "Philadelphia 76ers",
+    "away": "Boston Celtics",
+    "homeScore": 102,
+    "awayScore": 100
+  },
+  {
+    "date": "2025-11-11",
+    "home": "Oklahoma City Thunder",
+    "away": "Golden State Warriors",
+    "homeScore": 126,
+    "awayScore": 102
+  },
+  {
+    "date": "2025-11-11",
+    "home": "Utah Jazz",
+    "away": "Indiana Pacers",
+    "homeScore": 152,
+    "awayScore": 128
+  },
+  {
+    "date": "2025-11-11",
+    "home": "Sacramento Kings",
+    "away": "Denver Nuggets",
+    "homeScore": 108,
+    "awayScore": 122
+  },
+  {
+    "date": "2025-11-12",
+    "home": "Charlotte Hornets",
+    "away": "Milwaukee Bucks",
+    "homeScore": 111,
+    "awayScore": 100
+  },
+  {
+    "date": "2025-11-12",
+    "home": "Detroit Pistons",
+    "away": "Chicago Bulls",
+    "homeScore": 124,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-11-12",
+    "home": "New York Knicks",
+    "away": "Orlando Magic",
+    "homeScore": 107,
+    "awayScore": 124
+  },
+  {
+    "date": "2025-11-12",
+    "home": "Boston Celtics",
+    "away": "Memphis Grizzlies",
+    "homeScore": 131,
+    "awayScore": 95
+  },
+  {
+    "date": "2025-11-12",
+    "home": "Miami Heat",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 116,
+    "awayScore": 130
+  },
+  {
+    "date": "2025-11-12",
+    "home": "Houston Rockets",
+    "away": "Washington Wizards",
+    "homeScore": 135,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-12",
+    "home": "New Orleans Pelicans",
+    "away": "Portland Trail Blazers",
+    "homeScore": 117,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-11-12",
+    "home": "San Antonio Spurs",
+    "away": "Golden State Warriors",
+    "homeScore": 120,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-11-12",
+    "home": "Dallas Mavericks",
+    "away": "Phoenix Suns",
+    "homeScore": 114,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-11-12",
+    "home": "Oklahoma City Thunder",
+    "away": "Los Angeles Lakers",
+    "homeScore": 121,
+    "awayScore": 92
+  },
+  {
+    "date": "2025-11-12",
+    "home": "Sacramento Kings",
+    "away": "Atlanta Hawks",
+    "homeScore": 100,
+    "awayScore": 133
+  },
+  {
+    "date": "2025-11-12",
+    "home": "Los Angeles Clippers",
+    "away": "Denver Nuggets",
+    "homeScore": 116,
+    "awayScore": 130
+  },
+  {
+    "date": "2025-11-13",
+    "home": "Cleveland Cavaliers",
+    "away": "Toronto Raptors",
+    "homeScore": 113,
+    "awayScore": 126
+  },
+  {
+    "date": "2025-11-13",
+    "home": "Phoenix Suns",
+    "away": "Indiana Pacers",
+    "homeScore": 133,
+    "awayScore": 98
+  },
+  {
+    "date": "2025-11-13",
+    "home": "Utah Jazz",
+    "away": "Atlanta Hawks",
+    "homeScore": 122,
+    "awayScore": 132
+  },
+  {
+    "date": "2025-11-14",
+    "home": "New York Knicks",
+    "away": "Miami Heat",
+    "homeScore": 140,
+    "awayScore": 132
+  },
+  {
+    "date": "2025-11-14",
+    "home": "Orlando Magic",
+    "away": "Brooklyn Nets",
+    "homeScore": 105,
+    "awayScore": 98
+  },
+  {
+    "date": "2025-11-14",
+    "home": "Detroit Pistons",
+    "away": "Philadelphia 76ers",
+    "homeScore": 114,
+    "awayScore": 105
+  },
+  {
+    "date": "2025-11-14",
+    "home": "Houston Rockets",
+    "away": "Portland Trail Blazers",
+    "homeScore": 140,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-11-14",
+    "home": "Milwaukee Bucks",
+    "away": "Charlotte Hornets",
+    "homeScore": 147,
+    "awayScore": 134
+  },
+  {
+    "date": "2025-11-14",
+    "home": "Minnesota Timberwolves",
+    "away": "Sacramento Kings",
+    "homeScore": 124,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-11-14",
+    "home": "New Orleans Pelicans",
+    "away": "Los Angeles Lakers",
+    "homeScore": 104,
+    "awayScore": 118
+  },
+  {
+    "date": "2025-11-14",
+    "home": "Dallas Mavericks",
+    "away": "Los Angeles Clippers",
+    "homeScore": 127,
+    "awayScore": 133
+  },
+  {
+    "date": "2025-11-14",
+    "home": "San Antonio Spurs",
+    "away": "Golden State Warriors",
+    "homeScore": 108,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-11-15",
+    "home": "Cleveland Cavaliers",
+    "away": "Memphis Grizzlies",
+    "homeScore": 108,
+    "awayScore": 100
+  },
+  {
+    "date": "2025-11-15",
+    "home": "Charlotte Hornets",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 96,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-11-15",
+    "home": "Indiana Pacers",
+    "away": "Toronto Raptors",
+    "homeScore": 111,
+    "awayScore": 129
+  },
+  {
+    "date": "2025-11-15",
+    "home": "Milwaukee Bucks",
+    "away": "Los Angeles Lakers",
+    "homeScore": 95,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-11-15",
+    "home": "Minnesota Timberwolves",
+    "away": "Denver Nuggets",
+    "homeScore": 112,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Boston Celtics",
+    "away": "Los Angeles Clippers",
+    "homeScore": 121,
+    "awayScore": 118
+  },
+  {
+    "date": "2025-11-16",
+    "home": "San Antonio Spurs",
+    "away": "Sacramento Kings",
+    "homeScore": 123,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Washington Wizards",
+    "away": "Brooklyn Nets",
+    "homeScore": 106,
+    "awayScore": 129
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Houston Rockets",
+    "away": "Orlando Magic",
+    "homeScore": 117,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-11-16",
+    "home": "New Orleans Pelicans",
+    "away": "Golden State Warriors",
+    "homeScore": 106,
+    "awayScore": 124
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Dallas Mavericks",
+    "away": "Portland Trail Blazers",
+    "homeScore": 138,
+    "awayScore": 133
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Phoenix Suns",
+    "away": "Atlanta Hawks",
+    "homeScore": 122,
+    "awayScore": 124
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Utah Jazz",
+    "away": "Chicago Bulls",
+    "homeScore": 150,
+    "awayScore": 147
+  },
+  {
+    "date": "2025-11-17",
+    "home": "Cleveland Cavaliers",
+    "away": "Milwaukee Bucks",
+    "homeScore": 118,
+    "awayScore": 106
+  },
+  {
+    "date": "2025-11-17",
+    "home": "Detroit Pistons",
+    "away": "Indiana Pacers",
+    "homeScore": 127,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-17",
+    "home": "Philadelphia 76ers",
+    "away": "Los Angeles Clippers",
+    "homeScore": 110,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-11-17",
+    "home": "Miami Heat",
+    "away": "New York Knicks",
+    "homeScore": 115,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-11-17",
+    "home": "Toronto Raptors",
+    "away": "Charlotte Hornets",
+    "homeScore": 110,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-11-17",
+    "home": "Minnesota Timberwolves",
+    "away": "Dallas Mavericks",
+    "homeScore": 120,
+    "awayScore": 96
+  },
+  {
+    "date": "2025-11-17",
+    "home": "New Orleans Pelicans",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 109,
+    "awayScore": 126
+  },
+  {
+    "date": "2025-11-17",
+    "home": "Denver Nuggets",
+    "away": "Chicago Bulls",
+    "homeScore": 127,
+    "awayScore": 130
+  },
+  {
+    "date": "2025-11-18",
+    "home": "Orlando Magic",
+    "away": "Golden State Warriors",
+    "homeScore": 121,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-11-18",
+    "home": "Brooklyn Nets",
+    "away": "Boston Celtics",
+    "homeScore": 99,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-11-18",
+    "home": "Atlanta Hawks",
+    "away": "Detroit Pistons",
+    "homeScore": 112,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-11-18",
+    "home": "San Antonio Spurs",
+    "away": "Memphis Grizzlies",
+    "homeScore": 111,
+    "awayScore": 101
+  },
+  {
+    "date": "2025-11-18",
+    "home": "Los Angeles Lakers",
+    "away": "Utah Jazz",
+    "homeScore": 140,
+    "awayScore": 126
+  },
+  {
+    "date": "2025-11-18",
+    "home": "Portland Trail Blazers",
+    "away": "Phoenix Suns",
+    "homeScore": 110,
+    "awayScore": 127
+  },
+  {
+    "date": "2025-11-19",
+    "home": "Cleveland Cavaliers",
+    "away": "Houston Rockets",
+    "homeScore": 104,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-11-19",
+    "home": "Indiana Pacers",
+    "away": "Charlotte Hornets",
+    "homeScore": 127,
+    "awayScore": 118
+  },
+  {
+    "date": "2025-11-19",
+    "home": "Miami Heat",
+    "away": "Golden State Warriors",
+    "homeScore": 110,
+    "awayScore": 96
+  },
+  {
+    "date": "2025-11-19",
+    "home": "Philadelphia 76ers",
+    "away": "Toronto Raptors",
+    "homeScore": 112,
+    "awayScore": 121
+  },
+  {
+    "date": "2025-11-19",
+    "home": "Minnesota Timberwolves",
+    "away": "Washington Wizards",
+    "homeScore": 120,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-11-19",
+    "home": "New Orleans Pelicans",
+    "away": "Denver Nuggets",
+    "homeScore": 118,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-11-19",
+    "home": "Oklahoma City Thunder",
+    "away": "Sacramento Kings",
+    "homeScore": 113,
+    "awayScore": 99
+  },
+  {
+    "date": "2025-11-19",
+    "home": "Dallas Mavericks",
+    "away": "New York Knicks",
+    "homeScore": 111,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-11-19",
+    "home": "Portland Trail Blazers",
+    "away": "Chicago Bulls",
+    "homeScore": 121,
+    "awayScore": 122
+  },
+  {
+    "date": "2025-11-20",
+    "home": "Orlando Magic",
+    "away": "Los Angeles Clippers",
+    "homeScore": 129,
+    "awayScore": 101
+  },
+  {
+    "date": "2025-11-20",
+    "home": "Memphis Grizzlies",
+    "away": "Sacramento Kings",
+    "homeScore": 137,
+    "awayScore": 96
+  },
+  {
+    "date": "2025-11-20",
+    "home": "Milwaukee Bucks",
+    "away": "Philadelphia 76ers",
+    "homeScore": 114,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-11-20",
+    "home": "San Antonio Spurs",
+    "away": "Atlanta Hawks",
+    "homeScore": 135,
+    "awayScore": 126
+  },
+  {
+    "date": "2025-11-21",
+    "home": "Cleveland Cavaliers",
+    "away": "Indiana Pacers",
+    "homeScore": 120,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-11-21",
+    "home": "Boston Celtics",
+    "away": "Brooklyn Nets",
+    "homeScore": 105,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-11-21",
+    "home": "Toronto Raptors",
+    "away": "Washington Wizards",
+    "homeScore": 140,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-11-21",
+    "home": "Chicago Bulls",
+    "away": "Miami Heat",
+    "homeScore": 107,
+    "awayScore": 143
+  },
+  {
+    "date": "2025-11-21",
+    "home": "Dallas Mavericks",
+    "away": "New Orleans Pelicans",
+    "homeScore": 118,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-11-21",
+    "home": "Phoenix Suns",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 114,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-11-21",
+    "home": "Houston Rockets",
+    "away": "Denver Nuggets",
+    "homeScore": 109,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-21",
+    "home": "Utah Jazz",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 112,
+    "awayScore": 144
+  },
+  {
+    "date": "2025-11-21",
+    "home": "Golden State Warriors",
+    "away": "Portland Trail Blazers",
+    "homeScore": 123,
+    "awayScore": 127
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Charlotte Hornets",
+    "away": "Los Angeles Clippers",
+    "homeScore": 116,
+    "awayScore": 131
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Orlando Magic",
+    "away": "New York Knicks",
+    "homeScore": 133,
+    "awayScore": 121
+  },
+  {
+    "date": "2025-11-22",
+    "home": "New Orleans Pelicans",
+    "away": "Atlanta Hawks",
+    "homeScore": 98,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Chicago Bulls",
+    "away": "Washington Wizards",
+    "homeScore": 121,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Milwaukee Bucks",
+    "away": "Detroit Pistons",
+    "homeScore": 116,
+    "awayScore": 129
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Dallas Mavericks",
+    "away": "Memphis Grizzlies",
+    "homeScore": 96,
+    "awayScore": 102
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Denver Nuggets",
+    "away": "Sacramento Kings",
+    "homeScore": 123,
+    "awayScore": 128
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Philadelphia 76ers",
+    "away": "Miami Heat",
+    "homeScore": 117,
+    "awayScore": 127
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Atlanta Hawks",
+    "away": "Charlotte Hornets",
+    "homeScore": 113,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Boston Celtics",
+    "away": "Orlando Magic",
+    "homeScore": 138,
+    "awayScore": 129
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Cleveland Cavaliers",
+    "away": "Los Angeles Clippers",
+    "homeScore": 120,
+    "awayScore": 105
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Toronto Raptors",
+    "away": "Brooklyn Nets",
+    "homeScore": 119,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Oklahoma City Thunder",
+    "away": "Portland Trail Blazers",
+    "homeScore": 122,
+    "awayScore": 95
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Phoenix Suns",
+    "away": "San Antonio Spurs",
+    "homeScore": 111,
+    "awayScore": 102
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Utah Jazz",
+    "away": "Los Angeles Lakers",
+    "homeScore": 106,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-11-24",
+    "home": "Indiana Pacers",
+    "away": "Detroit Pistons",
+    "homeScore": 117,
+    "awayScore": 122
+  },
+  {
+    "date": "2025-11-24",
+    "home": "Toronto Raptors",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 110,
+    "awayScore": 99
+  },
+  {
+    "date": "2025-11-24",
+    "home": "Brooklyn Nets",
+    "away": "New York Knicks",
+    "homeScore": 100,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-11-24",
+    "home": "Miami Heat",
+    "away": "Dallas Mavericks",
+    "homeScore": 106,
+    "awayScore": 102
+  },
+  {
+    "date": "2025-11-24",
+    "home": "Memphis Grizzlies",
+    "away": "Denver Nuggets",
+    "homeScore": 115,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-11-24",
+    "home": "Milwaukee Bucks",
+    "away": "Portland Trail Blazers",
+    "homeScore": 103,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-11-24",
+    "home": "New Orleans Pelicans",
+    "away": "Chicago Bulls",
+    "homeScore": 143,
+    "awayScore": 130
+  },
+  {
+    "date": "2025-11-24",
+    "home": "Phoenix Suns",
+    "away": "Houston Rockets",
+    "homeScore": 92,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-11-24",
+    "home": "Golden State Warriors",
+    "away": "Utah Jazz",
+    "homeScore": 134,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-11-24",
+    "home": "Sacramento Kings",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 117,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-25",
+    "home": "Washington Wizards",
+    "away": "Atlanta Hawks",
+    "homeScore": 132,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-11-25",
+    "home": "Philadelphia 76ers",
+    "away": "Orlando Magic",
+    "homeScore": 103,
+    "awayScore": 144
+  },
+  {
+    "date": "2025-11-25",
+    "home": "Los Angeles Lakers",
+    "away": "Los Angeles Clippers",
+    "homeScore": 135,
+    "awayScore": 118
+  },
+  {
+    "date": "2025-11-26",
+    "home": "Boston Celtics",
+    "away": "Detroit Pistons",
+    "homeScore": 117,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-11-26",
+    "home": "Charlotte Hornets",
+    "away": "New York Knicks",
+    "homeScore": 101,
+    "awayScore": 129
+  },
+  {
+    "date": "2025-11-26",
+    "home": "Miami Heat",
+    "away": "Milwaukee Bucks",
+    "homeScore": 106,
+    "awayScore": 103
+  },
+  {
+    "date": "2025-11-26",
+    "home": "Toronto Raptors",
+    "away": "Indiana Pacers",
+    "homeScore": 97,
+    "awayScore": 95
+  },
+  {
+    "date": "2025-11-26",
+    "home": "Oklahoma City Thunder",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 113,
+    "awayScore": 105
+  },
+  {
+    "date": "2025-11-26",
+    "home": "New Orleans Pelicans",
+    "away": "Memphis Grizzlies",
+    "homeScore": 128,
+    "awayScore": 133
+  },
+  {
+    "date": "2025-11-26",
+    "home": "Golden State Warriors",
+    "away": "Houston Rockets",
+    "homeScore": 100,
+    "awayScore": 104
+  },
+  {
+    "date": "2025-11-26",
+    "home": "Portland Trail Blazers",
+    "away": "San Antonio Spurs",
+    "homeScore": 102,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-11-26",
+    "home": "Sacramento Kings",
+    "away": "Phoenix Suns",
+    "homeScore": 100,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Atlanta Hawks",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 130,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Brooklyn Nets",
+    "away": "Philadelphia 76ers",
+    "homeScore": 103,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Charlotte Hornets",
+    "away": "Chicago Bulls",
+    "homeScore": 123,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Detroit Pistons",
+    "away": "Orlando Magic",
+    "homeScore": 109,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Indiana Pacers",
+    "away": "Washington Wizards",
+    "homeScore": 119,
+    "awayScore": 86
+  },
+  {
+    "date": "2025-11-28",
+    "home": "New York Knicks",
+    "away": "Milwaukee Bucks",
+    "homeScore": 118,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Oklahoma City Thunder",
+    "away": "Phoenix Suns",
+    "homeScore": 123,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Denver Nuggets",
+    "away": "San Antonio Spurs",
+    "homeScore": 136,
+    "awayScore": 139
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Utah Jazz",
+    "away": "Sacramento Kings",
+    "homeScore": 128,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Los Angeles Lakers",
+    "away": "Dallas Mavericks",
+    "homeScore": 129,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Los Angeles Clippers",
+    "away": "Memphis Grizzlies",
+    "homeScore": 107,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Minnesota Timberwolves",
+    "away": "Boston Celtics",
+    "homeScore": 119,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Charlotte Hornets",
+    "away": "Toronto Raptors",
+    "homeScore": 118,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Indiana Pacers",
+    "away": "Chicago Bulls",
+    "homeScore": 103,
+    "awayScore": 101
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Miami Heat",
+    "away": "Detroit Pistons",
+    "homeScore": 135,
+    "awayScore": 138
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Milwaukee Bucks",
+    "away": "Brooklyn Nets",
+    "homeScore": 116,
+    "awayScore": 99
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Golden State Warriors",
+    "away": "New Orleans Pelicans",
+    "homeScore": 104,
+    "awayScore": 96
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Phoenix Suns",
+    "away": "Denver Nuggets",
+    "homeScore": 112,
+    "awayScore": 130
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Los Angeles Clippers",
+    "away": "Dallas Mavericks",
+    "homeScore": 110,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Utah Jazz",
+    "away": "Houston Rockets",
+    "homeScore": 101,
+    "awayScore": 129
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Cleveland Cavaliers",
+    "away": "Boston Celtics",
+    "homeScore": 115,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-11-30",
+    "home": "New York Knicks",
+    "away": "Toronto Raptors",
+    "homeScore": 116,
+    "awayScore": 94
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Philadelphia 76ers",
+    "away": "Atlanta Hawks",
+    "homeScore": 134,
+    "awayScore": 142
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Portland Trail Blazers",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 115,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Minnesota Timberwolves",
+    "away": "San Antonio Spurs",
+    "homeScore": 125,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Sacramento Kings",
+    "away": "Memphis Grizzlies",
+    "homeScore": 107,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Los Angeles Lakers",
+    "away": "New Orleans Pelicans",
+    "homeScore": 133,
+    "awayScore": 121
+  },
+  {
+    "date": "2025-12-01",
+    "home": "Detroit Pistons",
+    "away": "Atlanta Hawks",
+    "homeScore": 99,
+    "awayScore": 98
+  },
+  {
+    "date": "2025-12-01",
+    "home": "Indiana Pacers",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 119,
+    "awayScore": 135
+  },
+  {
+    "date": "2025-12-01",
+    "home": "Washington Wizards",
+    "away": "Milwaukee Bucks",
+    "homeScore": 129,
+    "awayScore": 126
+  },
+  {
+    "date": "2025-12-01",
+    "home": "Brooklyn Nets",
+    "away": "Charlotte Hornets",
+    "homeScore": 116,
+    "awayScore": 103
+  },
+  {
+    "date": "2025-12-01",
+    "home": "Miami Heat",
+    "away": "Los Angeles Clippers",
+    "homeScore": 140,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-12-01",
+    "home": "Orlando Magic",
+    "away": "Chicago Bulls",
+    "homeScore": 125,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-12-01",
+    "home": "Denver Nuggets",
+    "away": "Dallas Mavericks",
+    "homeScore": 121,
+    "awayScore": 131
+  },
+  {
+    "date": "2025-12-01",
+    "home": "Utah Jazz",
+    "away": "Houston Rockets",
+    "homeScore": 133,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-12-01",
+    "home": "Los Angeles Lakers",
+    "away": "Phoenix Suns",
+    "homeScore": 108,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-12-02",
+    "home": "Philadelphia 76ers",
+    "away": "Washington Wizards",
+    "homeScore": 121,
+    "awayScore": 102
+  },
+  {
+    "date": "2025-12-02",
+    "home": "Toronto Raptors",
+    "away": "Portland Trail Blazers",
+    "homeScore": 121,
+    "awayScore": 118
+  },
+  {
+    "date": "2025-12-02",
+    "home": "Boston Celtics",
+    "away": "New York Knicks",
+    "homeScore": 123,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-12-02",
+    "home": "New Orleans Pelicans",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 142,
+    "awayScore": 149
+  },
+  {
+    "date": "2025-12-02",
+    "home": "San Antonio Spurs",
+    "away": "Memphis Grizzlies",
+    "homeScore": 126,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-12-02",
+    "home": "Golden State Warriors",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 112,
+    "awayScore": 124
+  },
+  {
+    "date": "2025-12-03",
+    "home": "Cleveland Cavaliers",
+    "away": "Portland Trail Blazers",
+    "homeScore": 110,
+    "awayScore": 122
+  },
+  {
+    "date": "2025-12-03",
+    "home": "Indiana Pacers",
+    "away": "Denver Nuggets",
+    "homeScore": 120,
+    "awayScore": 135
+  },
+  {
+    "date": "2025-12-03",
+    "home": "Orlando Magic",
+    "away": "San Antonio Spurs",
+    "homeScore": 112,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-12-03",
+    "home": "Atlanta Hawks",
+    "away": "Los Angeles Clippers",
+    "homeScore": 92,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-12-03",
+    "home": "New York Knicks",
+    "away": "Charlotte Hornets",
+    "homeScore": 119,
+    "awayScore": 104
+  },
+  {
+    "date": "2025-12-03",
+    "home": "Chicago Bulls",
+    "away": "Brooklyn Nets",
+    "homeScore": 103,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-12-03",
+    "home": "Houston Rockets",
+    "away": "Sacramento Kings",
+    "homeScore": 121,
+    "awayScore": 95
+  },
+  {
+    "date": "2025-12-03",
+    "home": "Milwaukee Bucks",
+    "away": "Detroit Pistons",
+    "homeScore": 113,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-12-03",
+    "home": "Dallas Mavericks",
+    "away": "Miami Heat",
+    "homeScore": 118,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-12-04",
+    "home": "Philadelphia 76ers",
+    "away": "Golden State Warriors",
+    "homeScore": 99,
+    "awayScore": 98
+  },
+  {
+    "date": "2025-12-04",
+    "home": "Washington Wizards",
+    "away": "Boston Celtics",
+    "homeScore": 101,
+    "awayScore": 146
+  },
+  {
+    "date": "2025-12-04",
+    "home": "Brooklyn Nets",
+    "away": "Utah Jazz",
+    "homeScore": 110,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-12-04",
+    "home": "Toronto Raptors",
+    "away": "Los Angeles Lakers",
+    "homeScore": 120,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-12-04",
+    "home": "New Orleans Pelicans",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 116,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Boston Celtics",
+    "away": "Los Angeles Lakers",
+    "homeScore": 126,
+    "awayScore": 105
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Orlando Magic",
+    "away": "Miami Heat",
+    "homeScore": 106,
+    "awayScore": 105
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Atlanta Hawks",
+    "away": "Denver Nuggets",
+    "homeScore": 133,
+    "awayScore": 134
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Cleveland Cavaliers",
+    "away": "San Antonio Spurs",
+    "homeScore": 130,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Detroit Pistons",
+    "away": "Portland Trail Blazers",
+    "homeScore": 122,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-12-05",
+    "home": "New York Knicks",
+    "away": "Utah Jazz",
+    "homeScore": 146,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Toronto Raptors",
+    "away": "Charlotte Hornets",
+    "homeScore": 86,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Chicago Bulls",
+    "away": "Indiana Pacers",
+    "homeScore": 105,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Houston Rockets",
+    "away": "Phoenix Suns",
+    "homeScore": 117,
+    "awayScore": 98
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Memphis Grizzlies",
+    "away": "Los Angeles Clippers",
+    "homeScore": 107,
+    "awayScore": 98
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Milwaukee Bucks",
+    "away": "Philadelphia 76ers",
+    "homeScore": 101,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Oklahoma City Thunder",
+    "away": "Dallas Mavericks",
+    "homeScore": 132,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Brooklyn Nets",
+    "away": "New Orleans Pelicans",
+    "homeScore": 119,
+    "awayScore": 101
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Washington Wizards",
+    "away": "Atlanta Hawks",
+    "homeScore": 116,
+    "awayScore": 131
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Cleveland Cavaliers",
+    "away": "Golden State Warriors",
+    "homeScore": 94,
+    "awayScore": 99
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Detroit Pistons",
+    "away": "Milwaukee Bucks",
+    "homeScore": 124,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Miami Heat",
+    "away": "Sacramento Kings",
+    "homeScore": 111,
+    "awayScore": 127
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Minnesota Timberwolves",
+    "away": "Los Angeles Clippers",
+    "homeScore": 109,
+    "awayScore": 106
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Dallas Mavericks",
+    "away": "Houston Rockets",
+    "homeScore": 122,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-12-07",
+    "home": "New York Knicks",
+    "away": "Orlando Magic",
+    "homeScore": 106,
+    "awayScore": 100
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Toronto Raptors",
+    "away": "Boston Celtics",
+    "homeScore": 113,
+    "awayScore": 121
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Charlotte Hornets",
+    "away": "Denver Nuggets",
+    "homeScore": 106,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Memphis Grizzlies",
+    "away": "Portland Trail Blazers",
+    "homeScore": 119,
+    "awayScore": 96
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Chicago Bulls",
+    "away": "Golden State Warriors",
+    "homeScore": 91,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Philadelphia 76ers",
+    "away": "Los Angeles Lakers",
+    "homeScore": 108,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Utah Jazz",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 101,
+    "awayScore": 131
+  },
+  {
+    "date": "2025-12-08",
+    "home": "Indiana Pacers",
+    "away": "Sacramento Kings",
+    "homeScore": 116,
+    "awayScore": 105
+  },
+  {
+    "date": "2025-12-08",
+    "home": "Minnesota Timberwolves",
+    "away": "Phoenix Suns",
+    "homeScore": 105,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-12-08",
+    "home": "New Orleans Pelicans",
+    "away": "San Antonio Spurs",
+    "homeScore": 132,
+    "awayScore": 135
+  },
+  {
+    "date": "2025-12-09",
+    "home": "Orlando Magic",
+    "away": "Miami Heat",
+    "homeScore": 117,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-12-09",
+    "home": "Toronto Raptors",
+    "away": "New York Knicks",
+    "homeScore": 101,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-12-10",
+    "home": "Oklahoma City Thunder",
+    "away": "Phoenix Suns",
+    "homeScore": 138,
+    "awayScore": 89
+  },
+  {
+    "date": "2025-12-10",
+    "home": "Los Angeles Lakers",
+    "away": "San Antonio Spurs",
+    "homeScore": 119,
+    "awayScore": 132
+  },
+  {
+    "date": "2025-12-11",
+    "home": "Houston Rockets",
+    "away": "Los Angeles Clippers",
+    "homeScore": 115,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-12-11",
+    "home": "Milwaukee Bucks",
+    "away": "Boston Celtics",
+    "homeScore": 116,
+    "awayScore": 101
+  },
+  {
+    "date": "2025-12-11",
+    "home": "New Orleans Pelicans",
+    "away": "Portland Trail Blazers",
+    "homeScore": 143,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-12-11",
+    "home": "Sacramento Kings",
+    "away": "Denver Nuggets",
+    "homeScore": 105,
+    "awayScore": 136
+  },
+  {
+    "date": "2025-12-12",
+    "home": "Charlotte Hornets",
+    "away": "Chicago Bulls",
+    "homeScore": 126,
+    "awayScore": 129
+  },
+  {
+    "date": "2025-12-12",
+    "home": "Detroit Pistons",
+    "away": "Atlanta Hawks",
+    "homeScore": 142,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-12-12",
+    "home": "Philadelphia 76ers",
+    "away": "Indiana Pacers",
+    "homeScore": 115,
+    "awayScore": 105
+  },
+  {
+    "date": "2025-12-12",
+    "home": "Washington Wizards",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 126,
+    "awayScore": 130
+  },
+  {
+    "date": "2025-12-12",
+    "home": "Memphis Grizzlies",
+    "away": "Utah Jazz",
+    "homeScore": 126,
+    "awayScore": 130
+  },
+  {
+    "date": "2025-12-12",
+    "home": "Dallas Mavericks",
+    "away": "Brooklyn Nets",
+    "homeScore": 119,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-12-12",
+    "home": "Golden State Warriors",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 120,
+    "awayScore": 127
+  },
+  {
+    "date": "2025-12-13",
+    "home": "Orlando Magic",
+    "away": "New York Knicks",
+    "homeScore": 120,
+    "awayScore": 132
+  },
+  {
+    "date": "2025-12-13",
+    "home": "Oklahoma City Thunder",
+    "away": "San Antonio Spurs",
+    "homeScore": 109,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Indiana Pacers",
+    "away": "Washington Wizards",
+    "homeScore": 89,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Atlanta Hawks",
+    "away": "Philadelphia 76ers",
+    "homeScore": 120,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Cleveland Cavaliers",
+    "away": "Charlotte Hornets",
+    "homeScore": 111,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Brooklyn Nets",
+    "away": "Milwaukee Bucks",
+    "homeScore": 127,
+    "awayScore": 82
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Minnesota Timberwolves",
+    "away": "Sacramento Kings",
+    "homeScore": 117,
+    "awayScore": 103
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Portland Trail Blazers",
+    "away": "Golden State Warriors",
+    "homeScore": 136,
+    "awayScore": 131
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Chicago Bulls",
+    "away": "New Orleans Pelicans",
+    "homeScore": 104,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Phoenix Suns",
+    "away": "Los Angeles Lakers",
+    "homeScore": 114,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-12-15",
+    "home": "Boston Celtics",
+    "away": "Detroit Pistons",
+    "homeScore": 105,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-12-15",
+    "home": "Utah Jazz",
+    "away": "Dallas Mavericks",
+    "homeScore": 140,
+    "awayScore": 133
+  },
+  {
+    "date": "2025-12-15",
+    "home": "Denver Nuggets",
+    "away": "Houston Rockets",
+    "homeScore": 128,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-12-15",
+    "home": "Los Angeles Clippers",
+    "away": "Memphis Grizzlies",
+    "homeScore": 103,
+    "awayScore": 121
+  },
+  {
+    "date": "2025-12-15",
+    "home": "Miami Heat",
+    "away": "Toronto Raptors",
+    "homeScore": 96,
+    "awayScore": 106
+  },
+  {
+    "date": "2025-12-16",
+    "home": "New York Knicks",
+    "away": "San Antonio Spurs",
+    "homeScore": 124,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-12-17",
+    "home": "Chicago Bulls",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 127,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-12-17",
+    "home": "Minnesota Timberwolves",
+    "away": "Memphis Grizzlies",
+    "homeScore": 110,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-12-18",
+    "home": "Oklahoma City Thunder",
+    "away": "Los Angeles Clippers",
+    "homeScore": 122,
+    "awayScore": 101
+  },
+  {
+    "date": "2025-12-18",
+    "home": "San Antonio Spurs",
+    "away": "Washington Wizards",
+    "homeScore": 119,
+    "awayScore": 94
+  },
+  {
+    "date": "2025-12-18",
+    "home": "Charlotte Hornets",
+    "away": "Atlanta Hawks",
+    "homeScore": 133,
+    "awayScore": 126
+  },
+  {
+    "date": "2025-12-18",
+    "home": "Indiana Pacers",
+    "away": "New York Knicks",
+    "homeScore": 113,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-12-18",
+    "home": "Brooklyn Nets",
+    "away": "Miami Heat",
+    "homeScore": 95,
+    "awayScore": 106
+  },
+  {
+    "date": "2025-12-18",
+    "home": "Milwaukee Bucks",
+    "away": "Toronto Raptors",
+    "homeScore": 105,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-12-18",
+    "home": "New Orleans Pelicans",
+    "away": "Houston Rockets",
+    "homeScore": 133,
+    "awayScore": 128
+  },
+  {
+    "date": "2025-12-18",
+    "home": "Dallas Mavericks",
+    "away": "Detroit Pistons",
+    "homeScore": 116,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-12-18",
+    "home": "Denver Nuggets",
+    "away": "Orlando Magic",
+    "homeScore": 126,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-12-18",
+    "home": "Phoenix Suns",
+    "away": "Golden State Warriors",
+    "homeScore": 99,
+    "awayScore": 98
+  },
+  {
+    "date": "2025-12-18",
+    "home": "Utah Jazz",
+    "away": "Los Angeles Lakers",
+    "homeScore": 135,
+    "awayScore": 143
+  },
+  {
+    "date": "2025-12-18",
+    "home": "Portland Trail Blazers",
+    "away": "Sacramento Kings",
+    "homeScore": 134,
+    "awayScore": 133
+  },
+  {
+    "date": "2025-12-19",
+    "home": "Boston Celtics",
+    "away": "Miami Heat",
+    "homeScore": 129,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-12-19",
+    "home": "New York Knicks",
+    "away": "Philadelphia 76ers",
+    "homeScore": 107,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-12-19",
+    "home": "Atlanta Hawks",
+    "away": "San Antonio Spurs",
+    "homeScore": 98,
+    "awayScore": 126
+  },
+  {
+    "date": "2025-12-19",
+    "home": "Cleveland Cavaliers",
+    "away": "Chicago Bulls",
+    "homeScore": 125,
+    "awayScore": 136
+  },
+  {
+    "date": "2025-12-19",
+    "home": "Minnesota Timberwolves",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 112,
+    "awayScore": 107
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Denver Nuggets",
+    "away": "Houston Rockets",
+    "homeScore": 101,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Philadelphia 76ers",
+    "away": "Dallas Mavericks",
+    "homeScore": 121,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Toronto Raptors",
+    "away": "Boston Celtics",
+    "homeScore": 96,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-12-20",
+    "home": "New Orleans Pelicans",
+    "away": "Indiana Pacers",
+    "homeScore": 128,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Detroit Pistons",
+    "away": "Charlotte Hornets",
+    "homeScore": 112,
+    "awayScore": 86
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Memphis Grizzlies",
+    "away": "Washington Wizards",
+    "homeScore": 122,
+    "awayScore": 130
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Golden State Warriors",
+    "away": "Phoenix Suns",
+    "homeScore": 119,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Utah Jazz",
+    "away": "Orlando Magic",
+    "homeScore": 127,
+    "awayScore": 128
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Sacramento Kings",
+    "away": "Portland Trail Blazers",
+    "homeScore": 93,
+    "awayScore": 98
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Los Angeles Clippers",
+    "away": "Los Angeles Lakers",
+    "homeScore": 103,
+    "awayScore": 88
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Atlanta Hawks",
+    "away": "Chicago Bulls",
+    "homeScore": 150,
+    "awayScore": 152
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Brooklyn Nets",
+    "away": "Toronto Raptors",
+    "homeScore": 96,
+    "awayScore": 81
+  },
+  {
+    "date": "2025-12-21",
+    "home": "New York Knicks",
+    "away": "Miami Heat",
+    "homeScore": 132,
+    "awayScore": 125
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Washington Wizards",
+    "away": "San Antonio Spurs",
+    "homeScore": 113,
+    "awayScore": 124
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Minnesota Timberwolves",
+    "away": "Milwaukee Bucks",
+    "homeScore": 103,
+    "awayScore": 100
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Sacramento Kings",
+    "away": "Houston Rockets",
+    "homeScore": 125,
+    "awayScore": 124
+  },
+  {
+    "date": "2025-12-22",
+    "home": "Cleveland Cavaliers",
+    "away": "Charlotte Hornets",
+    "homeScore": 139,
+    "awayScore": 132
+  },
+  {
+    "date": "2025-12-22",
+    "home": "Boston Celtics",
+    "away": "Indiana Pacers",
+    "homeScore": 103,
+    "awayScore": 95
+  },
+  {
+    "date": "2025-12-22",
+    "home": "New Orleans Pelicans",
+    "away": "Dallas Mavericks",
+    "homeScore": 119,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-12-22",
+    "home": "Denver Nuggets",
+    "away": "Utah Jazz",
+    "homeScore": 135,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-12-22",
+    "home": "Oklahoma City Thunder",
+    "away": "Memphis Grizzlies",
+    "homeScore": 119,
+    "awayScore": 103
+  },
+  {
+    "date": "2025-12-22",
+    "home": "Golden State Warriors",
+    "away": "Orlando Magic",
+    "homeScore": 120,
+    "awayScore": 97
+  },
+  {
+    "date": "2025-12-22",
+    "home": "Portland Trail Blazers",
+    "away": "Detroit Pistons",
+    "homeScore": 102,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Charlotte Hornets",
+    "away": "Washington Wizards",
+    "homeScore": 126,
+    "awayScore": 109
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Philadelphia 76ers",
+    "away": "Brooklyn Nets",
+    "homeScore": 106,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Atlanta Hawks",
+    "away": "Chicago Bulls",
+    "homeScore": 123,
+    "awayScore": 126
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Cleveland Cavaliers",
+    "away": "New Orleans Pelicans",
+    "homeScore": 141,
+    "awayScore": 118
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Indiana Pacers",
+    "away": "Milwaukee Bucks",
+    "homeScore": 94,
+    "awayScore": 111
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Miami Heat",
+    "away": "Toronto Raptors",
+    "homeScore": 91,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Dallas Mavericks",
+    "away": "Denver Nuggets",
+    "homeScore": 131,
+    "awayScore": 130
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Minnesota Timberwolves",
+    "away": "New York Knicks",
+    "homeScore": 115,
+    "awayScore": 104
+  },
+  {
+    "date": "2025-12-23",
+    "home": "San Antonio Spurs",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 130,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Phoenix Suns",
+    "away": "Los Angeles Lakers",
+    "homeScore": 132,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Utah Jazz",
+    "away": "Memphis Grizzlies",
+    "homeScore": 128,
+    "awayScore": 137
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Portland Trail Blazers",
+    "away": "Orlando Magic",
+    "homeScore": 106,
+    "awayScore": 110
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Sacramento Kings",
+    "away": "Detroit Pistons",
+    "homeScore": 127,
+    "awayScore": 136
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Los Angeles Clippers",
+    "away": "Houston Rockets",
+    "homeScore": 128,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-12-25",
+    "home": "New York Knicks",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 126,
+    "awayScore": 124
+  },
+  {
+    "date": "2025-12-25",
+    "home": "Oklahoma City Thunder",
+    "away": "San Antonio Spurs",
+    "homeScore": 102,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-12-25",
+    "home": "Golden State Warriors",
+    "away": "Dallas Mavericks",
+    "homeScore": 126,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-12-25",
+    "home": "Los Angeles Lakers",
+    "away": "Houston Rockets",
+    "homeScore": 96,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-12-25",
+    "home": "Denver Nuggets",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 142,
+    "awayScore": 138
+  },
+  {
+    "date": "2025-12-26",
+    "home": "Atlanta Hawks",
+    "away": "Miami Heat",
+    "homeScore": 111,
+    "awayScore": 126
+  },
+  {
+    "date": "2025-12-26",
+    "home": "Orlando Magic",
+    "away": "Charlotte Hornets",
+    "homeScore": 105,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-12-26",
+    "home": "Washington Wizards",
+    "away": "Toronto Raptors",
+    "homeScore": 138,
+    "awayScore": 117
+  },
+  {
+    "date": "2025-12-26",
+    "home": "Indiana Pacers",
+    "away": "Boston Celtics",
+    "homeScore": 122,
+    "awayScore": 140
+  },
+  {
+    "date": "2025-12-26",
+    "home": "Chicago Bulls",
+    "away": "Philadelphia 76ers",
+    "homeScore": 109,
+    "awayScore": 102
+  },
+  {
+    "date": "2025-12-26",
+    "home": "Memphis Grizzlies",
+    "away": "Milwaukee Bucks",
+    "homeScore": 125,
+    "awayScore": 104
+  },
+  {
+    "date": "2025-12-26",
+    "home": "New Orleans Pelicans",
+    "away": "Phoenix Suns",
+    "homeScore": 108,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-12-26",
+    "home": "Utah Jazz",
+    "away": "Detroit Pistons",
+    "homeScore": 131,
+    "awayScore": 129
+  },
+  {
+    "date": "2025-12-26",
+    "home": "Portland Trail Blazers",
+    "away": "Los Angeles Clippers",
+    "homeScore": 103,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-12-27",
+    "home": "Sacramento Kings",
+    "away": "Dallas Mavericks",
+    "homeScore": 113,
+    "awayScore": 107
+  },
+  {
+    "date": "2025-12-27",
+    "home": "Orlando Magic",
+    "away": "Denver Nuggets",
+    "homeScore": 127,
+    "awayScore": 126
+  },
+  {
+    "date": "2025-12-27",
+    "home": "New Orleans Pelicans",
+    "away": "Phoenix Suns",
+    "homeScore": 114,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-12-27",
+    "home": "Atlanta Hawks",
+    "away": "New York Knicks",
+    "homeScore": 125,
+    "awayScore": 128
+  },
+  {
+    "date": "2025-12-27",
+    "home": "Miami Heat",
+    "away": "Indiana Pacers",
+    "homeScore": 142,
+    "awayScore": 116
+  },
+  {
+    "date": "2025-12-27",
+    "home": "Chicago Bulls",
+    "away": "Milwaukee Bucks",
+    "homeScore": 103,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-12-27",
+    "home": "Houston Rockets",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 117,
+    "awayScore": 100
+  },
+  {
+    "date": "2025-12-27",
+    "home": "Minnesota Timberwolves",
+    "away": "Brooklyn Nets",
+    "homeScore": 107,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-12-27",
+    "home": "San Antonio Spurs",
+    "away": "Utah Jazz",
+    "homeScore": 114,
+    "awayScore": 127
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Toronto Raptors",
+    "away": "Golden State Warriors",
+    "homeScore": 141,
+    "awayScore": 127
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Oklahoma City Thunder",
+    "away": "Philadelphia 76ers",
+    "homeScore": 129,
+    "awayScore": 104
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Washington Wizards",
+    "away": "Memphis Grizzlies",
+    "homeScore": 116,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Portland Trail Blazers",
+    "away": "Boston Celtics",
+    "homeScore": 114,
+    "awayScore": 108
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Los Angeles Clippers",
+    "away": "Detroit Pistons",
+    "homeScore": 112,
+    "awayScore": 99
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Los Angeles Lakers",
+    "away": "Sacramento Kings",
+    "homeScore": 125,
+    "awayScore": 101
+  },
+  {
+    "date": "2025-12-29",
+    "home": "Charlotte Hornets",
+    "away": "Milwaukee Bucks",
+    "homeScore": 113,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-12-29",
+    "home": "Washington Wizards",
+    "away": "Phoenix Suns",
+    "homeScore": 101,
+    "awayScore": 115
+  },
+  {
+    "date": "2025-12-29",
+    "home": "Brooklyn Nets",
+    "away": "Golden State Warriors",
+    "homeScore": 107,
+    "awayScore": 120
+  },
+  {
+    "date": "2025-12-29",
+    "home": "Miami Heat",
+    "away": "Denver Nuggets",
+    "homeScore": 147,
+    "awayScore": 123
+  },
+  {
+    "date": "2025-12-29",
+    "home": "Toronto Raptors",
+    "away": "Orlando Magic",
+    "homeScore": 107,
+    "awayScore": 106
+  },
+  {
+    "date": "2025-12-29",
+    "home": "Chicago Bulls",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 101,
+    "awayScore": 136
+  },
+  {
+    "date": "2025-12-29",
+    "home": "Houston Rockets",
+    "away": "Indiana Pacers",
+    "homeScore": 126,
+    "awayScore": 119
+  },
+  {
+    "date": "2025-12-29",
+    "home": "New Orleans Pelicans",
+    "away": "New York Knicks",
+    "homeScore": 125,
+    "awayScore": 130
+  },
+  {
+    "date": "2025-12-29",
+    "home": "Oklahoma City Thunder",
+    "away": "Atlanta Hawks",
+    "homeScore": 140,
+    "awayScore": 129
+  },
+  {
+    "date": "2025-12-29",
+    "home": "San Antonio Spurs",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 101,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-12-29",
+    "home": "Portland Trail Blazers",
+    "away": "Dallas Mavericks",
+    "homeScore": 125,
+    "awayScore": 122
+  },
+  {
+    "date": "2025-12-30",
+    "home": "Memphis Grizzlies",
+    "away": "Philadelphia 76ers",
+    "homeScore": 136,
+    "awayScore": 139
+  },
+  {
+    "date": "2025-12-30",
+    "home": "Utah Jazz",
+    "away": "Boston Celtics",
+    "homeScore": 119,
+    "awayScore": 129
+  },
+  {
+    "date": "2025-12-30",
+    "home": "Los Angeles Lakers",
+    "away": "Detroit Pistons",
+    "homeScore": 106,
+    "awayScore": 128
+  },
+  {
+    "date": "2025-12-30",
+    "home": "Los Angeles Clippers",
+    "away": "Sacramento Kings",
+    "homeScore": 131,
+    "awayScore": 90
+  },
+  {
+    "date": "2025-12-31",
+    "home": "Charlotte Hornets",
+    "away": "Golden State Warriors",
+    "homeScore": 125,
+    "awayScore": 132
+  },
+  {
+    "date": "2025-12-31",
+    "home": "Atlanta Hawks",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 126,
+    "awayScore": 102
+  },
+  {
+    "date": "2025-12-31",
+    "home": "Indiana Pacers",
+    "away": "Orlando Magic",
+    "homeScore": 110,
+    "awayScore": 112
+  },
+  {
+    "date": "2025-12-31",
+    "home": "Cleveland Cavaliers",
+    "away": "Phoenix Suns",
+    "homeScore": 129,
+    "awayScore": 113
+  },
+  {
+    "date": "2025-12-31",
+    "home": "Chicago Bulls",
+    "away": "New Orleans Pelicans",
+    "homeScore": 134,
+    "awayScore": 118
+  },
+  {
+    "date": "2025-12-31",
+    "home": "San Antonio Spurs",
+    "away": "New York Knicks",
+    "homeScore": 134,
+    "awayScore": 132
+  },
+  {
+    "date": "2025-12-31",
+    "home": "Toronto Raptors",
+    "away": "Denver Nuggets",
+    "homeScore": 103,
+    "awayScore": 106
+  },
+  {
+    "date": "2025-12-31",
+    "home": "Milwaukee Bucks",
+    "away": "Washington Wizards",
+    "homeScore": 113,
+    "awayScore": 114
+  },
+  {
+    "date": "2025-12-31",
+    "home": "Oklahoma City Thunder",
+    "away": "Portland Trail Blazers",
+    "homeScore": 124,
+    "awayScore": 95
+  },
+  {
+    "date": "2026-01-01",
+    "home": "Brooklyn Nets",
+    "away": "Houston Rockets",
+    "homeScore": 96,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-01-01",
+    "home": "Detroit Pistons",
+    "away": "Miami Heat",
+    "homeScore": 112,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-01-01",
+    "home": "Dallas Mavericks",
+    "away": "Philadelphia 76ers",
+    "homeScore": 108,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-01-01",
+    "home": "Sacramento Kings",
+    "away": "Boston Celtics",
+    "homeScore": 106,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-01-01",
+    "home": "Los Angeles Clippers",
+    "away": "Utah Jazz",
+    "homeScore": 118,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-01-02",
+    "home": "Indiana Pacers",
+    "away": "San Antonio Spurs",
+    "homeScore": 113,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-01-02",
+    "home": "Washington Wizards",
+    "away": "Brooklyn Nets",
+    "homeScore": 119,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-01-02",
+    "home": "Cleveland Cavaliers",
+    "away": "Denver Nuggets",
+    "homeScore": 113,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-01-02",
+    "home": "New York Knicks",
+    "away": "Atlanta Hawks",
+    "homeScore": 99,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-02",
+    "home": "Chicago Bulls",
+    "away": "Orlando Magic",
+    "homeScore": 121,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-01-02",
+    "home": "Milwaukee Bucks",
+    "away": "Charlotte Hornets",
+    "homeScore": 122,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-01-02",
+    "home": "New Orleans Pelicans",
+    "away": "Portland Trail Blazers",
+    "homeScore": 109,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-01-02",
+    "home": "Phoenix Suns",
+    "away": "Sacramento Kings",
+    "homeScore": 129,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-01-02",
+    "home": "Golden State Warriors",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 94,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-01-02",
+    "home": "Los Angeles Lakers",
+    "away": "Memphis Grizzlies",
+    "homeScore": 128,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-01-03",
+    "home": "Miami Heat",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 115,
+    "awayScore": 125
+  },
+  {
+    "date": "2026-01-03",
+    "home": "New York Knicks",
+    "away": "Philadelphia 76ers",
+    "homeScore": 119,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-01-03",
+    "home": "Toronto Raptors",
+    "away": "Atlanta Hawks",
+    "homeScore": 134,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-01-03",
+    "home": "Chicago Bulls",
+    "away": "Charlotte Hornets",
+    "homeScore": 99,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-01-03",
+    "home": "San Antonio Spurs",
+    "away": "Portland Trail Blazers",
+    "homeScore": 110,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-01-03",
+    "home": "Dallas Mavericks",
+    "away": "Houston Rockets",
+    "homeScore": 110,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-01-03",
+    "home": "Golden State Warriors",
+    "away": "Utah Jazz",
+    "homeScore": 123,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-01-03",
+    "home": "Los Angeles Clippers",
+    "away": "Boston Celtics",
+    "homeScore": 115,
+    "awayScore": 146
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Cleveland Cavaliers",
+    "away": "Detroit Pistons",
+    "homeScore": 110,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Orlando Magic",
+    "away": "Indiana Pacers",
+    "homeScore": 135,
+    "awayScore": 127
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Brooklyn Nets",
+    "away": "Denver Nuggets",
+    "homeScore": 127,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Miami Heat",
+    "away": "New Orleans Pelicans",
+    "homeScore": 125,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Washington Wizards",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 115,
+    "awayScore": 141
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Phoenix Suns",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 108,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Sacramento Kings",
+    "away": "Milwaukee Bucks",
+    "homeScore": 98,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Los Angeles Lakers",
+    "away": "Memphis Grizzlies",
+    "homeScore": 120,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-01-05",
+    "home": "Detroit Pistons",
+    "away": "New York Knicks",
+    "homeScore": 121,
+    "awayScore": 90
+  },
+  {
+    "date": "2026-01-05",
+    "home": "Boston Celtics",
+    "away": "Chicago Bulls",
+    "homeScore": 115,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-01-05",
+    "home": "Toronto Raptors",
+    "away": "Atlanta Hawks",
+    "homeScore": 118,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-01-05",
+    "home": "Houston Rockets",
+    "away": "Phoenix Suns",
+    "homeScore": 100,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-01-05",
+    "home": "Oklahoma City Thunder",
+    "away": "Charlotte Hornets",
+    "homeScore": 97,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-01-05",
+    "home": "Philadelphia 76ers",
+    "away": "Denver Nuggets",
+    "homeScore": 124,
+    "awayScore": 125
+  },
+  {
+    "date": "2026-01-05",
+    "home": "Los Angeles Clippers",
+    "away": "Golden State Warriors",
+    "homeScore": 103,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-01-05",
+    "home": "Portland Trail Blazers",
+    "away": "Utah Jazz",
+    "homeScore": 137,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-01-06",
+    "home": "Indiana Pacers",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 116,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-01-06",
+    "home": "Washington Wizards",
+    "away": "Orlando Magic",
+    "homeScore": 120,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-01-06",
+    "home": "Memphis Grizzlies",
+    "away": "San Antonio Spurs",
+    "homeScore": 106,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-01-06",
+    "home": "Minnesota Timberwolves",
+    "away": "Miami Heat",
+    "homeScore": 122,
+    "awayScore": 94
+  },
+  {
+    "date": "2026-01-06",
+    "home": "New Orleans Pelicans",
+    "away": "Los Angeles Lakers",
+    "homeScore": 103,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-06",
+    "home": "Sacramento Kings",
+    "away": "Dallas Mavericks",
+    "homeScore": 98,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-01-07",
+    "home": "Charlotte Hornets",
+    "away": "Toronto Raptors",
+    "homeScore": 96,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-01-07",
+    "home": "Detroit Pistons",
+    "away": "Chicago Bulls",
+    "homeScore": 108,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-01-07",
+    "home": "Philadelphia 76ers",
+    "away": "Washington Wizards",
+    "homeScore": 131,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-01-07",
+    "home": "Atlanta Hawks",
+    "away": "New Orleans Pelicans",
+    "homeScore": 117,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-01-07",
+    "home": "Boston Celtics",
+    "away": "Denver Nuggets",
+    "homeScore": 110,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-01-07",
+    "home": "Brooklyn Nets",
+    "away": "Orlando Magic",
+    "homeScore": 103,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-01-07",
+    "home": "New York Knicks",
+    "away": "Los Angeles Clippers",
+    "homeScore": 123,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-07",
+    "home": "San Antonio Spurs",
+    "away": "Los Angeles Lakers",
+    "homeScore": 107,
+    "awayScore": 91
+  },
+  {
+    "date": "2026-01-07",
+    "home": "Memphis Grizzlies",
+    "away": "Phoenix Suns",
+    "homeScore": 98,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-01-07",
+    "home": "Oklahoma City Thunder",
+    "away": "Utah Jazz",
+    "homeScore": 129,
+    "awayScore": 125
+  },
+  {
+    "date": "2026-01-07",
+    "home": "Golden State Warriors",
+    "away": "Milwaukee Bucks",
+    "homeScore": 120,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-01-07",
+    "home": "Portland Trail Blazers",
+    "away": "Houston Rockets",
+    "homeScore": 103,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-01-08",
+    "home": "Charlotte Hornets",
+    "away": "Indiana Pacers",
+    "homeScore": 112,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-01-08",
+    "home": "Minnesota Timberwolves",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 131,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-01-08",
+    "home": "Utah Jazz",
+    "away": "Dallas Mavericks",
+    "homeScore": 116,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-01-09",
+    "home": "Boston Celtics",
+    "away": "Toronto Raptors",
+    "homeScore": 125,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-01-09",
+    "home": "Orlando Magic",
+    "away": "Philadelphia 76ers",
+    "homeScore": 91,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-01-09",
+    "home": "Washington Wizards",
+    "away": "New Orleans Pelicans",
+    "homeScore": 107,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-01-09",
+    "home": "Brooklyn Nets",
+    "away": "Los Angeles Clippers",
+    "homeScore": 105,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-01-09",
+    "home": "Memphis Grizzlies",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 116,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-01-09",
+    "home": "Denver Nuggets",
+    "away": "Atlanta Hawks",
+    "homeScore": 87,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-01-09",
+    "home": "Phoenix Suns",
+    "away": "New York Knicks",
+    "homeScore": 112,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-01-09",
+    "home": "Golden State Warriors",
+    "away": "Sacramento Kings",
+    "homeScore": 137,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-01-09",
+    "home": "Portland Trail Blazers",
+    "away": "Houston Rockets",
+    "homeScore": 111,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-01-09",
+    "home": "Los Angeles Lakers",
+    "away": "Milwaukee Bucks",
+    "homeScore": 101,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-01-10",
+    "home": "Cleveland Cavaliers",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 146,
+    "awayScore": 134
+  },
+  {
+    "date": "2026-01-10",
+    "home": "Indiana Pacers",
+    "away": "Miami Heat",
+    "homeScore": 123,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-01-10",
+    "home": "Detroit Pistons",
+    "away": "Los Angeles Clippers",
+    "homeScore": 92,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-01-10",
+    "home": "Boston Celtics",
+    "away": "San Antonio Spurs",
+    "homeScore": 95,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-01-10",
+    "home": "Chicago Bulls",
+    "away": "Dallas Mavericks",
+    "homeScore": 125,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-01-10",
+    "home": "Utah Jazz",
+    "away": "Charlotte Hornets",
+    "homeScore": 95,
+    "awayScore": 150
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Orlando Magic",
+    "away": "New Orleans Pelicans",
+    "homeScore": 128,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Memphis Grizzlies",
+    "away": "Brooklyn Nets",
+    "homeScore": 103,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Toronto Raptors",
+    "away": "Philadelphia 76ers",
+    "homeScore": 116,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Portland Trail Blazers",
+    "away": "New York Knicks",
+    "homeScore": 114,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Minnesota Timberwolves",
+    "away": "San Antonio Spurs",
+    "homeScore": 104,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Oklahoma City Thunder",
+    "away": "Miami Heat",
+    "homeScore": 124,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Denver Nuggets",
+    "away": "Milwaukee Bucks",
+    "homeScore": 108,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Phoenix Suns",
+    "away": "Washington Wizards",
+    "homeScore": 112,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Golden State Warriors",
+    "away": "Atlanta Hawks",
+    "homeScore": 111,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Sacramento Kings",
+    "away": "Houston Rockets",
+    "homeScore": 111,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-01-12",
+    "home": "Cleveland Cavaliers",
+    "away": "Utah Jazz",
+    "homeScore": 112,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-01-12",
+    "home": "Indiana Pacers",
+    "away": "Boston Celtics",
+    "homeScore": 98,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-01-12",
+    "home": "Toronto Raptors",
+    "away": "Philadelphia 76ers",
+    "homeScore": 102,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-01-12",
+    "home": "Dallas Mavericks",
+    "away": "Brooklyn Nets",
+    "homeScore": 113,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-01-12",
+    "home": "Sacramento Kings",
+    "away": "Los Angeles Lakers",
+    "homeScore": 124,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-01-12",
+    "home": "Los Angeles Clippers",
+    "away": "Charlotte Hornets",
+    "homeScore": 117,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-01-13",
+    "home": "Miami Heat",
+    "away": "Phoenix Suns",
+    "homeScore": 127,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-01-13",
+    "home": "Houston Rockets",
+    "away": "Chicago Bulls",
+    "homeScore": 119,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-01-13",
+    "home": "Milwaukee Bucks",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 106,
+    "awayScore": 139
+  },
+  {
+    "date": "2026-01-13",
+    "home": "New Orleans Pelicans",
+    "away": "Denver Nuggets",
+    "homeScore": 116,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-01-13",
+    "home": "Oklahoma City Thunder",
+    "away": "San Antonio Spurs",
+    "homeScore": 119,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-01-13",
+    "home": "Los Angeles Lakers",
+    "away": "Atlanta Hawks",
+    "homeScore": 141,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-01-13",
+    "home": "Golden State Warriors",
+    "away": "Portland Trail Blazers",
+    "homeScore": 119,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-01-14",
+    "home": "Indiana Pacers",
+    "away": "Toronto Raptors",
+    "homeScore": 101,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-01-14",
+    "home": "Philadelphia 76ers",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 107,
+    "awayScore": 133
+  },
+  {
+    "date": "2026-01-14",
+    "home": "Chicago Bulls",
+    "away": "Utah Jazz",
+    "homeScore": 128,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-01-14",
+    "home": "New Orleans Pelicans",
+    "away": "Brooklyn Nets",
+    "homeScore": 116,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-01-14",
+    "home": "Dallas Mavericks",
+    "away": "Denver Nuggets",
+    "homeScore": 109,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-01-14",
+    "home": "Sacramento Kings",
+    "away": "New York Knicks",
+    "homeScore": 112,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-01-14",
+    "home": "Los Angeles Clippers",
+    "away": "Washington Wizards",
+    "homeScore": 119,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-01-15",
+    "home": "Orlando Magic",
+    "away": "Memphis Grizzlies",
+    "homeScore": 118,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-15",
+    "home": "Detroit Pistons",
+    "away": "Phoenix Suns",
+    "homeScore": 108,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-01-15",
+    "home": "Miami Heat",
+    "away": "Boston Celtics",
+    "homeScore": 114,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-01-15",
+    "home": "Houston Rockets",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 91,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-15",
+    "home": "San Antonio Spurs",
+    "away": "Milwaukee Bucks",
+    "homeScore": 119,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-01-15",
+    "home": "Dallas Mavericks",
+    "away": "Utah Jazz",
+    "homeScore": 144,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-01-15",
+    "home": "Golden State Warriors",
+    "away": "New York Knicks",
+    "homeScore": 126,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-01-15",
+    "home": "Portland Trail Blazers",
+    "away": "Atlanta Hawks",
+    "homeScore": 117,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-01-15",
+    "home": "Los Angeles Lakers",
+    "away": "Charlotte Hornets",
+    "homeScore": 117,
+    "awayScore": 135
+  },
+  {
+    "date": "2026-01-16",
+    "home": "Brooklyn Nets",
+    "away": "Chicago Bulls",
+    "homeScore": 112,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-01-16",
+    "home": "Indiana Pacers",
+    "away": "New Orleans Pelicans",
+    "homeScore": 127,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-01-16",
+    "home": "Philadelphia 76ers",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 115,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-01-16",
+    "home": "Toronto Raptors",
+    "away": "Los Angeles Clippers",
+    "homeScore": 117,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-01-16",
+    "home": "Houston Rockets",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 110,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-01-16",
+    "home": "Sacramento Kings",
+    "away": "Washington Wizards",
+    "homeScore": 128,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-01-17",
+    "home": "Dallas Mavericks",
+    "away": "Utah Jazz",
+    "homeScore": 138,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-01-17",
+    "home": "Atlanta Hawks",
+    "away": "Boston Celtics",
+    "homeScore": 106,
+    "awayScore": 132
+  },
+  {
+    "date": "2026-01-17",
+    "home": "Detroit Pistons",
+    "away": "Indiana Pacers",
+    "homeScore": 121,
+    "awayScore": 78
+  },
+  {
+    "date": "2026-01-17",
+    "home": "New York Knicks",
+    "away": "Phoenix Suns",
+    "homeScore": 99,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-01-17",
+    "home": "Miami Heat",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 122,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-01-17",
+    "home": "San Antonio Spurs",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 126,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-01-17",
+    "home": "Golden State Warriors",
+    "away": "Charlotte Hornets",
+    "homeScore": 136,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-01-17",
+    "home": "Denver Nuggets",
+    "away": "Washington Wizards",
+    "homeScore": 121,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-01-17",
+    "home": "Portland Trail Blazers",
+    "away": "Los Angeles Lakers",
+    "homeScore": 132,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-01-18",
+    "home": "Memphis Grizzlies",
+    "away": "Orlando Magic",
+    "homeScore": 126,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-01-18",
+    "home": "Chicago Bulls",
+    "away": "Brooklyn Nets",
+    "homeScore": 124,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-01-18",
+    "home": "Houston Rockets",
+    "away": "New Orleans Pelicans",
+    "homeScore": 119,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-01-18",
+    "home": "Denver Nuggets",
+    "away": "Charlotte Hornets",
+    "homeScore": 87,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-01-18",
+    "home": "Sacramento Kings",
+    "away": "Portland Trail Blazers",
+    "homeScore": 110,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-01-18",
+    "home": "Los Angeles Lakers",
+    "away": "Toronto Raptors",
+    "homeScore": 110,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-01-19",
+    "home": "Atlanta Hawks",
+    "away": "Milwaukee Bucks",
+    "homeScore": 110,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-01-19",
+    "home": "Cleveland Cavaliers",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 104,
+    "awayScore": 136
+  },
+  {
+    "date": "2026-01-19",
+    "home": "New York Knicks",
+    "away": "Dallas Mavericks",
+    "homeScore": 97,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-01-19",
+    "home": "Detroit Pistons",
+    "away": "Boston Celtics",
+    "homeScore": 104,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-01-19",
+    "home": "Washington Wizards",
+    "away": "Los Angeles Clippers",
+    "homeScore": 106,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-01-19",
+    "home": "Philadelphia 76ers",
+    "away": "Indiana Pacers",
+    "homeScore": 113,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-01-19",
+    "home": "Brooklyn Nets",
+    "away": "Phoenix Suns",
+    "homeScore": 117,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-01-19",
+    "home": "San Antonio Spurs",
+    "away": "Utah Jazz",
+    "homeScore": 123,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-01-19",
+    "home": "Golden State Warriors",
+    "away": "Miami Heat",
+    "homeScore": 135,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-01-20",
+    "home": "Philadelphia 76ers",
+    "away": "Phoenix Suns",
+    "homeScore": 110,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-01-20",
+    "home": "Chicago Bulls",
+    "away": "Los Angeles Clippers",
+    "homeScore": 138,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-01-20",
+    "home": "Houston Rockets",
+    "away": "San Antonio Spurs",
+    "homeScore": 111,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-01-20",
+    "home": "Utah Jazz",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 127,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-01-20",
+    "home": "Denver Nuggets",
+    "away": "Los Angeles Lakers",
+    "homeScore": 107,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-01-20",
+    "home": "Golden State Warriors",
+    "away": "Toronto Raptors",
+    "homeScore": 127,
+    "awayScore": 145
+  },
+  {
+    "date": "2026-01-20",
+    "home": "Sacramento Kings",
+    "away": "Miami Heat",
+    "homeScore": 117,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-01-21",
+    "home": "Charlotte Hornets",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 87,
+    "awayScore": 94
+  },
+  {
+    "date": "2026-01-21",
+    "home": "Boston Celtics",
+    "away": "Indiana Pacers",
+    "homeScore": 119,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-01-21",
+    "home": "New York Knicks",
+    "away": "Brooklyn Nets",
+    "homeScore": 120,
+    "awayScore": 66
+  },
+  {
+    "date": "2026-01-21",
+    "home": "Memphis Grizzlies",
+    "away": "Atlanta Hawks",
+    "homeScore": 122,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-01-21",
+    "home": "New Orleans Pelicans",
+    "away": "Detroit Pistons",
+    "homeScore": 104,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-01-21",
+    "home": "Milwaukee Bucks",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 102,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-01-21",
+    "home": "Sacramento Kings",
+    "away": "Toronto Raptors",
+    "homeScore": 109,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-01-22",
+    "home": "Orlando Magic",
+    "away": "Charlotte Hornets",
+    "homeScore": 97,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-01-22",
+    "home": "Philadelphia 76ers",
+    "away": "Houston Rockets",
+    "homeScore": 128,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-01-22",
+    "home": "Washington Wizards",
+    "away": "Denver Nuggets",
+    "homeScore": 97,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-01-22",
+    "home": "Dallas Mavericks",
+    "away": "Golden State Warriors",
+    "homeScore": 123,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-01-22",
+    "home": "Minnesota Timberwolves",
+    "away": "Chicago Bulls",
+    "homeScore": 115,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-01-22",
+    "home": "Utah Jazz",
+    "away": "San Antonio Spurs",
+    "homeScore": 109,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-01-22",
+    "home": "Los Angeles Clippers",
+    "away": "Los Angeles Lakers",
+    "homeScore": 112,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-01-22",
+    "home": "Portland Trail Blazers",
+    "away": "Miami Heat",
+    "homeScore": 127,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-01-23",
+    "home": "Detroit Pistons",
+    "away": "Houston Rockets",
+    "homeScore": 104,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-23",
+    "home": "Atlanta Hawks",
+    "away": "Phoenix Suns",
+    "homeScore": 110,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-01-23",
+    "home": "Brooklyn Nets",
+    "away": "Boston Celtics",
+    "homeScore": 126,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-01-23",
+    "home": "Cleveland Cavaliers",
+    "away": "Sacramento Kings",
+    "homeScore": 123,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-01-23",
+    "home": "Memphis Grizzlies",
+    "away": "New Orleans Pelicans",
+    "homeScore": 127,
+    "awayScore": 133
+  },
+  {
+    "date": "2026-01-23",
+    "home": "Milwaukee Bucks",
+    "away": "Denver Nuggets",
+    "homeScore": 100,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-01-23",
+    "home": "Oklahoma City Thunder",
+    "away": "Indiana Pacers",
+    "homeScore": 114,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-01-23",
+    "home": "Portland Trail Blazers",
+    "away": "Toronto Raptors",
+    "homeScore": 98,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-01-24",
+    "home": "Philadelphia 76ers",
+    "away": "New York Knicks",
+    "homeScore": 109,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-01-24",
+    "home": "Charlotte Hornets",
+    "away": "Washington Wizards",
+    "homeScore": 119,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-01-24",
+    "home": "Orlando Magic",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 105,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-01-24",
+    "home": "Chicago Bulls",
+    "away": "Boston Celtics",
+    "homeScore": 114,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-24",
+    "home": "Dallas Mavericks",
+    "away": "Los Angeles Lakers",
+    "homeScore": 110,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-01-24",
+    "home": "Utah Jazz",
+    "away": "Miami Heat",
+    "homeScore": 116,
+    "awayScore": 147
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Minnesota Timberwolves",
+    "away": "Golden State Warriors",
+    "homeScore": 85,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Detroit Pistons",
+    "away": "Sacramento Kings",
+    "homeScore": 139,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Oklahoma City Thunder",
+    "away": "Toronto Raptors",
+    "homeScore": 101,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-01-25",
+    "home": "San Antonio Spurs",
+    "away": "New Orleans Pelicans",
+    "homeScore": 95,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Phoenix Suns",
+    "away": "Miami Heat",
+    "homeScore": 102,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Los Angeles Clippers",
+    "away": "Brooklyn Nets",
+    "homeScore": 126,
+    "awayScore": 89
+  },
+  {
+    "date": "2026-01-26",
+    "home": "Charlotte Hornets",
+    "away": "Philadelphia 76ers",
+    "homeScore": 130,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-01-26",
+    "home": "Cleveland Cavaliers",
+    "away": "Orlando Magic",
+    "homeScore": 114,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-01-26",
+    "home": "Atlanta Hawks",
+    "away": "Indiana Pacers",
+    "homeScore": 132,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-01-26",
+    "home": "Boston Celtics",
+    "away": "Portland Trail Blazers",
+    "homeScore": 102,
+    "awayScore": 94
+  },
+  {
+    "date": "2026-01-26",
+    "home": "Chicago Bulls",
+    "away": "Los Angeles Lakers",
+    "homeScore": 118,
+    "awayScore": 129
+  },
+  {
+    "date": "2026-01-26",
+    "home": "Houston Rockets",
+    "away": "Memphis Grizzlies",
+    "homeScore": 108,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-01-26",
+    "home": "Minnesota Timberwolves",
+    "away": "Golden State Warriors",
+    "homeScore": 108,
+    "awayScore": 83
+  },
+  {
+    "date": "2026-01-27",
+    "home": "Washington Wizards",
+    "away": "Portland Trail Blazers",
+    "homeScore": 115,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-27",
+    "home": "New York Knicks",
+    "away": "Sacramento Kings",
+    "homeScore": 103,
+    "awayScore": 87
+  },
+  {
+    "date": "2026-01-27",
+    "home": "Philadelphia 76ers",
+    "away": "Milwaukee Bucks",
+    "homeScore": 139,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-01-27",
+    "home": "Oklahoma City Thunder",
+    "away": "New Orleans Pelicans",
+    "homeScore": 104,
+    "awayScore": 95
+  },
+  {
+    "date": "2026-01-27",
+    "home": "Denver Nuggets",
+    "away": "Detroit Pistons",
+    "homeScore": 107,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-01-27",
+    "home": "Phoenix Suns",
+    "away": "Brooklyn Nets",
+    "homeScore": 106,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-01-27",
+    "home": "Utah Jazz",
+    "away": "Los Angeles Clippers",
+    "homeScore": 103,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-01-28",
+    "home": "Cleveland Cavaliers",
+    "away": "Los Angeles Lakers",
+    "homeScore": 129,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-01-28",
+    "home": "Indiana Pacers",
+    "away": "Chicago Bulls",
+    "homeScore": 113,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-01-28",
+    "home": "Boston Celtics",
+    "away": "Atlanta Hawks",
+    "homeScore": 106,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-01-28",
+    "home": "Miami Heat",
+    "away": "Orlando Magic",
+    "homeScore": 124,
+    "awayScore": 133
+  },
+  {
+    "date": "2026-01-28",
+    "home": "Toronto Raptors",
+    "away": "New York Knicks",
+    "homeScore": 92,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-01-28",
+    "home": "Memphis Grizzlies",
+    "away": "Charlotte Hornets",
+    "homeScore": 97,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-01-28",
+    "home": "Dallas Mavericks",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 105,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-01-28",
+    "home": "Utah Jazz",
+    "away": "Golden State Warriors",
+    "homeScore": 124,
+    "awayScore": 140
+  },
+  {
+    "date": "2026-01-28",
+    "home": "Houston Rockets",
+    "away": "San Antonio Spurs",
+    "homeScore": 99,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-29",
+    "home": "Chicago Bulls",
+    "away": "Miami Heat",
+    "homeScore": 113,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-01-29",
+    "home": "Philadelphia 76ers",
+    "away": "Sacramento Kings",
+    "homeScore": 113,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-29",
+    "home": "Washington Wizards",
+    "away": "Milwaukee Bucks",
+    "homeScore": 109,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-01-29",
+    "home": "Atlanta Hawks",
+    "away": "Houston Rockets",
+    "homeScore": 86,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-01-29",
+    "home": "Dallas Mavericks",
+    "away": "Charlotte Hornets",
+    "homeScore": 121,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-01-29",
+    "home": "Denver Nuggets",
+    "away": "Brooklyn Nets",
+    "homeScore": 107,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-01-29",
+    "home": "Phoenix Suns",
+    "away": "Detroit Pistons",
+    "homeScore": 114,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-01-29",
+    "home": "Minnesota Timberwolves",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 123,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-01-30",
+    "home": "Orlando Magic",
+    "away": "Toronto Raptors",
+    "homeScore": 130,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-01-30",
+    "home": "Washington Wizards",
+    "away": "Los Angeles Lakers",
+    "homeScore": 111,
+    "awayScore": 142
+  },
+  {
+    "date": "2026-01-30",
+    "home": "Boston Celtics",
+    "away": "Sacramento Kings",
+    "homeScore": 112,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-01-30",
+    "home": "New York Knicks",
+    "away": "Portland Trail Blazers",
+    "homeScore": 127,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-01-30",
+    "home": "New Orleans Pelicans",
+    "away": "Memphis Grizzlies",
+    "homeScore": 114,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-01-30",
+    "home": "Phoenix Suns",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 126,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-01-30",
+    "home": "Utah Jazz",
+    "away": "Brooklyn Nets",
+    "homeScore": 99,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-01-30",
+    "home": "Denver Nuggets",
+    "away": "Los Angeles Clippers",
+    "homeScore": 122,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-01-30",
+    "home": "Golden State Warriors",
+    "away": "Detroit Pistons",
+    "homeScore": 124,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Miami Heat",
+    "away": "Chicago Bulls",
+    "homeScore": 118,
+    "awayScore": 125
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Charlotte Hornets",
+    "away": "San Antonio Spurs",
+    "homeScore": 111,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Indiana Pacers",
+    "away": "Atlanta Hawks",
+    "homeScore": 129,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Philadelphia 76ers",
+    "away": "New Orleans Pelicans",
+    "homeScore": 124,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Memphis Grizzlies",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 114,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Houston Rockets",
+    "away": "Dallas Mavericks",
+    "homeScore": 111,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-02-01",
+    "home": "Boston Celtics",
+    "away": "Milwaukee Bucks",
+    "homeScore": 107,
+    "awayScore": 79
+  },
+  {
+    "date": "2026-02-01",
+    "home": "San Antonio Spurs",
+    "away": "Orlando Magic",
+    "homeScore": 112,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-02-01",
+    "home": "Detroit Pistons",
+    "away": "Brooklyn Nets",
+    "homeScore": 130,
+    "awayScore": 77
+  },
+  {
+    "date": "2026-02-01",
+    "home": "Miami Heat",
+    "away": "Chicago Bulls",
+    "homeScore": 134,
+    "awayScore": 91
+  },
+  {
+    "date": "2026-02-01",
+    "home": "Toronto Raptors",
+    "away": "Utah Jazz",
+    "homeScore": 107,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-02-01",
+    "home": "Washington Wizards",
+    "away": "Sacramento Kings",
+    "homeScore": 116,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-02-01",
+    "home": "New York Knicks",
+    "away": "Los Angeles Lakers",
+    "homeScore": 112,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-02-01",
+    "home": "Phoenix Suns",
+    "away": "Los Angeles Clippers",
+    "homeScore": 93,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-02-01",
+    "home": "Portland Trail Blazers",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 111,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-02-01",
+    "home": "Denver Nuggets",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 111,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-02-02",
+    "home": "Charlotte Hornets",
+    "away": "New Orleans Pelicans",
+    "homeScore": 102,
+    "awayScore": 95
+  },
+  {
+    "date": "2026-02-02",
+    "home": "Indiana Pacers",
+    "away": "Houston Rockets",
+    "homeScore": 114,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-02-02",
+    "home": "Memphis Grizzlies",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 137,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-02-02",
+    "home": "Los Angeles Clippers",
+    "away": "Philadelphia 76ers",
+    "homeScore": 113,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-02-03",
+    "home": "Detroit Pistons",
+    "away": "Denver Nuggets",
+    "homeScore": 124,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-02-03",
+    "home": "Indiana Pacers",
+    "away": "Utah Jazz",
+    "homeScore": 122,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-02-03",
+    "home": "Washington Wizards",
+    "away": "New York Knicks",
+    "homeScore": 101,
+    "awayScore": 132
+  },
+  {
+    "date": "2026-02-03",
+    "home": "Brooklyn Nets",
+    "away": "Los Angeles Lakers",
+    "homeScore": 109,
+    "awayScore": 125
+  },
+  {
+    "date": "2026-02-03",
+    "home": "Miami Heat",
+    "away": "Atlanta Hawks",
+    "homeScore": 115,
+    "awayScore": 127
+  },
+  {
+    "date": "2026-02-03",
+    "home": "Dallas Mavericks",
+    "away": "Boston Celtics",
+    "homeScore": 100,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-02-03",
+    "home": "Milwaukee Bucks",
+    "away": "Chicago Bulls",
+    "homeScore": 131,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-02-03",
+    "home": "Oklahoma City Thunder",
+    "away": "Orlando Magic",
+    "homeScore": 128,
+    "awayScore": 92
+  },
+  {
+    "date": "2026-02-03",
+    "home": "Golden State Warriors",
+    "away": "Philadelphia 76ers",
+    "homeScore": 94,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-02-03",
+    "home": "Portland Trail Blazers",
+    "away": "Phoenix Suns",
+    "homeScore": 125,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-02-04",
+    "home": "New York Knicks",
+    "away": "Denver Nuggets",
+    "homeScore": 134,
+    "awayScore": 127
+  },
+  {
+    "date": "2026-02-04",
+    "home": "Toronto Raptors",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 126,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-02-04",
+    "home": "Houston Rockets",
+    "away": "Boston Celtics",
+    "homeScore": 93,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-02-04",
+    "home": "Milwaukee Bucks",
+    "away": "New Orleans Pelicans",
+    "homeScore": 141,
+    "awayScore": 137
+  },
+  {
+    "date": "2026-02-04",
+    "home": "San Antonio Spurs",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 116,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-02-04",
+    "home": "Sacramento Kings",
+    "away": "Memphis Grizzlies",
+    "homeScore": 125,
+    "awayScore": 129
+  },
+  {
+    "date": "2026-02-04",
+    "home": "Los Angeles Clippers",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 91,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-02-05",
+    "home": "Detroit Pistons",
+    "away": "Washington Wizards",
+    "homeScore": 117,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-02-05",
+    "home": "Orlando Magic",
+    "away": "Brooklyn Nets",
+    "homeScore": 118,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-02-05",
+    "home": "Atlanta Hawks",
+    "away": "Utah Jazz",
+    "homeScore": 121,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-02-05",
+    "home": "Toronto Raptors",
+    "away": "Chicago Bulls",
+    "homeScore": 123,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-02-05",
+    "home": "Houston Rockets",
+    "away": "Charlotte Hornets",
+    "homeScore": 99,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-02-05",
+    "home": "Dallas Mavericks",
+    "away": "San Antonio Spurs",
+    "homeScore": 123,
+    "awayScore": 135
+  },
+  {
+    "date": "2026-02-05",
+    "home": "Phoenix Suns",
+    "away": "Golden State Warriors",
+    "homeScore": 97,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-02-05",
+    "home": "Los Angeles Lakers",
+    "away": "Philadelphia 76ers",
+    "homeScore": 119,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-02-06",
+    "home": "Boston Celtics",
+    "away": "Miami Heat",
+    "homeScore": 98,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-02-06",
+    "home": "Detroit Pistons",
+    "away": "New York Knicks",
+    "homeScore": 118,
+    "awayScore": 80
+  },
+  {
+    "date": "2026-02-06",
+    "home": "Milwaukee Bucks",
+    "away": "Indiana Pacers",
+    "homeScore": 105,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-02-06",
+    "home": "Minnesota Timberwolves",
+    "away": "New Orleans Pelicans",
+    "homeScore": 115,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-02-06",
+    "home": "Portland Trail Blazers",
+    "away": "Memphis Grizzlies",
+    "homeScore": 135,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-02-06",
+    "home": "Sacramento Kings",
+    "away": "Los Angeles Clippers",
+    "homeScore": 111,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Brooklyn Nets",
+    "away": "Washington Wizards",
+    "homeScore": 127,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Oklahoma City Thunder",
+    "away": "Houston Rockets",
+    "homeScore": 106,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-02-07",
+    "home": "San Antonio Spurs",
+    "away": "Dallas Mavericks",
+    "homeScore": 138,
+    "awayScore": 125
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Orlando Magic",
+    "away": "Utah Jazz",
+    "homeScore": 120,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Atlanta Hawks",
+    "away": "Charlotte Hornets",
+    "homeScore": 119,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Chicago Bulls",
+    "away": "Denver Nuggets",
+    "homeScore": 120,
+    "awayScore": 136
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Los Angeles Lakers",
+    "away": "Golden State Warriors",
+    "homeScore": 105,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Phoenix Suns",
+    "away": "Philadelphia 76ers",
+    "homeScore": 103,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Portland Trail Blazers",
+    "away": "Memphis Grizzlies",
+    "homeScore": 122,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Sacramento Kings",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 126,
+    "awayScore": 132
+  },
+  {
+    "date": "2026-02-08",
+    "home": "Boston Celtics",
+    "away": "New York Knicks",
+    "homeScore": 89,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-02-08",
+    "home": "Washington Wizards",
+    "away": "Miami Heat",
+    "homeScore": 101,
+    "awayScore": 132
+  },
+  {
+    "date": "2026-02-08",
+    "home": "Toronto Raptors",
+    "away": "Indiana Pacers",
+    "homeScore": 122,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-02-08",
+    "home": "Minnesota Timberwolves",
+    "away": "Los Angeles Clippers",
+    "homeScore": 96,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-02-09",
+    "home": "Charlotte Hornets",
+    "away": "Detroit Pistons",
+    "homeScore": 104,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-02-09",
+    "home": "Brooklyn Nets",
+    "away": "Chicago Bulls",
+    "homeScore": 123,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-02-09",
+    "home": "Miami Heat",
+    "away": "Utah Jazz",
+    "homeScore": 111,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-02-09",
+    "home": "Orlando Magic",
+    "away": "Milwaukee Bucks",
+    "homeScore": 118,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-02-09",
+    "home": "Minnesota Timberwolves",
+    "away": "Atlanta Hawks",
+    "homeScore": 138,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-02-09",
+    "home": "New Orleans Pelicans",
+    "away": "Sacramento Kings",
+    "homeScore": 120,
+    "awayScore": 94
+  },
+  {
+    "date": "2026-02-09",
+    "home": "Denver Nuggets",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 117,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-02-09",
+    "home": "Golden State Warriors",
+    "away": "Memphis Grizzlies",
+    "homeScore": 114,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-02-09",
+    "home": "Los Angeles Lakers",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 110,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-02-09",
+    "home": "Portland Trail Blazers",
+    "away": "Philadelphia 76ers",
+    "homeScore": 135,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-02-10",
+    "home": "New York Knicks",
+    "away": "Indiana Pacers",
+    "homeScore": 134,
+    "awayScore": 137
+  },
+  {
+    "date": "2026-02-10",
+    "home": "Houston Rockets",
+    "away": "Los Angeles Clippers",
+    "homeScore": 102,
+    "awayScore": 95
+  },
+  {
+    "date": "2026-02-10",
+    "home": "Phoenix Suns",
+    "away": "Dallas Mavericks",
+    "homeScore": 120,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-02-10",
+    "home": "Los Angeles Lakers",
+    "away": "San Antonio Spurs",
+    "homeScore": 108,
+    "awayScore": 136
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Charlotte Hornets",
+    "away": "Atlanta Hawks",
+    "homeScore": 110,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Cleveland Cavaliers",
+    "away": "Washington Wizards",
+    "homeScore": 138,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Orlando Magic",
+    "away": "Milwaukee Bucks",
+    "homeScore": 108,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Boston Celtics",
+    "away": "Chicago Bulls",
+    "homeScore": 124,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Brooklyn Nets",
+    "away": "Indiana Pacers",
+    "homeScore": 110,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Philadelphia 76ers",
+    "away": "New York Knicks",
+    "homeScore": 89,
+    "awayScore": 138
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Toronto Raptors",
+    "away": "Detroit Pistons",
+    "homeScore": 95,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Houston Rockets",
+    "away": "Los Angeles Clippers",
+    "homeScore": 102,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Minnesota Timberwolves",
+    "away": "Portland Trail Blazers",
+    "homeScore": 133,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-02-11",
+    "home": "New Orleans Pelicans",
+    "away": "Miami Heat",
+    "homeScore": 111,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Phoenix Suns",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 109,
+    "awayScore": 136
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Utah Jazz",
+    "away": "Sacramento Kings",
+    "homeScore": 121,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Denver Nuggets",
+    "away": "Memphis Grizzlies",
+    "homeScore": 122,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-02-11",
+    "home": "Golden State Warriors",
+    "away": "San Antonio Spurs",
+    "homeScore": 113,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-02-12",
+    "home": "Oklahoma City Thunder",
+    "away": "Milwaukee Bucks",
+    "homeScore": 93,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-02-12",
+    "home": "Utah Jazz",
+    "away": "Portland Trail Blazers",
+    "homeScore": 119,
+    "awayScore": 135
+  },
+  {
+    "date": "2026-02-12",
+    "home": "Los Angeles Lakers",
+    "away": "Dallas Mavericks",
+    "homeScore": 124,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-02-19",
+    "home": "Charlotte Hornets",
+    "away": "Houston Rockets",
+    "homeScore": 101,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-02-19",
+    "home": "Cleveland Cavaliers",
+    "away": "Brooklyn Nets",
+    "homeScore": 112,
+    "awayScore": 84
+  },
+  {
+    "date": "2026-02-19",
+    "home": "Philadelphia 76ers",
+    "away": "Atlanta Hawks",
+    "homeScore": 107,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-02-19",
+    "home": "Washington Wizards",
+    "away": "Indiana Pacers",
+    "homeScore": 112,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-02-19",
+    "home": "New York Knicks",
+    "away": "Detroit Pistons",
+    "homeScore": 111,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-02-19",
+    "home": "Chicago Bulls",
+    "away": "Toronto Raptors",
+    "homeScore": 101,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-02-19",
+    "home": "San Antonio Spurs",
+    "away": "Phoenix Suns",
+    "homeScore": 121,
+    "awayScore": 94
+  },
+  {
+    "date": "2026-02-19",
+    "home": "Golden State Warriors",
+    "away": "Boston Celtics",
+    "homeScore": 110,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-02-19",
+    "home": "Sacramento Kings",
+    "away": "Orlando Magic",
+    "homeScore": 94,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-02-19",
+    "home": "Los Angeles Clippers",
+    "away": "Denver Nuggets",
+    "homeScore": 115,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-02-20",
+    "home": "Charlotte Hornets",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 113,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-02-20",
+    "home": "Washington Wizards",
+    "away": "Indiana Pacers",
+    "homeScore": 131,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-02-20",
+    "home": "Memphis Grizzlies",
+    "away": "Utah Jazz",
+    "homeScore": 123,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-02-20",
+    "home": "Atlanta Hawks",
+    "away": "Miami Heat",
+    "homeScore": 97,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-02-20",
+    "home": "Minnesota Timberwolves",
+    "away": "Dallas Mavericks",
+    "homeScore": 122,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-02-20",
+    "home": "New Orleans Pelicans",
+    "away": "Milwaukee Bucks",
+    "homeScore": 118,
+    "awayScore": 139
+  },
+  {
+    "date": "2026-02-20",
+    "home": "Oklahoma City Thunder",
+    "away": "Brooklyn Nets",
+    "homeScore": 105,
+    "awayScore": 86
+  },
+  {
+    "date": "2026-02-20",
+    "home": "Los Angeles Lakers",
+    "away": "Los Angeles Clippers",
+    "homeScore": 125,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-02-20",
+    "home": "Portland Trail Blazers",
+    "away": "Denver Nuggets",
+    "homeScore": 103,
+    "awayScore": 157
+  },
+  {
+    "date": "2026-02-21",
+    "home": "Phoenix Suns",
+    "away": "Orlando Magic",
+    "homeScore": 113,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-02-21",
+    "home": "New Orleans Pelicans",
+    "away": "Philadelphia 76ers",
+    "homeScore": 126,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-02-21",
+    "home": "Miami Heat",
+    "away": "Memphis Grizzlies",
+    "homeScore": 136,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-02-21",
+    "home": "Chicago Bulls",
+    "away": "Detroit Pistons",
+    "homeScore": 110,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-02-21",
+    "home": "San Antonio Spurs",
+    "away": "Sacramento Kings",
+    "homeScore": 139,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-02-21",
+    "home": "New York Knicks",
+    "away": "Houston Rockets",
+    "homeScore": 108,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Oklahoma City Thunder",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 121,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Atlanta Hawks",
+    "away": "Brooklyn Nets",
+    "homeScore": 115,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Milwaukee Bucks",
+    "away": "Toronto Raptors",
+    "homeScore": 94,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Golden State Warriors",
+    "away": "Denver Nuggets",
+    "homeScore": 128,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Indiana Pacers",
+    "away": "Dallas Mavericks",
+    "homeScore": 130,
+    "awayScore": 134
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Washington Wizards",
+    "away": "Charlotte Hornets",
+    "homeScore": 112,
+    "awayScore": 129
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Los Angeles Lakers",
+    "away": "Boston Celtics",
+    "homeScore": 89,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Minnesota Timberwolves",
+    "away": "Philadelphia 76ers",
+    "homeScore": 108,
+    "awayScore": 135
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Chicago Bulls",
+    "away": "New York Knicks",
+    "homeScore": 99,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Phoenix Suns",
+    "away": "Portland Trail Blazers",
+    "homeScore": 77,
+    "awayScore": 92
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Los Angeles Clippers",
+    "away": "Orlando Magic",
+    "homeScore": 109,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-02-23",
+    "home": "Detroit Pistons",
+    "away": "San Antonio Spurs",
+    "homeScore": 103,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-02-23",
+    "home": "Memphis Grizzlies",
+    "away": "Sacramento Kings",
+    "homeScore": 114,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-02-23",
+    "home": "Houston Rockets",
+    "away": "Utah Jazz",
+    "homeScore": 125,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-02-24",
+    "home": "Indiana Pacers",
+    "away": "Philadelphia 76ers",
+    "homeScore": 114,
+    "awayScore": 135
+  },
+  {
+    "date": "2026-02-24",
+    "home": "Atlanta Hawks",
+    "away": "Washington Wizards",
+    "homeScore": 119,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-02-24",
+    "home": "Brooklyn Nets",
+    "away": "Dallas Mavericks",
+    "homeScore": 114,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-02-24",
+    "home": "Toronto Raptors",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 107,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-02-24",
+    "home": "Cleveland Cavaliers",
+    "away": "New York Knicks",
+    "homeScore": 109,
+    "awayScore": 94
+  },
+  {
+    "date": "2026-02-24",
+    "home": "Chicago Bulls",
+    "away": "Charlotte Hornets",
+    "homeScore": 99,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-02-24",
+    "home": "Milwaukee Bucks",
+    "away": "Miami Heat",
+    "homeScore": 128,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-02-24",
+    "home": "New Orleans Pelicans",
+    "away": "Golden State Warriors",
+    "homeScore": 113,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-02-24",
+    "home": "Phoenix Suns",
+    "away": "Boston Celtics",
+    "homeScore": 81,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-02-24",
+    "home": "Los Angeles Lakers",
+    "away": "Orlando Magic",
+    "homeScore": 109,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-02-24",
+    "home": "Portland Trail Blazers",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 121,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-02-25",
+    "home": "Detroit Pistons",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 124,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-02-25",
+    "home": "Toronto Raptors",
+    "away": "San Antonio Spurs",
+    "homeScore": 107,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-02-25",
+    "home": "Memphis Grizzlies",
+    "away": "Golden State Warriors",
+    "homeScore": 112,
+    "awayScore": 133
+  },
+  {
+    "date": "2026-02-25",
+    "home": "Houston Rockets",
+    "away": "Sacramento Kings",
+    "homeScore": 128,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-02-25",
+    "home": "Milwaukee Bucks",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 118,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-02-25",
+    "home": "Denver Nuggets",
+    "away": "Boston Celtics",
+    "homeScore": 103,
+    "awayScore": 84
+  },
+  {
+    "date": "2026-02-26",
+    "home": "Indiana Pacers",
+    "away": "Charlotte Hornets",
+    "homeScore": 109,
+    "awayScore": 133
+  },
+  {
+    "date": "2026-02-26",
+    "home": "Philadelphia 76ers",
+    "away": "Miami Heat",
+    "homeScore": 124,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-02-26",
+    "home": "Atlanta Hawks",
+    "away": "Washington Wizards",
+    "homeScore": 126,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-02-26",
+    "home": "Brooklyn Nets",
+    "away": "San Antonio Spurs",
+    "homeScore": 110,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-02-26",
+    "home": "Orlando Magic",
+    "away": "Houston Rockets",
+    "homeScore": 108,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-02-26",
+    "home": "Chicago Bulls",
+    "away": "Portland Trail Blazers",
+    "homeScore": 112,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-02-26",
+    "home": "Dallas Mavericks",
+    "away": "Sacramento Kings",
+    "homeScore": 121,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-02-26",
+    "home": "Phoenix Suns",
+    "away": "Los Angeles Lakers",
+    "homeScore": 113,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-02-26",
+    "home": "Utah Jazz",
+    "away": "New Orleans Pelicans",
+    "homeScore": 118,
+    "awayScore": 129
+  },
+  {
+    "date": "2026-02-26",
+    "home": "Los Angeles Clippers",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 88,
+    "awayScore": 94
+  },
+  {
+    "date": "2026-02-27",
+    "home": "Detroit Pistons",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 122,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-02-27",
+    "home": "Boston Celtics",
+    "away": "Brooklyn Nets",
+    "homeScore": 148,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-02-27",
+    "home": "Milwaukee Bucks",
+    "away": "New York Knicks",
+    "homeScore": 98,
+    "awayScore": 127
+  },
+  {
+    "date": "2026-02-27",
+    "home": "Dallas Mavericks",
+    "away": "Memphis Grizzlies",
+    "homeScore": 105,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-02-27",
+    "home": "Oklahoma City Thunder",
+    "away": "Denver Nuggets",
+    "homeScore": 127,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-02-28",
+    "home": "Charlotte Hornets",
+    "away": "Portland Trail Blazers",
+    "homeScore": 109,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-02-28",
+    "home": "Miami Heat",
+    "away": "Houston Rockets",
+    "homeScore": 115,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-02-28",
+    "home": "Washington Wizards",
+    "away": "Toronto Raptors",
+    "homeScore": 125,
+    "awayScore": 134
+  },
+  {
+    "date": "2026-02-28",
+    "home": "Golden State Warriors",
+    "away": "Los Angeles Lakers",
+    "homeScore": 101,
+    "awayScore": 129
+  },
+  {
+    "date": "2026-02-28",
+    "home": "Utah Jazz",
+    "away": "New Orleans Pelicans",
+    "homeScore": 105,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-03-01",
+    "home": "New York Knicks",
+    "away": "San Antonio Spurs",
+    "homeScore": 114,
+    "awayScore": 89
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Brooklyn Nets",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 102,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Chicago Bulls",
+    "away": "Milwaukee Bucks",
+    "homeScore": 120,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Denver Nuggets",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 108,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Indiana Pacers",
+    "away": "Memphis Grizzlies",
+    "homeScore": 106,
+    "awayScore": 125
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Atlanta Hawks",
+    "away": "Portland Trail Blazers",
+    "homeScore": 135,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Boston Celtics",
+    "away": "Philadelphia 76ers",
+    "homeScore": 114,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Orlando Magic",
+    "away": "Detroit Pistons",
+    "homeScore": 92,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Dallas Mavericks",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 87,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Los Angeles Clippers",
+    "away": "New Orleans Pelicans",
+    "homeScore": 137,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Los Angeles Lakers",
+    "away": "Sacramento Kings",
+    "homeScore": 128,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-03-02",
+    "home": "Washington Wizards",
+    "away": "Houston Rockets",
+    "homeScore": 118,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-03-02",
+    "home": "Milwaukee Bucks",
+    "away": "Boston Celtics",
+    "homeScore": 81,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-03-02",
+    "home": "Utah Jazz",
+    "away": "Denver Nuggets",
+    "homeScore": 125,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-03-02",
+    "home": "Golden State Warriors",
+    "away": "Los Angeles Clippers",
+    "homeScore": 101,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-03-03",
+    "home": "Charlotte Hornets",
+    "away": "Dallas Mavericks",
+    "homeScore": 117,
+    "awayScore": 90
+  },
+  {
+    "date": "2026-03-03",
+    "home": "Cleveland Cavaliers",
+    "away": "Detroit Pistons",
+    "homeScore": 113,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-03-03",
+    "home": "Orlando Magic",
+    "away": "Washington Wizards",
+    "homeScore": 126,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-03-03",
+    "home": "Miami Heat",
+    "away": "Brooklyn Nets",
+    "homeScore": 124,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-03-03",
+    "home": "Toronto Raptors",
+    "away": "New York Knicks",
+    "homeScore": 95,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-03-03",
+    "home": "Philadelphia 76ers",
+    "away": "San Antonio Spurs",
+    "homeScore": 91,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-03-03",
+    "home": "Chicago Bulls",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 108,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-03-03",
+    "home": "Minnesota Timberwolves",
+    "away": "Memphis Grizzlies",
+    "homeScore": 117,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-03-03",
+    "home": "Los Angeles Lakers",
+    "away": "New Orleans Pelicans",
+    "homeScore": 110,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-03-03",
+    "home": "Sacramento Kings",
+    "away": "Phoenix Suns",
+    "homeScore": 103,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-03-04",
+    "home": "New York Knicks",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 100,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-03-04",
+    "home": "Boston Celtics",
+    "away": "Charlotte Hornets",
+    "homeScore": 89,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-03-04",
+    "home": "Philadelphia 76ers",
+    "away": "Utah Jazz",
+    "homeScore": 106,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-03-04",
+    "home": "Memphis Grizzlies",
+    "away": "Portland Trail Blazers",
+    "homeScore": 114,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-03-04",
+    "home": "Milwaukee Bucks",
+    "away": "Atlanta Hawks",
+    "homeScore": 113,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-03-04",
+    "home": "Los Angeles Clippers",
+    "away": "Indiana Pacers",
+    "homeScore": 130,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-03-05",
+    "home": "Orlando Magic",
+    "away": "Dallas Mavericks",
+    "homeScore": 115,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-03-05",
+    "home": "Washington Wizards",
+    "away": "Utah Jazz",
+    "homeScore": 112,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-03-05",
+    "home": "Miami Heat",
+    "away": "Brooklyn Nets",
+    "homeScore": 126,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-03-05",
+    "home": "Houston Rockets",
+    "away": "Golden State Warriors",
+    "homeScore": 113,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-03-05",
+    "home": "Minnesota Timberwolves",
+    "away": "Toronto Raptors",
+    "homeScore": 115,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-03-05",
+    "home": "San Antonio Spurs",
+    "away": "Detroit Pistons",
+    "homeScore": 121,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-03-05",
+    "home": "Phoenix Suns",
+    "away": "Chicago Bulls",
+    "homeScore": 103,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-03-05",
+    "home": "Denver Nuggets",
+    "away": "Los Angeles Lakers",
+    "homeScore": 120,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-03-05",
+    "home": "Sacramento Kings",
+    "away": "New Orleans Pelicans",
+    "homeScore": 123,
+    "awayScore": 133
+  },
+  {
+    "date": "2026-03-06",
+    "home": "Boston Celtics",
+    "away": "Dallas Mavericks",
+    "homeScore": 120,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-03-06",
+    "home": "Charlotte Hornets",
+    "away": "Miami Heat",
+    "homeScore": 120,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-03-06",
+    "home": "Houston Rockets",
+    "away": "Portland Trail Blazers",
+    "homeScore": 106,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-03-06",
+    "home": "Denver Nuggets",
+    "away": "New York Knicks",
+    "homeScore": 103,
+    "awayScore": 142
+  },
+  {
+    "date": "2026-03-06",
+    "home": "Phoenix Suns",
+    "away": "New Orleans Pelicans",
+    "homeScore": 118,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-03-06",
+    "home": "San Antonio Spurs",
+    "away": "Los Angeles Clippers",
+    "homeScore": 116,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-03-06",
+    "home": "Los Angeles Lakers",
+    "away": "Indiana Pacers",
+    "homeScore": 128,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-03-07",
+    "home": "Minnesota Timberwolves",
+    "away": "Orlando Magic",
+    "homeScore": 92,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-03-07",
+    "home": "Detroit Pistons",
+    "away": "Brooklyn Nets",
+    "homeScore": 105,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-03-07",
+    "home": "Atlanta Hawks",
+    "away": "Philadelphia 76ers",
+    "homeScore": 125,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-03-07",
+    "home": "Memphis Grizzlies",
+    "away": "Los Angeles Clippers",
+    "homeScore": 120,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-03-07",
+    "home": "Milwaukee Bucks",
+    "away": "Utah Jazz",
+    "homeScore": 113,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-03-07",
+    "home": "Oklahoma City Thunder",
+    "away": "Golden State Warriors",
+    "homeScore": 104,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Cleveland Cavaliers",
+    "away": "Boston Celtics",
+    "homeScore": 98,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Los Angeles Lakers",
+    "away": "New York Knicks",
+    "homeScore": 110,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Miami Heat",
+    "away": "Detroit Pistons",
+    "homeScore": 121,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Toronto Raptors",
+    "away": "Dallas Mavericks",
+    "homeScore": 122,
+    "awayScore": 92
+  },
+  {
+    "date": "2026-03-08",
+    "home": "New Orleans Pelicans",
+    "away": "Washington Wizards",
+    "homeScore": 138,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Milwaukee Bucks",
+    "away": "Orlando Magic",
+    "homeScore": 91,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-03-08",
+    "home": "San Antonio Spurs",
+    "away": "Houston Rockets",
+    "homeScore": 145,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Phoenix Suns",
+    "away": "Charlotte Hornets",
+    "homeScore": 111,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Portland Trail Blazers",
+    "away": "Indiana Pacers",
+    "homeScore": 131,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Sacramento Kings",
+    "away": "Chicago Bulls",
+    "homeScore": 126,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-03-09",
+    "home": "Cleveland Cavaliers",
+    "away": "Philadelphia 76ers",
+    "homeScore": 115,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-03-09",
+    "home": "Brooklyn Nets",
+    "away": "Memphis Grizzlies",
+    "homeScore": 126,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-03-09",
+    "home": "Oklahoma City Thunder",
+    "away": "Denver Nuggets",
+    "homeScore": 129,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-03-09",
+    "home": "Utah Jazz",
+    "away": "Golden State Warriors",
+    "homeScore": 119,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-03-09",
+    "home": "Los Angeles Clippers",
+    "away": "New York Knicks",
+    "homeScore": 126,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-03-10",
+    "home": "Philadelphia 76ers",
+    "away": "Memphis Grizzlies",
+    "homeScore": 139,
+    "awayScore": 129
+  },
+  {
+    "date": "2026-03-10",
+    "home": "Brooklyn Nets",
+    "away": "Detroit Pistons",
+    "homeScore": 100,
+    "awayScore": 138
+  },
+  {
+    "date": "2026-03-10",
+    "home": "Miami Heat",
+    "away": "Washington Wizards",
+    "homeScore": 150,
+    "awayScore": 129
+  },
+  {
+    "date": "2026-03-10",
+    "home": "Atlanta Hawks",
+    "away": "Dallas Mavericks",
+    "homeScore": 124,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-03-10",
+    "home": "Houston Rockets",
+    "away": "Toronto Raptors",
+    "homeScore": 113,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-03-10",
+    "home": "Milwaukee Bucks",
+    "away": "Phoenix Suns",
+    "homeScore": 114,
+    "awayScore": 129
+  },
+  {
+    "date": "2026-03-10",
+    "home": "San Antonio Spurs",
+    "away": "Boston Celtics",
+    "homeScore": 125,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-03-10",
+    "home": "Golden State Warriors",
+    "away": "Chicago Bulls",
+    "homeScore": 124,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-03-10",
+    "home": "Portland Trail Blazers",
+    "away": "Charlotte Hornets",
+    "homeScore": 101,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-03-10",
+    "home": "Sacramento Kings",
+    "away": "Indiana Pacers",
+    "homeScore": 114,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-03-10",
+    "home": "Los Angeles Lakers",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 120,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-03-11",
+    "home": "Orlando Magic",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 128,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-03-11",
+    "home": "New Orleans Pelicans",
+    "away": "Toronto Raptors",
+    "homeScore": 122,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-03-11",
+    "home": "Utah Jazz",
+    "away": "New York Knicks",
+    "homeScore": 117,
+    "awayScore": 134
+  },
+  {
+    "date": "2026-03-11",
+    "home": "Denver Nuggets",
+    "away": "Houston Rockets",
+    "homeScore": 129,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-03-11",
+    "home": "Sacramento Kings",
+    "away": "Charlotte Hornets",
+    "homeScore": 109,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-03-11",
+    "home": "Los Angeles Clippers",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 153,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-03-12",
+    "home": "Detroit Pistons",
+    "away": "Philadelphia 76ers",
+    "homeScore": 131,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-03-12",
+    "home": "Indiana Pacers",
+    "away": "Phoenix Suns",
+    "homeScore": 108,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-03-12",
+    "home": "Orlando Magic",
+    "away": "Washington Wizards",
+    "homeScore": 136,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-03-12",
+    "home": "Atlanta Hawks",
+    "away": "Brooklyn Nets",
+    "homeScore": 108,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-03-12",
+    "home": "Miami Heat",
+    "away": "Milwaukee Bucks",
+    "homeScore": 112,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-03-12",
+    "home": "San Antonio Spurs",
+    "away": "Denver Nuggets",
+    "homeScore": 131,
+    "awayScore": 136
+  },
+  {
+    "date": "2026-03-12",
+    "home": "Oklahoma City Thunder",
+    "away": "Boston Celtics",
+    "homeScore": 104,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-03-12",
+    "home": "Los Angeles Lakers",
+    "away": "Chicago Bulls",
+    "homeScore": 142,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-03-12",
+    "home": "Memphis Grizzlies",
+    "away": "Dallas Mavericks",
+    "homeScore": 112,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-03-13",
+    "home": "Detroit Pistons",
+    "away": "Memphis Grizzlies",
+    "homeScore": 126,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-03-13",
+    "home": "Indiana Pacers",
+    "away": "New York Knicks",
+    "homeScore": 92,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-03-13",
+    "home": "Toronto Raptors",
+    "away": "Phoenix Suns",
+    "homeScore": 122,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-03-13",
+    "home": "Houston Rockets",
+    "away": "New Orleans Pelicans",
+    "homeScore": 107,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-03-13",
+    "home": "Dallas Mavericks",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 105,
+    "awayScore": 138
+  },
+  {
+    "date": "2026-03-13",
+    "home": "Golden State Warriors",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 117,
+    "awayScore": 127
+  },
+  {
+    "date": "2026-03-13",
+    "home": "Portland Trail Blazers",
+    "away": "Utah Jazz",
+    "homeScore": 124,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-03-13",
+    "home": "Los Angeles Clippers",
+    "away": "Chicago Bulls",
+    "homeScore": 119,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-03-14",
+    "home": "Philadelphia 76ers",
+    "away": "Brooklyn Nets",
+    "homeScore": 104,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-03-14",
+    "home": "Atlanta Hawks",
+    "away": "Milwaukee Bucks",
+    "homeScore": 122,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-03-14",
+    "home": "Boston Celtics",
+    "away": "Washington Wizards",
+    "homeScore": 111,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-03-14",
+    "home": "Miami Heat",
+    "away": "Orlando Magic",
+    "homeScore": 117,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-03-14",
+    "home": "San Antonio Spurs",
+    "away": "Charlotte Hornets",
+    "homeScore": 115,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-03-14",
+    "home": "Los Angeles Lakers",
+    "away": "Denver Nuggets",
+    "homeScore": 127,
+    "awayScore": 125
+  },
+  {
+    "date": "2026-03-14",
+    "home": "Los Angeles Clippers",
+    "away": "Sacramento Kings",
+    "homeScore": 109,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-03-15",
+    "home": "Oklahoma City Thunder",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 116,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-03-15",
+    "home": "Cleveland Cavaliers",
+    "away": "Dallas Mavericks",
+    "homeScore": 120,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-03-15",
+    "home": "Toronto Raptors",
+    "away": "Detroit Pistons",
+    "homeScore": 119,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-03-15",
+    "home": "Milwaukee Bucks",
+    "away": "Indiana Pacers",
+    "homeScore": 134,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-03-15",
+    "home": "Philadelphia 76ers",
+    "away": "Portland Trail Blazers",
+    "homeScore": 109,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-03-15",
+    "home": "New York Knicks",
+    "away": "Golden State Warriors",
+    "homeScore": 110,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-03-15",
+    "home": "Sacramento Kings",
+    "away": "Utah Jazz",
+    "homeScore": 116,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-03-16",
+    "home": "Atlanta Hawks",
+    "away": "Orlando Magic",
+    "homeScore": 124,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-03-16",
+    "home": "Washington Wizards",
+    "away": "Golden State Warriors",
+    "homeScore": 117,
+    "awayScore": 125
+  },
+  {
+    "date": "2026-03-16",
+    "home": "Brooklyn Nets",
+    "away": "Portland Trail Blazers",
+    "homeScore": 95,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-03-16",
+    "home": "Boston Celtics",
+    "away": "Phoenix Suns",
+    "homeScore": 120,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-03-16",
+    "home": "Chicago Bulls",
+    "away": "Memphis Grizzlies",
+    "homeScore": 132,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-03-16",
+    "home": "New Orleans Pelicans",
+    "away": "Dallas Mavericks",
+    "homeScore": 129,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-03-16",
+    "home": "Houston Rockets",
+    "away": "Los Angeles Lakers",
+    "homeScore": 92,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-03-16",
+    "home": "Los Angeles Clippers",
+    "away": "San Antonio Spurs",
+    "homeScore": 115,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-03-17",
+    "home": "Charlotte Hornets",
+    "away": "Miami Heat",
+    "homeScore": 136,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-03-17",
+    "home": "Orlando Magic",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 108,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-03-17",
+    "home": "Washington Wizards",
+    "away": "Detroit Pistons",
+    "homeScore": 117,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-03-17",
+    "home": "New York Knicks",
+    "away": "Indiana Pacers",
+    "homeScore": 136,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-03-17",
+    "home": "Milwaukee Bucks",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 116,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-03-17",
+    "home": "Minnesota Timberwolves",
+    "away": "Phoenix Suns",
+    "homeScore": 116,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-03-17",
+    "home": "Denver Nuggets",
+    "away": "Philadelphia 76ers",
+    "homeScore": 124,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-03-17",
+    "home": "Sacramento Kings",
+    "away": "San Antonio Spurs",
+    "homeScore": 104,
+    "awayScore": 132
+  },
+  {
+    "date": "2026-03-18",
+    "home": "Memphis Grizzlies",
+    "away": "Denver Nuggets",
+    "homeScore": 125,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-03-18",
+    "home": "Boston Celtics",
+    "away": "Golden State Warriors",
+    "homeScore": 120,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-03-18",
+    "home": "Brooklyn Nets",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 92,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-03-18",
+    "home": "Indiana Pacers",
+    "away": "Portland Trail Blazers",
+    "homeScore": 119,
+    "awayScore": 127
+  },
+  {
+    "date": "2026-03-18",
+    "home": "Chicago Bulls",
+    "away": "Toronto Raptors",
+    "homeScore": 109,
+    "awayScore": 139
+  },
+  {
+    "date": "2026-03-18",
+    "home": "Minnesota Timberwolves",
+    "away": "Utah Jazz",
+    "homeScore": 147,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-03-18",
+    "home": "New Orleans Pelicans",
+    "away": "Los Angeles Clippers",
+    "homeScore": 124,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-03-18",
+    "home": "Dallas Mavericks",
+    "away": "Atlanta Hawks",
+    "homeScore": 120,
+    "awayScore": 135
+  },
+  {
+    "date": "2026-03-18",
+    "home": "Houston Rockets",
+    "away": "Los Angeles Lakers",
+    "homeScore": 116,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-03-19",
+    "home": "Charlotte Hornets",
+    "away": "Orlando Magic",
+    "homeScore": 130,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-03-19",
+    "home": "Washington Wizards",
+    "away": "Detroit Pistons",
+    "homeScore": 95,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-03-19",
+    "home": "Miami Heat",
+    "away": "Los Angeles Lakers",
+    "homeScore": 126,
+    "awayScore": 134
+  },
+  {
+    "date": "2026-03-19",
+    "home": "Chicago Bulls",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 110,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-03-19",
+    "home": "New Orleans Pelicans",
+    "away": "Los Angeles Clippers",
+    "homeScore": 105,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-03-19",
+    "home": "San Antonio Spurs",
+    "away": "Phoenix Suns",
+    "homeScore": 101,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-03-19",
+    "home": "Utah Jazz",
+    "away": "Milwaukee Bucks",
+    "homeScore": 128,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-03-19",
+    "home": "Sacramento Kings",
+    "away": "Philadelphia 76ers",
+    "homeScore": 118,
+    "awayScore": 139
+  },
+  {
+    "date": "2026-03-20",
+    "home": "Brooklyn Nets",
+    "away": "New York Knicks",
+    "homeScore": 92,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-03-20",
+    "home": "Detroit Pistons",
+    "away": "Golden State Warriors",
+    "homeScore": 115,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-03-20",
+    "home": "Houston Rockets",
+    "away": "Atlanta Hawks",
+    "homeScore": 117,
+    "awayScore": 95
+  },
+  {
+    "date": "2026-03-20",
+    "home": "Memphis Grizzlies",
+    "away": "Boston Celtics",
+    "homeScore": 112,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-03-20",
+    "home": "Minnesota Timberwolves",
+    "away": "Portland Trail Blazers",
+    "homeScore": 104,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-03-20",
+    "home": "Denver Nuggets",
+    "away": "Toronto Raptors",
+    "homeScore": 121,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Washington Wizards",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 111,
+    "awayScore": 132
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Charlotte Hornets",
+    "away": "Memphis Grizzlies",
+    "homeScore": 124,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Orlando Magic",
+    "away": "Los Angeles Lakers",
+    "homeScore": 104,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-03-21",
+    "home": "New Orleans Pelicans",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 106,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Atlanta Hawks",
+    "away": "Golden State Warriors",
+    "homeScore": 126,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Houston Rockets",
+    "away": "Miami Heat",
+    "homeScore": 123,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-03-21",
+    "home": "San Antonio Spurs",
+    "away": "Indiana Pacers",
+    "homeScore": 134,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Dallas Mavericks",
+    "away": "Los Angeles Clippers",
+    "homeScore": 131,
+    "awayScore": 138
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Utah Jazz",
+    "away": "Philadelphia 76ers",
+    "homeScore": 116,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Phoenix Suns",
+    "away": "Milwaukee Bucks",
+    "homeScore": 105,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Denver Nuggets",
+    "away": "Portland Trail Blazers",
+    "homeScore": 128,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Sacramento Kings",
+    "away": "Brooklyn Nets",
+    "homeScore": 126,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-03-22",
+    "home": "New York Knicks",
+    "away": "Washington Wizards",
+    "homeScore": 145,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Boston Celtics",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 92,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Phoenix Suns",
+    "away": "Toronto Raptors",
+    "homeScore": 120,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-03-23",
+    "home": "Atlanta Hawks",
+    "away": "Memphis Grizzlies",
+    "homeScore": 146,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-03-23",
+    "home": "Detroit Pistons",
+    "away": "Los Angeles Lakers",
+    "homeScore": 113,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-03-23",
+    "home": "Orlando Magic",
+    "away": "Indiana Pacers",
+    "homeScore": 126,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-03-23",
+    "home": "Philadelphia 76ers",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 103,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-03-23",
+    "home": "Miami Heat",
+    "away": "San Antonio Spurs",
+    "homeScore": 111,
+    "awayScore": 136
+  },
+  {
+    "date": "2026-03-23",
+    "home": "Chicago Bulls",
+    "away": "Houston Rockets",
+    "homeScore": 132,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-03-23",
+    "home": "Utah Jazz",
+    "away": "Toronto Raptors",
+    "homeScore": 127,
+    "awayScore": 143
+  },
+  {
+    "date": "2026-03-23",
+    "home": "Dallas Mavericks",
+    "away": "Golden State Warriors",
+    "homeScore": 131,
+    "awayScore": 137
+  },
+  {
+    "date": "2026-03-23",
+    "home": "Portland Trail Blazers",
+    "away": "Brooklyn Nets",
+    "homeScore": 134,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-03-23",
+    "home": "Los Angeles Clippers",
+    "away": "Milwaukee Bucks",
+    "homeScore": 129,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-03-24",
+    "home": "Charlotte Hornets",
+    "away": "Sacramento Kings",
+    "homeScore": 134,
+    "awayScore": 90
+  },
+  {
+    "date": "2026-03-24",
+    "home": "New York Knicks",
+    "away": "New Orleans Pelicans",
+    "homeScore": 121,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-03-24",
+    "home": "Cleveland Cavaliers",
+    "away": "Orlando Magic",
+    "homeScore": 136,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-03-24",
+    "home": "Phoenix Suns",
+    "away": "Denver Nuggets",
+    "homeScore": 123,
+    "awayScore": 125
+  },
+  {
+    "date": "2026-03-25",
+    "home": "Detroit Pistons",
+    "away": "Atlanta Hawks",
+    "homeScore": 129,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-03-25",
+    "home": "Indiana Pacers",
+    "away": "Los Angeles Lakers",
+    "homeScore": 130,
+    "awayScore": 137
+  },
+  {
+    "date": "2026-03-25",
+    "home": "Philadelphia 76ers",
+    "away": "Chicago Bulls",
+    "homeScore": 157,
+    "awayScore": 137
+  },
+  {
+    "date": "2026-03-25",
+    "home": "Boston Celtics",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 119,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-03-25",
+    "home": "Cleveland Cavaliers",
+    "away": "Miami Heat",
+    "homeScore": 103,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-03-25",
+    "home": "Memphis Grizzlies",
+    "away": "San Antonio Spurs",
+    "homeScore": 98,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-03-25",
+    "home": "Utah Jazz",
+    "away": "Washington Wizards",
+    "homeScore": 110,
+    "awayScore": 133
+  },
+  {
+    "date": "2026-03-25",
+    "home": "Minnesota Timberwolves",
+    "away": "Houston Rockets",
+    "homeScore": 110,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-03-25",
+    "home": "Denver Nuggets",
+    "away": "Dallas Mavericks",
+    "homeScore": 142,
+    "awayScore": 135
+  },
+  {
+    "date": "2026-03-25",
+    "home": "Golden State Warriors",
+    "away": "Brooklyn Nets",
+    "homeScore": 109,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-03-25",
+    "home": "Portland Trail Blazers",
+    "away": "Milwaukee Bucks",
+    "homeScore": 130,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-03-25",
+    "home": "Los Angeles Clippers",
+    "away": "Toronto Raptors",
+    "homeScore": 119,
+    "awayScore": 94
+  },
+  {
+    "date": "2026-03-26",
+    "home": "Charlotte Hornets",
+    "away": "New York Knicks",
+    "homeScore": 114,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-03-26",
+    "home": "Detroit Pistons",
+    "away": "New Orleans Pelicans",
+    "homeScore": 129,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-03-26",
+    "home": "Orlando Magic",
+    "away": "Sacramento Kings",
+    "homeScore": 121,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-03-27",
+    "home": "Indiana Pacers",
+    "away": "Los Angeles Clippers",
+    "homeScore": 113,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-03-27",
+    "home": "Boston Celtics",
+    "away": "Atlanta Hawks",
+    "homeScore": 109,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-03-27",
+    "home": "Cleveland Cavaliers",
+    "away": "Miami Heat",
+    "homeScore": 149,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-03-27",
+    "home": "Memphis Grizzlies",
+    "away": "Houston Rockets",
+    "homeScore": 109,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-03-27",
+    "home": "Oklahoma City Thunder",
+    "away": "Chicago Bulls",
+    "homeScore": 131,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-03-27",
+    "home": "Toronto Raptors",
+    "away": "New Orleans Pelicans",
+    "homeScore": 119,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-03-27",
+    "home": "Denver Nuggets",
+    "away": "Utah Jazz",
+    "homeScore": 135,
+    "awayScore": 129
+  },
+  {
+    "date": "2026-03-27",
+    "home": "Golden State Warriors",
+    "away": "Washington Wizards",
+    "homeScore": 131,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-03-27",
+    "home": "Portland Trail Blazers",
+    "away": "Dallas Mavericks",
+    "homeScore": 93,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-03-27",
+    "home": "Los Angeles Lakers",
+    "away": "Brooklyn Nets",
+    "homeScore": 116,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-03-28",
+    "home": "Milwaukee Bucks",
+    "away": "San Antonio Spurs",
+    "homeScore": 95,
+    "awayScore": 127
+  },
+  {
+    "date": "2026-03-28",
+    "home": "Charlotte Hornets",
+    "away": "Philadelphia 76ers",
+    "homeScore": 114,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-03-28",
+    "home": "Atlanta Hawks",
+    "away": "Sacramento Kings",
+    "homeScore": 123,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-03-28",
+    "home": "Memphis Grizzlies",
+    "away": "Chicago Bulls",
+    "homeScore": 125,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-03-28",
+    "home": "Minnesota Timberwolves",
+    "away": "Detroit Pistons",
+    "homeScore": 87,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-03-28",
+    "home": "Phoenix Suns",
+    "away": "Utah Jazz",
+    "homeScore": 134,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Milwaukee Bucks",
+    "away": "Los Angeles Clippers",
+    "homeScore": 113,
+    "awayScore": 127
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Indiana Pacers",
+    "away": "Miami Heat",
+    "homeScore": 135,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Brooklyn Nets",
+    "away": "Sacramento Kings",
+    "homeScore": 116,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Charlotte Hornets",
+    "away": "Boston Celtics",
+    "homeScore": 99,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Toronto Raptors",
+    "away": "Orlando Magic",
+    "homeScore": 139,
+    "awayScore": 87
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Portland Trail Blazers",
+    "away": "Washington Wizards",
+    "homeScore": 123,
+    "awayScore": 88
+  },
+  {
+    "date": "2026-03-29",
+    "home": "New Orleans Pelicans",
+    "away": "Houston Rockets",
+    "homeScore": 102,
+    "awayScore": 134
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Oklahoma City Thunder",
+    "away": "New York Knicks",
+    "homeScore": 111,
+    "awayScore": 100
+  },
+  {
+    "date": "2026-03-29",
+    "home": "Denver Nuggets",
+    "away": "Golden State Warriors",
+    "homeScore": 116,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-03-30",
+    "home": "Miami Heat",
+    "away": "Philadelphia 76ers",
+    "homeScore": 119,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-03-30",
+    "home": "Atlanta Hawks",
+    "away": "Boston Celtics",
+    "homeScore": 112,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-03-30",
+    "home": "Memphis Grizzlies",
+    "away": "Phoenix Suns",
+    "homeScore": 105,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-03-30",
+    "home": "San Antonio Spurs",
+    "away": "Chicago Bulls",
+    "homeScore": 129,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-03-30",
+    "home": "Dallas Mavericks",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 94,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-03-30",
+    "home": "Utah Jazz",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 113,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-03-30",
+    "home": "Oklahoma City Thunder",
+    "away": "Detroit Pistons",
+    "homeScore": 114,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-03-30",
+    "home": "Los Angeles Lakers",
+    "away": "Washington Wizards",
+    "homeScore": 120,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-03-31",
+    "home": "Milwaukee Bucks",
+    "away": "Dallas Mavericks",
+    "homeScore": 123,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-03-31",
+    "home": "Orlando Magic",
+    "away": "Phoenix Suns",
+    "homeScore": 115,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-03-31",
+    "home": "Brooklyn Nets",
+    "away": "Charlotte Hornets",
+    "homeScore": 86,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-03-31",
+    "home": "Detroit Pistons",
+    "away": "Toronto Raptors",
+    "homeScore": 127,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-03-31",
+    "home": "Houston Rockets",
+    "away": "New York Knicks",
+    "homeScore": 111,
+    "awayScore": 94
+  },
+  {
+    "date": "2026-03-31",
+    "home": "Los Angeles Lakers",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 127,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-03-31",
+    "home": "Los Angeles Clippers",
+    "away": "Portland Trail Blazers",
+    "homeScore": 104,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-04-01",
+    "home": "Memphis Grizzlies",
+    "away": "New York Knicks",
+    "homeScore": 119,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-04-01",
+    "home": "Washington Wizards",
+    "away": "Philadelphia 76ers",
+    "homeScore": 131,
+    "awayScore": 153
+  },
+  {
+    "date": "2026-04-01",
+    "home": "Miami Heat",
+    "away": "Boston Celtics",
+    "homeScore": 129,
+    "awayScore": 147
+  },
+  {
+    "date": "2026-04-01",
+    "home": "Orlando Magic",
+    "away": "Atlanta Hawks",
+    "homeScore": 101,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-04-01",
+    "home": "Toronto Raptors",
+    "away": "Sacramento Kings",
+    "homeScore": 115,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-04-01",
+    "home": "Chicago Bulls",
+    "away": "Indiana Pacers",
+    "homeScore": 126,
+    "awayScore": 145
+  },
+  {
+    "date": "2026-04-01",
+    "home": "Houston Rockets",
+    "away": "Milwaukee Bucks",
+    "homeScore": 119,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-04-01",
+    "home": "Utah Jazz",
+    "away": "Denver Nuggets",
+    "homeScore": 117,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-04-01",
+    "home": "Golden State Warriors",
+    "away": "San Antonio Spurs",
+    "homeScore": 113,
+    "awayScore": 127
+  },
+  {
+    "date": "2026-04-02",
+    "home": "Charlotte Hornets",
+    "away": "Phoenix Suns",
+    "homeScore": 127,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-04-02",
+    "home": "Detroit Pistons",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 113,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-04-02",
+    "home": "Oklahoma City Thunder",
+    "away": "Los Angeles Lakers",
+    "homeScore": 139,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-04-02",
+    "home": "Golden State Warriors",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 111,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-04-02",
+    "home": "Portland Trail Blazers",
+    "away": "New Orleans Pelicans",
+    "homeScore": 118,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-04-02",
+    "home": "Los Angeles Clippers",
+    "away": "San Antonio Spurs",
+    "homeScore": 99,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-04-03",
+    "home": "Charlotte Hornets",
+    "away": "Indiana Pacers",
+    "homeScore": 129,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-04-03",
+    "home": "Philadelphia 76ers",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 115,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-04-03",
+    "home": "Brooklyn Nets",
+    "away": "Atlanta Hawks",
+    "homeScore": 107,
+    "awayScore": 141
+  },
+  {
+    "date": "2026-04-03",
+    "home": "New York Knicks",
+    "away": "Chicago Bulls",
+    "homeScore": 136,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-04-03",
+    "home": "Houston Rockets",
+    "away": "Utah Jazz",
+    "homeScore": 140,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-04-03",
+    "home": "Memphis Grizzlies",
+    "away": "Toronto Raptors",
+    "homeScore": 96,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-04-03",
+    "home": "Milwaukee Bucks",
+    "away": "Boston Celtics",
+    "homeScore": 101,
+    "awayScore": 133
+  },
+  {
+    "date": "2026-04-03",
+    "home": "Dallas Mavericks",
+    "away": "Orlando Magic",
+    "homeScore": 127,
+    "awayScore": 138
+  },
+  {
+    "date": "2026-04-03",
+    "home": "Sacramento Kings",
+    "away": "New Orleans Pelicans",
+    "homeScore": 117,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-04-04",
+    "home": "Miami Heat",
+    "away": "Washington Wizards",
+    "homeScore": 152,
+    "awayScore": 136
+  },
+  {
+    "date": "2026-04-04",
+    "home": "Denver Nuggets",
+    "away": "San Antonio Spurs",
+    "homeScore": 136,
+    "awayScore": 134
+  },
+  {
+    "date": "2026-04-04",
+    "home": "Philadelphia 76ers",
+    "away": "Detroit Pistons",
+    "homeScore": 93,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-04-05",
+    "home": "Boston Celtics",
+    "away": "Toronto Raptors",
+    "homeScore": 115,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-04-05",
+    "home": "Brooklyn Nets",
+    "away": "Washington Wizards",
+    "homeScore": 121,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-04-05",
+    "home": "Chicago Bulls",
+    "away": "Phoenix Suns",
+    "homeScore": 110,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-04-05",
+    "home": "Milwaukee Bucks",
+    "away": "Memphis Grizzlies",
+    "homeScore": 131,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-04-05",
+    "home": "Cleveland Cavaliers",
+    "away": "Indiana Pacers",
+    "homeScore": 117,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-04-05",
+    "home": "Minnesota Timberwolves",
+    "away": "Charlotte Hornets",
+    "homeScore": 108,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-04-05",
+    "home": "New Orleans Pelicans",
+    "away": "Orlando Magic",
+    "homeScore": 108,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-04-05",
+    "home": "Oklahoma City Thunder",
+    "away": "Utah Jazz",
+    "homeScore": 146,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-04-05",
+    "home": "Dallas Mavericks",
+    "away": "Los Angeles Lakers",
+    "homeScore": 134,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-04-05",
+    "home": "Sacramento Kings",
+    "away": "Los Angeles Clippers",
+    "homeScore": 109,
+    "awayScore": 138
+  },
+  {
+    "date": "2026-04-05",
+    "home": "Golden State Warriors",
+    "away": "Houston Rockets",
+    "homeScore": 116,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-04-06",
+    "home": "Atlanta Hawks",
+    "away": "New York Knicks",
+    "homeScore": 105,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-04-06",
+    "home": "Orlando Magic",
+    "away": "Detroit Pistons",
+    "homeScore": 123,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-04-06",
+    "home": "Memphis Grizzlies",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 126,
+    "awayScore": 142
+  },
+  {
+    "date": "2026-04-06",
+    "home": "San Antonio Spurs",
+    "away": "Philadelphia 76ers",
+    "homeScore": 115,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-04-06",
+    "home": "Denver Nuggets",
+    "away": "Portland Trail Blazers",
+    "homeScore": 137,
+    "awayScore": 132
+  },
+  {
+    "date": "2026-04-07",
+    "home": "Washington Wizards",
+    "away": "Chicago Bulls",
+    "homeScore": 98,
+    "awayScore": 129
+  },
+  {
+    "date": "2026-04-07",
+    "home": "Boston Celtics",
+    "away": "Charlotte Hornets",
+    "homeScore": 113,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-04-07",
+    "home": "Brooklyn Nets",
+    "away": "Milwaukee Bucks",
+    "homeScore": 96,
+    "awayScore": 90
+  },
+  {
+    "date": "2026-04-07",
+    "home": "Toronto Raptors",
+    "away": "Miami Heat",
+    "homeScore": 121,
+    "awayScore": 95
+  },
+  {
+    "date": "2026-04-07",
+    "home": "Indiana Pacers",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 104,
+    "awayScore": 124
+  },
+  {
+    "date": "2026-04-07",
+    "home": "New Orleans Pelicans",
+    "away": "Utah Jazz",
+    "homeScore": 156,
+    "awayScore": 137
+  },
+  {
+    "date": "2026-04-07",
+    "home": "Golden State Warriors",
+    "away": "Sacramento Kings",
+    "homeScore": 110,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-04-07",
+    "home": "Los Angeles Lakers",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 87,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-04-07",
+    "home": "Los Angeles Clippers",
+    "away": "Dallas Mavericks",
+    "homeScore": 116,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-04-07",
+    "home": "Phoenix Suns",
+    "away": "Houston Rockets",
+    "homeScore": 105,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-04-08",
+    "home": "Cleveland Cavaliers",
+    "away": "Atlanta Hawks",
+    "homeScore": 122,
+    "awayScore": 116
+  },
+  {
+    "date": "2026-04-08",
+    "home": "Orlando Magic",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 132,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-04-08",
+    "home": "Detroit Pistons",
+    "away": "Milwaukee Bucks",
+    "homeScore": 137,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-04-08",
+    "home": "San Antonio Spurs",
+    "away": "Portland Trail Blazers",
+    "homeScore": 112,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-04-08",
+    "home": "Denver Nuggets",
+    "away": "Memphis Grizzlies",
+    "homeScore": 136,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-04-08",
+    "home": "Los Angeles Clippers",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 110,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-04-08",
+    "home": "Phoenix Suns",
+    "away": "Dallas Mavericks",
+    "homeScore": 112,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-04-09",
+    "home": "Toronto Raptors",
+    "away": "Miami Heat",
+    "homeScore": 128,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-04-09",
+    "home": "Washington Wizards",
+    "away": "Chicago Bulls",
+    "homeScore": 108,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-04-09",
+    "home": "Brooklyn Nets",
+    "away": "Indiana Pacers",
+    "homeScore": 94,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-04-09",
+    "home": "New York Knicks",
+    "away": "Boston Celtics",
+    "homeScore": 112,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-04-09",
+    "home": "Houston Rockets",
+    "away": "Philadelphia 76ers",
+    "homeScore": 113,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-04-09",
+    "home": "Golden State Warriors",
+    "away": "Los Angeles Lakers",
+    "homeScore": 103,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Charlotte Hornets",
+    "away": "Detroit Pistons",
+    "homeScore": 100,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Washington Wizards",
+    "away": "Miami Heat",
+    "homeScore": 117,
+    "awayScore": 140
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Atlanta Hawks",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 124,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Boston Celtics",
+    "away": "New Orleans Pelicans",
+    "homeScore": 144,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Indiana Pacers",
+    "away": "Philadelphia 76ers",
+    "homeScore": 94,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-04-10",
+    "home": "New York Knicks",
+    "away": "Toronto Raptors",
+    "homeScore": 112,
+    "awayScore": 95
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Chicago Bulls",
+    "away": "Orlando Magic",
+    "homeScore": 103,
+    "awayScore": 127
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Houston Rockets",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 132,
+    "awayScore": 136
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Milwaukee Bucks",
+    "away": "Brooklyn Nets",
+    "homeScore": 125,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-04-10",
+    "home": "San Antonio Spurs",
+    "away": "Dallas Mavericks",
+    "homeScore": 139,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Utah Jazz",
+    "away": "Memphis Grizzlies",
+    "homeScore": 147,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Denver Nuggets",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 127,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Portland Trail Blazers",
+    "away": "Los Angeles Clippers",
+    "homeScore": 116,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Sacramento Kings",
+    "away": "Golden State Warriors",
+    "homeScore": 124,
+    "awayScore": 118
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Los Angeles Lakers",
+    "away": "Phoenix Suns",
+    "homeScore": 101,
+    "awayScore": 73
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Boston Celtics",
+    "away": "Orlando Magic",
+    "homeScore": 113,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Cleveland Cavaliers",
+    "away": "Washington Wizards",
+    "homeScore": 130,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Indiana Pacers",
+    "away": "Detroit Pistons",
+    "homeScore": 121,
+    "awayScore": 133
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Miami Heat",
+    "away": "Atlanta Hawks",
+    "homeScore": 143,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-04-12",
+    "home": "New York Knicks",
+    "away": "Charlotte Hornets",
+    "homeScore": 96,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Philadelphia 76ers",
+    "away": "Milwaukee Bucks",
+    "homeScore": 126,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Toronto Raptors",
+    "away": "Brooklyn Nets",
+    "homeScore": 136,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Dallas Mavericks",
+    "away": "Chicago Bulls",
+    "homeScore": 149,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Houston Rockets",
+    "away": "Memphis Grizzlies",
+    "homeScore": 132,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Minnesota Timberwolves",
+    "away": "New Orleans Pelicans",
+    "homeScore": 132,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Oklahoma City Thunder",
+    "away": "Phoenix Suns",
+    "homeScore": 103,
+    "awayScore": 135
+  },
+  {
+    "date": "2026-04-12",
+    "home": "San Antonio Spurs",
+    "away": "Denver Nuggets",
+    "homeScore": 118,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Los Angeles Lakers",
+    "away": "Utah Jazz",
+    "homeScore": 131,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Los Angeles Clippers",
+    "away": "Golden State Warriors",
+    "homeScore": 115,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Portland Trail Blazers",
+    "away": "Sacramento Kings",
+    "homeScore": 122,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-04-14",
+    "home": "Charlotte Hornets",
+    "away": "Miami Heat",
+    "homeScore": 127,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-04-14",
+    "home": "Phoenix Suns",
+    "away": "Portland Trail Blazers",
+    "homeScore": 110,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-04-15",
+    "home": "Philadelphia 76ers",
+    "away": "Orlando Magic",
+    "homeScore": 109,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-04-15",
+    "home": "Los Angeles Clippers",
+    "away": "Golden State Warriors",
+    "homeScore": 121,
+    "awayScore": 126
+  },
+  {
+    "date": "2026-04-17",
+    "home": "Orlando Magic",
+    "away": "Charlotte Hornets",
+    "homeScore": 121,
+    "awayScore": 90
+  },
+  {
+    "date": "2026-04-17",
+    "home": "Phoenix Suns",
+    "away": "Golden State Warriors",
+    "homeScore": 111,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-04-18",
+    "home": "New York Knicks",
+    "away": "Atlanta Hawks",
+    "homeScore": 113,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-04-18",
+    "home": "Cleveland Cavaliers",
+    "away": "Toronto Raptors",
+    "homeScore": 126,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-04-18",
+    "home": "Denver Nuggets",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 116,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-04-18",
+    "home": "Los Angeles Lakers",
+    "away": "Houston Rockets",
+    "homeScore": 107,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-04-19",
+    "home": "San Antonio Spurs",
+    "away": "Portland Trail Blazers",
+    "homeScore": 111,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-04-19",
+    "home": "Boston Celtics",
+    "away": "Philadelphia 76ers",
+    "homeScore": 123,
+    "awayScore": 91
+  },
+  {
+    "date": "2026-04-19",
+    "home": "Detroit Pistons",
+    "away": "Orlando Magic",
+    "homeScore": 101,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-04-19",
+    "home": "Oklahoma City Thunder",
+    "away": "Phoenix Suns",
+    "homeScore": 119,
+    "awayScore": 84
+  },
+  {
+    "date": "2026-04-20",
+    "home": "New York Knicks",
+    "away": "Atlanta Hawks",
+    "homeScore": 106,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-04-20",
+    "home": "Cleveland Cavaliers",
+    "away": "Toronto Raptors",
+    "homeScore": 115,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-04-20",
+    "home": "Denver Nuggets",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 114,
+    "awayScore": 119
+  },
+  {
+    "date": "2026-04-21",
+    "home": "San Antonio Spurs",
+    "away": "Portland Trail Blazers",
+    "homeScore": 103,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-04-21",
+    "home": "Los Angeles Lakers",
+    "away": "Houston Rockets",
+    "homeScore": 101,
+    "awayScore": 94
+  },
+  {
+    "date": "2026-04-21",
+    "home": "Boston Celtics",
+    "away": "Philadelphia 76ers",
+    "homeScore": 97,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-04-22",
+    "home": "Detroit Pistons",
+    "away": "Orlando Magic",
+    "homeScore": 98,
+    "awayScore": 83
+  },
+  {
+    "date": "2026-04-22",
+    "home": "Oklahoma City Thunder",
+    "away": "Phoenix Suns",
+    "homeScore": 120,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-04-23",
+    "home": "Atlanta Hawks",
+    "away": "New York Knicks",
+    "homeScore": 109,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-04-23",
+    "home": "Toronto Raptors",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 126,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-04-23",
+    "home": "Minnesota Timberwolves",
+    "away": "Denver Nuggets",
+    "homeScore": 113,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-04-24",
+    "home": "Portland Trail Blazers",
+    "away": "San Antonio Spurs",
+    "homeScore": 108,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-04-24",
+    "home": "Houston Rockets",
+    "away": "Los Angeles Lakers",
+    "homeScore": 108,
+    "awayScore": 112
+  },
+  {
+    "date": "2026-04-24",
+    "home": "Philadelphia 76ers",
+    "away": "Boston Celtics",
+    "homeScore": 100,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-04-25",
+    "home": "Atlanta Hawks",
+    "away": "New York Knicks",
+    "homeScore": 98,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-04-25",
+    "home": "Minnesota Timberwolves",
+    "away": "Denver Nuggets",
+    "homeScore": 112,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-04-25",
+    "home": "Orlando Magic",
+    "away": "Detroit Pistons",
+    "homeScore": 113,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-04-25",
+    "home": "Phoenix Suns",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 109,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-04-26",
+    "home": "Toronto Raptors",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 93,
+    "awayScore": 89
+  },
+  {
+    "date": "2026-04-26",
+    "home": "Portland Trail Blazers",
+    "away": "San Antonio Spurs",
+    "homeScore": 93,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-04-26",
+    "home": "Houston Rockets",
+    "away": "Los Angeles Lakers",
+    "homeScore": 115,
+    "awayScore": 96
+  },
+  {
+    "date": "2026-04-26",
+    "home": "Philadelphia 76ers",
+    "away": "Boston Celtics",
+    "homeScore": 96,
+    "awayScore": 128
+  },
+  {
+    "date": "2026-04-27",
+    "home": "Denver Nuggets",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 125,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-04-27",
+    "home": "Orlando Magic",
+    "away": "Detroit Pistons",
+    "homeScore": 94,
+    "awayScore": 88
+  },
+  {
+    "date": "2026-04-27",
+    "home": "Phoenix Suns",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 122,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-04-28",
+    "home": "New York Knicks",
+    "away": "Atlanta Hawks",
+    "homeScore": 126,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-04-28",
+    "home": "San Antonio Spurs",
+    "away": "Portland Trail Blazers",
+    "homeScore": 114,
+    "awayScore": 95
+  },
+  {
+    "date": "2026-04-28",
+    "home": "Boston Celtics",
+    "away": "Philadelphia 76ers",
+    "homeScore": 97,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-04-29",
+    "home": "Cleveland Cavaliers",
+    "away": "Toronto Raptors",
+    "homeScore": 125,
+    "awayScore": 120
+  },
+  {
+    "date": "2026-04-29",
+    "home": "Los Angeles Lakers",
+    "away": "Houston Rockets",
+    "homeScore": 93,
+    "awayScore": 99
+  },
+  {
+    "date": "2026-04-29",
+    "home": "Detroit Pistons",
+    "away": "Orlando Magic",
+    "homeScore": 116,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-04-30",
+    "home": "Atlanta Hawks",
+    "away": "New York Knicks",
+    "homeScore": 89,
+    "awayScore": 140
+  },
+  {
+    "date": "2026-04-30",
+    "home": "Minnesota Timberwolves",
+    "away": "Denver Nuggets",
+    "homeScore": 110,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-04-30",
+    "home": "Philadelphia 76ers",
+    "away": "Boston Celtics",
+    "homeScore": 106,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-05-01",
+    "home": "Toronto Raptors",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 112,
+    "awayScore": 110
+  },
+  {
+    "date": "2026-05-01",
+    "home": "Houston Rockets",
+    "away": "Los Angeles Lakers",
+    "homeScore": 78,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-05-01",
+    "home": "Orlando Magic",
+    "away": "Detroit Pistons",
+    "homeScore": 79,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-05-02",
+    "home": "Boston Celtics",
+    "away": "Philadelphia 76ers",
+    "homeScore": 100,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-05-03",
+    "home": "Cleveland Cavaliers",
+    "away": "Toronto Raptors",
+    "homeScore": 114,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-05-03",
+    "home": "Detroit Pistons",
+    "away": "Orlando Magic",
+    "homeScore": 116,
+    "awayScore": 94
+  },
+  {
+    "date": "2026-05-04",
+    "home": "San Antonio Spurs",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 102,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-05-04",
+    "home": "New York Knicks",
+    "away": "Philadelphia 76ers",
+    "homeScore": 137,
+    "awayScore": 98
+  },
+  {
+    "date": "2026-05-05",
+    "home": "Oklahoma City Thunder",
+    "away": "Los Angeles Lakers",
+    "homeScore": 108,
+    "awayScore": 90
+  },
+  {
+    "date": "2026-05-05",
+    "home": "Detroit Pistons",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 111,
+    "awayScore": 101
+  },
+  {
+    "date": "2026-05-06",
+    "home": "San Antonio Spurs",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 133,
+    "awayScore": 95
+  },
+  {
+    "date": "2026-05-06",
+    "home": "New York Knicks",
+    "away": "Philadelphia 76ers",
+    "homeScore": 108,
+    "awayScore": 102
+  },
+  {
+    "date": "2026-05-07",
+    "home": "Oklahoma City Thunder",
+    "away": "Los Angeles Lakers",
+    "homeScore": 125,
+    "awayScore": 107
+  },
+  {
+    "date": "2026-05-07",
+    "home": "Detroit Pistons",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 107,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-05-08",
+    "home": "Minnesota Timberwolves",
+    "away": "San Antonio Spurs",
+    "homeScore": 108,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-05-08",
+    "home": "Philadelphia 76ers",
+    "away": "New York Knicks",
+    "homeScore": 94,
+    "awayScore": 108
+  },
+  {
+    "date": "2026-05-09",
+    "home": "Los Angeles Lakers",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 108,
+    "awayScore": 131
+  },
+  {
+    "date": "2026-05-09",
+    "home": "Cleveland Cavaliers",
+    "away": "Detroit Pistons",
+    "homeScore": 116,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-05-10",
+    "home": "Minnesota Timberwolves",
+    "away": "San Antonio Spurs",
+    "homeScore": 114,
+    "awayScore": 109
+  },
+  {
+    "date": "2026-05-10",
+    "home": "Philadelphia 76ers",
+    "away": "New York Knicks",
+    "homeScore": 114,
+    "awayScore": 144
+  },
+  {
+    "date": "2026-05-11",
+    "home": "Los Angeles Lakers",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 110,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-05-11",
+    "home": "Cleveland Cavaliers",
+    "away": "Detroit Pistons",
+    "homeScore": 112,
+    "awayScore": 103
+  },
+  {
+    "date": "2026-05-12",
+    "home": "San Antonio Spurs",
+    "away": "Minnesota Timberwolves",
+    "homeScore": 126,
+    "awayScore": 97
+  },
+  {
+    "date": "2026-05-13",
+    "home": "Detroit Pistons",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 113,
+    "awayScore": 117
+  },
+  {
+    "date": "2026-05-15",
+    "home": "Minnesota Timberwolves",
+    "away": "San Antonio Spurs",
+    "homeScore": 109,
+    "awayScore": 139
+  },
+  {
+    "date": "2026-05-15",
+    "home": "Cleveland Cavaliers",
+    "away": "Detroit Pistons",
+    "homeScore": 94,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-05-17",
+    "home": "Detroit Pistons",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 94,
+    "awayScore": 125
+  },
+  {
+    "date": "2026-05-18",
+    "home": "Oklahoma City Thunder",
+    "away": "San Antonio Spurs",
+    "homeScore": 115,
+    "awayScore": 122
+  },
+  {
+    "date": "2026-05-19",
+    "home": "New York Knicks",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 115,
+    "awayScore": 104
+  },
+  {
+    "date": "2026-05-20",
+    "home": "Oklahoma City Thunder",
+    "away": "San Antonio Spurs",
+    "homeScore": 122,
+    "awayScore": 113
+  },
+  {
+    "date": "2026-05-21",
+    "home": "New York Knicks",
+    "away": "Cleveland Cavaliers",
+    "homeScore": 109,
+    "awayScore": 93
+  },
+  {
+    "date": "2026-05-22",
+    "home": "San Antonio Spurs",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 108,
+    "awayScore": 123
+  },
+  {
+    "date": "2026-05-23",
+    "home": "Cleveland Cavaliers",
+    "away": "New York Knicks",
+    "homeScore": 108,
+    "awayScore": 121
+  },
+  {
+    "date": "2026-05-24",
+    "home": "San Antonio Spurs",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 103,
+    "awayScore": 82
+  },
+  {
+    "date": "2026-05-25",
+    "home": "Cleveland Cavaliers",
+    "away": "New York Knicks",
+    "homeScore": 93,
+    "awayScore": 130
+  },
+  {
+    "date": "2026-05-26",
+    "home": "Oklahoma City Thunder",
+    "away": "San Antonio Spurs",
+    "homeScore": 127,
+    "awayScore": 114
+  },
+  {
+    "date": "2026-05-28",
+    "home": "San Antonio Spurs",
+    "away": "Oklahoma City Thunder",
+    "homeScore": 118,
+    "awayScore": 91
+  },
+  {
+    "date": "2026-05-30",
+    "home": "Oklahoma City Thunder",
+    "away": "San Antonio Spurs",
+    "homeScore": 103,
+    "awayScore": 111
+  },
+  {
+    "date": "2026-06-03",
+    "home": "San Antonio Spurs",
+    "away": "New York Knicks",
+    "homeScore": 95,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-06-05",
+    "home": "San Antonio Spurs",
+    "away": "New York Knicks",
+    "homeScore": 104,
+    "awayScore": 105
+  },
+  {
+    "date": "2026-06-08",
+    "home": "New York Knicks",
+    "away": "San Antonio Spurs",
+    "homeScore": 111,
+    "awayScore": 115
+  },
+  {
+    "date": "2026-06-10",
+    "home": "New York Knicks",
+    "away": "San Antonio Spurs",
+    "homeScore": 107,
+    "awayScore": 106
+  },
+  {
+    "date": "2026-06-13",
+    "home": "San Antonio Spurs",
+    "away": "New York Knicks",
+    "homeScore": 90,
+    "awayScore": 94
+  }
+]

@@ -365,6 +365,8 @@
 
         .rec-match { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
         .rec-time  { font-size: 11px; color: var(--text-dim); margin-bottom: 10px; }
+        .rec-when  { font-weight: 700; color: var(--primary); }
+        .rec-when.far { color: #9a3412; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 6px; padding: 1px 6px; }
 
         .rec-pick {
             display: inline-flex; align-items: center; gap: 6px;
@@ -1607,6 +1609,16 @@ function renderRecommended(bets) {
     body.innerHTML = buildRecCardsHtml(bets);
 }
 
+function relWhen(commenceTime) {
+    const now = new Date();
+    const md  = new Date(commenceTime);
+    const d0  = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const d1  = new Date(md.getFullYear(),  md.getMonth(),  md.getDate());
+    const days = Math.round((d1 - d0) / 86400000);
+    const when = days <= 0 ? 'dziś' : days === 1 ? 'jutro' : `za ${days} dni`;
+    return { when, far: days >= 7 };
+}
+
 function buildRecCardsHtml(bets) {
     const rankClass = r => r === 1 ? 'top1' : r === 2 ? 'top2' : r === 3 ? 'top3' : '';
     const outcomeIcon = t => ({ home:'🏠', away:'✈️', draw:'🤝', '1X':'🛡️', '12':'🛡️', 'X2':'🛡️' })[t] || '🎯';
@@ -1617,6 +1629,7 @@ function buildRecCardsHtml(bets) {
         const time = new Date(bet.commenceTime).toLocaleString('pl-PL', {
             weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit'
         });
+        const { when, far } = relWhen(bet.commenceTime);
         const kellyPct     = (bet.fractionalKelly * 100).toFixed(1);
         const barWidth     = Math.min(100, bet.fractionalKelly * 400).toFixed(0);
         const sourceLabel  = bet.probabilitySource === 'model'
@@ -1634,7 +1647,7 @@ function buildRecCardsHtml(bets) {
                 <div class="rec-source-badge ${sourceClass}">${sourceLabel}</div>
             </div>
             <div class="rec-match">${bet.homeTeam} vs ${bet.awayTeam}</div>
-            <div class="rec-time">${time}</div>
+            <div class="rec-time">${time} · <span class="rec-when${far ? ' far' : ''}">${when}</span></div>
             <div class="rec-pick">
                 ${outcomeIcon(bet.outcomeType)} Typuj: <strong>${bet.outcomeLabel}</strong>
             </div>
@@ -1895,7 +1908,7 @@ function showKellyExplain(betAmt, kellyPct, bankroll) {
 }
 
 // ── Power Ranking ──────────────────────────────────────────
-const POWER_LEAGUES = LEAGUES.filter(l => ['ekstraklasa','premier_league','laliga','bundesliga','nfl'].includes(l.key));
+const POWER_LEAGUES = LEAGUES.filter(l => ['ekstraklasa','premier_league','laliga','bundesliga','nfl','nba'].includes(l.key));
 let powerLeague = 'ekstraklasa';
 
 function initPowerScreen() {
@@ -1964,17 +1977,22 @@ function renderPowerRanking(data) {
 
     const rankClass = r => r === 1 ? 'top1' : r === 2 ? 'top2' : r === 3 ? 'top3' : '';
     const formHtml = form => `<span class="pr-form">${(form||[]).map(f => `<span class="${f}">${f}</span>`).join('')}</span>`;
+    const hasDraw = LEAGUES.find(l => l.key === powerLeague)?.hasDraw;
 
     let html = '';
+    if (powerLeague === 'nba') {
+        html += `<div class="power-note" style="margin-bottom:8px">🏀 Ranking startowy wg sezonu 2025/26 — nowy sezon (od października) będzie go korygował na bieżąco.</div>`;
+    }
     for (const t of teams) {
         const mine = myVoteFor(powerLeague, t.team);
-        const rec  = t.wins + '-' + t.draws + '-' + t.losses;
+        const rec  = hasDraw ? `${t.wins}-${t.draws}-${t.losses}` : `${t.wins}-${t.losses}`;
+        const recLbl = hasDraw ? '(Z-R-P)' : '(Z-P)';
         html += `
         <div class="pr-row">
             <div class="pr-rank ${rankClass(t.rank)}">${t.rank}</div>
             <div class="pr-main">
                 <div class="pr-team">${t.team}</div>
-                <div class="pr-meta">${t.games} m • ${rec} (Z-R-P)${formHtml(t.form)}</div>
+                <div class="pr-meta">${t.games} m • ${rec} ${recLbl}${formHtml(t.form)}</div>
             </div>
             <div class="pr-elo">
                 <div class="pr-elo-val">${Math.round(t.rating)}</div>

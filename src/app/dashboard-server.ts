@@ -26,7 +26,7 @@ export class DashboardServer {
 
     // Ligi, dla ktorych liczymy power ranking (ELO z realnych wynikow).
     private readonly powerSports: Sport[] = [
-        Sport.EKSTRAKLASA, Sport.PREMIER_LEAGUE, Sport.LALIGA, Sport.BUNDESLIGA, Sport.NFL
+        Sport.EKSTRAKLASA, Sport.PREMIER_LEAGUE, Sport.LALIGA, Sport.BUNDESLIGA, Sport.NFL, Sport.NBA
     ];
 
     constructor() {

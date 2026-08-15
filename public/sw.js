@@ -1,4 +1,4 @@
-const CACHE = 'odds-v5';
+const CACHE = 'odds-v7';
 const ASSETS = ['/', '/index.html', '/icon.svg'];
 
 self.addEventListener('install', e => {

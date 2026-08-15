@@ -33,6 +33,7 @@ export interface RecommendedBet {
 const MIN_EDGE = 0.015;        // minimum 1.5% edge to include
 const MIN_KELLY = 0.005;       // minimum 0.5% Kelly
 const ROUND_WINDOW_DAYS = 4;   // "następna kolejka": mecze w N dni od najbliższego meczu ligi
+const MAX_DAYS_AHEAD = 14;     // twardy limit: nie polecaj meczów dalej niż N dni (np. NFL zaczyna sezon we wrześniu)
 
 interface Single {
     type: 'home' | 'draw' | 'away';
@@ -65,7 +66,12 @@ export class RecommendedService {
                 continue;
             }
             const earliest = Math.min(...upcoming.map(m => new Date(m.commenceTime).getTime()));
-            const roundEnd = earliest + ROUND_WINDOW_DAYS * 86400000;
+            const maxAhead = floorMs + MAX_DAYS_AHEAD * 86400000;
+            if (earliest > maxAhead) {
+                console.log(`[Recommended] ${config.label}: najbliższy mecz za >${MAX_DAYS_AHEAD} dni (${new Date(earliest).toLocaleDateString('pl-PL')}) — pomijam`);
+                continue;
+            }
+            const roundEnd = Math.min(earliest + ROUND_WINDOW_DAYS * 86400000, maxAhead);
             console.log(`[Recommended] ${config.label}: ${cache.data.length} w cache | kolejka od ${new Date(earliest).toLocaleDateString('pl-PL')} do ${new Date(roundEnd).toLocaleDateString('pl-PL')}`);
 
             let skippedWrongWeek = 0, skippedNoOdds = 0, skippedNoModel = 0, skippedNoEdge = 0, added = 0;

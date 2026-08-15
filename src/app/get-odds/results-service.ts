@@ -55,13 +55,14 @@ interface ResultsCache {
 
 // Ligi obslugiwane przez the-odds-api /scores, dla ktorych liczymy ELO.
 const SUPPORTED = new Set<Sport>([
-    Sport.EKSTRAKLASA, Sport.PREMIER_LEAGUE, Sport.LALIGA, Sport.BUNDESLIGA, Sport.NFL,
+    Sport.EKSTRAKLASA, Sport.PREMIER_LEAGUE, Sport.LALIGA, Sport.BUNDESLIGA, Sport.NFL, Sport.NBA,
 ]);
 
 // Jednorazowy backfill historii (okno /scores to tylko ~3 dni, nie zlapie
 // wczesniejszych kolejek). Pliki maja nazwy druzyn JUZ jak w kursach.
 const BACKFILL_FILES: Partial<Record<Sport, string>> = {
     [Sport.EKSTRAKLASA]: 'ekstraklasa-backfill.json',
+    [Sport.NBA]: 'nba-backfill.json',   // seed z sezonu 2025/26 (balldontlie)
 };
 
 const CACHE_FILE = path.join(process.cwd(), 'results-cache.json');
