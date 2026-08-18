@@ -1,5 +1,2084 @@
 [
   {
+    "date": "2025-07-18",
+    "home": "Jagiellonia Białystok",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 0,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-07-18",
+    "home": "Lech Poznań",
+    "away": "Cracovia Kraków",
+    "homeScore": 1,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-07-19",
+    "home": "GKS Katowice",
+    "away": "Raków Częstochowa",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-07-19",
+    "home": "Widzew Łódź",
+    "away": "Zagłębie Lubin",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-07-19",
+    "home": "Wisła Płock",
+    "away": "Korona Kielce",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-07-20",
+    "home": "Górnik Zabrze",
+    "away": "Lechia Gdańsk",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-07-20",
+    "home": "Motor Lublin",
+    "away": "Arka Gdynia",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-07-20",
+    "home": "Radomiak Radom",
+    "away": "Pogoń Szczecin",
+    "homeScore": 5,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-07-25",
+    "home": "Arka Gdynia",
+    "away": "Radomiak Radom",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-07-25",
+    "home": "Cracovia Kraków",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-07-26",
+    "home": "Lechia Gdańsk",
+    "away": "Lech Poznań",
+    "homeScore": 3,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-07-26",
+    "home": "Piast Gliwice",
+    "away": "Górnik Zabrze",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-07-26",
+    "home": "Pogoń Szczecin",
+    "away": "Motor Lublin",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-07-27",
+    "home": "Jagiellonia Białystok",
+    "away": "Widzew Łódź",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-07-27",
+    "home": "Korona Kielce",
+    "away": "Legia Warszawa",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-07-27",
+    "home": "Raków Częstochowa",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-07-28",
+    "home": "GKS Katowice",
+    "away": "Zagłębie Lubin",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-08-01",
+    "home": "Wisła Płock",
+    "away": "Piast Gliwice",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-01",
+    "home": "Zagłębie Lubin",
+    "away": "Korona Kielce",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-02",
+    "home": "Lech Poznań",
+    "away": "Górnik Zabrze",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-02",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Pogoń Szczecin",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-02",
+    "home": "Widzew Łódź",
+    "away": "GKS Katowice",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-03",
+    "home": "Cracovia Kraków",
+    "away": "Lechia Gdańsk",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-08-03",
+    "home": "Legia Warszawa",
+    "away": "Arka Gdynia",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-03",
+    "home": "Radomiak Radom",
+    "away": "Raków Częstochowa",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-08",
+    "home": "Górnik Zabrze",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-08",
+    "home": "Korona Kielce",
+    "away": "Radomiak Radom",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-09",
+    "home": "Arka Gdynia",
+    "away": "Pogoń Szczecin",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-09",
+    "home": "Widzew Łódź",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-10",
+    "home": "Jagiellonia Białystok",
+    "away": "Cracovia Kraków",
+    "homeScore": 5,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-08-10",
+    "home": "Legia Warszawa",
+    "away": "GKS Katowice",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-11",
+    "home": "Lechia Gdańsk",
+    "away": "Motor Lublin",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-08-15",
+    "home": "Cracovia Kraków",
+    "away": "Widzew Łódź",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-15",
+    "home": "Zagłębie Lubin",
+    "away": "Lechia Gdańsk",
+    "homeScore": 6,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-08-16",
+    "home": "GKS Katowice",
+    "away": "Arka Gdynia",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-16",
+    "home": "Lech Poznań",
+    "away": "Korona Kielce",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-16",
+    "home": "Motor Lublin",
+    "away": "Piast Gliwice",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-17",
+    "home": "Pogoń Szczecin",
+    "away": "Górnik Zabrze",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-08-17",
+    "home": "Radomiak Radom",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-08-17",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Raków Częstochowa",
+    "homeScore": 2,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-08-17",
+    "home": "Wisła Płock",
+    "away": "Legia Warszawa",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-22",
+    "home": "Radomiak Radom",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-22",
+    "home": "Widzew Łódź",
+    "away": "Pogoń Szczecin",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-08-23",
+    "home": "Górnik Zabrze",
+    "away": "GKS Katowice",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-23",
+    "home": "Korona Kielce",
+    "away": "Motor Lublin",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-24",
+    "home": "Lechia Gdańsk",
+    "away": "Arka Gdynia",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-24",
+    "home": "Piast Gliwice",
+    "away": "Cracovia Kraków",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-25",
+    "home": "Wisła Płock",
+    "away": "Zagłębie Lubin",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-29",
+    "home": "Arka Gdynia",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-29",
+    "home": "GKS Katowice",
+    "away": "Radomiak Radom",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-08-30",
+    "home": "Górnik Zabrze",
+    "away": "Motor Lublin",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-30",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Korona Kielce",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-08-30",
+    "home": "Zagłębie Lubin",
+    "away": "Piast Gliwice",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-08-31",
+    "home": "Cracovia Kraków",
+    "away": "Legia Warszawa",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-31",
+    "home": "Jagiellonia Białystok",
+    "away": "Lechia Gdańsk",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-31",
+    "home": "Lech Poznań",
+    "away": "Widzew Łódź",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-31",
+    "home": "Pogoń Szczecin",
+    "away": "Raków Częstochowa",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-12",
+    "home": "Lechia Gdańsk",
+    "away": "GKS Katowice",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-12",
+    "home": "Lech Poznań",
+    "away": "Zagłębie Lubin",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-09-13",
+    "home": "Korona Kielce",
+    "away": "Pogoń Szczecin",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-13",
+    "home": "Piast Gliwice",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Legia Warszawa",
+    "away": "Radomiak Radom",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Motor Lublin",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Widzew Łódź",
+    "away": "Arka Gdynia",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-15",
+    "home": "Raków Częstochowa",
+    "away": "Górnik Zabrze",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-19",
+    "home": "GKS Katowice",
+    "away": "Cracovia Kraków",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-09-19",
+    "home": "Wisła Płock",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-20",
+    "home": "Arka Gdynia",
+    "away": "Korona Kielce",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-20",
+    "home": "Radomiak Radom",
+    "away": "Piast Gliwice",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-20",
+    "home": "Raków Częstochowa",
+    "away": "Legia Warszawa",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-20",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Lech Poznań",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Górnik Zabrze",
+    "away": "Widzew Łódź",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Pogoń Szczecin",
+    "away": "Lechia Gdańsk",
+    "homeScore": 3,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Zagłębie Lubin",
+    "away": "Motor Lublin",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-09-24",
+    "home": "Legia Warszawa",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-24",
+    "home": "Raków Częstochowa",
+    "away": "Lech Poznań",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-09-26",
+    "home": "Wisła Płock",
+    "away": "GKS Katowice",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-27",
+    "home": "Cracovia Kraków",
+    "away": "Górnik Zabrze",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-27",
+    "home": "Korona Kielce",
+    "away": "Lechia Gdańsk",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-27",
+    "home": "Piast Gliwice",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 4,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Lech Poznań",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Legia Warszawa",
+    "away": "Pogoń Szczecin",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Widzew Łódź",
+    "away": "Raków Częstochowa",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-29",
+    "home": "Motor Lublin",
+    "away": "Radomiak Radom",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-09-29",
+    "home": "Zagłębie Lubin",
+    "away": "Arka Gdynia",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-03",
+    "home": "Lechia Gdańsk",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-03",
+    "home": "Pogoń Szczecin",
+    "away": "Piast Gliwice",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-04",
+    "home": "Arka Gdynia",
+    "away": "Cracovia Kraków",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-04",
+    "home": "Radomiak Radom",
+    "away": "Zagłębie Lubin",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-04",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Widzew Łódź",
+    "homeScore": 2,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-10-05",
+    "home": "GKS Katowice",
+    "away": "Lech Poznań",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Górnik Zabrze",
+    "away": "Legia Warszawa",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Jagiellonia Białystok",
+    "away": "Korona Kielce",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Raków Częstochowa",
+    "away": "Motor Lublin",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-17",
+    "home": "Motor Lublin",
+    "away": "GKS Katowice",
+    "homeScore": 2,
+    "awayScore": 5
+  },
+  {
+    "date": "2025-10-17",
+    "home": "Widzew Łódź",
+    "away": "Radomiak Radom",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-10-18",
+    "home": "Cracovia Kraków",
+    "away": "Raków Częstochowa",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-18",
+    "home": "Jagiellonia Białystok",
+    "away": "Arka Gdynia",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-18",
+    "home": "Korona Kielce",
+    "away": "Górnik Zabrze",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Lech Poznań",
+    "away": "Pogoń Szczecin",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Piast Gliwice",
+    "away": "Lechia Gdańsk",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Zagłębie Lubin",
+    "away": "Legia Warszawa",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-20",
+    "home": "Wisła Płock",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Motor Lublin",
+    "away": "Widzew Łódź",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Zagłębie Lubin",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-25",
+    "home": "Arka Gdynia",
+    "away": "Piast Gliwice",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-25",
+    "home": "GKS Katowice",
+    "away": "Korona Kielce",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-25",
+    "home": "Pogoń Szczecin",
+    "away": "Cracovia Kraków",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Górnik Zabrze",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Legia Warszawa",
+    "away": "Lech Poznań",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Raków Częstochowa",
+    "away": "Lechia Gdańsk",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-27",
+    "home": "Radomiak Radom",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-31",
+    "home": "Piast Gliwice",
+    "away": "Korona Kielce",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-31",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "GKS Katowice",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Górnik Zabrze",
+    "away": "Arka Gdynia",
+    "homeScore": 5,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Jagiellonia Białystok",
+    "away": "Raków Częstochowa",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Lech Poznań",
+    "away": "Motor Lublin",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Widzew Łódź",
+    "away": "Legia Warszawa",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-03",
+    "home": "Cracovia Kraków",
+    "away": "Zagłębie Lubin",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-03",
+    "home": "Lechia Gdańsk",
+    "away": "Radomiak Radom",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-03",
+    "home": "Wisła Płock",
+    "away": "Pogoń Szczecin",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Radomiak Radom",
+    "away": "Cracovia Kraków",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Zagłębie Lubin",
+    "away": "Górnik Zabrze",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-08",
+    "home": "GKS Katowice",
+    "away": "Piast Gliwice",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Lechia Gdańsk",
+    "away": "Widzew Łódź",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Motor Lublin",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Arka Gdynia",
+    "away": "Lech Poznań",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Korona Kielce",
+    "away": "Raków Częstochowa",
+    "homeScore": 1,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Legia Warszawa",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Pogoń Szczecin",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-21",
+    "home": "Górnik Zabrze",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-21",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Arka Gdynia",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Cracovia Kraków",
+    "away": "Motor Lublin",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Legia Warszawa",
+    "away": "Lechia Gdańsk",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Raków Częstochowa",
+    "away": "Piast Gliwice",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Lech Poznań",
+    "away": "Radomiak Radom",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Widzew Łódź",
+    "away": "Korona Kielce",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-11-24",
+    "home": "Pogoń Szczecin",
+    "away": "Zagłębie Lubin",
+    "homeScore": 5,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Piast Gliwice",
+    "away": "Widzew Łódź",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Radomiak Radom",
+    "away": "Górnik Zabrze",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-29",
+    "home": "GKS Katowice",
+    "away": "Pogoń Szczecin",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Korona Kielce",
+    "away": "Cracovia Kraków",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Lechia Gdańsk",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 5,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Arka Gdynia",
+    "away": "Raków Częstochowa",
+    "homeScore": 1,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Wisła Płock",
+    "away": "Lech Poznań",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Zagłębie Lubin",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-01",
+    "home": "Motor Lublin",
+    "away": "Legia Warszawa",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-04",
+    "home": "Wisła Płock",
+    "away": "Cracovia Kraków",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Lechia Gdańsk",
+    "away": "Górnik Zabrze",
+    "homeScore": 5,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Arka Gdynia",
+    "away": "Motor Lublin",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Piast Gliwice",
+    "away": "Legia Warszawa",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Pogoń Szczecin",
+    "away": "Radomiak Radom",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Zagłębie Lubin",
+    "away": "Widzew Łódź",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Cracovia Kraków",
+    "away": "Lech Poznań",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Raków Częstochowa",
+    "away": "GKS Katowice",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-08",
+    "home": "Korona Kielce",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Legia Warszawa",
+    "away": "Piast Gliwice",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Motor Lublin",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Raków Częstochowa",
+    "away": "Zagłębie Lubin",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-30",
+    "home": "Zagłębie Lubin",
+    "away": "GKS Katowice",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Górnik Zabrze",
+    "away": "Piast Gliwice",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Lech Poznań",
+    "away": "Lechia Gdańsk",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Widzew Łódź",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-02-01",
+    "home": "Legia Warszawa",
+    "away": "Korona Kielce",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-01",
+    "home": "Motor Lublin",
+    "away": "Pogoń Szczecin",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-01",
+    "home": "Wisła Płock",
+    "away": "Raków Częstochowa",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-02",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Cracovia Kraków",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-03",
+    "home": "Piast Gliwice",
+    "away": "Lech Poznań",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-06",
+    "home": "Korona Kielce",
+    "away": "Zagłębie Lubin",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-06",
+    "home": "Lechia Gdańsk",
+    "away": "Cracovia Kraków",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Arka Gdynia",
+    "away": "Legia Warszawa",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Górnik Zabrze",
+    "away": "Lech Poznań",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Jagiellonia Białystok",
+    "away": "Motor Lublin",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-08",
+    "home": "GKS Katowice",
+    "away": "Widzew Łódź",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-08",
+    "home": "Pogoń Szczecin",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-08",
+    "home": "Raków Częstochowa",
+    "away": "Radomiak Radom",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-09",
+    "home": "Piast Gliwice",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-13",
+    "home": "GKS Katowice",
+    "away": "Legia Warszawa",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-13",
+    "home": "Radomiak Radom",
+    "away": "Korona Kielce",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-14",
+    "home": "Cracovia Kraków",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-14",
+    "home": "Wisła Płock",
+    "away": "Widzew Łódź",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-14",
+    "home": "Zagłębie Lubin",
+    "away": "Raków Częstochowa",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-15",
+    "home": "Lech Poznań",
+    "away": "Piast Gliwice",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-15",
+    "home": "Motor Lublin",
+    "away": "Lechia Gdańsk",
+    "homeScore": 2,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-02-15",
+    "home": "Pogoń Szczecin",
+    "away": "Arka Gdynia",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-16",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Górnik Zabrze",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-20",
+    "home": "Piast Gliwice",
+    "away": "Motor Lublin",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-20",
+    "home": "Widzew Łódź",
+    "away": "Cracovia Kraków",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-21",
+    "home": "Górnik Zabrze",
+    "away": "Pogoń Szczecin",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-21",
+    "home": "Legia Warszawa",
+    "away": "Wisła Płock",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-21",
+    "home": "Raków Częstochowa",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Arka Gdynia",
+    "away": "GKS Katowice",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Jagiellonia Białystok",
+    "away": "Radomiak Radom",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-22",
+    "home": "Korona Kielce",
+    "away": "Lech Poznań",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-23",
+    "home": "Lechia Gdańsk",
+    "away": "Zagłębie Lubin",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-27",
+    "home": "Arka Gdynia",
+    "away": "Lechia Gdańsk",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-27",
+    "home": "Cracovia Kraków",
+    "away": "Piast Gliwice",
+    "homeScore": 2,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-02-28",
+    "home": "GKS Katowice",
+    "away": "Górnik Zabrze",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-28",
+    "home": "Motor Lublin",
+    "away": "Korona Kielce",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-28",
+    "home": "Pogoń Szczecin",
+    "away": "Widzew Łódź",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Jagiellonia Białystok",
+    "away": "Legia Warszawa",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Lech Poznań",
+    "away": "Raków Częstochowa",
+    "homeScore": 4,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-03-01",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Radomiak Radom",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-02",
+    "home": "Zagłębie Lubin",
+    "away": "Wisła Płock",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-05",
+    "home": "Radomiak Radom",
+    "away": "Arka Gdynia",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-06",
+    "home": "Lechia Gdańsk",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-07",
+    "home": "Korona Kielce",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-07",
+    "home": "Piast Gliwice",
+    "away": "Zagłębie Lubin",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-03-07",
+    "home": "Widzew Łódź",
+    "away": "Lech Poznań",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Legia Warszawa",
+    "away": "Cracovia Kraków",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Motor Lublin",
+    "away": "Górnik Zabrze",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Radomiak Radom",
+    "away": "GKS Katowice",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-08",
+    "home": "Raków Częstochowa",
+    "away": "Pogoń Szczecin",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-09",
+    "home": "Wisła Płock",
+    "away": "Arka Gdynia",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-03-13",
+    "home": "Radomiak Radom",
+    "away": "Legia Warszawa",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-13",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Motor Lublin",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-03-14",
+    "home": "Cracovia Kraków",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-03-14",
+    "home": "GKS Katowice",
+    "away": "Lechia Gdańsk",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-14",
+    "home": "Jagiellonia Białystok",
+    "away": "Piast Gliwice",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-03-15",
+    "home": "Arka Gdynia",
+    "away": "Widzew Łódź",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-15",
+    "home": "Górnik Zabrze",
+    "away": "Raków Częstochowa",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-15",
+    "home": "Zagłębie Lubin",
+    "away": "Lech Poznań",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-16",
+    "home": "Pogoń Szczecin",
+    "away": "Korona Kielce",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-17",
+    "home": "Jagiellonia Białystok",
+    "away": "GKS Katowice",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-20",
+    "home": "Motor Lublin",
+    "away": "Zagłębie Lubin",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-20",
+    "home": "Piast Gliwice",
+    "away": "Radomiak Radom",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Cracovia Kraków",
+    "away": "GKS Katowice",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Lechia Gdańsk",
+    "away": "Pogoń Szczecin",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Jagiellonia Białystok",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Korona Kielce",
+    "away": "Arka Gdynia",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Lech Poznań",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Legia Warszawa",
+    "away": "Raków Częstochowa",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Widzew Łódź",
+    "away": "Górnik Zabrze",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-04",
+    "home": "GKS Katowice",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-04",
+    "home": "Górnik Zabrze",
+    "away": "Cracovia Kraków",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-04",
+    "home": "Jagiellonia Białystok",
+    "away": "Lech Poznań",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-04",
+    "home": "Raków Częstochowa",
+    "away": "Widzew Łódź",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-06",
+    "home": "Lechia Gdańsk",
+    "away": "Korona Kielce",
+    "homeScore": 4,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-06",
+    "home": "Pogoń Szczecin",
+    "away": "Legia Warszawa",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-06",
+    "home": "Radomiak Radom",
+    "away": "Motor Lublin",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-06",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Piast Gliwice",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-07",
+    "home": "Arka Gdynia",
+    "away": "Zagłębie Lubin",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Korona Kielce",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Wisła Płock",
+    "away": "Lechia Gdańsk",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-11",
+    "home": "Legia Warszawa",
+    "away": "Górnik Zabrze",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-11",
+    "home": "Widzew Łódź",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-11",
+    "home": "Zagłębie Lubin",
+    "away": "Radomiak Radom",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Cracovia Kraków",
+    "away": "Arka Gdynia",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Lech Poznań",
+    "away": "GKS Katowice",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-04-12",
+    "home": "Motor Lublin",
+    "away": "Raków Częstochowa",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-13",
+    "home": "Piast Gliwice",
+    "away": "Pogoń Szczecin",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-17",
+    "home": "GKS Katowice",
+    "away": "Motor Lublin",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-17",
+    "home": "Legia Warszawa",
+    "away": "Zagłębie Lubin",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-18",
+    "home": "Górnik Zabrze",
+    "away": "Korona Kielce",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-18",
+    "home": "Pogoń Szczecin",
+    "away": "Lech Poznań",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-18",
+    "home": "Radomiak Radom",
+    "away": "Widzew Łódź",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-19",
+    "home": "Arka Gdynia",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-04-19",
+    "home": "Raków Częstochowa",
+    "away": "Cracovia Kraków",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-19",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Wisła Płock",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-04-20",
+    "home": "Lechia Gdańsk",
+    "away": "Piast Gliwice",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-24",
+    "home": "Jagiellonia Białystok",
+    "away": "Górnik Zabrze",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-24",
+    "home": "Zagłębie Lubin",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-25",
+    "home": "Cracovia Kraków",
+    "away": "Pogoń Szczecin",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-25",
+    "home": "Korona Kielce",
+    "away": "GKS Katowice",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-25",
+    "home": "Lechia Gdańsk",
+    "away": "Raków Częstochowa",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-26",
+    "home": "Lech Poznań",
+    "away": "Legia Warszawa",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-26",
+    "home": "Widzew Łódź",
+    "away": "Motor Lublin",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-26",
+    "home": "Wisła Płock",
+    "away": "Radomiak Radom",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-27",
+    "home": "Piast Gliwice",
+    "away": "Arka Gdynia",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-01",
+    "home": "Korona Kielce",
+    "away": "Piast Gliwice",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-01",
+    "home": "Legia Warszawa",
+    "away": "Widzew Łódź",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-05-02",
+    "home": "Motor Lublin",
+    "away": "Lech Poznań",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-03",
+    "home": "GKS Katowice",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 5,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-03",
+    "home": "Pogoń Szczecin",
+    "away": "Wisła Płock",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-05-03",
+    "home": "Zagłębie Lubin",
+    "away": "Cracovia Kraków",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-05-04",
+    "home": "Radomiak Radom",
+    "away": "Lechia Gdańsk",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-08",
+    "home": "Lech Poznań",
+    "away": "Arka Gdynia",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-08",
+    "home": "Raków Częstochowa",
+    "away": "Korona Kielce",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-05-09",
+    "home": "Górnik Zabrze",
+    "away": "Zagłębie Lubin",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-05-09",
+    "home": "Jagiellonia Białystok",
+    "away": "Pogoń Szczecin",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-05-09",
+    "home": "Widzew Łódź",
+    "away": "Lechia Gdańsk",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-10",
+    "home": "Piast Gliwice",
+    "away": "GKS Katowice",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-05-10",
+    "home": "Bruk-Bet Termalica Nieciecza",
+    "away": "Legia Warszawa",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-10",
+    "home": "Wisła Płock",
+    "away": "Motor Lublin",
+    "homeScore": 0,
+    "awayScore": 4
+  },
+  {
+    "date": "2026-05-11",
+    "home": "Cracovia Kraków",
+    "away": "Radomiak Radom",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-05-13",
+    "home": "Arka Gdynia",
+    "away": "Górnik Zabrze",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-05-13",
+    "home": "Raków Częstochowa",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-05-15",
+    "home": "Korona Kielce",
+    "away": "Widzew Łódź",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-05-15",
+    "home": "Zagłębie Lubin",
+    "away": "Pogoń Szczecin",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-16",
+    "home": "Motor Lublin",
+    "away": "Cracovia Kraków",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-05-16",
+    "home": "Radomiak Radom",
+    "away": "Lech Poznań",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-05-16",
+    "home": "Wisła Płock",
+    "away": "Górnik Zabrze",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-17",
+    "home": "GKS Katowice",
+    "away": "Jagiellonia Białystok",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-05-17",
+    "home": "Lechia Gdańsk",
+    "away": "Legia Warszawa",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-05-17",
+    "home": "Piast Gliwice",
+    "away": "Raków Częstochowa",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-05-18",
+    "home": "Arka Gdynia",
+    "away": "Bruk-Bet Termalica Nieciecza",
+    "homeScore": 2,
+    "awayScore": 3
+  },
+  {
     "date": "2026-07-24",
     "home": "Pogoń Szczecin",
     "away": "Legia Warszawa",

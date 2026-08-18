@@ -1,0 +1,1955 @@
+[
+  {
+    "date": "2025-08-22",
+    "home": "Bayern Munich",
+    "away": "RB Leipzig",
+    "homeScore": 6,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-23",
+    "home": "Bayer Leverkusen",
+    "away": "TSG Hoffenheim",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-08-23",
+    "home": "Eintracht Frankfurt",
+    "away": "Werder Bremen",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-23",
+    "home": "SC Freiburg",
+    "away": "Augsburg",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-08-23",
+    "home": "FC Heidenheim",
+    "away": "Wolfsburg",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-08-23",
+    "home": "St Pauli",
+    "away": "Borussia Dortmund",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-08-23",
+    "home": "Union Berlin",
+    "away": "VfB Stuttgart",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-24",
+    "home": "Borussia Monchengladbach",
+    "away": "Hamburger SV",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-24",
+    "home": "FSV Mainz 05",
+    "away": "1. FC Köln",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-29",
+    "home": "Hamburger SV",
+    "away": "St Pauli",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-08-30",
+    "home": "Augsburg",
+    "away": "Bayern Munich",
+    "homeScore": 2,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-08-30",
+    "home": "TSG Hoffenheim",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-08-30",
+    "home": "RB Leipzig",
+    "away": "FC Heidenheim",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-30",
+    "home": "VfB Stuttgart",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-30",
+    "home": "Werder Bremen",
+    "away": "Bayer Leverkusen",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-08-31",
+    "home": "Borussia Dortmund",
+    "away": "Union Berlin",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-08-31",
+    "home": "1. FC Köln",
+    "away": "SC Freiburg",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-08-31",
+    "home": "Wolfsburg",
+    "away": "FSV Mainz 05",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-12",
+    "home": "Bayer Leverkusen",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-13",
+    "home": "Bayern Munich",
+    "away": "Hamburger SV",
+    "homeScore": 5,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-13",
+    "home": "SC Freiburg",
+    "away": "VfB Stuttgart",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-13",
+    "home": "FC Heidenheim",
+    "away": "Borussia Dortmund",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-09-13",
+    "home": "FSV Mainz 05",
+    "away": "RB Leipzig",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-13",
+    "home": "Union Berlin",
+    "away": "TSG Hoffenheim",
+    "homeScore": 2,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-09-13",
+    "home": "Wolfsburg",
+    "away": "1. FC Köln",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Borussia Monchengladbach",
+    "away": "Werder Bremen",
+    "homeScore": 0,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-09-14",
+    "home": "St Pauli",
+    "away": "Augsburg",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-19",
+    "home": "VfB Stuttgart",
+    "away": "St Pauli",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-20",
+    "home": "Augsburg",
+    "away": "FSV Mainz 05",
+    "homeScore": 1,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-09-20",
+    "home": "Hamburger SV",
+    "away": "FC Heidenheim",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-20",
+    "home": "TSG Hoffenheim",
+    "away": "Bayern Munich",
+    "homeScore": 1,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-09-20",
+    "home": "RB Leipzig",
+    "away": "1. FC Köln",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-20",
+    "home": "Werder Bremen",
+    "away": "SC Freiburg",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Bayer Leverkusen",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Borussia Dortmund",
+    "away": "Wolfsburg",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Eintracht Frankfurt",
+    "away": "Union Berlin",
+    "homeScore": 3,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-09-26",
+    "home": "Bayern Munich",
+    "away": "Werder Bremen",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-27",
+    "home": "Borussia Monchengladbach",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 4,
+    "awayScore": 6
+  },
+  {
+    "date": "2025-09-27",
+    "home": "FC Heidenheim",
+    "away": "Augsburg",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-27",
+    "home": "FSV Mainz 05",
+    "away": "Borussia Dortmund",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-09-27",
+    "home": "St Pauli",
+    "away": "Bayer Leverkusen",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-09-27",
+    "home": "Wolfsburg",
+    "away": "RB Leipzig",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-28",
+    "home": "1. FC Köln",
+    "away": "VfB Stuttgart",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-09-28",
+    "home": "SC Freiburg",
+    "away": "TSG Hoffenheim",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Union Berlin",
+    "away": "Hamburger SV",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-03",
+    "home": "TSG Hoffenheim",
+    "away": "1. FC Köln",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-04",
+    "home": "Augsburg",
+    "away": "Wolfsburg",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-04",
+    "home": "Bayer Leverkusen",
+    "away": "Union Berlin",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-04",
+    "home": "Borussia Dortmund",
+    "away": "RB Leipzig",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-04",
+    "home": "Eintracht Frankfurt",
+    "away": "Bayern Munich",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-10-04",
+    "home": "Werder Bremen",
+    "away": "St Pauli",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Borussia Monchengladbach",
+    "away": "SC Freiburg",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Hamburger SV",
+    "away": "FSV Mainz 05",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-05",
+    "home": "VfB Stuttgart",
+    "away": "FC Heidenheim",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-17",
+    "home": "Union Berlin",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-18",
+    "home": "Bayern Munich",
+    "away": "Borussia Dortmund",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-18",
+    "home": "1. FC Köln",
+    "away": "Augsburg",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-18",
+    "home": "FC Heidenheim",
+    "away": "Werder Bremen",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-10-18",
+    "home": "FSV Mainz 05",
+    "away": "Bayer Leverkusen",
+    "homeScore": 3,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-10-18",
+    "home": "RB Leipzig",
+    "away": "Hamburger SV",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-18",
+    "home": "Wolfsburg",
+    "away": "VfB Stuttgart",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-10-19",
+    "home": "SC Freiburg",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-10-19",
+    "home": "St Pauli",
+    "away": "TSG Hoffenheim",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Werder Bremen",
+    "away": "Union Berlin",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-25",
+    "home": "Augsburg",
+    "away": "RB Leipzig",
+    "homeScore": 0,
+    "awayScore": 6
+  },
+  {
+    "date": "2025-10-25",
+    "home": "Borussia Monchengladbach",
+    "away": "Bayern Munich",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-10-25",
+    "home": "Borussia Dortmund",
+    "away": "1. FC Köln",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-25",
+    "home": "Eintracht Frankfurt",
+    "away": "St Pauli",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-25",
+    "home": "Hamburger SV",
+    "away": "Wolfsburg",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-25",
+    "home": "TSG Hoffenheim",
+    "away": "FC Heidenheim",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Bayer Leverkusen",
+    "away": "SC Freiburg",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-26",
+    "home": "VfB Stuttgart",
+    "away": "FSV Mainz 05",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-10-31",
+    "home": "Augsburg",
+    "away": "Borussia Dortmund",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-01",
+    "home": "Bayern Munich",
+    "away": "Bayer Leverkusen",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-01",
+    "home": "FC Heidenheim",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-01",
+    "home": "FSV Mainz 05",
+    "away": "Werder Bremen",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-01",
+    "home": "RB Leipzig",
+    "away": "VfB Stuttgart",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-01",
+    "home": "St Pauli",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 0,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-11-01",
+    "home": "Union Berlin",
+    "away": "SC Freiburg",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-02",
+    "home": "1. FC Köln",
+    "away": "Hamburger SV",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Wolfsburg",
+    "away": "TSG Hoffenheim",
+    "homeScore": 2,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Werder Bremen",
+    "away": "Wolfsburg",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Bayer Leverkusen",
+    "away": "FC Heidenheim",
+    "homeScore": 6,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Borussia Monchengladbach",
+    "away": "1. FC Köln",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Hamburger SV",
+    "away": "Borussia Dortmund",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-08",
+    "home": "TSG Hoffenheim",
+    "away": "RB Leipzig",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-08",
+    "home": "Union Berlin",
+    "away": "Bayern Munich",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Eintracht Frankfurt",
+    "away": "FSV Mainz 05",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-09",
+    "home": "SC Freiburg",
+    "away": "St Pauli",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-09",
+    "home": "VfB Stuttgart",
+    "away": "Augsburg",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-21",
+    "home": "FSV Mainz 05",
+    "away": "TSG Hoffenheim",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Augsburg",
+    "away": "Hamburger SV",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Bayern Munich",
+    "away": "SC Freiburg",
+    "homeScore": 6,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Borussia Dortmund",
+    "away": "VfB Stuttgart",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-11-22",
+    "home": "1. FC Köln",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 3,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-11-22",
+    "home": "FC Heidenheim",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-11-22",
+    "home": "Wolfsburg",
+    "away": "Bayer Leverkusen",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-11-23",
+    "home": "RB Leipzig",
+    "away": "Werder Bremen",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-23",
+    "home": "St Pauli",
+    "away": "Union Berlin",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Borussia Monchengladbach",
+    "away": "RB Leipzig",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Bayer Leverkusen",
+    "away": "Borussia Dortmund",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Bayern Munich",
+    "away": "St Pauli",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-29",
+    "home": "TSG Hoffenheim",
+    "away": "Augsburg",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Union Berlin",
+    "away": "FC Heidenheim",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-11-29",
+    "home": "Werder Bremen",
+    "away": "1. FC Köln",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Eintracht Frankfurt",
+    "away": "Wolfsburg",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-11-30",
+    "home": "SC Freiburg",
+    "away": "FSV Mainz 05",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Hamburger SV",
+    "away": "VfB Stuttgart",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-05",
+    "home": "FSV Mainz 05",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Augsburg",
+    "away": "Bayer Leverkusen",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-06",
+    "home": "1. FC Köln",
+    "away": "St Pauli",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-06",
+    "home": "FC Heidenheim",
+    "away": "SC Freiburg",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-06",
+    "home": "RB Leipzig",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 6,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-06",
+    "home": "VfB Stuttgart",
+    "away": "Bayern Munich",
+    "homeScore": 0,
+    "awayScore": 5
+  },
+  {
+    "date": "2025-12-06",
+    "home": "Wolfsburg",
+    "away": "Union Berlin",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Borussia Dortmund",
+    "away": "TSG Hoffenheim",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Hamburger SV",
+    "away": "Werder Bremen",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-12-12",
+    "home": "Union Berlin",
+    "away": "RB Leipzig",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-13",
+    "home": "Bayer Leverkusen",
+    "away": "1. FC Köln",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-13",
+    "home": "Borussia Monchengladbach",
+    "away": "Wolfsburg",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-12-13",
+    "home": "Eintracht Frankfurt",
+    "away": "Augsburg",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-13",
+    "home": "TSG Hoffenheim",
+    "away": "Hamburger SV",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-13",
+    "home": "St Pauli",
+    "away": "FC Heidenheim",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Bayern Munich",
+    "away": "FSV Mainz 05",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2025-12-14",
+    "home": "SC Freiburg",
+    "away": "Borussia Dortmund",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Werder Bremen",
+    "away": "VfB Stuttgart",
+    "homeScore": 0,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-12-19",
+    "home": "Borussia Dortmund",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Augsburg",
+    "away": "Werder Bremen",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-20",
+    "home": "1. FC Köln",
+    "away": "Union Berlin",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Hamburger SV",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2025-12-20",
+    "home": "RB Leipzig",
+    "away": "Bayer Leverkusen",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-12-20",
+    "home": "VfB Stuttgart",
+    "away": "TSG Hoffenheim",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Wolfsburg",
+    "away": "SC Freiburg",
+    "homeScore": 3,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-12-21",
+    "home": "FC Heidenheim",
+    "away": "Bayern Munich",
+    "homeScore": 0,
+    "awayScore": 4
+  },
+  {
+    "date": "2025-12-21",
+    "home": "FSV Mainz 05",
+    "away": "St Pauli",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-01-09",
+    "home": "Eintracht Frankfurt",
+    "away": "Borussia Dortmund",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-01-10",
+    "home": "Bayer Leverkusen",
+    "away": "VfB Stuttgart",
+    "homeScore": 1,
+    "awayScore": 4
+  },
+  {
+    "date": "2026-01-10",
+    "home": "SC Freiburg",
+    "away": "Hamburger SV",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-10",
+    "home": "FC Heidenheim",
+    "away": "1. FC Köln",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-01-10",
+    "home": "Union Berlin",
+    "away": "FSV Mainz 05",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Bayern Munich",
+    "away": "Wolfsburg",
+    "homeScore": 8,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Borussia Monchengladbach",
+    "away": "Augsburg",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-01-13",
+    "home": "Borussia Dortmund",
+    "away": "Werder Bremen",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-01-13",
+    "home": "FSV Mainz 05",
+    "away": "FC Heidenheim",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-13",
+    "home": "VfB Stuttgart",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-01-14",
+    "home": "1. FC Köln",
+    "away": "Bayern Munich",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-01-14",
+    "home": "TSG Hoffenheim",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 5,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-14",
+    "home": "RB Leipzig",
+    "away": "SC Freiburg",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-01-14",
+    "home": "Wolfsburg",
+    "away": "St Pauli",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-15",
+    "home": "Augsburg",
+    "away": "Union Berlin",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-16",
+    "home": "Werder Bremen",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-01-17",
+    "home": "Borussia Dortmund",
+    "away": "St Pauli",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-01-17",
+    "home": "1. FC Köln",
+    "away": "FSV Mainz 05",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-17",
+    "home": "Hamburger SV",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-01-17",
+    "home": "TSG Hoffenheim",
+    "away": "Bayer Leverkusen",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-01-17",
+    "home": "RB Leipzig",
+    "away": "Bayern Munich",
+    "homeScore": 1,
+    "awayScore": 5
+  },
+  {
+    "date": "2026-01-17",
+    "home": "Wolfsburg",
+    "away": "FC Heidenheim",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-18",
+    "home": "Augsburg",
+    "away": "SC Freiburg",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-01-18",
+    "home": "VfB Stuttgart",
+    "away": "Union Berlin",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-23",
+    "home": "St Pauli",
+    "away": "Hamburger SV",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-01-24",
+    "home": "Bayer Leverkusen",
+    "away": "Werder Bremen",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-01-24",
+    "home": "Bayern Munich",
+    "away": "Augsburg",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-01-24",
+    "home": "Eintracht Frankfurt",
+    "away": "TSG Hoffenheim",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-01-24",
+    "home": "FC Heidenheim",
+    "away": "RB Leipzig",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-01-24",
+    "home": "FSV Mainz 05",
+    "away": "Wolfsburg",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-24",
+    "home": "Union Berlin",
+    "away": "Borussia Dortmund",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Borussia Monchengladbach",
+    "away": "VfB Stuttgart",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-01-25",
+    "home": "SC Freiburg",
+    "away": "1. FC Köln",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-27",
+    "home": "St Pauli",
+    "away": "RB Leipzig",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-27",
+    "home": "Werder Bremen",
+    "away": "TSG Hoffenheim",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-01-30",
+    "home": "1. FC Köln",
+    "away": "Wolfsburg",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Augsburg",
+    "away": "St Pauli",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Eintracht Frankfurt",
+    "away": "Bayer Leverkusen",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Hamburger SV",
+    "away": "Bayern Munich",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-01-31",
+    "home": "TSG Hoffenheim",
+    "away": "Union Berlin",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-01-31",
+    "home": "RB Leipzig",
+    "away": "FSV Mainz 05",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-01-31",
+    "home": "Werder Bremen",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-01",
+    "home": "Borussia Dortmund",
+    "away": "FC Heidenheim",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-01",
+    "home": "VfB Stuttgart",
+    "away": "SC Freiburg",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-06",
+    "home": "Union Berlin",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Borussia Monchengladbach",
+    "away": "Bayer Leverkusen",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-07",
+    "home": "SC Freiburg",
+    "away": "Werder Bremen",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-07",
+    "home": "FC Heidenheim",
+    "away": "Hamburger SV",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-07",
+    "home": "FSV Mainz 05",
+    "away": "Augsburg",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-07",
+    "home": "St Pauli",
+    "away": "VfB Stuttgart",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-07",
+    "home": "Wolfsburg",
+    "away": "Borussia Dortmund",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-08",
+    "home": "Bayern Munich",
+    "away": "TSG Hoffenheim",
+    "homeScore": 5,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-08",
+    "home": "1. FC Köln",
+    "away": "RB Leipzig",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-13",
+    "home": "Borussia Dortmund",
+    "away": "FSV Mainz 05",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-14",
+    "home": "Bayer Leverkusen",
+    "away": "St Pauli",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-14",
+    "home": "Eintracht Frankfurt",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-14",
+    "home": "Hamburger SV",
+    "away": "Union Berlin",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-14",
+    "home": "TSG Hoffenheim",
+    "away": "SC Freiburg",
+    "homeScore": 3,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-14",
+    "home": "VfB Stuttgart",
+    "away": "1. FC Köln",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-14",
+    "home": "Werder Bremen",
+    "away": "Bayern Munich",
+    "homeScore": 0,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-02-15",
+    "home": "Augsburg",
+    "away": "FC Heidenheim",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-15",
+    "home": "RB Leipzig",
+    "away": "Wolfsburg",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-20",
+    "home": "FSV Mainz 05",
+    "away": "Hamburger SV",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-21",
+    "home": "Bayern Munich",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-21",
+    "home": "1. FC Köln",
+    "away": "TSG Hoffenheim",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-21",
+    "home": "RB Leipzig",
+    "away": "Borussia Dortmund",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-02-21",
+    "home": "Union Berlin",
+    "away": "Bayer Leverkusen",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-02-21",
+    "home": "Wolfsburg",
+    "away": "Augsburg",
+    "homeScore": 2,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-02-22",
+    "home": "SC Freiburg",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-02-22",
+    "home": "FC Heidenheim",
+    "away": "VfB Stuttgart",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-02-22",
+    "home": "St Pauli",
+    "away": "Werder Bremen",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-04",
+    "home": "Hamburger SV",
+    "away": "Bayer Leverkusen",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-20",
+    "home": "RB Leipzig",
+    "away": "TSG Hoffenheim",
+    "homeScore": 5,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Bayern Munich",
+    "away": "Union Berlin",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Borussia Dortmund",
+    "away": "Hamburger SV",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-03-21",
+    "home": "1. FC Köln",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-03-21",
+    "home": "FC Heidenheim",
+    "away": "Bayer Leverkusen",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-03-21",
+    "home": "Wolfsburg",
+    "away": "Werder Bremen",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-22",
+    "home": "Augsburg",
+    "away": "VfB Stuttgart",
+    "homeScore": 2,
+    "awayScore": 5
+  },
+  {
+    "date": "2026-03-22",
+    "home": "FSV Mainz 05",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-03-22",
+    "home": "St Pauli",
+    "away": "SC Freiburg",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-04",
+    "home": "Bayer Leverkusen",
+    "away": "Wolfsburg",
+    "homeScore": 6,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-04-04",
+    "home": "Borussia Monchengladbach",
+    "away": "FC Heidenheim",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-04",
+    "home": "SC Freiburg",
+    "away": "Bayern Munich",
+    "homeScore": 2,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-04-04",
+    "home": "Hamburger SV",
+    "away": "Augsburg",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-04",
+    "home": "TSG Hoffenheim",
+    "away": "FSV Mainz 05",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-04",
+    "home": "VfB Stuttgart",
+    "away": "Borussia Dortmund",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-04",
+    "home": "Werder Bremen",
+    "away": "RB Leipzig",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-05",
+    "home": "Eintracht Frankfurt",
+    "away": "1. FC Köln",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-05",
+    "home": "Union Berlin",
+    "away": "St Pauli",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-10",
+    "home": "Augsburg",
+    "away": "TSG Hoffenheim",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-11",
+    "home": "Borussia Dortmund",
+    "away": "Bayer Leverkusen",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-11",
+    "home": "FC Heidenheim",
+    "away": "Union Berlin",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-11",
+    "home": "RB Leipzig",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-11",
+    "home": "St Pauli",
+    "away": "Bayern Munich",
+    "homeScore": 0,
+    "awayScore": 5
+  },
+  {
+    "date": "2026-04-11",
+    "home": "Wolfsburg",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-12",
+    "home": "1. FC Köln",
+    "away": "Werder Bremen",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-12",
+    "home": "FSV Mainz 05",
+    "away": "SC Freiburg",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-12",
+    "home": "VfB Stuttgart",
+    "away": "Hamburger SV",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-17",
+    "home": "St Pauli",
+    "away": "1. FC Köln",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-18",
+    "home": "Bayer Leverkusen",
+    "away": "Augsburg",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-18",
+    "home": "Eintracht Frankfurt",
+    "away": "RB Leipzig",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-04-18",
+    "home": "TSG Hoffenheim",
+    "away": "Borussia Dortmund",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-18",
+    "home": "Union Berlin",
+    "away": "Wolfsburg",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-18",
+    "home": "Werder Bremen",
+    "away": "Hamburger SV",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-19",
+    "home": "Bayern Munich",
+    "away": "VfB Stuttgart",
+    "homeScore": 4,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-19",
+    "home": "Borussia Monchengladbach",
+    "away": "FSV Mainz 05",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-19",
+    "home": "SC Freiburg",
+    "away": "FC Heidenheim",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-24",
+    "home": "RB Leipzig",
+    "away": "Union Berlin",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-25",
+    "home": "Augsburg",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-04-25",
+    "home": "1. FC Köln",
+    "away": "Bayer Leverkusen",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-25",
+    "home": "Hamburger SV",
+    "away": "TSG Hoffenheim",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-04-25",
+    "home": "FC Heidenheim",
+    "away": "St Pauli",
+    "homeScore": 2,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-25",
+    "home": "FSV Mainz 05",
+    "away": "Bayern Munich",
+    "homeScore": 3,
+    "awayScore": 4
+  },
+  {
+    "date": "2026-04-25",
+    "home": "Wolfsburg",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-26",
+    "home": "Borussia Dortmund",
+    "away": "SC Freiburg",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-04-26",
+    "home": "VfB Stuttgart",
+    "away": "Werder Bremen",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-02",
+    "home": "Bayer Leverkusen",
+    "away": "RB Leipzig",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-02",
+    "home": "Bayern Munich",
+    "away": "FC Heidenheim",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-05-02",
+    "home": "Eintracht Frankfurt",
+    "away": "Hamburger SV",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-05-02",
+    "home": "TSG Hoffenheim",
+    "away": "VfB Stuttgart",
+    "homeScore": 3,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-05-02",
+    "home": "Union Berlin",
+    "away": "1. FC Köln",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-05-02",
+    "home": "Werder Bremen",
+    "away": "Augsburg",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-05-03",
+    "home": "Borussia Monchengladbach",
+    "away": "Borussia Dortmund",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-05-03",
+    "home": "SC Freiburg",
+    "away": "Wolfsburg",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-03",
+    "home": "St Pauli",
+    "away": "FSV Mainz 05",
+    "homeScore": 1,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-05-08",
+    "home": "Borussia Dortmund",
+    "away": "Eintracht Frankfurt",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-05-09",
+    "home": "Augsburg",
+    "away": "Borussia Monchengladbach",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-09",
+    "home": "TSG Hoffenheim",
+    "away": "Werder Bremen",
+    "homeScore": 1,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-05-09",
+    "home": "RB Leipzig",
+    "away": "St Pauli",
+    "homeScore": 2,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-09",
+    "home": "VfB Stuttgart",
+    "away": "Bayer Leverkusen",
+    "homeScore": 3,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-09",
+    "home": "Wolfsburg",
+    "away": "Bayern Munich",
+    "homeScore": 0,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-10",
+    "home": "1. FC Köln",
+    "away": "FC Heidenheim",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-05-10",
+    "home": "Hamburger SV",
+    "away": "SC Freiburg",
+    "homeScore": 3,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-05-10",
+    "home": "FSV Mainz 05",
+    "away": "Union Berlin",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-05-16",
+    "home": "Bayer Leverkusen",
+    "away": "Hamburger SV",
+    "homeScore": 1,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-16",
+    "home": "Bayern Munich",
+    "away": "1. FC Köln",
+    "homeScore": 5,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-16",
+    "home": "Borussia Monchengladbach",
+    "away": "TSG Hoffenheim",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-05-16",
+    "home": "Eintracht Frankfurt",
+    "away": "VfB Stuttgart",
+    "homeScore": 2,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-05-16",
+    "home": "SC Freiburg",
+    "away": "RB Leipzig",
+    "homeScore": 4,
+    "awayScore": 1
+  },
+  {
+    "date": "2026-05-16",
+    "home": "FC Heidenheim",
+    "away": "FSV Mainz 05",
+    "homeScore": 0,
+    "awayScore": 2
+  },
+  {
+    "date": "2026-05-16",
+    "home": "St Pauli",
+    "away": "Wolfsburg",
+    "homeScore": 1,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-05-16",
+    "home": "Union Berlin",
+    "away": "Augsburg",
+    "homeScore": 4,
+    "awayScore": 0
+  },
+  {
+    "date": "2026-05-16",
+    "home": "Werder Bremen",
+    "away": "Borussia Dortmund",
+    "homeScore": 0,
+    "awayScore": 2
+  }
+]

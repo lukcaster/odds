@@ -61,8 +61,11 @@ const SUPPORTED = new Set<Sport>([
 // Jednorazowy backfill historii (okno /scores to tylko ~3 dni, nie zlapie
 // wczesniejszych kolejek). Pliki maja nazwy druzyn JUZ jak w kursach.
 const BACKFILL_FILES: Partial<Record<Sport, string>> = {
-    [Sport.EKSTRAKLASA]: 'ekstraklasa-backfill.json',
-    [Sport.NBA]: 'nba-backfill.json',   // seed z sezonu 2025/26 (balldontlie)
+    [Sport.EKSTRAKLASA]:    'ekstraklasa-backfill.json',
+    [Sport.NBA]:            'nba-backfill.json',        // seed z sezonu 2025/26 (balldontlie)
+    [Sport.PREMIER_LEAGUE]: 'pl-backfill.json',         // seed z sezonu 2025/26 (TheSportsDB)
+    [Sport.LALIGA]:         'laliga-backfill.json',     // seed z sezonu 2025/26 (TheSportsDB)
+    [Sport.BUNDESLIGA]:     'bundesliga-backfill.json', // seed z sezonu 2025/26 (TheSportsDB)
 };
 
 const CACHE_FILE = path.join(process.cwd(), 'results-cache.json');
