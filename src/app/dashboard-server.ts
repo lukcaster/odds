@@ -264,6 +264,36 @@ export class DashboardServer {
             res.json(ranking);
         });
 
+        // Rozstrzyganie zakladow z realnych wynikow (auto-settle). Obsluguje
+        // pojedyncze (home/draw/away) i double chance (1X/12/X2).
+        this.app.post('/api/settle', async (req: Request, res: Response) => {
+            const bets: Array<{ id: string; league: string; home: string; away: string; outcome: string }> =
+                Array.isArray(req.body?.bets) ? req.body.bets : [];
+            if (!bets.length) return res.json({ settled: [] });
+
+            // Dociagnij swieze wyniki (guarded) dla lig, w ktorych sa zaklady.
+            const leagues = new Set(bets.map(b => b.league));
+            for (const league of leagues) {
+                const sport = LEAGUE_KEY_TO_SPORT[league];
+                if (sport && this.powerRankingService.isSupported(sport)) {
+                    try { await this.powerRankingService.ensureFresh(sport); } catch { /* offline — uzyj dysku */ }
+                }
+            }
+
+            const dcWin: Record<string, string[]> = { '1X': ['home', 'draw'], '12': ['home', 'away'], 'X2': ['draw', 'away'] };
+            const settled = bets.map(bet => {
+                const sport = LEAGUE_KEY_TO_SPORT[bet.league];
+                if (!sport) return { id: bet.id, result: 'pending' };
+                const results = this.resultsService.getResults(sport);
+                const m = results.find(r => r.home === bet.home && r.away === bet.away);
+                if (!m) return { id: bet.id, result: 'pending' };
+                const actual = m.homeScore > m.awayScore ? 'home' : m.homeScore < m.awayScore ? 'away' : 'draw';
+                const won = dcWin[bet.outcome] ? dcWin[bet.outcome].includes(actual) : bet.outcome === actual;
+                return { id: bet.id, result: won ? 'won' : 'lost', homeScore: m.homeScore, awayScore: m.awayScore };
+            });
+            res.json({ settled });
+        });
+
         // Sentyment spolecznosci — glos na druzyne (zgadzam sie / nie)
         this.app.post('/api/sentiment', (req: Request, res: Response) => {
             const { league, team, dir } = req.body ?? {};

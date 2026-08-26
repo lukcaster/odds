@@ -35,5 +35,16 @@ Progi doboru polecanych (w `src/app/get-odds/recommended-service.ts`):
 - `MIN_EDGE` – minimalna przewaga nad bukmacherem (domyślnie 1.5%),
 - `UPCOMING_WINDOW_DAYS` – ile dni w przód patrzymy (domyślnie 8).
 
+## Instalacja na telefonie (PWA)
+
+Apka jest PWA — instaluje się bez sklepu, wprost z przeglądarki (wymaga HTTPS,
+np. adres z Rendera):
+
+- **Android (Chrome):** menu ⋮ → „Zainstaluj aplikację" / „Dodaj do ekranu głównego".
+- **iPhone (Safari):** przycisk Udostępnij → „Do ekranu początkowego".
+
+Po instalacji działa jak natywna apka (ikona, pełny ekran). Przy pierwszym
+uruchomieniu pokazuje się zgoda 18+ / disclaimer.
+
 > ⚠️ Kursy bywają nieaktualne — zawsze sprawdź je u bukmachera przed zakładem.
-> Gra to ryzyko, obstawiaj odpowiedzialnie.
+> Narzędzie informacyjne, tylko 18+. Gra to ryzyko, obstawiaj odpowiedzialnie.

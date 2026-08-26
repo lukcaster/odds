@@ -1,5 +1,5 @@
-const CACHE = 'odds-v7';
-const ASSETS = ['/', '/index.html', '/icon.svg'];
+const CACHE = 'odds-v9';
+const ASSETS = ['/', '/index.html', '/icon.svg', '/icon-192.png', '/icon-512.png', '/apple-touch-icon.png'];
 
 self.addEventListener('install', e => {
     e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
