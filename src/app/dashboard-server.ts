@@ -266,8 +266,11 @@ export class DashboardServer {
 
         // Rozstrzyganie zakladow z realnych wynikow (auto-settle). Obsluguje
         // pojedyncze (home/draw/away) i double chance (1X/12/X2).
+        // WAZNE: dopasowanie po dacie meczu (nie samych nazwach), bo w danych
+        // mamy cale zeszle sezony (backfill) — te same pary druzyn wystepuja
+        // wielokrotnie. Bez tego zaklad na przyszly mecz dostawal wynik z zeszlego.
         this.app.post('/api/settle', async (req: Request, res: Response) => {
-            const bets: Array<{ id: string; league: string; home: string; away: string; outcome: string }> =
+            const bets: Array<{ id: string; league: string; home: string; away: string; outcome: string; commenceTime?: string }> =
                 Array.isArray(req.body?.bets) ? req.body.bets : [];
             if (!bets.length) return res.json({ settled: [] });
 
@@ -280,13 +283,31 @@ export class DashboardServer {
                 }
             }
 
+            const now = Date.now();
+            const MATCH_WINDOW_MS = 36 * 60 * 60 * 1000; // wynik musi byc w +-36h od terminu zakladu
             const dcWin: Record<string, string[]> = { '1X': ['home', 'draw'], '12': ['home', 'away'], 'X2': ['draw', 'away'] };
+
             const settled = bets.map(bet => {
                 const sport = LEAGUE_KEY_TO_SPORT[bet.league];
                 if (!sport) return { id: bet.id, result: 'pending' };
+
+                // Bez daty meczu nie zgadujemy (unikamy zlapania meczu z zeszlego sezonu).
+                const betTime = bet.commenceTime ? new Date(bet.commenceTime).getTime() : NaN;
+                if (!Number.isFinite(betTime)) return { id: bet.id, result: 'pending' };
+                // Mecz jeszcze sie nie odbyl — na pewno brak wyniku.
+                if (betTime > now) return { id: bet.id, result: 'pending' };
+
                 const results = this.resultsService.getResults(sport);
-                const m = results.find(r => r.home === bet.home && r.away === bet.away);
-                if (!m) return { id: bet.id, result: 'pending' };
+                // Wybierz mecz tej pary druzyn NAJBLIZSZY dacie zakladu (w oknie).
+                let best: { m: any; diff: number } | null = null;
+                for (const r of results) {
+                    if (r.home !== bet.home || r.away !== bet.away) continue;
+                    const diff = Math.abs(new Date(r.date).getTime() - betTime);
+                    if (diff <= MATCH_WINDOW_MS && (!best || diff < best.diff)) best = { m: r, diff };
+                }
+                if (!best) return { id: bet.id, result: 'pending' };
+
+                const m = best.m;
                 const actual = m.homeScore > m.awayScore ? 'home' : m.homeScore < m.awayScore ? 'away' : 'draw';
                 const won = dcWin[bet.outcome] ? dcWin[bet.outcome].includes(actual) : bet.outcome === actual;
                 return { id: bet.id, result: won ? 'won' : 'lost', homeScore: m.homeScore, awayScore: m.awayScore };

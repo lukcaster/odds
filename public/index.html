@@ -276,6 +276,21 @@
         .hist-badge.lost { background: #ffebee; color: #c62828; }
         .hist-badge.pending { background: rgba(96,125,139,0.12); color: var(--text-dim); }
 
+        /* ── Moje zakłady (taby) ── */
+        .bets-tabs {
+            display: flex; gap: 6px; padding: 10px 12px;
+            background: var(--surface); border-bottom: 1px solid var(--border);
+        }
+        .bets-tab {
+            flex: 1; border: 1px solid var(--border); background: var(--bg);
+            color: var(--text-dim); border-radius: 999px; padding: 8px 6px;
+            font-size: 13px; font-weight: 700; cursor: pointer; white-space: nowrap; text-align: center;
+        }
+        .bets-tab.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+        .bets-tab .cnt { opacity: 0.75; font-weight: 800; }
+        .bets-body { flex: 1; overflow-y: auto; padding: 12px; }
+        .bets-empty { text-align: center; color: var(--text-dim); font-size: 14px; line-height: 1.6; padding: 50px 20px; }
+
         /* ── Power ranking screen ── */
         .power-tabs {
             display: flex; gap: 6px; overflow-x: auto; padding: 10px 12px;
@@ -838,6 +853,15 @@
             <span class="menu-card-chevron">›</span>
         </button>
 
+        <button class="menu-card" onclick="showScreen('screen-bets')">
+            <div class="menu-card-icon">🧾</div>
+            <div class="menu-card-text">
+                <div class="menu-card-title">Moje zakłady</div>
+                <div class="menu-card-desc">Historia i statusy — oczekujące / wygrane / przegrane</div>
+            </div>
+            <span class="menu-card-chevron">›</span>
+        </button>
+
         <button class="menu-card" onclick="showScreen('screen-profile-edit')">
             <div class="menu-card-icon">👤</div>
             <div class="menu-card-text">
@@ -870,9 +894,30 @@
         </div>
         <button class="btn-primary" onclick="updateProfile()">Zapisz zmiany</button>
 
-        <div class="section-heading">Historia zakładów</div>
-        <div id="historyList"></div>
+        <button class="menu-card" style="margin-top:16px" onclick="showScreen('screen-bets')">
+            <div class="menu-card-icon">🧾</div>
+            <div class="menu-card-text">
+                <div class="menu-card-title">Moje zakłady</div>
+                <div class="menu-card-desc">Historia i statusy zakładów</div>
+            </div>
+            <span class="menu-card-chevron">›</span>
+        </button>
     </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     SCREEN: Moje zakłady (taby: oczekujące / wygrane / przegrane)
+════════════════════════════════════════════════════ -->
+<div id="screen-bets" class="screen">
+    <div class="screen-header">
+        <button class="back-btn" onclick="showScreen('screen-menu')">‹</button>
+        <div class="header-info">
+            <div class="header-title">🧾 Moje zakłady</div>
+            <div class="header-sub" id="betsSub"></div>
+        </div>
+    </div>
+    <div class="bets-tabs" id="betsTabs"></div>
+    <div class="bets-body" id="betsBody"></div>
 </div>
 
 <!-- ═══════════════════════════════════════════════════
@@ -1130,7 +1175,6 @@ function showScreen(id) {
     if (id === 'screen-profile-edit') {
         document.getElementById('editNicknameInput').value = state.profile?.nickname || '';
         document.getElementById('editMaxBetInput').value   = state.profile?.maxBet   || 1000;
-        renderHistory();
     }
     if (id === 'screen-leagues') {
         renderLeagues();
@@ -1144,6 +1188,10 @@ function showScreen(id) {
     }
     if (id === 'screen-power') {
         initPowerScreen();
+    }
+    if (id === 'screen-bets') {
+        settlePendingBets();
+        renderBets();
     }
 }
 
@@ -1530,35 +1578,78 @@ function saveBet() {
     showToast(hasValue ? `Zapisano: ${betAmt} PLN` : 'Zapisano: PASS');
 }
 
-// ── History ────────────────────────────────────────────────
-function renderHistory() {
-    const list    = document.getElementById('historyList');
-    const history = state.profile?.history || [];
-    if (!history.length) {
-        list.innerHTML = '<div class="history-empty">Brak zapisanych zakładów</div>';
+// ── Moje zakłady (taby: oczekujące / wygrane / przegrane) ───
+let betsTab = 'pending';
+
+function renderBets() {
+    const tabsEl = document.getElementById('betsTabs');
+    const body   = document.getElementById('betsBody');
+    const sub    = document.getElementById('betsSub');
+    if (!tabsEl || !body) return;
+
+    const history = (state.profile?.history || []).filter(b => b.betAmt > 0);
+    const groups = {
+        pending: history.filter(b => (b.result || 'pending') === 'pending'),
+        won:     history.filter(b => b.result === 'won'),
+        lost:    history.filter(b => b.result === 'lost'),
+    };
+    if (sub) sub.textContent = `${history.length} zakładów`;
+
+    const tabDef = [
+        { key: 'pending', label: '⏳ Oczekujące' },
+        { key: 'won',     label: '✓ Wygrane' },
+        { key: 'lost',    label: '✗ Przegrane' },
+    ];
+    tabsEl.innerHTML = tabDef.map(t =>
+        `<button class="bets-tab ${betsTab === t.key ? 'active' : ''}" onclick="selectBetsTab('${t.key}')">
+            ${t.label} <span class="cnt">${groups[t.key].length}</span>
+        </button>`
+    ).join('');
+
+    const list = groups[betsTab] || [];
+    if (!list.length) {
+        const msg = { pending: 'Brak oczekujących zakładów.', won: 'Brak wygranych… jeszcze 😉', lost: 'Brak przegranych.' }[betsTab];
+        body.innerHTML = `<div class="bets-empty">🧾<br>${msg}</div>`;
         return;
     }
+
+    // Sortuj wg daty MECZU (najbliższy najpierw dla oczekujących, najnowszy dla rozstrzygniętych)
+    const sorted = [...list].sort((a, b) => {
+        const ta = new Date(a.commenceTime || a.date).getTime();
+        const tb = new Date(b.commenceTime || b.date).getTime();
+        return betsTab === 'pending' ? ta - tb : tb - ta;
+    });
+
+    body.innerHTML = sorted.map(betRowHtml).join('');
+}
+
+function betRowHtml(bet) {
     const badge = { won: '✓ wygrany', lost: '✗ przegrany', pending: '⏳ oczekuje' };
-    list.innerHTML = history.map(bet => {
-        const date = new Date(bet.date).toLocaleDateString('pl-PL',
-            { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
-        const leagueName = LEAGUES.find(l => l.key === bet.league)?.label || bet.league;
-        const isBet = bet.betAmt > 0;
-        const r = bet.result || 'pending';
-        const score = (bet.homeScore != null && bet.awayScore != null) ? ` · ${bet.homeScore}:${bet.awayScore}` : '';
-        return `
-        <div class="history-item" onclick="openBetDetail('${bet.id}')" style="cursor:pointer">
-            <div class="history-item-row">
-                <div class="history-item-match">${bet.match}</div>
-                <div class="history-item-amount">${isBet ? bet.betAmt + ' PLN' : 'PASS'}</div>
-            </div>
-            <div class="history-item-meta">${leagueName} · ${date} · typ: ${outcomeLabelOf(bet.outcome)} · kurs ${bet.odds?.toFixed(2)}${score}</div>
-            ${isBet ? `<div class="history-item-row" style="margin-top:8px;align-items:center">
-                <span class="hist-badge ${r}">${badge[r]}</span>
-                <span style="margin-left:auto;font-size:11px;color:var(--text-dim)">szczegóły ›</span>
-            </div>` : ''}
-        </div>`;
-    }).join('');
+    const leagueName = LEAGUES.find(l => l.key === bet.league)?.label || bet.league;
+    const r = bet.result || 'pending';
+    const score = (bet.homeScore != null && bet.awayScore != null) ? ` · wynik ${bet.homeScore}:${bet.awayScore}` : '';
+    // Data MECZU (nie postawienia)
+    const kickoff = bet.commenceTime
+        ? new Date(bet.commenceTime).toLocaleString('pl-PL', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
+        : 'termin nieznany';
+    return `
+    <div class="history-item" onclick="openBetDetail('${bet.id}')" style="cursor:pointer">
+        <div class="history-item-row">
+            <div class="history-item-match">${bet.match}</div>
+            <div class="history-item-amount">${bet.betAmt} PLN</div>
+        </div>
+        <div class="history-item-meta">📅 ${kickoff} · ${leagueName}</div>
+        <div class="history-item-meta">typ: ${outcomeLabelOf(bet.outcome)} · kurs ${bet.odds?.toFixed(2)}${score}</div>
+        <div class="history-item-row" style="margin-top:8px;align-items:center">
+            <span class="hist-badge ${r}">${badge[r]}</span>
+            <span style="margin-left:auto;font-size:11px;color:var(--text-dim)">szczegóły ›</span>
+        </div>
+    </div>`;
+}
+
+function selectBetsTab(key) {
+    betsTab = key;
+    renderBets();
 }
 
 function outcomeLabelOf(o) {
@@ -1637,7 +1728,8 @@ function saveBetOdds(id) {
     persistProfile();
     const amt = document.getElementById('bd-amt');
     if (amt) amt.textContent = bet.betAmt + ' PLN';
-    renderHistory();
+    if (isScreenActive('screen-bets')) renderBets();
+    renderDashboard();
     showToast('Zaktualizowano kurs');
 }
 
@@ -1856,7 +1948,7 @@ function renderDashboard() {
             <div class="dash-card-title">Zysk w czasie <small>${s.settledCount} rozstrzygniętych</small></div>
             ${cumulative.length >= 2
                 ? profitChartSvg(cumulative)
-                : `<div class="dash-pending-note">Za mało rozstrzygniętych zakładów na wykres —<br>rozstrzygnij co najmniej 2 (auto po meczu albo ręcznie w Profilu).</div>`}
+                : `<div class="dash-pending-note">Za mało rozstrzygniętych zakładów na wykres —<br>rozstrzygnij co najmniej 2 (auto po meczu albo ręcznie w „Moje zakłady").</div>`}
         </div>`;
 }
 
@@ -1880,15 +1972,21 @@ function profitChartSvg(cumulative) {
     </svg>`;
 }
 
-// Auto-rozstrzyganie zakładów z realnych wyników (serwer dopasowuje mecz+typ)
+// Auto-rozstrzyganie zakładów z realnych wyników (serwer dopasowuje mecz po dacie).
+// Rozstrzygamy TYLKO mecze, które już się odbyły i mają datę — resztę zostawiamy
+// użytkownikowi (ręczna zmiana statusu w widoku Zakłady).
 async function settlePendingBets() {
     const history = state.profile?.history || [];
-    const pending = history.filter(b => b.betAmt > 0 && b.result !== 'won' && b.result !== 'lost');
+    const now = Date.now();
+    const pending = history.filter(b =>
+        b.betAmt > 0 && b.result !== 'won' && b.result !== 'lost' &&
+        b.commenceTime && new Date(b.commenceTime).getTime() <= now
+    );
     if (!pending.length) return;
 
     const payload = pending.map(b => {
         const { home, away } = betHomeAway(b);
-        return { id: b.id, league: b.league, home, away, outcome: b.outcome };
+        return { id: b.id, league: b.league, home, away, outcome: b.outcome, commenceTime: b.commenceTime };
     }).filter(b => b.id && b.home && b.away);
     if (!payload.length) return;
 
@@ -1905,18 +2003,23 @@ async function settlePendingBets() {
             const bet = history.find(b => b.id === s.id);
             if (bet) { bet.result = s.result; bet.homeScore = s.homeScore; bet.awayScore = s.awayScore; changed = true; }
         }
-        if (changed) { persistProfile(); renderDashboard(); }
+        if (changed) { persistProfile(); renderDashboard(); if (isScreenActive('screen-bets')) renderBets(); }
     } catch { /* offline — spróbujemy następnym razem */ }
 }
 
-// Ręczne rozstrzygnięcie (z historii w Profilu)
+function isScreenActive(id) {
+    return document.getElementById(id)?.classList.contains('active');
+}
+
+// Ręczna zmiana statusu zakładu
 function setBetResult(id, result) {
     const history = state.profile?.history || [];
     const bet = history.find(b => b.id === id);
     if (!bet) return;
     bet.result = bet.result === result ? 'pending' : result;  // ponowne kliknięcie = cofnij
     persistProfile();
-    renderHistory();
+    if (isScreenActive('screen-bets')) renderBets();
+    renderDashboard();
 }
 
 // Klik w polecany bet → arkusz (modal) nad bieżącym ekranem, bez nawigacji.
@@ -2147,8 +2250,15 @@ function showHelp() {
             <div style="font-weight:700;margin:0.4rem 0 0.3rem;">🏠 Ekran główny</div>
             <p style="margin:0 0 0.9rem;color:#475569;">
                 Podsumowanie Twoich zakładów: ile postawionych, wygrane, bilans kasy, ROI
-                i wykres zysku w czasie. Zakłady rozstrzygają się automatycznie po meczu
-                (z wyników), a ręcznie możesz je oznaczyć w <strong>Profilu</strong>.
+                i wykres zysku w czasie.
+            </p>
+
+            <div style="font-weight:700;margin:0.4rem 0 0.3rem;">🧾 Moje zakłady</div>
+            <p style="margin:0 0 0.9rem;color:#475569;">
+                Historia z podziałem na <strong>oczekujące / wygrane / przegrane</strong>.
+                Zakłady na rozegrane mecze rozstrzygają się automatycznie z wyników,
+                a status zawsze możesz zmienić ręcznie (klik w zakład → szczegóły). Widać
+                tam datę meczu i możesz poprawić kurs, jeśli u buka był inny.
             </p>
 
             <div style="font-weight:700;margin:0.4rem 0 0.3rem;">🎯 Polecane</div>
