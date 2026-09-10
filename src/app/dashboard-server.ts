@@ -311,10 +311,10 @@ export class DashboardServer {
                 if (!best) return { id: bet.id, result: 'pending' };
 
                 const m = best.m;
-                const won = settleOutcome(bet.outcome, m.homeScore, m.awayScore);
+                const result = settleOutcome(bet.outcome, m.homeScore, m.awayScore);
                 // Nieznany typ zakladu — zostawiamy userowi do recznego rozstrzygniecia.
-                if (won == null) return { id: bet.id, result: 'pending' };
-                return { id: bet.id, result: won ? 'won' : 'lost', homeScore: m.homeScore, awayScore: m.awayScore };
+                if (result == null) return { id: bet.id, result: 'pending' };
+                return { id: bet.id, result, homeScore: m.homeScore, awayScore: m.awayScore };
             });
             res.json({ settled });
         });
@@ -474,37 +474,48 @@ export class DashboardServer {
     }
 }
 
+export type SettleResult = 'won' | 'lost' | 'void' | null;
+
 /**
- * Czy zaklad wygral, na podstawie wyniku meczu.
- *   true  = wygrany, false = przegrany, null = nie umiemy rozstrzygnac.
+ * Rozstrzygniecie zakladu na podstawie wyniku meczu.
+ *   'won' | 'lost' | 'void' (zwrot stawki) | null (nie umiemy — zostaje userowi).
  *
  * Typy musza sie zgadzac z `canonicalOutcome()` w match-analysis-service.ts
  * i z etykietami w web/src/helpers.ts.
  */
-export function settleOutcome(outcome: string, homeScore: number, awayScore: number): boolean | null {
+export function settleOutcome(outcome: string, homeScore: number, awayScore: number): SettleResult {
+    const wl = (won: boolean): SettleResult => (won ? 'won' : 'lost');
     const actual = homeScore > awayScore ? 'home' : homeScore < awayScore ? 'away' : 'draw';
 
     // 1X2
-    if (outcome === 'home' || outcome === 'draw' || outcome === 'away') return outcome === actual;
+    if (outcome === 'home' || outcome === 'draw' || outcome === 'away') return wl(outcome === actual);
 
     // Podwojna szansa
     const dcWin: Record<string, string[]> = { '1X': ['home', 'draw'], '12': ['home', 'away'], 'X2': ['draw', 'away'] };
-    if (dcWin[outcome]) return dcWin[outcome].includes(actual);
+    if (dcWin[outcome]) return wl(dcWin[outcome].includes(actual));
 
-    // Suma goli, np. 'over_2.5' / 'under_2.5'
+    // Suma goli / punktow, np. 'over_2.5' / 'under_2.5'
     const totals = /^(over|under)_(\d+(?:\.\d+)?)$/.exec(outcome);
     if (totals) {
         const line = parseFloat(totals[2]);
         const sum = homeScore + awayScore;
-        // Pelna linia trafiona co do gola = zwrot stawki. Model liczy tylko linie
-        // polowkowe (x.5), wiec tu nie powinnismy trafic — zostawiamy userowi.
-        if (sum === line) return null;
-        return totals[1] === 'over' ? sum > line : sum < line;
+        if (sum === line) return 'void'; // pelna linia trafiona co do gola = zwrot
+        return wl(totals[1] === 'over' ? sum > line : sum < line);
+    }
+
+    // Handicap punktowy (NFL), np. 'spread_home_-6.5' / 'spread_away_3'
+    const spread = /^spread_(home|away)_(-?\d+(?:\.\d+)?)$/.exec(outcome);
+    if (spread) {
+        const line = parseFloat(spread[2]);
+        const margin = spread[1] === 'home' ? homeScore - awayScore : awayScore - homeScore;
+        const diff = margin + line;
+        if (diff === 0) return 'void'; // dokladnie na linii = zwrot stawki (push)
+        return wl(diff > 0);
     }
 
     // Obie druzyny strzela
-    if (outcome === 'btts_yes') return homeScore > 0 && awayScore > 0;
-    if (outcome === 'btts_no')  return homeScore === 0 || awayScore === 0;
+    if (outcome === 'btts_yes') return wl(homeScore > 0 && awayScore > 0);
+    if (outcome === 'btts_no')  return wl(homeScore === 0 || awayScore === 0);
 
     return null;
 }

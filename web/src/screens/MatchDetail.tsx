@@ -53,6 +53,14 @@ export function MatchDetail({ params }: { params: { match: any; league: string }
             <span>{match.awayTeam}</span>
           </div>
           <div className="match-detail-time">{date} · {time}</div>
+          {data?.expectedMargin != null && (
+            <div className="match-detail-xg" style={{ display: 'inline-flex' }}>
+              <span>
+                {data.expectedMargin >= 0 ? match.homeTeam : match.awayTeam} faworytem o{' '}
+                <span>{Math.abs(data.expectedMargin).toFixed(1)} pkt</span>
+              </span>
+            </div>
+          )}
           {data?.xgHome != null && (
             <div className="match-detail-xg" style={{ display: 'inline-flex' }}>
               <span>xG dom: <span>{data.xgHome.toFixed(2)}</span></span>

@@ -1,0 +1,19 @@
+# Konfiguracja dla Rendera. Dziala tylko gdy serwis jest podpiety jako Blueprint;
+# serwis stworzony recznie w panelu czyta ustawienia z dashboardu, nie stad.
+#
+# WAZNE: frontend (React/Vite) musi zostac zbudowany do dist-web/ ZANIM wstanie
+# serwer — bez tego Express oddaje strone "Frontend nie jest zbudowany".
+# Robi to `postinstall` w package.json, wiec samo `npm install` wystarcza.
+services:
+  - type: web
+    name: odds
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      # Wartosci ustawiane w panelu Rendera — NIE trzymamy ich w repo.
+      - key: apiKey
+        sync: false
+      - key: ballDontLieApiKey
+        sync: false

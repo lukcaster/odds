@@ -103,7 +103,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
     const now = Date.now();
     const history: Bet[] = profileRef.current?.history || [];
     const pending = history.filter(b =>
-      b.betAmt > 0 && b.result !== 'won' && b.result !== 'lost' &&
+      b.betAmt > 0 && b.result !== 'won' && b.result !== 'lost' && b.result !== 'void' &&
       b.commenceTime && new Date(b.commenceTime).getTime() <= now
     );
     if (!pending.length) return;
@@ -117,7 +117,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       const map = new Map<string, any>((data.settled || []).map((s: any) => [s.id, s]));
       updateHistory(h => h.map(b => {
         const s = map.get(b.id);
-        if (s && (s.result === 'won' || s.result === 'lost')) {
+        if (s && (s.result === 'won' || s.result === 'lost' || s.result === 'void')) {
           return { ...b, result: s.result, homeScore: s.homeScore, awayScore: s.awayScore };
         }
         return b;

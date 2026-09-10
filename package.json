@@ -8,6 +8,7 @@
     "start": "tsx src/app/server.ts",
     "dev": "tsx src/app/main.ts",
     "build": "vite build",
+    "postinstall": "npm run build",
     "web:dev": "vite",
     "web:build": "vite build",
     "web:preview": "vite preview",

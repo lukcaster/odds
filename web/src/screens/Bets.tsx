@@ -4,7 +4,7 @@ import { Header } from '../components/Header';
 import { Bet, leagueName, outcomeLabelOf, fmtDateTime } from '../helpers';
 
 function BetRow({ bet, onClick }: { bet: Bet; onClick: () => void }) {
-  const badge = { won: '✓ wygrany', lost: '✗ przegrany', pending: '⏳ oczekuje' } as Record<string, string>;
+  const badge = { won: '✓ wygrany', lost: '✗ przegrany', pending: '⏳ oczekuje', void: '↩︎ zwrot stawki' } as Record<string, string>;
   const r = bet.result || 'pending';
   const score = bet.homeScore != null && bet.awayScore != null ? ` · wynik ${bet.homeScore}:${bet.awayScore}` : '';
   const kickoff = bet.commenceTime
@@ -26,9 +26,11 @@ function BetRow({ bet, onClick }: { bet: Bet; onClick: () => void }) {
   );
 }
 
+type Tab = 'pending' | 'won' | 'lost' | 'void';
+
 export function Bets() {
   const { profile, navigate, settlePending, openBetDetail } = useApp();
-  const [tab, setTab] = useState<'pending' | 'won' | 'lost'>('pending');
+  const [tab, setTab] = useState<Tab>('pending');
 
   useEffect(() => { settlePending(); }, [settlePending]);
 
@@ -37,29 +39,40 @@ export function Bets() {
     pending: history.filter(b => (b.result || 'pending') === 'pending'),
     won: history.filter(b => b.result === 'won'),
     lost: history.filter(b => b.result === 'lost'),
+    void: history.filter(b => b.result === 'void'),
   };
 
-  const tabDef = [
+  const tabDef: Array<{ key: Tab; label: string }> = [
     { key: 'pending', label: '⏳ Oczekujące' },
     { key: 'won', label: '✓ Wygrane' },
     { key: 'lost', label: '✗ Przegrane' },
-  ] as const;
+    // Zwroty to rzadkosc (handicap trafiony w linie) — zakladka pojawia sie,
+    // dopiero gdy jest co w niej pokazac.
+    ...(groups.void.length ? [{ key: 'void' as Tab, label: '↩︎ Zwroty' }] : []),
+  ];
 
-  const list = groups[tab] || [];
+  // Po usunieciu ostatniego zwrotu zakladka znika — nie zostawiaj pustego widoku.
+  const active: Tab = tabDef.some(t => t.key === tab) ? tab : 'pending';
+  const list = groups[active] || [];
   const sorted = [...list].sort((a, b) => {
     const ta = new Date(a.commenceTime || a.date).getTime();
     const tb = new Date(b.commenceTime || b.date).getTime();
-    return tab === 'pending' ? ta - tb : tb - ta;
+    return active === 'pending' ? ta - tb : tb - ta;
   });
 
-  const emptyMsg = { pending: 'Brak oczekujących zakładów.', won: 'Brak wygranych… jeszcze 😉', lost: 'Brak przegranych.' }[tab];
+  const emptyMsg = {
+    pending: 'Brak oczekujących zakładów.',
+    won: 'Brak wygranych… jeszcze 😉',
+    lost: 'Brak przegranych.',
+    void: 'Brak zwrotów.',
+  }[active];
 
   return (
     <>
       <Header title="🧾 Moje zakłady" sub={`${history.length} zakładów`} onBack={() => navigate('menu')} />
       <div className="bets-tabs">
         {tabDef.map(t => (
-          <button key={t.key} className={`bets-tab ${tab === t.key ? 'active' : ''}`} onClick={() => setTab(t.key)}>
+          <button key={t.key} className={`bets-tab ${active === t.key ? 'active' : ''}`} onClick={() => setTab(t.key)}>
             {t.label} <span className="cnt">{groups[t.key].length}</span>
           </button>
         ))}

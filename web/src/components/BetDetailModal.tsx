@@ -23,7 +23,7 @@ export function BetDetailModal() {
     showToast('Zaktualizowano kurs');
   };
 
-  const setResult = (result: 'won' | 'lost' | 'pending') => {
+  const setResult = (result: 'won' | 'lost' | 'pending' | 'void') => {
     updateHistory(h => h.map(b => b.id === bet.id ? { ...b, result: b.result === result ? 'pending' : result } : b));
   };
 
@@ -66,11 +66,14 @@ export function BetDetailModal() {
           </div>
 
           <div style={{ fontSize: '0.8rem', color: '#475569', fontWeight: 600, marginBottom: '0.4rem' }}>Wynik zakładu</div>
-          <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem' }}>
+          <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}>
             <button onClick={() => setResult('won')} style={stBtn(r === 'won', '#2e7d32')}>✓ wygrany</button>
             <button onClick={() => setResult('lost')} style={stBtn(r === 'lost', '#c62828')}>✗ przegrany</button>
             <button onClick={() => setResult('pending')} style={stBtn(r === 'pending', '#64748b')}>⏳ czeka</button>
           </div>
+          <button onClick={() => setResult('void')} style={{ ...stBtn(r === 'void', '#64748b'), width: '100%', marginBottom: '1rem', fontSize: '0.85rem' }}>
+            ↩︎ zwrot stawki (push — trafiony dokładnie w linię)
+          </button>
         </>}
 
         <button onClick={closeBetDetail} style={{ width: '100%', padding: '0.7rem', border: 'none', borderRadius: '0.6rem', background: '#e2e8f0', color: '#334155', fontWeight: 700, cursor: 'pointer' }}>Zamknij</button>
