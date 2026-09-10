@@ -1,5 +1,6 @@
 import cors from 'cors';
 import express, { Express, Request, Response } from 'express';
+import fs from 'fs';
 import path from 'path';
 import { HybridPredictionModel } from './get-odds/hybrid-prediction-model';
 import { OddsService } from './get-odds/odds-service';
@@ -23,6 +24,9 @@ export class DashboardServer {
     private powerRankingService: PowerRankingService;
     private recommendedBets: RecommendedBet[] = [];
     private port: number = parseInt(process.env.PORT || '3000', 10);
+
+    // Zbudowany frontend (Vite: web/ -> dist-web/).
+    private static readonly WEB_ROOT = path.join(process.cwd(), 'dist-web');
 
     // Ligi, dla ktorych liczymy power ranking (ELO z realnych wynikow).
     private readonly powerSports: Sport[] = [
@@ -49,7 +53,7 @@ export class DashboardServer {
     private setupMiddleware(): void {
         this.app.use(cors());
         this.app.use(express.json());
-        this.app.use(express.static(path.join(process.cwd(), 'public')));
+        this.app.use(express.static(DashboardServer.WEB_ROOT));
     }
 
     /**
@@ -285,7 +289,6 @@ export class DashboardServer {
 
             const now = Date.now();
             const MATCH_WINDOW_MS = 36 * 60 * 60 * 1000; // wynik musi byc w +-36h od terminu zakladu
-            const dcWin: Record<string, string[]> = { '1X': ['home', 'draw'], '12': ['home', 'away'], 'X2': ['draw', 'away'] };
 
             const settled = bets.map(bet => {
                 const sport = LEAGUE_KEY_TO_SPORT[bet.league];
@@ -308,8 +311,9 @@ export class DashboardServer {
                 if (!best) return { id: bet.id, result: 'pending' };
 
                 const m = best.m;
-                const actual = m.homeScore > m.awayScore ? 'home' : m.homeScore < m.awayScore ? 'away' : 'draw';
-                const won = dcWin[bet.outcome] ? dcWin[bet.outcome].includes(actual) : bet.outcome === actual;
+                const won = settleOutcome(bet.outcome, m.homeScore, m.awayScore);
+                // Nieznany typ zakladu — zostawiamy userowi do recznego rozstrzygniecia.
+                if (won == null) return { id: bet.id, result: 'pending' };
                 return { id: bet.id, result: won ? 'won' : 'lost', homeScore: m.homeScore, awayScore: m.awayScore };
             });
             res.json({ settled });
@@ -332,9 +336,18 @@ export class DashboardServer {
             await this.fetchAllLeagues();
         });
 
-        // Serve index.html for all other routes
-        this.app.get('*', (req: Request, res: Response) => {
-            res.sendFile(path.join(process.cwd(), 'public/index.html'));
+        // SPA fallback - React router-less nawigacja zyje w kliencie
+        this.app.get('*', (_req: Request, res: Response) => {
+            const indexHtml = path.join(DashboardServer.WEB_ROOT, 'index.html');
+            if (!fs.existsSync(indexHtml)) {
+                res.status(503).send(
+                    '<h1>Frontend nie jest zbudowany</h1>' +
+                    '<p>Uruchom <code>npm run web:build</code> (produkcja) ' +
+                    'albo <code>npm run web:dev</code> i wejdz na <a href="http://localhost:5173">localhost:5173</a>.</p>'
+                );
+                return;
+            }
+            res.sendFile(indexHtml);
         });
     }
 
@@ -459,4 +472,39 @@ export class DashboardServer {
     public getPort(): number {
         return this.port;
     }
+}
+
+/**
+ * Czy zaklad wygral, na podstawie wyniku meczu.
+ *   true  = wygrany, false = przegrany, null = nie umiemy rozstrzygnac.
+ *
+ * Typy musza sie zgadzac z `canonicalOutcome()` w match-analysis-service.ts
+ * i z etykietami w web/src/helpers.ts.
+ */
+export function settleOutcome(outcome: string, homeScore: number, awayScore: number): boolean | null {
+    const actual = homeScore > awayScore ? 'home' : homeScore < awayScore ? 'away' : 'draw';
+
+    // 1X2
+    if (outcome === 'home' || outcome === 'draw' || outcome === 'away') return outcome === actual;
+
+    // Podwojna szansa
+    const dcWin: Record<string, string[]> = { '1X': ['home', 'draw'], '12': ['home', 'away'], 'X2': ['draw', 'away'] };
+    if (dcWin[outcome]) return dcWin[outcome].includes(actual);
+
+    // Suma goli, np. 'over_2.5' / 'under_2.5'
+    const totals = /^(over|under)_(\d+(?:\.\d+)?)$/.exec(outcome);
+    if (totals) {
+        const line = parseFloat(totals[2]);
+        const sum = homeScore + awayScore;
+        // Pelna linia trafiona co do gola = zwrot stawki. Model liczy tylko linie
+        // polowkowe (x.5), wiec tu nie powinnismy trafic — zostawiamy userowi.
+        if (sum === line) return null;
+        return totals[1] === 'over' ? sum > line : sum < line;
+    }
+
+    // Obie druzyny strzela
+    if (outcome === 'btts_yes') return homeScore > 0 && awayScore > 0;
+    if (outcome === 'btts_no')  return homeScore === 0 || awayScore === 0;
+
+    return null;
 }

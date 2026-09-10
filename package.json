@@ -7,6 +7,10 @@
   "scripts": {
     "start": "tsx src/app/server.ts",
     "dev": "tsx src/app/main.ts",
+    "build": "vite build",
+    "web:dev": "vite",
+    "web:build": "vite build",
+    "web:preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +31,8 @@
     "express": "^4.18.2",
     "inquirer": "^8.2.5",
     "playwright": "^1.49.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "zod": "^3.24.1"
   },
   "devDependencies": {
@@ -34,8 +40,12 @@
     "@types/express": "^5.0.6",
     "@types/inquirer": "^8.2.12",
     "@types/node": "^22.10.2",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vite": "^5.4.21"
   }
 }

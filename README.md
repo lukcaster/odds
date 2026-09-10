@@ -7,7 +7,8 @@ Mobilna apka (PWA) do szukania **value betów** i liczenia rozmiaru zakładu wg
 
 ```bash
 npm install
-npm start          # startuje serwer dashboardu na http://localhost:3000
+npm run build      # buduje frontend (web/ -> dist-web/)
+npm start          # startuje serwer + serwuje frontend na http://localhost:3000
 ```
 
 Wymagany plik `.env` z kluczem do the-odds-api.com:
@@ -15,6 +16,33 @@ Wymagany plik `.env` z kluczem do the-odds-api.com:
 ```
 apiKey=TWOJ_KLUCZ
 ```
+
+### Praca nad frontendem
+
+Frontend to **React + TypeScript (Vite)** i żyje w `web/`. W devie odpalasz
+dwa procesy — backend i Vite z hot reloadem (proxy `/api` → `:3000`):
+
+```bash
+npm start          # terminal 1: API na :3000
+npm run web:dev    # terminal 2: UI na :5173
+```
+
+Struktura `web/src`:
+
+| plik / katalog | co robi |
+| --- | --- |
+| `main.tsx` | montuje apkę, rejestruje service workera |
+| `store.tsx` | `AppProvider` — profil, historia zakładów, nawigacja, toast, modale |
+| `App.tsx` | mapa `screen → komponent` + warstwa modali |
+| `api.ts` | wywołania `/api/*` |
+| `constants.ts` | lista lig; `helpers.ts` — Kelly, formatowanie, statystyki |
+| `screens/` | ekrany (menu, ligi, mecze, analiza, polecane, power ranking, zakłady, profil) |
+| `components/` | nagłówek, bottom sheet zakładu, modale |
+| `styles.css` | cały CSS apki |
+
+Produkcyjny build (`npm run build`) ląduje w `dist-web/`, które serwuje
+Express — plus SPA fallback na `index.html`. Jeśli `dist-web/` nie istnieje,
+serwer zwraca podpowiedź zamiast 404.
 
 ## Jak to działa
 

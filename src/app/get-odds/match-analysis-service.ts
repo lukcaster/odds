@@ -10,6 +10,9 @@ export interface MatchBetRecommendation {
     rank: number;
     marketKey: string;
     marketLabel: string;
+    /** Kanoniczny typ zakladu, zrozumialy dla frontu i /api/settle:
+     *  'home'|'draw'|'away'|'1X'|'12'|'X2'|'over_2.5'|'under_2.5'|'btts_yes'|'btts_no' */
+    outcomeType: string;
     outcomeLabel: string;
     odds: number;
     bookmakerName: string;
@@ -107,6 +110,10 @@ export class MatchAnalysisService {
                     const modelProb = modelProbs[modelKey];
                     if (modelProb == null) continue;
 
+                    // Bez kanonicznego typu nie damy rady zapisac ani rozliczyc zakladu.
+                    const outcomeType = this.canonicalOutcome(mkt.key, outcome, homeTeam, awayTeam);
+                    if (!outcomeType) continue;
+
                     const impliedProb = 1 / outcome.price;
                     const edge = modelProb - impliedProb;
                     const b = outcome.price - 1;
@@ -117,6 +124,7 @@ export class MatchAnalysisService {
                     candidates.push({
                         marketKey:    mkt.key,
                         marketLabel:  this.marketLabel(mkt.key, outcome.point),
+                        outcomeType,
                         outcomeLabel: this.outcomeLabel(mkt.key, outcome, homeTeam, awayTeam),
                         odds:         outcome.price,
                         bookmakerName: bm.title,
@@ -133,7 +141,7 @@ export class MatchAnalysisService {
         // Deduplicate: keep best odds per (market + outcome)
         const best = new Map<string, Omit<MatchBetRecommendation, 'rank'>>();
         for (const c of candidates) {
-            const key = `${c.marketKey}_${c.outcomeLabel}`;
+            const key = c.outcomeType;
             const existing = best.get(key);
             if (!existing || c.odds > existing.odds) best.set(key, c);
         }
@@ -217,6 +225,39 @@ export class MatchAnalysisService {
                 return `totals_${outcome.point}_${name}`; // name = 'Over' | 'Under'
             case 'btts':
                 return `btts_${name}`; // name = 'Yes' | 'No'
+            default:
+                return '';
+        }
+    }
+
+    /**
+     * Kanoniczny, maszynowy typ zakladu. Musi sie zgadzac z tym, co rozumie
+     * front (etykiety w helpers.ts) i `/api/settle` (rozstrzyganie z wyniku).
+     * Pusty string = rynek, ktorego nie potrafimy rozliczyc (np. handicap).
+     */
+    private canonicalOutcome(mktKey: string, outcome: any, home: string, away: string): string {
+        const name = String(outcome.name ?? '');
+        switch (mktKey) {
+            case 'h2h':
+                if (name === home) return 'home';
+                if (name === away) return 'away';
+                if (name === 'Draw') return 'draw';
+                return '';
+            case 'double_chance':
+                if (name === '1X' || name === 'X2' || name === '12') return name;
+                if (name === `${home}/Draw`)  return '1X';
+                if (name === `Draw/${away}`)  return 'X2';
+                if (name === `${home}/${away}`) return '12';
+                return '';
+            case 'totals': {
+                if (outcome.point == null) return '';
+                const dir = name === 'Over' ? 'over' : name === 'Under' ? 'under' : '';
+                return dir ? `${dir}_${outcome.point}` : '';
+            }
+            case 'btts':
+                if (name === 'Yes') return 'btts_yes';
+                if (name === 'No')  return 'btts_no';
+                return '';
             default:
                 return '';
         }
