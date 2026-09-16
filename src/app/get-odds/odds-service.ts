@@ -6,6 +6,14 @@ import { Sport, SportConfig } from '../utils/enums/sport';
 
 dotenv.config();
 
+/** Jedna linia handicapu od konkretnego bukmachera (najlepszy kurs dla danej linii). */
+export interface SpreadLine {
+    side: 'home' | 'away';
+    point: number;
+    odds: number;
+    bookmaker: string;
+}
+
 export interface OddsMatch {
     id: string;
     homeTeam: string;
@@ -29,6 +37,8 @@ export interface OddsMatch {
         away: number;
         bookmakerCount: number;
     };
+    /** Handicapy — pobierane tylko dla lig w SPREAD_SPORTS (patrz nizej). */
+    spreads?: SpreadLine[];
 }
 
 export interface OddsCache {
@@ -37,6 +47,17 @@ export interface OddsCache {
     sport: Sport;
     requestsRemaining?: number;
 }
+
+/**
+ * Ligi, dla ktorych dociagamy rynek handicapu.
+ *
+ * KOSZT: the-odds-api liczy zuzycie jako [liczba rynkow] x [liczba regionow],
+ * wiec kazda liga tutaj to +1 kredyt na kazde odswiezenie kursow. Trzymamy tu
+ * TYLKO NFL, bo to jedyna liga z wlasnym modelem predykcji — w pozostalych
+ * prawdopodobienstwa biora sie z konsensusu rynku, wiec przewaga nad linia
+ * buka wychodzilaby z definicji okolo zera i placilibysmy za nic.
+ */
+const SPREAD_SPORTS = new Set<Sport>([Sport.NFL]);
 
 const CACHE_FILE = path.join(process.cwd(), 'odds-cache.json');
 const CACHE_MAX_AGE_MS = 24 * 60 * 60 * 1000; // 24h
@@ -80,7 +101,7 @@ export class OddsService {
             params: {
                 apiKey: this.apiKey,
                 regions: config.region,
-                markets: 'h2h',
+                markets: SPREAD_SPORTS.has(sport) ? 'h2h,spreads' : 'h2h',
                 oddsFormat: 'decimal'
             }
         });
@@ -104,7 +125,9 @@ export class OddsService {
     private normalizeMatches(data: any[], sport: Sport): OddsMatch[] {
         return data.map(match => {
             const bookmaker = match.bookmakers?.[0];
-            const market    = bookmaker?.markets?.[0];
+            // Wybieramy h2h po kluczu — przy markets='h2h,spreads' markets[0]
+            // moglby byc handicapem i kursy 1X2 wyszlyby kompletnie bledne.
+            const market    = bookmaker?.markets?.find((m: any) => m.key === 'h2h');
             const outcomes: any[] = market?.outcomes || [];
 
             let homeOdds: number | null = null;
@@ -127,9 +150,36 @@ export class OddsService {
                     ? { home: homeOdds, draw: drawOdds, away: awayOdds, bookmaker: bookmaker?.title || 'Bukmacher' }
                     : null,
                 bestOdds: this.computeBestOdds(match) ?? undefined,
-                consensusProbability: this.computeConsensus(match) ?? undefined
+                consensusProbability: this.computeConsensus(match) ?? undefined,
+                spreads: this.computeBestSpreads(match)
             };
         });
+    }
+
+    /**
+     * Najlepszy kurs dla kazdej pary (strona, linia handicapu) posrod wszystkich
+     * bukmacherow. Rozne buki wystawiaja rozne linie, wiec nie sprowadzamy tego
+     * do jednej — niech model sam oceni, ktora ma najwieksza przewage.
+     */
+    private computeBestSpreads(match: any): SpreadLine[] | undefined {
+        const best = new Map<string, SpreadLine>();
+
+        for (const bm of match.bookmakers || []) {
+            const mkt = bm.markets?.find((m: any) => m.key === 'spreads');
+            if (!mkt) continue;
+            for (const o of mkt.outcomes || []) {
+                if (o.point == null || !o.price) continue;
+                const side = o.name === match.home_team ? 'home' : o.name === match.away_team ? 'away' : null;
+                if (!side) continue;
+                const key = `${side}_${o.point}`;
+                const current = best.get(key);
+                if (!current || o.price > current.odds) {
+                    best.set(key, { side, point: o.point, odds: o.price, bookmaker: bm.title || 'Bukmacher' });
+                }
+            }
+        }
+
+        return best.size ? Array.from(best.values()) : undefined;
     }
 
     private computeBestOdds(match: any): { home: number; draw?: number; away: number } | null {

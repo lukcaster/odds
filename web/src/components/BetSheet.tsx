@@ -1,30 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useApp } from '../store';
 import { fetchPredict } from '../api';
-import { getBankroll, kellyFraction, outcomeFullLabel, Pick } from '../helpers';
+import { build1x2Picks, getBankroll, kellyFraction, outcomeFullLabel, Pick } from '../helpers';
 
 const clampProb = (p: number) => Math.min(0.99, Math.max(0.01, p));
-
-/** Domyslne typy: 1X2 z kursow meczu (+ podwojna szansa, gdy jest remis). */
-function buildOutcomes(match: any): Pick[] {
-  const o = match.odds;
-  if (!o) return [];
-  const hasDraw = o.draw != null;
-  const list: Pick[] = [
-    { type: 'home', label: outcomeFullLabel('home'), odds: o.home },
-    ...(hasDraw ? [{ type: 'draw', label: outcomeFullLabel('draw'), odds: o.draw }] : []),
-    { type: 'away', label: outcomeFullLabel('away'), odds: o.away },
-  ];
-  if (hasDraw) {
-    const dc = (a: number, b: number) => (a * b) / (a + b);
-    list.push(
-      { type: '1X', label: outcomeFullLabel('1X'), odds: dc(o.home, o.draw), estimated: true },
-      { type: '12', label: outcomeFullLabel('12'), odds: dc(o.home, o.away), estimated: true },
-      { type: 'X2', label: outcomeFullLabel('X2'), odds: dc(o.draw, o.away), estimated: true },
-    );
-  }
-  return list;
-}
 
 export function BetSheet() {
   const { sheet, closeSheet, profile, updateHistory, showToast } = useApp();
@@ -32,7 +11,7 @@ export function BetSheet() {
   const preselect = sheet!.preselect;
   const bankroll = getBankroll(profile);
   // Typy podane z zewnatrz (np. analiza meczu) maja pierwszenstwo nad 1X2 z kursow.
-  const outcomes = sheet!.picks?.length ? sheet!.picks : buildOutcomes(match);
+  const outcomes = sheet!.picks?.length ? sheet!.picks : build1x2Picks(match);
   const picksLabel = sheet!.picksLabel || '1 — Wybierz wynik który chcesz obstawić';
 
   const [selected, setSelected] = useState<Pick | null>(null);

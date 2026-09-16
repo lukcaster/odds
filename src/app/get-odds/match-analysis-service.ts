@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv';
 import { Sport, SportConfig } from '../utils/enums/sport';
 import { SoccerPredictionModel, isSoccerSport } from './soccer-prediction-model';
 import { HybridPredictionModel } from './hybrid-prediction-model';
+import { coverProbability, expectedHomeMargin, formatLine } from './nfl-spread-model';
 
 dotenv.config();
 
@@ -36,10 +37,6 @@ export interface MatchAnalysis {
     marketsChecked: number;
     computedAt: string;
 }
-
-// Odchylenie standardowe marginesu punktowego w NFL (~13.5 pkt, wartosc
-// powszechnie przyjmowana dla ligi). Z niego liczymy szanse pokrycia spreadu.
-const NFL_MARGIN_SIGMA = 13.5;
 
 const MIN_EDGE   = 0.02;   // 2% minimum edge
 const MIN_KELLY  = 0.005;  // 0.5% Kelly
@@ -103,7 +100,7 @@ export class MatchAnalysisService {
                 // W NFL glownym rynkiem jest handicap, nie moneyline — przeliczamy
                 // szanse wygranej na oczekiwany margines i z niego na pokrycie spreadu.
                 Object.assign(modelProbs, this.computeNflSpreadProbs(p, bookmakers, homeTeam, awayTeam));
-                expectedMargin = NFL_MARGIN_SIGMA * normalQuantile(p);
+                expectedMargin = expectedHomeMargin(p);
                 console.log(`[MatchAnalysis] NFL: P(dom)=${(p * 100).toFixed(0)}% → oczekiwany margines ${expectedMargin.toFixed(1)} pkt`);
             }
         }
@@ -246,28 +243,20 @@ export class MatchAnalysisService {
     }
 
     /**
-     * Szanse pokrycia handicapu w NFL. Model daje tylko P(wygrana gospodarzy),
-     * wiec zakladamy rozklad normalny marginesu punktowego:
-     *   P(wygrana) = Phi(mu / sigma)  =>  mu = sigma * Phi^-1(P)
-     *   P(druzyna pokrywa linie p) = Phi((margines_druzyny + p) / sigma)
-     * Liczymy tylko dla linii, ktore realnie oferuja bukmacherzy.
-     *
-     * UWAGA: to przeksztalcenie nie wnosi nowej informacji — edge na spreadzie
-     * jest pochodna edge'u na moneyline i zalozonej sigmy. Rozklad marginesow
-     * w NFL ma tez piki na 3 i 7 punktach, ktorych normalny nie oddaje.
+     * Szanse pokrycia handicapu w NFL — tylko dla linii, ktore realnie oferuja
+     * bukmacherzy. Matematyka i jej ograniczenia: ./nfl-spread-model.ts
      */
     private computeNflSpreadProbs(pHome: number, bookmakers: any[], home: string, away: string): Record<string, number> {
         const probs: Record<string, number> = {};
-        const mu = NFL_MARGIN_SIGMA * normalQuantile(pHome); // oczekiwany margines gospodarzy
 
         for (const bm of bookmakers) {
             for (const mkt of bm.markets ?? []) {
                 if (mkt.key !== 'spreads') continue;
                 for (const o of mkt.outcomes ?? []) {
                     if (o.point == null) continue;
-                    const teamMargin = o.name === home ? mu : o.name === away ? -mu : null;
-                    if (teamMargin == null) continue;
-                    probs[`spreads_${o.name}_${o.point}`] = normalCdf((teamMargin + o.point) / NFL_MARGIN_SIGMA);
+                    const side = o.name === home ? 'home' : o.name === away ? 'away' : null;
+                    if (!side) continue;
+                    probs[`spreads_${o.name}_${o.point}`] = coverProbability(pHome, side, o.point);
                 }
             }
         }
@@ -340,8 +329,7 @@ export class MatchAnalysisService {
             return name === 'Yes' ? 'Tak — obie drużyny strzelą' : 'Nie — co najmniej jedna nie strzeli';
         }
         if (mktKey === 'spreads') {
-            const pt = outcome.point as number;
-            return `${name} ${pt > 0 ? '+' : ''}${pt}`;
+            return `${name} ${formatLine(outcome.point as number)}`;
         }
         if (mktKey === 'double_chance') {
             if (name === '1X') return `${home} lub Remis`;
@@ -351,24 +339,6 @@ export class MatchAnalysisService {
         }
         return name;
     }
-}
-
-/** Dystrybuanta rozkladu normalnego (Abramowitz-Stegun 26.2.17). */
-export function normalCdf(z: number): number {
-    const t = 1 / (1 + 0.2316419 * Math.abs(z));
-    const d = 0.3989422804014327 * Math.exp(-z * z / 2);
-    const p = d * t * (0.319381530 + t * (-0.356563782 + t * (1.781477937 + t * (-1.821255978 + t * 1.330274429))));
-    return z > 0 ? 1 - p : p;
-}
-
-/** Odwrotnosc normalCdf — bisekcja, wystarczajaco dokladna i bez magicznych stalych. */
-export function normalQuantile(p: number): number {
-    let lo = -6, hi = 6;
-    for (let i = 0; i < 60; i++) {
-        const mid = (lo + hi) / 2;
-        if (normalCdf(mid) < p) lo = mid; else hi = mid;
-    }
-    return (lo + hi) / 2;
 }
 
 function poissonPMF(k: number, lambda: number): number {

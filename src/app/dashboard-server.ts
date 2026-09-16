@@ -419,6 +419,16 @@ export class DashboardServer {
             }
         } else {
             console.log('[Startup] Kursy świeże — pomijam fetch.');
+            // Cache sprzed dodania handicapow nie ma pola `spreads`, przez co
+            // polecane dla NFL zostalyby na samym moneyline. Dociagamy TYLKO NFL
+            // (1 kredyt), zamiast odswiezac wszystkie ligi.
+            const nfl = caches.get(Sport.NFL);
+            if (nfl && nfl.data.length && !nfl.data.some(m => m.spreads?.length)) {
+                console.log('[Startup] Cache NFL bez handicapów (stary format) — odświeżam samo NFL...');
+                try { await this.oddsService.refreshOdds(Sport.NFL); } catch (err: any) {
+                    console.error(`[Startup] błąd kursów NFL: ${err?.response?.status ?? ''} ${err?.message ?? ''}`);
+                }
+            }
         }
 
         this.computePowerRankings();

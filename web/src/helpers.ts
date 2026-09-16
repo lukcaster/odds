@@ -37,6 +37,31 @@ export interface Pick {
   bookmakerName?: string;
 }
 
+/**
+ * Domyslne typy do obstawienia: 1X2 z kursow meczu (+ podwojna szansa, gdy
+ * jest remis). Uzywane i przez kalkulator w arkuszu, i przy wchodzeniu w zaklad
+ * z Polecanych — zeby wszedzie byl ten sam zestaw przyciskow.
+ */
+export function build1x2Picks(match: any): Pick[] {
+  const o = match?.odds;
+  if (!o) return [];
+  const hasDraw = o.draw != null;
+  const list: Pick[] = [
+    { type: 'home', label: outcomeFullLabel('home'), odds: o.home },
+    ...(hasDraw ? [{ type: 'draw', label: outcomeFullLabel('draw'), odds: o.draw }] : []),
+    { type: 'away', label: outcomeFullLabel('away'), odds: o.away },
+  ];
+  if (hasDraw) {
+    const dc = (a: number, b: number) => (a * b) / (a + b);
+    list.push(
+      { type: '1X', label: outcomeFullLabel('1X'), odds: dc(o.home, o.draw), estimated: true },
+      { type: '12', label: outcomeFullLabel('12'), odds: dc(o.home, o.away), estimated: true },
+      { type: 'X2', label: outcomeFullLabel('X2'), odds: dc(o.draw, o.away), estimated: true },
+    );
+  }
+  return list;
+}
+
 export interface Profile {
   nickname: string;
   maxBet: number;

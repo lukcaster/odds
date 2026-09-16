@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { useApp } from '../store';
 import { Header } from '../components/Header';
 import { fetchRecommended, fetchOdds } from '../api';
-import { getBankroll, relWhen, outcomeIcon, fmtDateTime } from '../helpers';
+import { build1x2Picks, getBankroll, relWhen, outcomeIcon, outcomeFullLabel, parseSpread, fmtDateTime, Pick } from '../helpers';
 
 function RecCard({ bet, onClick, onInfo, bankroll }: any) {
   const time = fmtDateTime(bet.commenceTime, { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
@@ -61,6 +61,32 @@ export function Recommended() {
       const data = await fetchOdds(bet.leagueKey);
       const match = (data.data || []).find((m: any) => m.id === bet.matchId);
       if (!match || !match.odds) { showToast('Nie udało się wczytać kursów meczu'); return; }
+      const sheetMatch = { ...match, league: bet.leagueKey };
+
+      // Handicap (NFL): pokazujemy go jako osobny przycisk obok 1X2, zeby dalo
+      // sie porownac z moneyline bez zamykania arkusza.
+      const sp = parseSpread(bet.outcomeType);
+      if (sp) {
+        const fresh = (match.spreads || []).find((x: any) => x.side === sp.side && String(x.point) === sp.line);
+        // Kurs z rekomendacji moze byc sprzed kilku godzin — bierzemy swiezy,
+        // jesli buk nadal wystawia te linie.
+        const spreadPick: Pick = {
+          type: bet.outcomeType,
+          label: outcomeFullLabel(bet.outcomeType),
+          odds: fresh?.odds ?? bet.odds,
+          prob: bet.ourProbability,
+          marketLabel: 'Handicap',
+          bookmakerName: fresh?.bookmaker ?? bet.bookmakerName,
+        };
+        openSheet({
+          match: sheetMatch,
+          picks: [spreadPick, ...build1x2Picks(match)],
+          picksLabel: '1 — Handicap z modelu albo zwykły wynik',
+          preselect: { type: bet.outcomeType, odds: spreadPick.odds, prob: bet.ourProbability },
+        });
+        return;
+      }
+
       const dcPair: Record<string, string[]> = { '1X': ['home', 'draw'], '12': ['home', 'away'], 'X2': ['draw', 'away'] };
       let odds: number | null = null;
       if (dcPair[bet.outcomeType]) {
@@ -68,7 +94,7 @@ export function Recommended() {
         if (a != null && b != null) odds = (a * b) / (a + b);
       } else if (match.odds[bet.outcomeType] != null) odds = match.odds[bet.outcomeType];
       if (odds == null) { showToast('Nie udało się wczytać kursu tego typu'); return; }
-      openSheet({ match: { ...match, league: bet.leagueKey }, preselect: { type: bet.outcomeType, odds, prob: bet.ourProbability } });
+      openSheet({ match: sheetMatch, preselect: { type: bet.outcomeType, odds, prob: bet.ourProbability } });
     } catch { showToast('Błąd połączenia z serwerem'); }
   };
 
