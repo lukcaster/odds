@@ -258,7 +258,10 @@ export class DashboardServer {
                 else       await this.powerRankingService.ensureFresh(sport);
                 // Jesli to NFL — zasil model predykcji swiezym ELO.
                 if (sport === Sport.NFL) {
-                    this.predictionModel.setEloRatings(this.powerRankingService.ratingsMap(Sport.NFL));
+                    this.predictionModel.setEloRatings(
+                this.powerRankingService.ratingsMap(Sport.NFL),
+                this.powerRankingService.gamesMap(Sport.NFL)
+            );
                 }
             } catch (err: any) {
                 console.warn('[PowerRanking] ensureFresh blad:', err?.message);
@@ -442,7 +445,10 @@ export class DashboardServer {
             console.log('[PowerRanking] budowanie rankingow ELO z cache na dysku...');
             this.powerRankingService.primeFromDisk(this.powerSports);
             // Zasil model NFL realnym ELO (zamiast dawnego hardkodu).
-            this.predictionModel.setEloRatings(this.powerRankingService.ratingsMap(Sport.NFL));
+            this.predictionModel.setEloRatings(
+                this.powerRankingService.ratingsMap(Sport.NFL),
+                this.powerRankingService.gamesMap(Sport.NFL)
+            );
         } catch (err) {
             console.error('[PowerRanking] blad:', err);
         }

@@ -12,9 +12,25 @@ import { StatsScraperNFL } from "./stats-scraper";
 export class HybridPredictionModel extends PredictionModel {
     private elo: EloRatingSystem;
     private statsScraper: StatsScraperNFL;
-    private eloWeight = 0.5;          // 50% wagi na ELO
-    private statsWeight = 0.35;       // 35% wagi na statystyki
-    private momentumWeight = 0.15;    // 15% wagi na momentum (recent form)
+    private teamGames: Map<string, number> = new Map();
+
+    // TYLKO ELO. Statystyki i momentum sa wylaczone (waga 0), bo nie niosly
+    // zadnej informacji, a psuly wynik:
+    //  - statystyki ciagnal StatsScraperNFL z ESPN, ktore oddaje 403; fallback
+    //    to hardkod dla 4 druzyn, wiec dla reszty obie strony dostawaly
+    //    IDENTYCZNE liczby i komponent zwracal stale ~0.53,
+    //  - calculateMomentum() to jawna zaslepka `return 0.5`.
+    // Razem 50% wagi na stale, co sciskalo kazda prognoze w strone 50% i
+    // ograniczalo model do zakresu ~26-76% (max ~9.6 pkt marginesu), przez co
+    // przy liniach handicapu ponizej -10 system hurtowo "widzial" przewage na
+    // underdogu. Wagi mozna przywrocic przez setWeights(), gdy pojawi sie realne
+    // zrodlo statystyk.
+    private eloWeight = 1.0;
+    private statsWeight = 0;
+    private momentumWeight = 0;
+
+    /** Minimum meczow na druzyne, zeby rating cokolwiek znaczyl (jak MIN_GAMES w modelu pilki). */
+    private static readonly MIN_GAMES = 2;
 
     constructor() {
         super();
@@ -32,8 +48,9 @@ export class HybridPredictionModel extends PredictionModel {
     /**
      * Zasil ELO ratingami policzonymi z realnych wyników (PowerRankingService).
      */
-    public setEloRatings(ratings: Map<string, number>): void {
+    public setEloRatings(ratings: Map<string, number>, games?: Map<string, number>): void {
         this.elo.setRatings(ratings);
+        this.teamGames = games ?? new Map();
     }
 
     /**
@@ -41,16 +58,26 @@ export class HybridPredictionModel extends PredictionModel {
      */
     public async getPredictionAsync(homeTeam: string, awayTeam: string): Promise<number | null> {
         try {
-            // 1. Komponenta ELO (50%)
+            // Bez realnych ratingow nie zgadujemy. Nieznana druzyna dostawalaby
+            // baze 1500, wiec model zwracalby TE SAMA liczbe dla kazdego meczu
+            // (sama przewaga gospodarza) i generowal fikcyjna przewage nad
+            // rynkiem. Lepiej oddac glos konsensusowi — tak samo robi model pilki.
+            if (!this.hasUsableRating(homeTeam) || !this.hasUsableRating(awayTeam)) {
+                console.log(`[NFL] brak danych ELO dla ${homeTeam} / ${awayTeam} — pomijam prognoze`);
+                return null;
+            }
+
             const eloProbability = this.elo.calculateWinProbability(homeTeam, awayTeam);
 
-            // 2. Komponenta statystyk (35%)
-            const statsProbability = await this.calculateStatsBasedProbability(homeTeam, awayTeam);
+            // Komponenty o zerowej wadze pomijamy — statystyki robia zapytanie
+            // sieciowe, ktore i tak konczy sie 403.
+            const statsProbability = this.statsWeight > 0
+                ? await this.calculateStatsBasedProbability(homeTeam, awayTeam)
+                : 0;
+            const momentumProbability = this.momentumWeight > 0
+                ? this.calculateMomentum(homeTeam, awayTeam)
+                : 0;
 
-            // 3. Komponenta momentum (15%)
-            const momentumProbability = this.calculateMomentum(homeTeam, awayTeam);
-
-            // Połącz wszystkie komponenty
             const finalProbability =
                 eloProbability * this.eloWeight +
                 statsProbability * this.statsWeight +
@@ -61,6 +88,12 @@ export class HybridPredictionModel extends PredictionModel {
             console.error(`Błąd w hybrid prediction: ${error}`);
             return null;
         }
+    }
+
+    /** Druzyna ma rating z realnych wynikow i wystarczajaco duza probke. */
+    private hasUsableRating(team: string): boolean {
+        return this.elo.hasTeam(team)
+            && (this.teamGames.get(team) ?? 0) >= HybridPredictionModel.MIN_GAMES;
     }
 
     /**

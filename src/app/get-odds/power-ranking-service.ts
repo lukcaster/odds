@@ -99,6 +99,13 @@ export class PowerRankingService {
         return this.engines.get(sport)?.ratingsMap() ?? new Map();
     }
 
+    /** Liczba rozegranych meczow per druzyna — model odmawia prognozy przy zbyt malej probce. */
+    public gamesMap(sport: Sport): Map<string, number> {
+        const engine = this.engines.get(sport);
+        if (!engine) return new Map();
+        return new Map(engine.getRankings().map(t => [t.team, t.games]));
+    }
+
     // ── Sentyment spolecznosci (obok algorytmu, nie miesza w matmie) ──
     public vote(sport: Sport, team: string, dir: 'up' | 'down'): { up: number; down: number } {
         const key = SPORT_TO_LEAGUE_KEY[sport];

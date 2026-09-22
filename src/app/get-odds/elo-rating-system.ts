@@ -23,6 +23,15 @@ export class EloRatingSystem {
     }
 
     /**
+     * Czy mamy dla tej drużyny REALNY rating (z wyników), czy tylko bazę 1500.
+     * Bez tego rozróżnienia model liczyłby prognozę dla nieznanych drużyn
+     * i zwracał stałą wynikającą z samej przewagi gospodarza.
+     */
+    public hasTeam(teamName: string): boolean {
+        return this.teamRatings.has(teamName);
+    }
+
+    /**
      * Pobierz aktualny rating drużyny
      */
     public getTeamRating(teamName: string): number {
