@@ -4,7 +4,7 @@ import { postSettle } from './api';
 
 export type ScreenName =
   | 'disclaimer' | 'profile-setup' | 'menu' | 'bets' | 'power'
-  | 'leagues' | 'matches' | 'match-detail' | 'recommended' | 'profile-edit';
+  | 'leagues' | 'matches' | 'match-detail' | 'recommended' | 'profile-edit' | 'backtest';
 
 interface Screen { name: ScreenName; params?: any; }
 

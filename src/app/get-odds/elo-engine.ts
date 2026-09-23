@@ -85,8 +85,7 @@ export class EloEngine {
         const home = this.ensure(r.home);
         const away = this.ensure(r.away);
 
-        const adjHome = home.rating + this.home;
-        const expHome = 1 / (1 + Math.pow(10, (away.rating - adjHome) / 400));
+        const expHome = this.expectedHomeScore(r.home, r.away);
 
         let actualHome: number;
         let hRes: 'W' | 'D' | 'L';
@@ -108,6 +107,16 @@ export class EloEngine {
         away.goalsFor += r.awayScore; away.goalsAgainst += r.homeScore;
         pushForm(home.form, hRes);
         pushForm(away.form, aRes);
+    }
+
+    /**
+     * Oczekiwany wynik gospodarza (1 = pewna wygrana, 0.5 = remis).
+     * Ta sama formula, ktorej silnik uzywa do aktualizacji ratingow — dzieki
+     * temu backtest mierzy produkcyjny model, a nie jego kopie.
+     */
+    public expectedHomeScore(homeTeam: string, awayTeam: string): number {
+        const adjHome = this.getRating(homeTeam) + this.home;
+        return 1 / (1 + Math.pow(10, (this.getRating(awayTeam) - adjHome) / 400));
     }
 
     public getRating(team: string): number {

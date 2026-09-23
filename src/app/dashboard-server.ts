@@ -10,6 +10,7 @@ import { SoccerPredictionModel } from './get-odds/soccer-prediction-model';
 import { MatchAnalysisService } from './get-odds/match-analysis-service';
 import { ResultsService } from './get-odds/results-service';
 import { PowerRankingService } from './get-odds/power-ranking-service';
+import { runAllBacktests, BacktestReport } from './get-odds/backtest';
 import { LEAGUE_KEY_TO_SPORT, Sport, SportConfig } from './utils/enums/sport';
 
 export class DashboardServer {
@@ -23,6 +24,10 @@ export class DashboardServer {
     private resultsService: ResultsService;
     private powerRankingService: PowerRankingService;
     private recommendedBets: RecommendedBet[] = [];
+    // Backtest jest CPU-bound (~1.5s lokalnie, wiecej na darmowym Renderze),
+    // wiec liczymy go raz na 6h i dzielimy jedno liczenie miedzy rownolegle zadania.
+    private backtestCache: { at: number; data: BacktestReport[] } | null = null;
+    private backtestInFlight: Promise<BacktestReport[]> | null = null;
     private port: number = parseInt(process.env.PORT || '3000', 10);
 
     // Zbudowany frontend (Vite: web/ -> dist-web/).
@@ -331,6 +336,33 @@ export class DashboardServer {
             }
             const counts = this.powerRankingService.vote(sport, String(team), dir);
             res.json({ team, ...counts });
+        });
+
+        // Skutecznosc modelu — backtest na historii z dysku. ZERO kredytow API.
+        this.app.get('/api/backtest', async (req: Request, res: Response) => {
+            const SIX_HOURS = 6 * 60 * 60 * 1000;
+            const force = req.query.force === '1';
+
+            if (!force && this.backtestCache && Date.now() - this.backtestCache.at < SIX_HOURS) {
+                return res.json({
+                    reports: this.backtestCache.data,
+                    computedAt: new Date(this.backtestCache.at).toISOString(),
+                    cached: true
+                });
+            }
+
+            try {
+                if (!this.backtestInFlight) {
+                    this.backtestInFlight = runAllBacktests(this.resultsService)
+                        .finally(() => { this.backtestInFlight = null; });
+                }
+                const data = await this.backtestInFlight;
+                this.backtestCache = { at: Date.now(), data };
+                res.json({ reports: data, computedAt: new Date().toISOString(), cached: false });
+            } catch (err: any) {
+                console.error('[Backtest] blad:', err?.message);
+                res.status(500).json({ error: 'Nie udalo sie policzyc backtestu' });
+            }
         });
 
         // Manual refresh trigger (standings + odds + recommended)

@@ -7,6 +7,7 @@
   "scripts": {
     "start": "tsx src/app/server.ts",
     "dev": "tsx src/app/main.ts",
+    "backtest": "tsx src/app/backtest-cli.ts",
     "build": "vite build",
     "postinstall": "npm run build",
     "web:dev": "vite",

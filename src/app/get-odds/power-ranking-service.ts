@@ -5,7 +5,7 @@ import { ResultsService } from './results-service';
 import { EloEngine, EloOptions, EloTeam } from './elo-engine';
 
 // Parametry ELO per sport (koszykówka ma duże różnice punktowe → movDivisor).
-const ELO_OPTS: Partial<Record<Sport, EloOptions>> = {
+export const ELO_OPTS: Partial<Record<Sport, EloOptions>> = {
     [Sport.NBA]: { movDivisor: 7, home: 70 },
 };
 

@@ -24,3 +24,4 @@ export const fetchPredict = (homeTeam: string, awayTeam: string) =>
 export const postSentiment = (league: string, team: string, dir: 'up' | 'down') =>
   postJson(`/api/sentiment`, { league, team, dir });
 export const postSettle = (bets: any[]) => postJson(`/api/settle`, { bets });
+export const fetchBacktest = (force = false) => getJson(`/api/backtest${force ? '?force=1' : ''}`);

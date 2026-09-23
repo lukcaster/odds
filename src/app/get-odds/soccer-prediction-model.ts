@@ -1,5 +1,6 @@
 import { RatingsService, TeamStanding } from './ratings-service';
-import { ResultsService, standingsFromResults } from './results-service';
+import { MatchResult, ResultsService, standingsFromResults } from './results-service';
+import { EloEngine } from './elo-engine';
 import { Sport } from '../utils/enums/sport';
 
 export interface SoccerPrediction {
@@ -34,11 +35,72 @@ export function isSoccerSport(sport: Sport): boolean {
     return SOCCER_SPORTS.has(sport);
 }
 
+/**
+ * Ile wagi dac ELO przy podziale zwyciestw. 0 = sam Poisson (stan sprzed
+ * 22 wrzesnia 2026), 1 = sam podzial z ELO.
+ *
+ * Wartosc dobrana BACKTESTEM (`npm run backtest -- --sweep`), nie na wyczucie.
+ * Optimum per liga: Ekstraklasa 1.00, La Liga 0.50, PL 0.50, Bundesliga 0.75.
+ * 0.75 daje najlepsza srednia log loss i lezy na plaskim odcinku krzywej.
+ *
+ * UWAGA: dobrane in-sample na tych samych danych, na ktorych mierzymy, wiec
+ * sama wartosc miedzy 0.50 a 0.75 jest w granicach szumu. Odporny wniosek jest
+ * taki, ze KAZDA waga > 0 bije sam Poisson w kazdej z czterech lig.
+ */
+export const DEFAULT_ELO_WEIGHT = 0.75;
+
 export class SoccerPredictionModel {
+    /** Nadpisywane przez backtest przy szukaniu najlepszej wagi. */
+    public eloWeight = DEFAULT_ELO_WEIGHT;
+
+    // ELO budujemy z TYCH SAMYCH wynikow, ktore widzi model. Dzieki temu
+    // backtest (podstawiajacy skrocona historie) automatycznie dostaje ELO
+    // policzone tylko z przeszlosci — bez osobnego orurowania.
+    private eloCache = new Map<Sport, { count: number; engine: EloEngine }>();
+
     constructor(
         private ratingsService: RatingsService,
         private resultsService?: ResultsService
     ) {}
+
+    private eloFor(sport: Sport, results: MatchResult[]): EloEngine {
+        const cached = this.eloCache.get(sport);
+        if (cached && cached.count === results.length) return cached.engine;
+        const engine = new EloEngine();
+        engine.rebuild(results);
+        this.eloCache.set(sport, { count: results.length, engine });
+        return engine;
+    }
+
+    /**
+     * Rozklad 1X2 z polaczenia obu modeli.
+     *
+     * ELO mowi tylko "kto jest lepszy" (oczekiwany wynik, remis liczony jako
+     * pol wygranej) i nic nie wie o czestosci remisow — dlatego remis bierzemy
+     * z Poissona, a ELO decyduje o PODZIALE pozostalego prawdopodobienstwa
+     * miedzy gospodarza i goscia. Na koncu mieszamy oba rozklady waga.
+     */
+    private blendWithElo(
+        poisson: Pick<SoccerPrediction, 'homeWin' | 'draw' | 'awayWin'>,
+        expectedHome: number
+    ): Pick<SoccerPrediction, 'homeWin' | 'draw' | 'awayWin'> {
+        const w = Math.min(1, Math.max(0, this.eloWeight));
+        if (w === 0) return poisson;
+
+        const draw = poisson.draw;
+        const decisive = 1 - draw;
+        // E = P(dom) + 0.5*P(remis)  =>  P(dom) = E - 0.5*P(remis)
+        const rawHome = expectedHome - 0.5 * draw;
+        // Przy duzej roznicy ratingow ELO potrafi wyjsc poza dostepny zakres.
+        const eloHome = Math.min(decisive, Math.max(0, rawHome));
+        const eloAway = decisive - eloHome;
+
+        return {
+            homeWin: w * eloHome + (1 - w) * poisson.homeWin,
+            draw,
+            awayWin: w * eloAway + (1 - w) * poisson.awayWin,
+        };
+    }
 
     /**
      * Tabela liczona z wyników (/scores + backfill). ESPN wypadło (403),
@@ -53,6 +115,7 @@ export class SoccerPredictionModel {
         if (!isSoccerSport(sport)) return null;
 
         try {
+            const results = this.resultsService?.getResults(sport) ?? [];
             const standings = await this.getStandings(sport);
             if (!standings.length) return null;
 
@@ -94,10 +157,19 @@ export class SoccerPredictionModel {
             const lambdaHome = Math.max(0.1, homeAttack * awayDefense * avgHomeGoals);
             const lambdaAway = Math.max(0.1, awayAttack * homeDefense * avgAwayGoals);
 
-            console.log(`[Soccer] ${homeTeam} vs ${awayTeam}: xG home=${lambdaHome.toFixed(2)} away=${lambdaAway.toFixed(2)}`);
+            const poisson = this.poissonProbs(lambdaHome, lambdaAway);
+
+            // ELO liczone z tych samych wynikow; wchodzi tylko gdy obie druzyny
+            // maja juz historie — inaczej obie siedza na bazie i nic nie wnosi.
+            const elo = this.eloFor(sport, results);
+            const probs = (elo.has(homeTeam) && elo.has(awayTeam))
+                ? this.blendWithElo(poisson, elo.expectedHomeScore(homeTeam, awayTeam))
+                : poisson;
+
+            console.log(`[Soccer] ${homeTeam} vs ${awayTeam}: xG home=${lambdaHome.toFixed(2)} away=${lambdaAway.toFixed(2)} | 1X2 ${(probs.homeWin*100).toFixed(0)}/${(probs.draw*100).toFixed(0)}/${(probs.awayWin*100).toFixed(0)}`);
 
             return {
-                ...this.poissonProbs(lambdaHome, lambdaAway),
+                ...probs,
                 lambdaHome,
                 lambdaAway,
                 teamFound: true

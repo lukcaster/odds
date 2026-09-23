@@ -115,6 +115,7 @@ export function Menu() {
         <Card icon="📊" title="Power Ranking" desc="Siła drużyn wg ELO z realnych wyników" onClick={() => navigate('power')} />
         <Card icon="⚽" title="Graj" desc="Wybierz ligę i sprawdź kursy" onClick={() => navigate('leagues')} />
         <Card icon="🧾" title="Moje zakłady" desc="Historia i statusy — oczekujące / wygrane / przegrane" onClick={() => navigate('bets')} />
+        <Card icon="🔬" title="Skuteczność modelu" desc="Backtest na historii — czy model bije zwykłe częstości" onClick={() => navigate('backtest')} />
         <Card icon="👤" title="Profil" desc="Edytuj dane i bankroll" onClick={() => navigate('profile-edit')} />
       </div>
     </>

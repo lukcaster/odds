@@ -9,6 +9,7 @@ import { Matches } from './screens/Matches';
 import { MatchDetail } from './screens/MatchDetail';
 import { Recommended } from './screens/Recommended';
 import { ProfileEdit } from './screens/ProfileEdit';
+import { Backtest } from './screens/Backtest';
 import { BetSheet } from './components/BetSheet';
 import { BetDetailModal } from './components/BetDetailModal';
 import { KellyModal } from './components/KellyModal';
@@ -25,6 +26,7 @@ const SCREENS: Record<string, React.ComponentType<any>> = {
   'match-detail': MatchDetail,
   'recommended': Recommended,
   'profile-edit': ProfileEdit,
+  'backtest': Backtest,
 };
 
 export function App() {
