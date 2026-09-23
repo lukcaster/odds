@@ -7,6 +7,12 @@ import { EloEngine, EloOptions, EloTeam } from './elo-engine';
 // Parametry ELO per sport (koszykówka ma duże różnice punktowe → movDivisor).
 export const ELO_OPTS: Partial<Record<Sport, EloOptions>> = {
     [Sport.NBA]: { movDivisor: 7, home: 70 },
+    // NFL dostal wlasne parametry 23 wrzesnia 2026, dobrane backtestem na
+    // sezonie 2025 (285 meczow). Bez movDivisor roznice punktowe rzedu 20
+    // rozjezdzaly ratingi na 665 pkt ELO — ten sam problem, co kiedys w NBA.
+    // home=40 wychodzi na ~2.0 pkt przewagi gospodarza, czyli tyle, ile
+    // przyjmuje sie dla NFL.
+    [Sport.NFL]: { movDivisor: 3, home: 40 },
 };
 
 export interface PowerRankingEntry extends EloTeam {

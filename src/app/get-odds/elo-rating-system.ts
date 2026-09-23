@@ -6,7 +6,10 @@
 export class EloRatingSystem {
     private teamRatings: Map<string, number> = new Map();
     private K = 32; // Speed factor (32 dla NFL zwykle)
-    private homeFieldAdvantage = 65; // punkty ELO advantage dla domu
+    // 40 ELO ~ 2.0 pkt przewagi gospodarza. Zgodne z ELO_OPTS[NFL] w
+    // power-ranking-service (ten sam wzor liczy ratingi i prognozy, wiec
+    // wartosci musza byc takie same) i dobrane tym samym backtestem.
+    private homeFieldAdvantage = 40;
 
     constructor() {
         // Bez hardkodu — ratingi wgrywane sa z realnych wynikow

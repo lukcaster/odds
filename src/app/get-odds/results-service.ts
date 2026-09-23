@@ -62,6 +62,7 @@ const SUPPORTED = new Set<Sport>([
 // wczesniejszych kolejek). Pliki maja nazwy druzyn JUZ jak w kursach.
 const BACKFILL_FILES: Partial<Record<Sport, string>> = {
     [Sport.EKSTRAKLASA]:    'ekstraklasa-backfill.json',
+    [Sport.NFL]:            'nfl-backfill.json',        // sezon 2025 + playoffy (TheSportsDB, nazwy 1:1 z odds-api)
     [Sport.NBA]:            'nba-backfill.json',        // seed z sezonu 2025/26 (balldontlie)
     [Sport.PREMIER_LEAGUE]: 'pl-backfill.json',         // seed z sezonu 2025/26 (TheSportsDB)
     [Sport.LALIGA]:         'laliga-backfill.json',     // seed z sezonu 2025/26 (TheSportsDB)

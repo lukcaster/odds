@@ -1,0 +1,1997 @@
+[
+  {
+    "date": "2025-09-05",
+    "home": "Philadelphia Eagles",
+    "away": "Dallas Cowboys",
+    "homeScore": 24,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-09-06",
+    "home": "Los Angeles Chargers",
+    "away": "Kansas City Chiefs",
+    "homeScore": 27,
+    "awayScore": 21
+  },
+  {
+    "date": "2025-09-07",
+    "home": "Atlanta Falcons",
+    "away": "Tampa Bay Buccaneers",
+    "homeScore": 20,
+    "awayScore": 23
+  },
+  {
+    "date": "2025-09-07",
+    "home": "Cleveland Browns",
+    "away": "Cincinnati Bengals",
+    "homeScore": 16,
+    "awayScore": 17
+  },
+  {
+    "date": "2025-09-07",
+    "home": "Indianapolis Colts",
+    "away": "Miami Dolphins",
+    "homeScore": 33,
+    "awayScore": 8
+  },
+  {
+    "date": "2025-09-07",
+    "home": "New England Patriots",
+    "away": "Las Vegas Raiders",
+    "homeScore": 13,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-09-07",
+    "home": "New Orleans Saints",
+    "away": "Arizona Cardinals",
+    "homeScore": 13,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-09-07",
+    "home": "New York Jets",
+    "away": "Pittsburgh Steelers",
+    "homeScore": 32,
+    "awayScore": 34
+  },
+  {
+    "date": "2025-09-07",
+    "home": "Washington Commanders",
+    "away": "New York Giants",
+    "homeScore": 21,
+    "awayScore": 6
+  },
+  {
+    "date": "2025-09-07",
+    "home": "Jacksonville Jaguars",
+    "away": "Carolina Panthers",
+    "homeScore": 26,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-09-07",
+    "home": "Denver Broncos",
+    "away": "Tennessee Titans",
+    "homeScore": 20,
+    "awayScore": 12
+  },
+  {
+    "date": "2025-09-07",
+    "home": "Seattle Seahawks",
+    "away": "San Francisco 49ers",
+    "homeScore": 13,
+    "awayScore": 17
+  },
+  {
+    "date": "2025-09-07",
+    "home": "Green Bay Packers",
+    "away": "Detroit Lions",
+    "homeScore": 27,
+    "awayScore": 13
+  },
+  {
+    "date": "2025-09-07",
+    "home": "Los Angeles Rams",
+    "away": "Houston Texans",
+    "homeScore": 14,
+    "awayScore": 9
+  },
+  {
+    "date": "2025-09-08",
+    "home": "Buffalo Bills",
+    "away": "Baltimore Ravens",
+    "homeScore": 41,
+    "awayScore": 40
+  },
+  {
+    "date": "2025-09-09",
+    "home": "Chicago Bears",
+    "away": "Minnesota Vikings",
+    "homeScore": 24,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-09-12",
+    "home": "Green Bay Packers",
+    "away": "Washington Commanders",
+    "homeScore": 27,
+    "awayScore": 18
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Cincinnati Bengals",
+    "away": "Jacksonville Jaguars",
+    "homeScore": 31,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Dallas Cowboys",
+    "away": "New York Giants",
+    "homeScore": 40,
+    "awayScore": 37
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Tennessee Titans",
+    "away": "Los Angeles Rams",
+    "homeScore": 19,
+    "awayScore": 33
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Miami Dolphins",
+    "away": "New England Patriots",
+    "homeScore": 27,
+    "awayScore": 33
+  },
+  {
+    "date": "2025-09-14",
+    "home": "New York Jets",
+    "away": "Buffalo Bills",
+    "homeScore": 10,
+    "awayScore": 30
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Pittsburgh Steelers",
+    "away": "Seattle Seahawks",
+    "homeScore": 17,
+    "awayScore": 31
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Baltimore Ravens",
+    "away": "Cleveland Browns",
+    "homeScore": 41,
+    "awayScore": 17
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Indianapolis Colts",
+    "away": "Denver Broncos",
+    "homeScore": 29,
+    "awayScore": 28
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Arizona Cardinals",
+    "away": "Carolina Panthers",
+    "homeScore": 27,
+    "awayScore": 22
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Kansas City Chiefs",
+    "away": "Philadelphia Eagles",
+    "homeScore": 17,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-09-14",
+    "home": "Detroit Lions",
+    "away": "Chicago Bears",
+    "homeScore": 52,
+    "awayScore": 21
+  },
+  {
+    "date": "2025-09-14",
+    "home": "New Orleans Saints",
+    "away": "San Francisco 49ers",
+    "homeScore": 21,
+    "awayScore": 26
+  },
+  {
+    "date": "2025-09-15",
+    "home": "Minnesota Vikings",
+    "away": "Atlanta Falcons",
+    "homeScore": 6,
+    "awayScore": 22
+  },
+  {
+    "date": "2025-09-15",
+    "home": "Houston Texans",
+    "away": "Tampa Bay Buccaneers",
+    "homeScore": 19,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-09-16",
+    "home": "Las Vegas Raiders",
+    "away": "Los Angeles Chargers",
+    "homeScore": 9,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-09-19",
+    "home": "Buffalo Bills",
+    "away": "Miami Dolphins",
+    "homeScore": 31,
+    "awayScore": 21
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Cleveland Browns",
+    "away": "Green Bay Packers",
+    "homeScore": 13,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Tennessee Titans",
+    "away": "Indianapolis Colts",
+    "homeScore": 20,
+    "awayScore": 41
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Minnesota Vikings",
+    "away": "Cincinnati Bengals",
+    "homeScore": 48,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-09-21",
+    "home": "New England Patriots",
+    "away": "Pittsburgh Steelers",
+    "homeScore": 14,
+    "awayScore": 21
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Philadelphia Eagles",
+    "away": "Los Angeles Rams",
+    "homeScore": 33,
+    "awayScore": 26
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Tampa Bay Buccaneers",
+    "away": "New York Jets",
+    "homeScore": 29,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Washington Commanders",
+    "away": "Las Vegas Raiders",
+    "homeScore": 41,
+    "awayScore": 24
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Carolina Panthers",
+    "away": "Atlanta Falcons",
+    "homeScore": 30,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Jacksonville Jaguars",
+    "away": "Houston Texans",
+    "homeScore": 17,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Los Angeles Chargers",
+    "away": "Denver Broncos",
+    "homeScore": 23,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Seattle Seahawks",
+    "away": "New Orleans Saints",
+    "homeScore": 44,
+    "awayScore": 13
+  },
+  {
+    "date": "2025-09-21",
+    "home": "Chicago Bears",
+    "away": "Dallas Cowboys",
+    "homeScore": 31,
+    "awayScore": 14
+  },
+  {
+    "date": "2025-09-21",
+    "home": "San Francisco 49ers",
+    "away": "Arizona Cardinals",
+    "homeScore": 16,
+    "awayScore": 15
+  },
+  {
+    "date": "2025-09-22",
+    "home": "New York Giants",
+    "away": "Kansas City Chiefs",
+    "homeScore": 9,
+    "awayScore": 22
+  },
+  {
+    "date": "2025-09-23",
+    "home": "Baltimore Ravens",
+    "away": "Detroit Lions",
+    "homeScore": 30,
+    "awayScore": 38
+  },
+  {
+    "date": "2025-09-26",
+    "home": "Arizona Cardinals",
+    "away": "Seattle Seahawks",
+    "homeScore": 20,
+    "awayScore": 23
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Pittsburgh Steelers",
+    "away": "Minnesota Vikings",
+    "homeScore": 24,
+    "awayScore": 21
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Atlanta Falcons",
+    "away": "Washington Commanders",
+    "homeScore": 34,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Buffalo Bills",
+    "away": "New Orleans Saints",
+    "homeScore": 31,
+    "awayScore": 19
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Detroit Lions",
+    "away": "Cleveland Browns",
+    "homeScore": 34,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-09-28",
+    "home": "New England Patriots",
+    "away": "Carolina Panthers",
+    "homeScore": 42,
+    "awayScore": 13
+  },
+  {
+    "date": "2025-09-28",
+    "home": "New York Giants",
+    "away": "Los Angeles Chargers",
+    "homeScore": 21,
+    "awayScore": 18
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Tampa Bay Buccaneers",
+    "away": "Philadelphia Eagles",
+    "homeScore": 25,
+    "awayScore": 31
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Houston Texans",
+    "away": "Tennessee Titans",
+    "homeScore": 26,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Los Angeles Rams",
+    "away": "Indianapolis Colts",
+    "homeScore": 27,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-09-28",
+    "home": "San Francisco 49ers",
+    "away": "Jacksonville Jaguars",
+    "homeScore": 21,
+    "awayScore": 26
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Kansas City Chiefs",
+    "away": "Baltimore Ravens",
+    "homeScore": 37,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-09-28",
+    "home": "Las Vegas Raiders",
+    "away": "Chicago Bears",
+    "homeScore": 24,
+    "awayScore": 25
+  },
+  {
+    "date": "2025-09-29",
+    "home": "Dallas Cowboys",
+    "away": "Green Bay Packers",
+    "homeScore": 40,
+    "awayScore": 40
+  },
+  {
+    "date": "2025-09-29",
+    "home": "Miami Dolphins",
+    "away": "New York Jets",
+    "homeScore": 27,
+    "awayScore": 21
+  },
+  {
+    "date": "2025-09-30",
+    "home": "Denver Broncos",
+    "away": "Cincinnati Bengals",
+    "homeScore": 28,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-10-03",
+    "home": "Los Angeles Rams",
+    "away": "San Francisco 49ers",
+    "homeScore": 23,
+    "awayScore": 26
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Cleveland Browns",
+    "away": "Minnesota Vikings",
+    "homeScore": 17,
+    "awayScore": 21
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Indianapolis Colts",
+    "away": "Las Vegas Raiders",
+    "homeScore": 40,
+    "awayScore": 6
+  },
+  {
+    "date": "2025-10-05",
+    "home": "New Orleans Saints",
+    "away": "New York Giants",
+    "homeScore": 26,
+    "awayScore": 14
+  },
+  {
+    "date": "2025-10-05",
+    "home": "New York Jets",
+    "away": "Dallas Cowboys",
+    "homeScore": 22,
+    "awayScore": 37
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Philadelphia Eagles",
+    "away": "Denver Broncos",
+    "homeScore": 17,
+    "awayScore": 21
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Carolina Panthers",
+    "away": "Miami Dolphins",
+    "homeScore": 27,
+    "awayScore": 24
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Baltimore Ravens",
+    "away": "Houston Texans",
+    "homeScore": 10,
+    "awayScore": 44
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Arizona Cardinals",
+    "away": "Tennessee Titans",
+    "homeScore": 21,
+    "awayScore": 22
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Seattle Seahawks",
+    "away": "Tampa Bay Buccaneers",
+    "homeScore": 35,
+    "awayScore": 38
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Cincinnati Bengals",
+    "away": "Detroit Lions",
+    "homeScore": 24,
+    "awayScore": 37
+  },
+  {
+    "date": "2025-10-05",
+    "home": "Los Angeles Chargers",
+    "away": "Washington Commanders",
+    "homeScore": 10,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-10-06",
+    "home": "Buffalo Bills",
+    "away": "New England Patriots",
+    "homeScore": 20,
+    "awayScore": 23
+  },
+  {
+    "date": "2025-10-07",
+    "home": "Jacksonville Jaguars",
+    "away": "Kansas City Chiefs",
+    "homeScore": 31,
+    "awayScore": 28
+  },
+  {
+    "date": "2025-10-10",
+    "home": "New York Giants",
+    "away": "Philadelphia Eagles",
+    "homeScore": 34,
+    "awayScore": 17
+  },
+  {
+    "date": "2025-10-12",
+    "home": "New York Jets",
+    "away": "Denver Broncos",
+    "homeScore": 11,
+    "awayScore": 13
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Indianapolis Colts",
+    "away": "Arizona Cardinals",
+    "homeScore": 31,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Miami Dolphins",
+    "away": "Los Angeles Chargers",
+    "homeScore": 27,
+    "awayScore": 29
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Pittsburgh Steelers",
+    "away": "Cleveland Browns",
+    "homeScore": 23,
+    "awayScore": 9
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Tampa Bay Buccaneers",
+    "away": "San Francisco 49ers",
+    "homeScore": 30,
+    "awayScore": 19
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Carolina Panthers",
+    "away": "Dallas Cowboys",
+    "homeScore": 30,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Jacksonville Jaguars",
+    "away": "Seattle Seahawks",
+    "homeScore": 12,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Baltimore Ravens",
+    "away": "Los Angeles Rams",
+    "homeScore": 3,
+    "awayScore": 17
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Las Vegas Raiders",
+    "away": "Tennessee Titans",
+    "homeScore": 20,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-10-12",
+    "home": "Green Bay Packers",
+    "away": "Cincinnati Bengals",
+    "homeScore": 27,
+    "awayScore": 18
+  },
+  {
+    "date": "2025-10-12",
+    "home": "New Orleans Saints",
+    "away": "New England Patriots",
+    "homeScore": 19,
+    "awayScore": 25
+  },
+  {
+    "date": "2025-10-13",
+    "home": "Kansas City Chiefs",
+    "away": "Detroit Lions",
+    "homeScore": 30,
+    "awayScore": 17
+  },
+  {
+    "date": "2025-10-13",
+    "home": "Atlanta Falcons",
+    "away": "Buffalo Bills",
+    "homeScore": 24,
+    "awayScore": 14
+  },
+  {
+    "date": "2025-10-14",
+    "home": "Washington Commanders",
+    "away": "Chicago Bears",
+    "homeScore": 24,
+    "awayScore": 25
+  },
+  {
+    "date": "2025-10-17",
+    "home": "Cincinnati Bengals",
+    "away": "Pittsburgh Steelers",
+    "homeScore": 33,
+    "awayScore": 31
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Jacksonville Jaguars",
+    "away": "Los Angeles Rams",
+    "homeScore": 7,
+    "awayScore": 35
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Chicago Bears",
+    "away": "New Orleans Saints",
+    "homeScore": 26,
+    "awayScore": 14
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Cleveland Browns",
+    "away": "Miami Dolphins",
+    "homeScore": 31,
+    "awayScore": 6
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Tennessee Titans",
+    "away": "New England Patriots",
+    "homeScore": 13,
+    "awayScore": 31
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Kansas City Chiefs",
+    "away": "Las Vegas Raiders",
+    "homeScore": 31,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Minnesota Vikings",
+    "away": "Philadelphia Eagles",
+    "homeScore": 22,
+    "awayScore": 28
+  },
+  {
+    "date": "2025-10-19",
+    "home": "New York Jets",
+    "away": "Carolina Panthers",
+    "homeScore": 6,
+    "awayScore": 13
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Denver Broncos",
+    "away": "New York Giants",
+    "homeScore": 33,
+    "awayScore": 32
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Los Angeles Chargers",
+    "away": "Indianapolis Colts",
+    "homeScore": 24,
+    "awayScore": 38
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Dallas Cowboys",
+    "away": "Washington Commanders",
+    "homeScore": 44,
+    "awayScore": 22
+  },
+  {
+    "date": "2025-10-19",
+    "home": "Arizona Cardinals",
+    "away": "Green Bay Packers",
+    "homeScore": 23,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-10-20",
+    "home": "San Francisco 49ers",
+    "away": "Atlanta Falcons",
+    "homeScore": 20,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-10-20",
+    "home": "Detroit Lions",
+    "away": "Tampa Bay Buccaneers",
+    "homeScore": 24,
+    "awayScore": 9
+  },
+  {
+    "date": "2025-10-21",
+    "home": "Seattle Seahawks",
+    "away": "Houston Texans",
+    "homeScore": 27,
+    "awayScore": 19
+  },
+  {
+    "date": "2025-10-24",
+    "home": "Los Angeles Chargers",
+    "away": "Minnesota Vikings",
+    "homeScore": 37,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Atlanta Falcons",
+    "away": "Miami Dolphins",
+    "homeScore": 10,
+    "awayScore": 34
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Cincinnati Bengals",
+    "away": "New York Jets",
+    "homeScore": 38,
+    "awayScore": 39
+  },
+  {
+    "date": "2025-10-26",
+    "home": "New England Patriots",
+    "away": "Cleveland Browns",
+    "homeScore": 32,
+    "awayScore": 13
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Philadelphia Eagles",
+    "away": "New York Giants",
+    "homeScore": 38,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Carolina Panthers",
+    "away": "Buffalo Bills",
+    "homeScore": 9,
+    "awayScore": 40
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Baltimore Ravens",
+    "away": "Chicago Bears",
+    "homeScore": 30,
+    "awayScore": 16
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Houston Texans",
+    "away": "San Francisco 49ers",
+    "homeScore": 26,
+    "awayScore": 15
+  },
+  {
+    "date": "2025-10-26",
+    "home": "New Orleans Saints",
+    "away": "Tampa Bay Buccaneers",
+    "homeScore": 3,
+    "awayScore": 23
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Denver Broncos",
+    "away": "Dallas Cowboys",
+    "homeScore": 44,
+    "awayScore": 24
+  },
+  {
+    "date": "2025-10-26",
+    "home": "Indianapolis Colts",
+    "away": "Tennessee Titans",
+    "homeScore": 38,
+    "awayScore": 14
+  },
+  {
+    "date": "2025-10-27",
+    "home": "Pittsburgh Steelers",
+    "away": "Green Bay Packers",
+    "homeScore": 25,
+    "awayScore": 35
+  },
+  {
+    "date": "2025-10-28",
+    "home": "Kansas City Chiefs",
+    "away": "Washington Commanders",
+    "homeScore": 28,
+    "awayScore": 7
+  },
+  {
+    "date": "2025-10-31",
+    "home": "Miami Dolphins",
+    "away": "Baltimore Ravens",
+    "homeScore": 6,
+    "awayScore": 28
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Cincinnati Bengals",
+    "away": "Chicago Bears",
+    "homeScore": 42,
+    "awayScore": 47
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Detroit Lions",
+    "away": "Minnesota Vikings",
+    "homeScore": 24,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Green Bay Packers",
+    "away": "Carolina Panthers",
+    "homeScore": 13,
+    "awayScore": 16
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Tennessee Titans",
+    "away": "Los Angeles Chargers",
+    "homeScore": 20,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-11-02",
+    "home": "New England Patriots",
+    "away": "Atlanta Falcons",
+    "homeScore": 24,
+    "awayScore": 23
+  },
+  {
+    "date": "2025-11-02",
+    "home": "New York Giants",
+    "away": "San Francisco 49ers",
+    "homeScore": 24,
+    "awayScore": 34
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Pittsburgh Steelers",
+    "away": "Indianapolis Colts",
+    "homeScore": 27,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Houston Texans",
+    "away": "Denver Broncos",
+    "homeScore": 15,
+    "awayScore": 18
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Las Vegas Raiders",
+    "away": "Jacksonville Jaguars",
+    "homeScore": 29,
+    "awayScore": 30
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Los Angeles Rams",
+    "away": "New Orleans Saints",
+    "homeScore": 34,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-11-02",
+    "home": "Buffalo Bills",
+    "away": "Kansas City Chiefs",
+    "homeScore": 28,
+    "awayScore": 21
+  },
+  {
+    "date": "2025-11-03",
+    "home": "Washington Commanders",
+    "away": "Seattle Seahawks",
+    "homeScore": 14,
+    "awayScore": 38
+  },
+  {
+    "date": "2025-11-04",
+    "home": "Dallas Cowboys",
+    "away": "Arizona Cardinals",
+    "homeScore": 17,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-11-07",
+    "home": "Denver Broncos",
+    "away": "Las Vegas Raiders",
+    "homeScore": 10,
+    "awayScore": 7
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Indianapolis Colts",
+    "away": "Atlanta Falcons",
+    "homeScore": 31,
+    "awayScore": 25
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Chicago Bears",
+    "away": "New York Giants",
+    "homeScore": 24,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Miami Dolphins",
+    "away": "Buffalo Bills",
+    "homeScore": 30,
+    "awayScore": 13
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Minnesota Vikings",
+    "away": "Baltimore Ravens",
+    "homeScore": 19,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-11-09",
+    "home": "New York Jets",
+    "away": "Cleveland Browns",
+    "homeScore": 27,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Tampa Bay Buccaneers",
+    "away": "New England Patriots",
+    "homeScore": 23,
+    "awayScore": 28
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Carolina Panthers",
+    "away": "New Orleans Saints",
+    "homeScore": 7,
+    "awayScore": 17
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Houston Texans",
+    "away": "Jacksonville Jaguars",
+    "homeScore": 36,
+    "awayScore": 29
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Seattle Seahawks",
+    "away": "Arizona Cardinals",
+    "homeScore": 44,
+    "awayScore": 22
+  },
+  {
+    "date": "2025-11-09",
+    "home": "San Francisco 49ers",
+    "away": "Los Angeles Rams",
+    "homeScore": 26,
+    "awayScore": 42
+  },
+  {
+    "date": "2025-11-09",
+    "home": "Washington Commanders",
+    "away": "Detroit Lions",
+    "homeScore": 22,
+    "awayScore": 44
+  },
+  {
+    "date": "2025-11-10",
+    "home": "Los Angeles Chargers",
+    "away": "Pittsburgh Steelers",
+    "homeScore": 25,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-11-11",
+    "home": "Green Bay Packers",
+    "away": "Philadelphia Eagles",
+    "homeScore": 7,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-11-14",
+    "home": "New England Patriots",
+    "away": "New York Jets",
+    "homeScore": 27,
+    "awayScore": 14
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Miami Dolphins",
+    "away": "Washington Commanders",
+    "homeScore": 16,
+    "awayScore": 13
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Atlanta Falcons",
+    "away": "Carolina Panthers",
+    "homeScore": 27,
+    "awayScore": 30
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Buffalo Bills",
+    "away": "Tampa Bay Buccaneers",
+    "homeScore": 44,
+    "awayScore": 32
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Tennessee Titans",
+    "away": "Houston Texans",
+    "homeScore": 13,
+    "awayScore": 16
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Minnesota Vikings",
+    "away": "Chicago Bears",
+    "homeScore": 17,
+    "awayScore": 19
+  },
+  {
+    "date": "2025-11-16",
+    "home": "New York Giants",
+    "away": "Green Bay Packers",
+    "homeScore": 20,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Pittsburgh Steelers",
+    "away": "Cincinnati Bengals",
+    "homeScore": 34,
+    "awayScore": 12
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Jacksonville Jaguars",
+    "away": "Los Angeles Chargers",
+    "homeScore": 35,
+    "awayScore": 6
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Los Angeles Rams",
+    "away": "Seattle Seahawks",
+    "homeScore": 21,
+    "awayScore": 19
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Arizona Cardinals",
+    "away": "San Francisco 49ers",
+    "homeScore": 22,
+    "awayScore": 41
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Cleveland Browns",
+    "away": "Baltimore Ravens",
+    "homeScore": 16,
+    "awayScore": 23
+  },
+  {
+    "date": "2025-11-16",
+    "home": "Denver Broncos",
+    "away": "Kansas City Chiefs",
+    "homeScore": 22,
+    "awayScore": 19
+  },
+  {
+    "date": "2025-11-17",
+    "home": "Philadelphia Eagles",
+    "away": "Detroit Lions",
+    "homeScore": 16,
+    "awayScore": 9
+  },
+  {
+    "date": "2025-11-18",
+    "home": "Las Vegas Raiders",
+    "away": "Dallas Cowboys",
+    "homeScore": 16,
+    "awayScore": 33
+  },
+  {
+    "date": "2025-11-21",
+    "home": "Houston Texans",
+    "away": "Buffalo Bills",
+    "homeScore": 23,
+    "awayScore": 19
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Chicago Bears",
+    "away": "Pittsburgh Steelers",
+    "homeScore": 31,
+    "awayScore": 28
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Cincinnati Bengals",
+    "away": "New England Patriots",
+    "homeScore": 20,
+    "awayScore": 26
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Detroit Lions",
+    "away": "New York Giants",
+    "homeScore": 34,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Green Bay Packers",
+    "away": "Minnesota Vikings",
+    "homeScore": 23,
+    "awayScore": 6
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Tennessee Titans",
+    "away": "Seattle Seahawks",
+    "homeScore": 24,
+    "awayScore": 30
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Kansas City Chiefs",
+    "away": "Indianapolis Colts",
+    "homeScore": 23,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Baltimore Ravens",
+    "away": "New York Jets",
+    "homeScore": 23,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Las Vegas Raiders",
+    "away": "Cleveland Browns",
+    "homeScore": 10,
+    "awayScore": 24
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Arizona Cardinals",
+    "away": "Jacksonville Jaguars",
+    "homeScore": 24,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-11-23",
+    "home": "Dallas Cowboys",
+    "away": "Philadelphia Eagles",
+    "homeScore": 24,
+    "awayScore": 21
+  },
+  {
+    "date": "2025-11-23",
+    "home": "New Orleans Saints",
+    "away": "Atlanta Falcons",
+    "homeScore": 10,
+    "awayScore": 24
+  },
+  {
+    "date": "2025-11-24",
+    "home": "Los Angeles Rams",
+    "away": "Tampa Bay Buccaneers",
+    "homeScore": 34,
+    "awayScore": 7
+  },
+  {
+    "date": "2025-11-25",
+    "home": "San Francisco 49ers",
+    "away": "Carolina Panthers",
+    "homeScore": 20,
+    "awayScore": 9
+  },
+  {
+    "date": "2025-11-27",
+    "home": "Detroit Lions",
+    "away": "Green Bay Packers",
+    "homeScore": 24,
+    "awayScore": 31
+  },
+  {
+    "date": "2025-11-27",
+    "home": "Dallas Cowboys",
+    "away": "Kansas City Chiefs",
+    "homeScore": 31,
+    "awayScore": 28
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Baltimore Ravens",
+    "away": "Cincinnati Bengals",
+    "homeScore": 14,
+    "awayScore": 32
+  },
+  {
+    "date": "2025-11-28",
+    "home": "Philadelphia Eagles",
+    "away": "Chicago Bears",
+    "homeScore": 15,
+    "awayScore": 24
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Cleveland Browns",
+    "away": "San Francisco 49ers",
+    "homeScore": 8,
+    "awayScore": 26
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Tennessee Titans",
+    "away": "Jacksonville Jaguars",
+    "homeScore": 3,
+    "awayScore": 25
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Indianapolis Colts",
+    "away": "Houston Texans",
+    "homeScore": 16,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Miami Dolphins",
+    "away": "New Orleans Saints",
+    "homeScore": 21,
+    "awayScore": 17
+  },
+  {
+    "date": "2025-11-30",
+    "home": "New York Jets",
+    "away": "Atlanta Falcons",
+    "homeScore": 27,
+    "awayScore": 24
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Tampa Bay Buccaneers",
+    "away": "Arizona Cardinals",
+    "homeScore": 20,
+    "awayScore": 17
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Carolina Panthers",
+    "away": "Los Angeles Rams",
+    "homeScore": 31,
+    "awayScore": 28
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Seattle Seahawks",
+    "away": "Minnesota Vikings",
+    "homeScore": 26,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Pittsburgh Steelers",
+    "away": "Buffalo Bills",
+    "homeScore": 7,
+    "awayScore": 26
+  },
+  {
+    "date": "2025-11-30",
+    "home": "Los Angeles Chargers",
+    "away": "Las Vegas Raiders",
+    "homeScore": 31,
+    "awayScore": 14
+  },
+  {
+    "date": "2025-12-01",
+    "home": "Washington Commanders",
+    "away": "Denver Broncos",
+    "homeScore": 26,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-12-02",
+    "home": "New England Patriots",
+    "away": "New York Giants",
+    "homeScore": 33,
+    "awayScore": 15
+  },
+  {
+    "date": "2025-12-05",
+    "home": "Detroit Lions",
+    "away": "Dallas Cowboys",
+    "homeScore": 44,
+    "awayScore": 30
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Atlanta Falcons",
+    "away": "Seattle Seahawks",
+    "homeScore": 9,
+    "awayScore": 37
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Cleveland Browns",
+    "away": "Tennessee Titans",
+    "homeScore": 29,
+    "awayScore": 31
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Green Bay Packers",
+    "away": "Chicago Bears",
+    "homeScore": 28,
+    "awayScore": 21
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Minnesota Vikings",
+    "away": "Washington Commanders",
+    "homeScore": 31,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-07",
+    "home": "New York Jets",
+    "away": "Miami Dolphins",
+    "homeScore": 10,
+    "awayScore": 34
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Tampa Bay Buccaneers",
+    "away": "New Orleans Saints",
+    "homeScore": 20,
+    "awayScore": 24
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Jacksonville Jaguars",
+    "away": "Indianapolis Colts",
+    "homeScore": 36,
+    "awayScore": 19
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Baltimore Ravens",
+    "away": "Pittsburgh Steelers",
+    "homeScore": 22,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Las Vegas Raiders",
+    "away": "Denver Broncos",
+    "homeScore": 17,
+    "awayScore": 24
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Buffalo Bills",
+    "away": "Cincinnati Bengals",
+    "homeScore": 39,
+    "awayScore": 34
+  },
+  {
+    "date": "2025-12-07",
+    "home": "Arizona Cardinals",
+    "away": "Los Angeles Rams",
+    "homeScore": 17,
+    "awayScore": 45
+  },
+  {
+    "date": "2025-12-08",
+    "home": "Kansas City Chiefs",
+    "away": "Houston Texans",
+    "homeScore": 10,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-12-09",
+    "home": "Los Angeles Chargers",
+    "away": "Philadelphia Eagles",
+    "homeScore": 22,
+    "awayScore": 19
+  },
+  {
+    "date": "2025-12-12",
+    "home": "Tampa Bay Buccaneers",
+    "away": "Atlanta Falcons",
+    "homeScore": 28,
+    "awayScore": 29
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Chicago Bears",
+    "away": "Cleveland Browns",
+    "homeScore": 31,
+    "awayScore": 3
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Cincinnati Bengals",
+    "away": "Baltimore Ravens",
+    "homeScore": 0,
+    "awayScore": 24
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Kansas City Chiefs",
+    "away": "Los Angeles Chargers",
+    "homeScore": 13,
+    "awayScore": 16
+  },
+  {
+    "date": "2025-12-14",
+    "home": "New England Patriots",
+    "away": "Buffalo Bills",
+    "homeScore": 31,
+    "awayScore": 35
+  },
+  {
+    "date": "2025-12-14",
+    "home": "New York Giants",
+    "away": "Washington Commanders",
+    "homeScore": 21,
+    "awayScore": 29
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Philadelphia Eagles",
+    "away": "Las Vegas Raiders",
+    "homeScore": 31,
+    "awayScore": 0
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Jacksonville Jaguars",
+    "away": "New York Jets",
+    "homeScore": 48,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Houston Texans",
+    "away": "Arizona Cardinals",
+    "homeScore": 40,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Denver Broncos",
+    "away": "Green Bay Packers",
+    "homeScore": 34,
+    "awayScore": 26
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Los Angeles Rams",
+    "away": "Detroit Lions",
+    "homeScore": 41,
+    "awayScore": 34
+  },
+  {
+    "date": "2025-12-14",
+    "home": "New Orleans Saints",
+    "away": "Carolina Panthers",
+    "homeScore": 20,
+    "awayScore": 17
+  },
+  {
+    "date": "2025-12-14",
+    "home": "San Francisco 49ers",
+    "away": "Tennessee Titans",
+    "homeScore": 37,
+    "awayScore": 24
+  },
+  {
+    "date": "2025-12-14",
+    "home": "Seattle Seahawks",
+    "away": "Indianapolis Colts",
+    "homeScore": 18,
+    "awayScore": 16
+  },
+  {
+    "date": "2025-12-15",
+    "home": "Dallas Cowboys",
+    "away": "Minnesota Vikings",
+    "homeScore": 26,
+    "awayScore": 34
+  },
+  {
+    "date": "2025-12-16",
+    "home": "Pittsburgh Steelers",
+    "away": "Miami Dolphins",
+    "homeScore": 28,
+    "awayScore": 15
+  },
+  {
+    "date": "2025-12-19",
+    "home": "Seattle Seahawks",
+    "away": "Los Angeles Rams",
+    "homeScore": 38,
+    "awayScore": 37
+  },
+  {
+    "date": "2025-12-20",
+    "home": "Washington Commanders",
+    "away": "Philadelphia Eagles",
+    "homeScore": 18,
+    "awayScore": 29
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Chicago Bears",
+    "away": "Green Bay Packers",
+    "homeScore": 22,
+    "awayScore": 16
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Cleveland Browns",
+    "away": "Buffalo Bills",
+    "homeScore": 20,
+    "awayScore": 23
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Dallas Cowboys",
+    "away": "Los Angeles Chargers",
+    "homeScore": 17,
+    "awayScore": 34
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Tennessee Titans",
+    "away": "Kansas City Chiefs",
+    "homeScore": 26,
+    "awayScore": 9
+  },
+  {
+    "date": "2025-12-21",
+    "home": "New Orleans Saints",
+    "away": "New York Jets",
+    "homeScore": 29,
+    "awayScore": 6
+  },
+  {
+    "date": "2025-12-21",
+    "home": "New York Giants",
+    "away": "Minnesota Vikings",
+    "homeScore": 13,
+    "awayScore": 16
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Carolina Panthers",
+    "away": "Tampa Bay Buccaneers",
+    "homeScore": 23,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Denver Broncos",
+    "away": "Jacksonville Jaguars",
+    "homeScore": 20,
+    "awayScore": 34
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Arizona Cardinals",
+    "away": "Atlanta Falcons",
+    "homeScore": 19,
+    "awayScore": 26
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Detroit Lions",
+    "away": "Pittsburgh Steelers",
+    "homeScore": 24,
+    "awayScore": 29
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Houston Texans",
+    "away": "Las Vegas Raiders",
+    "homeScore": 23,
+    "awayScore": 21
+  },
+  {
+    "date": "2025-12-21",
+    "home": "Miami Dolphins",
+    "away": "Cincinnati Bengals",
+    "homeScore": 21,
+    "awayScore": 45
+  },
+  {
+    "date": "2025-12-22",
+    "home": "Baltimore Ravens",
+    "away": "New England Patriots",
+    "homeScore": 24,
+    "awayScore": 28
+  },
+  {
+    "date": "2025-12-23",
+    "home": "Indianapolis Colts",
+    "away": "San Francisco 49ers",
+    "homeScore": 27,
+    "awayScore": 48
+  },
+  {
+    "date": "2025-12-25",
+    "home": "Washington Commanders",
+    "away": "Dallas Cowboys",
+    "homeScore": 23,
+    "awayScore": 30
+  },
+  {
+    "date": "2025-12-25",
+    "home": "Minnesota Vikings",
+    "away": "Detroit Lions",
+    "homeScore": 23,
+    "awayScore": 10
+  },
+  {
+    "date": "2025-12-26",
+    "home": "Kansas City Chiefs",
+    "away": "Denver Broncos",
+    "homeScore": 13,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-12-27",
+    "home": "Los Angeles Chargers",
+    "away": "Houston Texans",
+    "homeScore": 16,
+    "awayScore": 20
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Cincinnati Bengals",
+    "away": "Arizona Cardinals",
+    "homeScore": 37,
+    "awayScore": 14
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Green Bay Packers",
+    "away": "Baltimore Ravens",
+    "homeScore": 24,
+    "awayScore": 41
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Las Vegas Raiders",
+    "away": "New York Giants",
+    "homeScore": 10,
+    "awayScore": 34
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Carolina Panthers",
+    "away": "Seattle Seahawks",
+    "homeScore": 10,
+    "awayScore": 27
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Cleveland Browns",
+    "away": "Pittsburgh Steelers",
+    "homeScore": 13,
+    "awayScore": 6
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Tennessee Titans",
+    "away": "New Orleans Saints",
+    "homeScore": 26,
+    "awayScore": 34
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Indianapolis Colts",
+    "away": "Jacksonville Jaguars",
+    "homeScore": 17,
+    "awayScore": 23
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Miami Dolphins",
+    "away": "Tampa Bay Buccaneers",
+    "homeScore": 20,
+    "awayScore": 17
+  },
+  {
+    "date": "2025-12-28",
+    "home": "New York Jets",
+    "away": "New England Patriots",
+    "homeScore": 10,
+    "awayScore": 42
+  },
+  {
+    "date": "2025-12-28",
+    "home": "Buffalo Bills",
+    "away": "Philadelphia Eagles",
+    "homeScore": 12,
+    "awayScore": 13
+  },
+  {
+    "date": "2025-12-29",
+    "home": "San Francisco 49ers",
+    "away": "Chicago Bears",
+    "homeScore": 42,
+    "awayScore": 38
+  },
+  {
+    "date": "2025-12-30",
+    "home": "Atlanta Falcons",
+    "away": "Los Angeles Rams",
+    "homeScore": 27,
+    "awayScore": 24
+  },
+  {
+    "date": "2026-01-03",
+    "home": "Tampa Bay Buccaneers",
+    "away": "Carolina Panthers",
+    "homeScore": 16,
+    "awayScore": 14
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Atlanta Falcons",
+    "away": "New Orleans Saints",
+    "homeScore": 19,
+    "awayScore": 17
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Buffalo Bills",
+    "away": "New York Jets",
+    "homeScore": 35,
+    "awayScore": 8
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Chicago Bears",
+    "away": "Detroit Lions",
+    "homeScore": 16,
+    "awayScore": 19
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Cincinnati Bengals",
+    "away": "Cleveland Browns",
+    "homeScore": 18,
+    "awayScore": 20
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Denver Broncos",
+    "away": "Los Angeles Chargers",
+    "homeScore": 19,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Las Vegas Raiders",
+    "away": "Kansas City Chiefs",
+    "homeScore": 14,
+    "awayScore": 12
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Los Angeles Rams",
+    "away": "Arizona Cardinals",
+    "homeScore": 37,
+    "awayScore": 20
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Minnesota Vikings",
+    "away": "Green Bay Packers",
+    "homeScore": 16,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-01-04",
+    "home": "New England Patriots",
+    "away": "Miami Dolphins",
+    "homeScore": 38,
+    "awayScore": 10
+  },
+  {
+    "date": "2026-01-04",
+    "home": "New York Giants",
+    "away": "Dallas Cowboys",
+    "homeScore": 34,
+    "awayScore": 17
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Philadelphia Eagles",
+    "away": "Washington Commanders",
+    "homeScore": 17,
+    "awayScore": 24
+  },
+  {
+    "date": "2026-01-04",
+    "home": "San Francisco 49ers",
+    "away": "Seattle Seahawks",
+    "homeScore": 3,
+    "awayScore": 13
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Jacksonville Jaguars",
+    "away": "Tennessee Titans",
+    "homeScore": 41,
+    "awayScore": 7
+  },
+  {
+    "date": "2026-01-04",
+    "home": "Houston Texans",
+    "away": "Indianapolis Colts",
+    "homeScore": 38,
+    "awayScore": 30
+  },
+  {
+    "date": "2026-01-05",
+    "home": "Pittsburgh Steelers",
+    "away": "Baltimore Ravens",
+    "homeScore": 26,
+    "awayScore": 24
+  },
+  {
+    "date": "2026-01-10",
+    "home": "Carolina Panthers",
+    "away": "Los Angeles Rams",
+    "homeScore": 31,
+    "awayScore": 34
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Chicago Bears",
+    "away": "Green Bay Packers",
+    "homeScore": 31,
+    "awayScore": 27
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Jacksonville Jaguars",
+    "away": "Buffalo Bills",
+    "homeScore": 24,
+    "awayScore": 27
+  },
+  {
+    "date": "2026-01-11",
+    "home": "Philadelphia Eagles",
+    "away": "San Francisco 49ers",
+    "homeScore": 19,
+    "awayScore": 23
+  },
+  {
+    "date": "2026-01-12",
+    "home": "New England Patriots",
+    "away": "Los Angeles Chargers",
+    "homeScore": 16,
+    "awayScore": 3
+  },
+  {
+    "date": "2026-01-13",
+    "home": "Pittsburgh Steelers",
+    "away": "Houston Texans",
+    "homeScore": 6,
+    "awayScore": 30
+  },
+  {
+    "date": "2026-01-17",
+    "home": "Denver Broncos",
+    "away": "Buffalo Bills",
+    "homeScore": 33,
+    "awayScore": 30
+  },
+  {
+    "date": "2026-01-18",
+    "home": "Seattle Seahawks",
+    "away": "San Francisco 49ers",
+    "homeScore": 41,
+    "awayScore": 6
+  },
+  {
+    "date": "2026-01-18",
+    "home": "Chicago Bears",
+    "away": "Los Angeles Rams",
+    "homeScore": 17,
+    "awayScore": 20
+  },
+  {
+    "date": "2026-01-18",
+    "home": "New England Patriots",
+    "away": "Houston Texans",
+    "homeScore": 28,
+    "awayScore": 16
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Denver Broncos",
+    "away": "New England Patriots",
+    "homeScore": 7,
+    "awayScore": 10
+  },
+  {
+    "date": "2026-01-25",
+    "home": "Seattle Seahawks",
+    "away": "Los Angeles Rams",
+    "homeScore": 31,
+    "awayScore": 27
+  },
+  {
+    "date": "2026-02-08",
+    "home": "New England Patriots",
+    "away": "Seattle Seahawks",
+    "homeScore": 13,
+    "awayScore": 29
+  }
+]
