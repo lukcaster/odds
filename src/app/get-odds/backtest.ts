@@ -15,10 +15,11 @@
 
 import { EloEngine, EloOptions } from './elo-engine';
 import { MatchResult, ResultsService, standingsFromResults } from './results-service';
-import { isSoccerSport, SoccerPredictionModel } from './soccer-prediction-model';
+import { DEFAULT_ELO_WEIGHT, isSoccerSport, SoccerPredictionModel } from './soccer-prediction-model';
 import { ELO_OPTS } from './power-ranking-service';
 import { RatingsService } from './ratings-service';
 import { Sport, SportConfig } from '../utils/enums/sport';
+import { applyTemperature, calibrateBinary, NFL_TEMPERATURE, SOCCER_TEMPERATURE } from './calibration';
 
 export interface CalibrationBucket {
     lo: number;
@@ -81,7 +82,12 @@ const clampP = (p: number) => Math.min(1 - 1e-9, Math.max(1e-9, p));
  * Uzywamy PRAWDZIWEJ klasy SoccerPredictionModel, podstawiajac jej tylko
  * okrojona historie wynikow.
  */
-export async function backtestSoccer(sport: Sport, all: MatchResult[], eloWeight?: number): Promise<BacktestReport> {
+export async function backtestSoccer(
+    sport: Sport,
+    all: MatchResult[],
+    eloWeight?: number,
+    temperature = 1
+): Promise<BacktestReport> {
     const results = chronological(all);
     let prefix: MatchResult[] = [];
 
@@ -89,6 +95,9 @@ export async function backtestSoccer(sport: Sport, all: MatchResult[], eloWeight
     const stubResults = { getResults: () => prefix } as unknown as ResultsService;
     const model = new SoccerPredictionModel({} as RatingsService, stubResults);
     if (eloWeight != null) model.eloWeight = eloWeight;
+    // Kalibracje nakladamy TUTAJ, wiec model musi oddac surowy rozklad —
+    // inaczej liczylibysmy temperature dwa razy.
+    model.temperature = 1;
 
     const obs: Observation[] = [];
     let skipped = 0, hits = 0, scored = 0;
@@ -101,7 +110,8 @@ export async function backtestSoccer(sport: Sport, all: MatchResult[], eloWeight
         if (!pred) { skipped++; continue; }
 
         const actual = outcomeOf(match);
-        const probs: Record<string, number> = { home: pred.homeWin, draw: pred.draw, away: pred.awayWin };
+        const [cH, cD, cA] = applyTemperature([pred.homeWin, pred.draw, pred.awayWin], temperature);
+        const probs: Record<string, number> = { home: cH, draw: cD, away: cA };
 
         for (const key of ['home', 'draw', 'away']) {
             obs.push({ p: probs[key], happened: key === actual ? 1 : 0 });
@@ -136,7 +146,7 @@ export async function backtestSoccer(sport: Sport, all: MatchResult[], eloWeight
 
     return {
         label: SportConfig[sport].label,
-        model: `Poisson + ELO (waga ELO ${(eloWeight ?? model.eloWeight).toFixed(2)})`,
+        model: `Poisson + ELO (waga ${(eloWeight ?? DEFAULT_ELO_WEIGHT).toFixed(2)}, T=${temperature.toFixed(2)})`,
         predicted: scored,
         skipped,
         brier: scored ? brier / scored : 0,
@@ -160,10 +170,14 @@ export async function runAllBacktests(resultsService: ResultsService): Promise<B
         const results = resultsService.getResults(sport as Sport);
         if (results.length < MIN_SAMPLE) continue;
 
+        // Raport ma pokazywac to, co robi PRODUKCJA — wiec z kalibracja.
         if (isSoccerSport(sport as Sport)) {
-            reports.push(await backtestSoccer(sport as Sport, results));
+            reports.push(await backtestSoccer(sport as Sport, results, undefined, SOCCER_TEMPERATURE));
         }
-        reports.push(backtestElo(sport as Sport, results, ELO_OPTS[sport as Sport]));
+        // ELO samo w sobie napedza prognozy tylko w NFL; dla pozostalych lig
+        // ten raport jest diagnostyczny, wiec bez kalibracji.
+        const eloT = sport === Sport.NFL ? NFL_TEMPERATURE : 1;
+        reports.push(backtestElo(sport as Sport, results, ELO_OPTS[sport as Sport], eloT));
     }
     return reports;
 }
@@ -188,10 +202,32 @@ export async function sweepEloWeight(
 }
 
 /**
+ * Szuka temperatury minimalizujacej log loss. Zwraca siatke wynikow, zeby
+ * bylo widac, czy minimum jest wyrazne, czy krzywa jest plaska (wtedy sama
+ * wartosc jest mniej wazna).
+ */
+export async function fitTemperature(
+    sport: Sport,
+    all: MatchResult[],
+    kind: 'soccer' | 'elo',
+    temperatures: number[],
+    eloOpts?: EloOptions
+): Promise<{ T: number; report: BacktestReport }[]> {
+    const out: { T: number; report: BacktestReport }[] = [];
+    for (const T of temperatures) {
+        const report = kind === 'soccer'
+            ? await backtestSoccer(sport, all, undefined, T)
+            : backtestElo(sport, all, eloOpts, T);
+        out.push({ T, report });
+    }
+    return out;
+}
+
+/**
  * Backtest silnika ELO. Remis liczy sie jako pol wygranej — tak samo, jak
  * traktuje go sam silnik przy aktualizacji ratingow.
  */
-export function backtestElo(sport: Sport, all: MatchResult[], opts?: EloOptions): BacktestReport {
+export function backtestElo(sport: Sport, all: MatchResult[], opts?: EloOptions, temperature = 1): BacktestReport {
     const results = chronological(all);
     const engine = new EloEngine(opts);
 
@@ -207,7 +243,7 @@ export function backtestElo(sport: Sport, all: MatchResult[], opts?: EloOptions)
             continue;
         }
 
-        const p = engine.expectedHomeScore(match.home, match.away);
+        const p = calibrateBinary(engine.expectedHomeScore(match.home, match.away), temperature);
         const outcome = outcomeOf(match);
         const actual = outcome === 'home' ? 1 : outcome === 'draw' ? 0.5 : 0;
 
@@ -245,7 +281,7 @@ export function backtestElo(sport: Sport, all: MatchResult[], opts?: EloOptions)
 
     return {
         label: SportConfig[sport].label,
-        model: `ELO (home +${opts?.home ?? 55}, K=${opts?.k ?? 24})`,
+        model: `ELO (home +${opts?.home ?? 55}, K=${opts?.k ?? 24}, T=${temperature.toFixed(2)})`,
         predicted: scored,
         skipped,
         brier: scored ? brier / scored : 0,

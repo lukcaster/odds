@@ -1,6 +1,7 @@
 import { EloRatingSystem } from "./elo-rating-system";
 import { PredictionModel } from "./prediction-model";
 import { StatsScraperNFL } from "./stats-scraper";
+import { calibrateBinary, NFL_TEMPERATURE } from "./calibration";
 
 /**
  * Hybrid Prediction Model
@@ -31,6 +32,9 @@ export class HybridPredictionModel extends PredictionModel {
 
     /** Minimum meczow na druzyne, zeby rating cokolwiek znaczyl (jak MIN_GAMES w modelu pilki). */
     private static readonly MIN_GAMES = 2;
+
+    /** Kalibracja pewnosci — patrz ./calibration.ts. */
+    public temperature = NFL_TEMPERATURE;
 
     constructor() {
         super();
@@ -83,7 +87,10 @@ export class HybridPredictionModel extends PredictionModel {
                 statsProbability * this.statsWeight +
                 momentumProbability * this.momentumWeight;
 
-            return Math.max(0.01, Math.min(0.99, finalProbability));
+            // Kalibracja: ELO przy duzej roznicy ratingow daje skrajne wartosci,
+            // ktore po przelozeniu na margines punktowy robia sie nierealne.
+            const calibrated = calibrateBinary(finalProbability, this.temperature);
+            return Math.max(0.01, Math.min(0.99, calibrated));
         } catch (error) {
             console.error(`Błąd w hybrid prediction: ${error}`);
             return null;

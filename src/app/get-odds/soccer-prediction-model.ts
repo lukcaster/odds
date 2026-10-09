@@ -1,6 +1,7 @@
 import { RatingsService, TeamStanding } from './ratings-service';
 import { MatchResult, ResultsService, standingsFromResults } from './results-service';
 import { EloEngine } from './elo-engine';
+import { applyTemperature, SOCCER_TEMPERATURE } from './calibration';
 import { Sport } from '../utils/enums/sport';
 
 export interface SoccerPrediction {
@@ -52,6 +53,9 @@ export const DEFAULT_ELO_WEIGHT = 0.75;
 export class SoccerPredictionModel {
     /** Nadpisywane przez backtest przy szukaniu najlepszej wagi. */
     public eloWeight = DEFAULT_ELO_WEIGHT;
+
+    /** Kalibracja pewnosci — patrz ./calibration.ts. Backtest ustawia 1. */
+    public temperature = SOCCER_TEMPERATURE;
 
     // ELO budujemy z TYCH SAMYCH wynikow, ktore widzi model. Dzieki temu
     // backtest (podstawiajacy skrocona historie) automatycznie dostaje ELO
@@ -162,9 +166,16 @@ export class SoccerPredictionModel {
             // ELO liczone z tych samych wynikow; wchodzi tylko gdy obie druzyny
             // maja juz historie — inaczej obie siedza na bazie i nic nie wnosi.
             const elo = this.eloFor(sport, results);
-            const probs = (elo.has(homeTeam) && elo.has(awayTeam))
+            const blended = (elo.has(homeTeam) && elo.has(awayTeam))
                 ? this.blendWithElo(poisson, elo.expectedHomeScore(homeTeam, awayTeam))
                 : poisson;
+
+            // Na koniec sciagamy przesadna pewnosc — model bez kalibracji
+            // zawyzal stawki Kelly'ego dokladnie tam, gdzie najczesciej myli sie.
+            const [cH, cD, cA] = applyTemperature(
+                [blended.homeWin, blended.draw, blended.awayWin], this.temperature
+            );
+            const probs = { homeWin: cH, draw: cD, awayWin: cA };
 
             console.log(`[Soccer] ${homeTeam} vs ${awayTeam}: xG home=${lambdaHome.toFixed(2)} away=${lambdaAway.toFixed(2)} | 1X2 ${(probs.homeWin*100).toFixed(0)}/${(probs.draw*100).toFixed(0)}/${(probs.awayWin*100).toFixed(0)}`);
 

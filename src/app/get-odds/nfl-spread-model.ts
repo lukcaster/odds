@@ -35,9 +35,23 @@ export function normalQuantile(p: number): number {
     return (lo + hi) / 2;
 }
 
+/**
+ * Twardy limit oczekiwanego marginesu.
+ *
+ * To NIE jest wartosc dobrana danymi — to wiedza dziedzinowa. Backtest pokazal,
+ * ze w srodku zakresu model jest dobrze skalibrowany, ale przy duzej roznicy
+ * ratingow wychodzi P(dom)=96.6% i 24.7 pkt marginesu, czego w NFL nie ma
+ * (najwyzsze realne linie to okolice -17). Takich meczow jest w probce tyle, ze
+ * zadna metryka ich nie zobaczy, wiec kalibracja temperatura ich nie naprawi —
+ * a handicap jest dla NFL typem PIERWSZEGO WYBORU, wiec wlasnie tam
+ * generowalyby najwieksze fikcyjne przewagi.
+ */
+const MAX_EXPECTED_MARGIN = 17;
+
 /** Oczekiwany margines gospodarzy w punktach (dodatni = faworyt). */
 export function expectedHomeMargin(pHome: number): number {
-    return NFL_MARGIN_SIGMA * normalQuantile(pHome);
+    const raw = NFL_MARGIN_SIGMA * normalQuantile(pHome);
+    return Math.max(-MAX_EXPECTED_MARGIN, Math.min(MAX_EXPECTED_MARGIN, raw));
 }
 
 /**
@@ -45,6 +59,7 @@ export function expectedHomeMargin(pHome: number): number {
  * `line` to punkt od bukmachera dla TEJ strony (np. -6.5 dla faworyta).
  */
 export function coverProbability(pHome: number, side: 'home' | 'away', line: number): number {
+    // Przez expectedHomeMargin, wiec limit marginesu obowiazuje tez tutaj.
     const mu = expectedHomeMargin(pHome);
     const teamMargin = side === 'home' ? mu : -mu;
     return normalCdf((teamMargin + line) / NFL_MARGIN_SIGMA);
